@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [content](content.md)
 * [1.Linux基础](1.Linux.md)
 * [2.序列分析](2.Sequence.md)
   * [2.1 序列比对 - Blast使用指南](21seqblast_md.md)
