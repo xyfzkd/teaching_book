@@ -11,7 +11,7 @@
 * [6.RNA-seq: differential expression and alternative splicing ](6.differential_alternative.md)
   * [6.1 Differential expression](6.1.basic_analyses.md)
   * [6.2 Alternative splicing]()
-* [7.CHIP-seq and Motif]()
+* [7.CHIP-seq and Motif](7.chipseq_motif.md)
 * [8.Machine Learning](8machine_learning.md)
   * [8.1 eMaize Challenge ](8machine_learning/81.md)
 * [Appendix I](6more.md)
