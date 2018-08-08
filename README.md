@@ -1,4 +1,4 @@
-# 生物信息学实践
+# Bioinformatics Tutorial - Basics
 
 > **格物致知  知行合一**
 
