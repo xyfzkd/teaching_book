@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Getting Started](getting-started.md)
 * [1.Linux基础](1.Linux.md)
 * [2.Blast](2.seqblast.md)
 * [3.Conservation](3.conservation.md)
@@ -16,4 +17,5 @@
   * [8.1 eMaize Challenge ](8.machine_learning/81.md)
 * [Appendix I](9.more.md)
 * [Appendix II](10.appendix-ii.md)
-* [Appendix III Docker基础](11.Docker.md)
+* Getting Started
+
