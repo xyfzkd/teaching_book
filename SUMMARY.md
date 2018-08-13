@@ -17,5 +17,5 @@
   * [8.1 eMaize Challenge ](8.machine_learning/81.md)
 * [Appendix I](9.more.md)
 * [Appendix II](10.appendix-ii.md)
-* Getting Started
+* [Getting Started](getting-started.md)
 
