@@ -20,11 +20,13 @@ _**MacOS**_
 
 ```
 cd ~/Desktop
-docker load -i Bioinfo_docker.tar                   # 加载镜像
+docker load -i bioinformatic.tar                   # 加载镜像
 
 docker images                                       # 查询镜像
 
-docker run --name test -it Bioinfo_docker:latest    # 运行容器进行后续操作
+docker run --name bioinfor -it ubuntu:latest    # 运行容器进行后续操作
+
+> cd /home/cs
 
 docker ps -a                                        # 查询容器信息（包括container_id)
 
