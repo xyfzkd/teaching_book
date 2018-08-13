@@ -16,7 +16,7 @@
 
 _**MacOS**_
 
-拷贝Bioinfo\_docker.tar到本地目录，如~/Desktop，运行docker程序，然后在终端进行操作，基本命令如下：
+下载[Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)到本地目录，如~/Desktop，运行docker程序，然后在终端进行操作，基本命令如下：
 
 ```
 cd ~/Desktop
@@ -37,7 +37,6 @@ docker kill $container_id                           # 终止容器
 docker rm $(docker ps -q -a)                        # 删除所有容器
 
 docker rmi $(docker images -q)                        # 删除所有镜像（不会删除保存的tar文件）
-
 ```
 
 _**Windows**_
