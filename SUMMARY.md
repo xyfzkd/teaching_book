@@ -8,6 +8,7 @@
 * [4.GO & KEGG](4.GOKEGG.md)
   * [4.1GO](4.1.GO.md)
   * [4.2KEGG](4.2.KEGG.md)
+  * [4.3 GSEA](43-gsea.md)
 * [5.Bowtie](5.seqbowtie.md)
 * [6.RNA-seq: differential expression and alternative splicing ](6.differential_alternative.md)
   * [6.1 Differential expression](6.1.basic_analyses.md)
