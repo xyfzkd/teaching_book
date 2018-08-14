@@ -30,15 +30,6 @@ Teaching Philosophy:
 
 
 
-
-
-
-
-
-
-
-
-
 ## Join Us
 
 * Lu Lab 鲁 志 实验室
@@ -52,24 +43,4 @@ Teaching Philosophy:
 ## Copyright
 
 [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-
-
-
-
-
-
-
-
-
-
----
-
-
-
-
-
-### 
-
-
 

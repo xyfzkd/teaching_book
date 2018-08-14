@@ -1,7 +1,8 @@
 # Getting Started
 
----
 ## 预修课程准备
+
+---
 
 1. 基本生物课程：如《遗传学》或《分子生物学》
 
@@ -13,30 +14,25 @@
 
 5. 基本计算机课程：如 C语言
 
+## Virtual Machines
 
 ---
-## Virtual Machines
 
 ### VirtualBox
 
 We provide a Linux virtual machine \(Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)\), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
 
-### Docker (Recommended)
+### Docker \(Recommended\)
 
-We also provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
+We  provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
 
-
-I. 安装： {#i-安装：}
-
----
+I. 安装： 
 
 课程文件提供已经下载好的适合Mac和Windows的安装包。
 
 也可以自行登录[docker官网](https://www.docker.com/get-docker)注册账号，下载Community Edition版本的docker安装程序进行安装。
 
-II. 使用方法： {#ii-使用方法：}
-
----
+II. 使用方法：
 
 _**MacOS**_
 
@@ -73,9 +69,5 @@ _**Windows**_
 
 安装好docker后，按照提示开启hyper-v功能。运行docker，打开powershell，操作命令同MacOS版本。
 
-### III. 更多阅读： {#iii-更多阅读：}
 
----
-
-更多命令详见[docker命令大全](http://www.runoob.com/docker/docker-command-manual.html)
 

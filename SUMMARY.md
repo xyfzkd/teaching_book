@@ -1,10 +1,10 @@
 # Summary
 
 * [Preface](README.md)
+* [Getting Started](getting-started.md)
 
 ## Part I. Basic Tools
 
-* [0.Getting Started](getting-started.md)
 * [1.Linux](1.Linux.md)
 * [2.Blast](2.seqblast.md)
 * [3.Conservation](3.conservation.md)
@@ -32,6 +32,5 @@
 
 * [Appendix I. More Reading](9.more.md)
 * [Appendix II. Databases & Servers](10.appendix-ii.md)
-* [Appendix III. Docker Manual](getting-started.md)
-* [Appendix IV. Shared Scripts](appendix-shared-scripts.md)
+* [Appendix III. Shared Scripts](appendix-shared-scripts.md)
 
