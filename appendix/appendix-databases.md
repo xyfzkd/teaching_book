@@ -1,8 +1,6 @@
-# Public Projects, Databases and Servers
+# Appendix II. Databases & Servers
 
 ## **Projects**
-
----
 
 **1. ENCODE**:
 
@@ -17,8 +15,6 @@ find most genetic variants with frequencies of at least 1% in the populations st
 generate comprehensive, multi-dimensional maps of the key genomic changes in 33 types of cancer. [https://cancergenome.nih.gov/](https://cancergenome.nih.gov/)
 
 ## **Databases**
-
----
 
 **1. NCBI**:
 
@@ -48,15 +44,5 @@ gene expression in different TCGA tumor types. [http://gepia.cancer-pku.cn/index
 
 visualization, analysis and download of large-scale cancer genomics data sets. [http://www.cbioportal.org/index.do](http://www.cbioportal.org/index.do)
 
-
-
-
-
 ## **Servers**
-
----
-
-
-
-
 

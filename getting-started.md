@@ -2,21 +2,13 @@
 
 ## 预修课程准备
 
----
-
 1. 基本生物课程：如《遗传学》或《分子生物学》
-
 2. 基本统计课程：如《概率论》或《生物统计》
-
 3. 基本数学课程：如《线性代数》
-
 4. 基本物理课程：如《物理化学》或《生物物理》
-
 5. 基本计算机课程：如 C语言
 
 ## Virtual Machines
-
----
 
 ### VirtualBox
 
@@ -24,9 +16,9 @@ We provide a Linux virtual machine \(Download links: [TsinghuaCloud](https://clo
 
 ### Docker \(Recommended\)
 
-We  provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
+We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
 
-I. 安装： 
+I. 安装：
 
 课程文件提供已经下载好的适合Mac和Windows的安装包。
 
@@ -38,7 +30,7 @@ _**MacOS**_
 
 下载[Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)到本地目录，如~/Desktop，运行docker程序，然后在终端进行操作，基本命令如下：
 
-```
+```text
 cd ~/Desktop
 docker load -i bioinformatic.tar                   # 加载镜像
 
@@ -68,6 +60,4 @@ _**Windows**_
 如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。![](https://lulab.gitbooks.io/teaching/content/img/docker_switch.png)
 
 安装好docker后，按照提示开启hyper-v功能。运行docker，打开powershell，操作命令同MacOS版本。
-
-
 

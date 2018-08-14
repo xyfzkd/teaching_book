@@ -1,9 +1,6 @@
 # 6.RNA-seq: differential expression and alternative splicing
 
----
-
 ## 6.1 Differential expression
+
 ## 6.2 Alternative splicing
-
-
 
