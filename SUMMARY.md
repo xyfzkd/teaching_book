@@ -1,8 +1,9 @@
 # Summary
 
 * [Preface](README.md)
----
-Part I.  Basic Tools
+
+## Part I. Basic Tools
+
 * [0.Getting Started](getting-started.md)
 * [1.Linux](1.Linux.md)
 * [2.Blast](2.seqblast.md)
@@ -13,7 +14,7 @@ Part I.  Basic Tools
   * [4.3 GSEA](43-gsea.md)
 
 ---
-Part II. NGS Piplelines
+## Part II. NGS Pipelines
 * [5.Bowtie](5.seqbowtie.md)
 * [6.RNA-seq: differential expression and alternative splicing ](6.differential_alternative.md)
   * [6.1 Differential expression](6.1.basic_analyses.md)
@@ -21,16 +22,14 @@ Part II. NGS Piplelines
 * [7.CHIP-seq and Motif](7.chipseq_motif.md)
 
 ---
-Part III. Machine Learning
+## Part III. Machine Learning
 * [8.Machine Learning](8.machine_learning.md)
   * [8.1 eMaize Challenge ](8.machine_learning/81.md)
 
 ---
-Part IV. Plots
-
+## Part IV. Plots
 ---
-Appendix
-
+## Appendix
 * [Appendix I. More Reading](9.more.md)
 * [Appendix II. Databases & Servers](10.appendix-ii.md)
 * [Appendix III. Docker Manual](getting-started.md)
