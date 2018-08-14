@@ -8,7 +8,7 @@ Teaching Philosophy:
 
 ![](img/intro.png)
 
-本书是在清华大学《生物信息学导论》上机指南的基础上编写。
+本书在清华大学《生物信息学导论》课和《生物信息学实践》课上机指南的基础上编写。
 
 
 鲁志
@@ -23,8 +23,19 @@ Teaching Philosophy:
 | Contributors | Contact | Github |
 | --- | --- | --- |
 | Zhi J. Lu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | [http://github.com/lulab](http://github.com/lulab) |
-| Siqi Wang | http://bioinfo.life.tsinghua.edu.cn | - |
 | Gang Xu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
+| Xiaochen Xi | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
+| Xi Hu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
+| Siqi Wang | http://bioinfo.life.tsinghua.edu.cn | - |
+
+
+
+
+
+
+
+
+
 
 
 
