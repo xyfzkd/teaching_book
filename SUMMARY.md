@@ -30,7 +30,7 @@
 
 ## Appendix
 
-* [Appendix I. More Reading](9.more.md)
-* [Appendix II. Databases & Servers](10.appendix-ii.md)
+* [Appendix I. More Reading](appendix-more.md)
+* [Appendix II. Databases & Servers](appendix-databases.md)
 * [Appendix III. Shared Scripts](appendix-shared-scripts.md)
 
