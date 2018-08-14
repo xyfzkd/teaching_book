@@ -1,8 +1,32 @@
-# Docker基础
+# Getting Started
 
-**Docker使用指南**
+---
+## 预修课程准备
 
-### I. 安装： {#i-安装：}
+1. 基本生物课程：如《遗传学》或《分子生物学》
+
+2. 基本统计课程：如《概率论》或《生物统计》
+
+3. 基本数学课程：如《线性代数》
+
+4. 基本物理课程：如《物理化学》或《生物物理》
+
+5. 基本计算机课程：如 C语言
+
+
+---
+## Virtual Machines
+
+### VirtualBox
+
+We provide a Linux virtual machine \(Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)\), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
+
+### Docker (Recommended)
+
+We also provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
+
+
+I. 安装： {#i-安装：}
 
 ---
 
@@ -10,7 +34,7 @@
 
 也可以自行登录[docker官网](https://www.docker.com/get-docker)注册账号，下载Community Edition版本的docker安装程序进行安装。
 
-### II. 使用方法： {#ii-使用方法：}
+II. 使用方法： {#ii-使用方法：}
 
 ---
 
