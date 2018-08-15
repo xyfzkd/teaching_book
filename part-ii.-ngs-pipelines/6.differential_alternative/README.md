@@ -1,16 +1,12 @@
 # 6.RNA-seq: differential expression and alternative splicing
 
-## 6.1 Differential expression
+* **Differential expression**
 
-## 6.2 Alternative splicing
-
-
+* **Alternative splicing**
 
 
-
-
-## More Reading: RNA-seq Analysis Pipelines
 ---
+### More Reading: RNA-seq Analysis Pipelines
 
 * [A survey of best practices for RNA-seq data analysis -- 2016](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8#Abs1)
 
