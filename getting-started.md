@@ -55,9 +55,11 @@ docker rmi $(docker images -q)                        # 删除所有镜像（不
 
 _**Windows**_
 
-只有64位的Windows系统才能安装docker，以下操作在64位Win10系统执行。安装的时候选项如图。![](https://lulab.gitbooks.io/teaching/content/img/docker_installation.png)
+只有64位的Windows系统才能安装docker，以下操作在64位Win10系统执行。安装的时候选项如图。
+![](/.gitbook/assets/docker_installation.png)
 
-如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。![](https://lulab.gitbooks.io/teaching/content/img/docker_switch.png)
+如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。
+![](/.gitbook/assets/docker_switch.png)
 
 安装好docker后，按照提示开启hyper-v功能。运行docker，打开powershell，操作命令同MacOS版本。
 
