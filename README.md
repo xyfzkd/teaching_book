@@ -1,14 +1,12 @@
-# Preface
-
-## Bioinformatics Tutorial - Basics
-
+# Bioinformatics Tutorial - Basics
 ## 生物信息学实践教程
 
-Teaching Philosophy:
+## Preface
+---
 
-> **Study and Practice** 
->
-> **格物致知 - 知行合一**
+> Teaching Philosophy:
+> **Study and Practice**  **格物致知 知行合一**
+
 
 ![](.gitbook/assets/intro.png)
 
