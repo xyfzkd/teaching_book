@@ -1,14 +1,7 @@
 # Appendix I. Keep Learning
 
-## I. Bioinformatics Tutorial - Advanced
 
----
-
-[Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
-
-## 
-
-## II. Basics for Self-study
+## I. Basics for Self-study
 
 ---
 
@@ -112,6 +105,15 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 3. Statistics: [Statistics 110](https://itunes.apple.com/us/course/statistics-110-probability/id502492375) @iTunes U
 
 ## 
+
+
+## II. Advanced Tutorial
+
+---
+
+[Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
+
+
 
 
 

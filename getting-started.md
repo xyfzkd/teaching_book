@@ -8,6 +8,14 @@
 4. 基本物理课程：如《物理化学》或《生物物理》
 5. 基本计算机课程：如 C语言
 
+
+## Learning Materials
+
+1. Tutorial 
+   * **Basic Tutorial** \(this one\) 
+   * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
+2. [Github](https://github.com/lulab/Shared) for students (shared code and scripts）
+
 ## Virtual Machines
 
 ### VirtualBox
@@ -55,10 +63,10 @@ docker rmi $(docker images -q)                        # 删除所有镜像（不
 
 _**Windows**_
 
-只有64位的Windows系统才能安装docker，以下操作在64位Win10系统执行。安装的时候选项如图。
+只有64位的Windows系统才能安装docker，以下操作在64位Win10系统执行。安装的时候选项如图。  
 ![](/.gitbook/assets/docker_installation.png)
 
-如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。
+如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。  
 ![](/.gitbook/assets/docker_switch.png)
 
 安装好docker后，按照提示开启hyper-v功能。运行docker，打开powershell，操作命令同MacOS版本。

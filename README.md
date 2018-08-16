@@ -6,8 +6,11 @@
 
 ---
 
-> Teaching Philosophy:  
-> **Study and Practice**  **格物致知 知行合一**
+### Teaching Philosophy
+  
+**Study and Practice**  
+**格物致知 | 知行合一**
+
 
 ![](.gitbook/assets/intro.png)
 
