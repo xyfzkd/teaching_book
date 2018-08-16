@@ -2,11 +2,10 @@
 
 ## 预修课程准备
 
-1. 基本生物课程：如《遗传学》或《分子生物学》
-2. 基本统计课程：如《概率论》或《生物统计》
-3. 基本数学课程：如《线性代数》
-4. 基本物理课程：如《物理化学》或《生物物理》
-5. 基本计算机课程：如 C语言
+1. 基本生物课程：    如《遗传学》和/或《分子生物学》
+2. 基本统计课程：    如《概率论》和/或《生物统计》
+3. 基本数学课程：    如《线性代数》
+4. 基本计算机课程：如《C语言》
 
 ## Learning Materials
 
@@ -14,6 +13,8 @@
    * **Basic Tutorial** \(this one\) 
    * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
 2. [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
+
+> see more in _Appendix I. Keep Learning_
 
 ## Virtual Machines
 
@@ -25,50 +26,51 @@ We provide a Linux virtual machine \(Download links: [TsinghuaCloud](https://clo
 
 We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
 
-I. 安装：
+**I. 安装并运行docker程序：**
 
-课程文件提供已经下载好的适合Mac和Windows的安装包。
+从[docker官网](https://www.docker.com/get-docker)下载Mac或Windows版本的docker程序，安装并运行。
 
-也可以自行登录[docker官网](https://www.docker.com/get-docker)注册账号，下载Community Edition版本的docker安装程序进行安装。
+>**注意：** 如果用的是Windows系统，只有64位的Windows才能安装docker。
 
-II. 使用方法：
+
+**II. 装载docker镜像文件：**
+
+首先下载该教程的配套文件，[Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)，到本地目录，如~/Desktop。
+
 
 _**MacOS**_
 
-下载[Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)到本地目录，如~/Desktop，运行docker程序，然后在终端进行操作，基本命令如下：
+首先检查docker程序已经运行，然后打开**Terminal**(终端)程序进行操作，基本命令如下：
 
-```text
-cd ~/Desktop
-docker load -i bioinformatic.tar                   # 加载镜像
 
-docker images                                       # 查询镜像
+```bash
+##install and run a centos docker for the first time
+docker run -it --name=centos -h centos -v ~/Documents/centos/:/mac centos
+# docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
+# simple version docker run -it centos
 
-docker run --name bioinfor -it ubuntu:latest    # 运行容器进行后续操作
+##add user
+useradd john
+passwd john
+su john
 
-> cd /home/cs
+###detach (pause) and attach
+ctrl+p+q     # detach退出: 容器不关闭，容器内部正在运行的任务不会停止. ctrl+p+q表示按住ctrl不动，先按下p，后按下q
+docker attach container_name # attach进入
 
-docker ps -a                                        # 查询容器信息（包括container_id)
 
-docker commit -a author_name -m other_message container_id my_docker      # 从容器建立镜像
-
-docker save -o my_docker.tar my_docker              # 保存镜像
-
-docker kill $container_id                           # 终止容器
-
-docker rm $(docker ps -q -a)                        # 删除所有容器
-
-docker rmi $(docker images -q)                        # 删除所有镜像（不会删除保存的tar文件）
+###exit and delete a container
+exit #inside docker as root, then exit
+docker rm container_name
 ```
+
 
 _**Windows**_
 
-只有64位的Windows系统才能安装docker，以下操作在64位Win10系统执行。安装的时候选项如图。  
-![](/.gitbook/assets/docker_installation.png)
+安装好docker后，按照提示开启hyper-v功能。运行docker，打开**powershell**程序进行操作，操作命令同MacOS版本。
 
-如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。  
+> **注意：** 如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。
 ![](/.gitbook/assets/docker_switch.png)
-
-安装好docker后，按照提示开启hyper-v功能。运行docker，打开powershell，操作命令同MacOS版本。
 
 
 
