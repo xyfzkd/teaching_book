@@ -1,6 +1,14 @@
-# Appendix I. More Reading
+# Appendix I. Keep Learning
 
-## I. Basics for Self-study
+## I. Bioinformatics Tutorial - Advanced
+
+---
+
+[Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
+
+## 
+
+## II. Basics for Self-study
 
 ---
 
@@ -81,10 +89,12 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
    > 25.5重点回顾
 
 2. Python \(or Perl\)
+
    * 《笨办法学 Python》（《Learn Python The Hard Way》） 
    * 《Python编程入门》
    * [http://www.pythonlearn.com/](http://www.pythonlearn.com/)
    * 《Beginning Perl for Bioinformatics》
+
 3. R \(or MATLAB\):
    * Quick R \([online](http://www.statmethods.net/)\)
    * 《R语言实战》 \(《R in action》\)
@@ -101,10 +111,7 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 2. [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \[UC SanDiego\]
 3. Statistics: [Statistics 110](https://itunes.apple.com/us/course/statistics-110-probability/id502492375) @iTunes U
 
+## 
 
-## II. Advanced Reading and Learning
----
-
-[Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
 
 

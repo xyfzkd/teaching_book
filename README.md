@@ -1,12 +1,13 @@
 # Bioinformatics Tutorial - Basics
+
 ## 生物信息学实践教程
 
 ## Preface
+
 ---
 
-> Teaching Philosophy:
+> Teaching Philosophy:  
 > **Study and Practice**  **格物致知 知行合一**
-
 
 ![](.gitbook/assets/intro.png)
 
@@ -18,11 +19,11 @@
 
 ### Contributors
 
-| Contributors | Contact | Github |
+| Contributors | Chaptors | Github |
 | :--- | :--- | :--- |
-| Zhi J. Lu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | [http://github.com/lulab](http://github.com/lulab) |
-| Gang Xu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
-| Xiaochen Xi | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
+| Zhi J. Lu | All | [http://github.com/lulab](http://github.com/lulab) |
+| Gang Xu | Getting Started; | - |
+| Xiaochen Xi | Plots | - |
 | Xi Hu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
 | Siqi Wang | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
 
