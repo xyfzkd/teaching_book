@@ -14,7 +14,7 @@
    * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
 2. [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
 
-> see more in _Appendix I. Keep Learning_
+> see more learning materials in _Appendix I. Keep Learning_
 
 ## Virtual Machines
 
