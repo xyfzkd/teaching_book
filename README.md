@@ -26,7 +26,7 @@
 | Whole book | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
 | Getting Started | Gang Xu \(Zhuoer Dong\) |  |
 | 1.Linux | Gang Xu \(Siqi Wang\) |  |
-| 2.Blast | Gang Xu |  |
+| 2.Blast | Gang Xu \(Siqi Wang\) |  |
 | 3.Conservation Analysis | Xi Hu \(Gang Xu\) |  |
 | 4. Function Analysis |  |  |
 | 4.1 GO | Gang Xu |  |
@@ -34,7 +34,7 @@
 | 4.3 GSEA | Zhuoer Dong |  |
 | 5.Mapping | Gang Xu \(Siqi Wang\) |  |
 | 6.RNA-seq |  |  |
-| 6.1 Differential Expression | Gang Xu \(Jingyi Cao\) |  |
+| 6.1 Differential Expression | Gang Xu \(Siqi Wang\) |  |
 | 6.2 Alternative Splicing | Yumin Zhu? |  |
 | 7.ChIP-seq |  |  |
 | 7.1 Peak Calling | Zhuoer Dong? |  |
