@@ -1,10 +1,30 @@
-## 附录： 文本编辑器 Vi /Vim
+## 附录： 文本编辑器
 
 ---
 
-> 简明Vim攻略： [原文链接](https://legacy.gitbook.com/book/lulab/teaching/edit#)    [中文版链接](https://legacy.gitbook.com/book/lulab/teaching/edit#)
+### A. **Atom **
 
-3种工作模式: 编辑模式、 一般模式\(Visual\)、命令模式.
+[_**Tutorial and Tips**_](https://www.evernote.com/l/ABJeb9FdBc1BC6AZSgWh4Ujc_StdcFYl-kw)_**​**_
+
+> A hackable text editor for the 21st century
+
+### B. Vi/**Vim**
+
+[_**Learn Vim Progressively**_](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)_**​**_
+
+> Learn [vim](http://www.vim.org/) and it will be your last text editor. There isn’t any better text editor that I know of. It is hard to learn, but incredible to use.I suggest you teach yourself Vim in 4 steps:
+>
+> 1. **Survive**
+>
+> 2. Feel comfortable
+>
+> 3. Feel Better, Stronger, Faster
+>
+> 4. Use superpowers of vim
+
+
+
+Vim有3种工作模式: 编辑模式、 一般模式\(Visual\)、命令模式.
 
 模式切换方法:
 
@@ -13,6 +33,8 @@
 一般模式到编辑模式: 输入 “i、a、o”等
 
 一般模式到命令模式: 输入“：、／、？”
+
+
 
 #### 1. 一般模式下:
 
