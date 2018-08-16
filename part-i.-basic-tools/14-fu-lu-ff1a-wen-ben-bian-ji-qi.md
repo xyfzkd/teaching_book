@@ -1,0 +1,96 @@
+## 附录： 文本编辑器 Vi /Vim
+
+---
+
+> 简明Vim攻略： [原文链接](https://legacy.gitbook.com/book/lulab/teaching/edit#)    [中文版链接](https://legacy.gitbook.com/book/lulab/teaching/edit#)
+
+3种工作模式: 编辑模式、 一般模式\(Visual\)、命令模式.
+
+模式切换方法:
+
+编辑模式到一般模式: 按 Esc
+
+一般模式到编辑模式: 输入 “i、a、o”等
+
+一般模式到命令模式: 输入“：、／、？”
+
+#### 1. 一般模式下:
+
+上下左右移动光标: 键盘方向键
+
+屏幕向下移动半页: ctrl+d
+
+屏幕向上移动半页: ctrl+u
+
+移动到当前行的最前面字符处: ^ 或者 0
+
+移动到当前行的最后面字符处: $
+
+移动到文件的第一行: gg
+
+移动到文件的最后一行: G
+
+移动到文件的第 n 行: n
+
+复制： y
+
+复制: nyy \(将当前行开始的 n 行内容复制到缓冲区\)
+
+粘贴： p
+
+粘贴: p \(将缓冲区的内容复制到光标所在处\)
+
+删除： d
+
+删除: ndd \(删除当前行及其后 n-1 行\)
+
+n 移动到下一个 string 字符串
+
+N 移动到上一个 string 字符串
+
+取消前一次操作: u
+
+重做前一次操作: ctrl+r
+
+查找字符串:
+
+```text
+/string       #向光标之下查找字符串 string
+
+？string      #向光标之上查找字符串 string
+```
+
+替换字符串:
+
+```text
+:%s/string1/string2/
+```
+
+#### 2. 命令模式下：
+
+文件存盘: :w
+
+存盘并退出: :wq
+
+不存盘退出： q!
+
+打开文件: :r file\_name
+
+新建文件: :e file\_name
+
+文件另存为 : :w file\_name
+
+移动到指定的行处: :n
+
+鼠标定位: :set mouse=a
+
+自动缩进: :set autoindent
+
+显示行号: :set number
+
+执行 shell 命令: :!command
+
+#### 3.编辑模式下：
+
+可进行文本编辑。
+
