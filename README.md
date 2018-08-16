@@ -2,8 +2,6 @@
 
 ## 生物信息学实践教程
 
-## Preface
-
 ---
 
 ### Teaching Philosophy
@@ -21,27 +19,28 @@
 
 ### Contributors
 
-| Chapter | Contributors | Notes |
+| Chapter | Contributors | Testing/Notes |
 | --- | --- | --- |
-| Whole book | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
-| Getting Started | Gang Xu \(Zhuoer Dong\) |  |
-| 1.Linux | Gang Xu \(Siqi Wang\) |  |
-| 2.Blast | Gang Xu \(Siqi Wang\) |  |
-| 3.Conservation Analysis | Xi Hu \(Gang Xu\) |  |
+| Getting Started | Gang Xu \(Zhuoer Dong\) | Xi Hu |
+| 1.Linux | Gang Xu \(Siqi Wang\) | Xi Hu |
+| 2.Blast | Gang Xu \(Siqi Wang\) | Xi Hu |
+| 3.Conservation Analysis | Xi Hu \(Gang Xu\) | Kexin Kang |
 | 4. Function Analysis |  |  |
-| 4.1 GO | Gang Xu |  |
-| 4.2 KEGG | Gang Xu |  |
-| 4.3 GSEA | Zhuoer Dong |  |
-| 5.Mapping | Gang Xu \(Siqi Wang\) |  |
+| 4.1 GO | Gang Xu | Wenjing Xing |
+| 4.2 KEGG | Gang Xu | Hongke Wang |
+| 4.3 GSEA | Zhuoer Dong | Jingyi Cao |
+| 5.Mapping | Gang Xu \(Siqi Wang\) | Zhuoer Dong |
 | 6.RNA-seq |  |  |
-| 6.1 Differential Expression | Gang Xu \(Siqi Wang\) |  |
-| 6.2 Alternative Splicing | Yumin Zhu? |  |
+| 6.1 Differential Expression | Gang Xu \(Siqi Wang\) | Zhuoer Dong |
+| 6.2 Alternative Splicing | Yumin Zhu? | Jingyi Cao |
 | 7.ChIP-seq |  |  |
-| 7.1 Peak Calling | Zhuoer Dong? |  |
-| 7.2 Motif Analysis | Binbin Shi? |  |
-| Appendix I. Keep Learning | Zhi J. Lu |  |
-| Appendix II. Databases & Servers | Yumin Zhu |  |
-| Appendix III. Scripts & Plots | Xiaocheng Xi |  |
+| 7.1 Peak Calling | Zhuoer Dong? | Yumin Zhu |
+| 7.2 Motif Analysis | Binbin Shi? | Yumin Zhu |
+| Appendix I. Keep Learning | Zhi J. Lu | -- |
+| Appendix II. Databases & Servers | Yumin Zhu | Wenjin Xing |
+| Appendix III. Scripts & Plots | Xiaocheng Xi | Siqi Wang |
+| **Docker** | Gang Xu | [Download](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1) |
+| **Whole Book** | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
 
 ### Join Us
 
