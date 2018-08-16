@@ -21,17 +21,17 @@
 
 | Chapter | Contributors | Testing/Notes |
 | --- | --- | --- |
-| Getting Started | Gang Xu \(Zhuoer Dong\) | Xi Hu |
-| 1.Linux | Gang Xu \(Siqi Wang\) | Xi Hu |
+| Getting Started | Gang Xu \(Zhi J. Lu\) | Xi Hu |
+| 1.Linux | Siqi Wang \(Gang Xu\) | Xi Hu |
 | 2.Blast | Gang Xu \(Siqi Wang\) | Xi Hu |
 | 3.Conservation Analysis | Xi Hu \(Gang Xu\) | Kexin Kang |
 | 4. Function Analysis |  |  |
 | 4.1 GO | Gang Xu | Wenjing Xing |
 | 4.2 KEGG | Gang Xu | Hongke Wang |
 | 4.3 GSEA | Zhuoer Dong | Jingyi Cao |
-| 5.Mapping | Gang Xu \(Siqi Wang\) | Zhuoer Dong |
+| 5.Mapping | Siqi Wang \(Gang Xu\) | Zhuoer Dong |
 | 6.RNA-seq |  |  |
-| 6.1 Differential Expression | Gang Xu \(Siqi Wang\) | Zhuoer Dong |
+| 6.1 Differential Expression | Siqi Wang \(Gang Xu\) | Zhuoer Dong |
 | 6.2 Alternative Splicing | Yumin Zhu? | Jingyi Cao |
 | 7.ChIP-seq |  |  |
 | 7.1 Peak Calling | Zhuoer Dong? | Yumin Zhu |
