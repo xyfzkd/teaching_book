@@ -19,11 +19,7 @@
 
 ### Contributors
 
-
-
-https://www.evernote.com/l/ABJIaHr5LVJCFZnmaODT2IHFblNSYS\_822U
-
-
+[https://www.evernote.com/l/ABJIaHr5LVJCFZnmaODT2IHFblNSYS\_822U](https://www.evernote.com/l/ABJIaHr5LVJCFZnmaODT2IHFblNSYS_822U)
 
 ### Join Us
 
