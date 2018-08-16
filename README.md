@@ -21,13 +21,26 @@
 
 ### Contributors
 
-| Contributors | Chaptors | Github |
-| :--- | :--- | :--- |
-| Zhi J. Lu | All | [http://github.com/lulab](http://github.com/lulab) |
-| Gang Xu | Getting Started; | - |
-| Xiaochen Xi | Plots | - |
-| Xi Hu | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
-| Siqi Wang | [http://bioinfo.life.tsinghua.edu.cn](http://bioinfo.life.tsinghua.edu.cn) | - |
+| Chapter | Contributors | Notes |
+| --- | --- | --- |
+| Getting Started | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
+| 1.Linux | Gang Xu \(Siqi Wang\) |  |
+| 2.Blast | Gang Xu |  |
+| 3.Conservation Analysis | Xi Hu \(Gang Xu\) |  |
+| 4. Function Analysis |  |  |
+| 4.1 GO | Gang Xu |  |
+| 4.2 KEGG | Gang Xu |  |
+| 4.3 GSEA | Zhuoer Dong |  |
+| 5.Mapping | Gang Xu \(Siqi Wang\) |  |
+| 6.RNA-seq |  |  |
+| 6.1 Differential Expression | Gang Xu \(Jingyi Cao\) |  |
+| 6.2 Alternative Splicing | Yumin Zhu? |  |
+| 7.ChIP-seq |  |  |
+| 7.1 Peak Calling | Zhuoer Dong? |  |
+| 7.2 Motif Analysis | Binbin Shi? |  |
+| Appendix I. Keep Learning | Zhi J. Lu |  |
+| Appendix II. Databases & Servers | Yumin Zhu |  |
+| Appendix III. Scripts & Plots | Xiaocheng Xi |  |
 
 ### Join Us
 
@@ -43,10 +56,9 @@
 
 [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-
-
-
 ---
 
-> [Markdown Syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) | [Excel Table to Markdown](https://www.tablesgenerator.com/markdown_tables) | [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)
+> [Markdown Syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) \| [Excel Table to Markdown](https://www.tablesgenerator.com/markdown_tables) \| [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)
+
+
 
