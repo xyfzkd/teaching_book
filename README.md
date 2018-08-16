@@ -23,7 +23,8 @@
 
 | Chapter | Contributors | Notes |
 | --- | --- | --- |
-| Getting Started | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
+| Whole book | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
+| Getting Started | Gang Xu \(Zhuoer Dong\) |  |
 | 1.Linux | Gang Xu \(Siqi Wang\) |  |
 | 2.Blast | Gang Xu |  |
 | 3.Conservation Analysis | Xi Hu \(Gang Xu\) |  |
