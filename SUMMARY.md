@@ -19,7 +19,9 @@
 * [6.RNA-seq](part-ii.-ngs-pipelines/6.differential_alternative/README.md)
   * [6.1 Differential Expression](part-ii.-ngs-pipelines/6.differential_alternative/6.1.basic_analyses.md)
   * [6.2 Alternative Splicing](part-ii.-ngs-pipelines/6.differential_alternative/6.2.alternative.md)
-* [7.CHIP-seq](part-ii.-ngs-pipelines/7.chipseq_motif.md)
+* [7.ChIP-seq](part-ii.-ngs-pipelines/7.chipseq_motif.md)
+  * [7.1 Peak Calling](part-ii.-ngs-pipelines/71-peak-calling.md)
+  * [7.2 Motif Analysis](part-ii.-ngs-pipelines/72-motif-analysis.md)
 
 ## Appendix
 
