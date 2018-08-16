@@ -39,7 +39,7 @@
 | Appendix I. Keep Learning | Zhi J. Lu | -- |
 | Appendix II. Databases & Servers | Yumin Zhu | Wenjin Xing |
 | Appendix III. Scripts & Plots | Xiaocheng Xi | Siqi Wang |
-| **Docker** | Gang Xu | [Download](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1) |
+| **Docker** | Gang Xu (Zhuoer, Longchen) | [Download](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1) |
 | **Whole Book** | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
 
 ### Join Us
