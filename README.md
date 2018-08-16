@@ -19,28 +19,33 @@
 
 ### Contributors
 
-| Chapter | Contributors | Testing/Notes |
-| --- | --- | --- |
-| Getting Started | Gang Xu \(Zhi J. Lu\) | Xi Hu |
-| 1.Linux | Siqi Wang \(Gang Xu\) | Xi Hu |
-| 2.Blast | Gang Xu \(Siqi Wang\) | Xi Hu |
-| 3.Conservation Analysis | Xi Hu \(Gang Xu\) | Kexin Kang |
-| 4. Function Analysis |  |  |
-| 4.1 GO | Gang Xu | Wenjing Xing |
-| 4.2 KEGG | Gang Xu | Hongke Wang |
-| 4.3 GSEA | Zhuoer Dong | Jingyi Cao |
-| 5.Mapping | Siqi Wang \(Gang Xu\) | Zhuoer Dong |
-| 6.RNA-seq |  |  |
-| 6.1 Differential Expression | Siqi Wang \(Gang Xu\) | Zhuoer Dong |
-| 6.2 Alternative Splicing | Yumin Zhu? | Jingyi Cao |
-| 7.ChIP-seq |  |  |
-| 7.1 Peak Calling | Zhuoer Dong? | Yumin Zhu |
-| 7.2 Motif Analysis | Binbin Shi? | Yumin Zhu |
-| Appendix I. Keep Learning | Zhi J. Lu | -- |
-| Appendix II. Databases & Servers | Yumin Zhu | Wenjin Xing |
-| Appendix III. Scripts & Plots | Xiaocheng Xi | Siqi Wang |
-| **Docker** | Gang Xu (Zhuoer, Longchen) | [Download](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1) |
-| **Whole Book** | Zhi J. Lu | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn) |
+
+
+
+| Chapter |   | Contributors |   | Testing/Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| Getting Started | \[x\] |  Zhi J. Lu \(Gang Xu\) | \[\] | Xi Hu |
+| 1.Linux | \[x\] | Siqi Wang \(Gang Xu\) | \[\] | Xi Hu |
+| 2.Blast | \[x\] | Gang Xu \(Siqi Wang\) | \[\] | Xi Hu |
+| 3.Conservation Analysis | \[x\] | Xi Hu \(Gang Xu\) | \[\] | Kexin Kang |
+| 4. Function Analysis |   |  |   |  |
+| 4.1 GO | \[x\] | Gang Xu | \[\] | Wenjing Xing |
+| 4.2 KEGG | \[\] | Gang Xu | \[\] | Hongke Wang |
+| 4.3 GSEA | \[x\] | Zhuoer Dong | \[\] | Yumin Zhu |
+| 5.Mapping | \[x\] | Siqi Wang \(Gang Xu\) | \[\] | Zhuoer Dong |
+| 6.RNA-seq |   |  | \[\] |  |
+| 6.1 Differential Expression | \[x\] | Siqi Wang \(Gang Xu\) | \[\] | Zhuoer Dong |
+| 6.2 Alternative Splicing | \[\] | Zhuoer Dong \(Yumin Zhu\) | \[\] | Jingyi Cao |
+| 7.ChIP-seq |   |  | \[\] |  |
+| 7.1 Peak Calling | \[\] |  Jingyi Cao \(Zhuoer Dong\) | \[\] | Jingjian |
+| 7.2 Motif Analysis | \[\] |  Jingyi Cao \(Zhuoer Dong\) | \[\] | Jingjian |
+| Appendix I. Keep Learning | \[x\] | Zhi J. Lu | \[\] | -- |
+| Appendix II. Databases & Servers | \[x\] | Yumin Zhu \(add more before 10.10.\) | \[\] | Wenjin Xing |
+| Appendix III. Scripts & Plots | \[\] | Xiaocheng Xi \(Zhuoer Dong\) | \[\] | Siqi Wang |
+| Docker | \[\] | Gang Xu, Zhuoer, Longchen | \[\] | [Download](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1) |
+| Whole Book |   | Zhi J. Lu |   | [Github](http://github.com/lulab), [Web](http://bioinfo.life.tsinghua.edu.cn/) |
+
+
 
 ### Join Us
 
