@@ -8,13 +8,12 @@
 4. 基本物理课程：如《物理化学》或《生物物理》
 5. 基本计算机课程：如 C语言
 
-
 ## Learning Materials
 
 1. Tutorial 
    * **Basic Tutorial** \(this one\) 
    * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
-2. [Github](https://github.com/lulab/Shared) for students (shared code and scripts）
+2. [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
 
 ## Virtual Machines
 
@@ -70,4 +69,6 @@ _**Windows**_
 ![](/.gitbook/assets/docker_switch.png)
 
 安装好docker后，按照提示开启hyper-v功能。运行docker，打开powershell，操作命令同MacOS版本。
+
+
 
