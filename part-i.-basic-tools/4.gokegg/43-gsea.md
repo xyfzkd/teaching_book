@@ -1,4 +1,190 @@
 # 4.3 GSEA
 
+## Pipeline
+
+![](.gitbook/assets/gsea-home.gif)
+
+## data structure
+
+
+- 程序下载与安装：
+
+  - 进入 [GSEA官方下载页面](http://software.broadinstitute.org/gsea/downloads.jsp) ^[需要登录方可进入（只需输入邮箱即可）] ，在 `Software` tab下载 "javaGSEA Java Jar file"
+
+  - 可选，安装 qGSEA（打开R）
+    
+    ```r
+    if (!('devtools' %in% .packages(T))) install.packages('devtools')
+    devtools::install_github('dongzhuoer/qGSEA')
+    ```
+
+-  准备材料：至 <https://www.ncbi.nlm.nih.gov/geo/browse/?view=series&display=20> 找到感兴趣的数据集（如 GSE19161）
+
+### input
+
+| **File format**       | **Information contained in file** | **File description**                                       |
+|-----------------------|-----------------------------------|------------------------------------------------------------|
+| res, gct, pcl, or txt | Expression dataset                | Contains expression value for each feature in each sample. |
+| cls                   | Phenotype labels                  | Associates each sample with a phenotype.                   |
+| gmx or gmt            | Gene sets                         | gives the gene set name and list of features in it.        |
+| Chip                  | Chip annotations                  | Lists each probe on and its matching HUGO gene symbol.     |
+
+参见 <http://software.broadinstitute.org/gsea/doc/GSEAUserGuideTEXT.htm#_Preparing_Data_Files>
+
+### output
+
+网页格式的输出信息。  
+参见 <http://software.broadinstitute.org/gsea/doc/GSEAUserGuideTEXT.htm#_Interpreting_GSEA_Results>
+
+
+## Running Scripts
+
+这里我们分析 GSE19161 数据集中与 _EIF4G2_ 基因的表达量显著相关的 gene set。
+
+
+
+### 准备 GSEA 输入文件
+
+官方指南见 <http://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats>
+
+如果你想利用 GEO 的原始数据，[qGSEA](https://github.com/dongzhuoer/qGSEA) 这个R包会让你轻松许多：
+
+1. 获取原始数据（打开R）
+
+   ```r
+   dir.create('raw/')
+
+   download.file(rGEO::gse_soft_ftp('GSE19161'), 'raw/GSE19161_family.soft.gz')
+   download.file(rGEO::gse_matrix_ftp('GSE19161'), 'raw/GSE19161_series_matrix.txt.gz')
+   ```
+
+1. 生成 GSEA 输入文件（打开R）
+
+   ```r
+   dir.create('input/')
+
+   qGSEA::make_gsea_input(
+       matrix_file = 'raw/GSE19161_series_matrix.txt.gz',
+       soft_file = 'raw/GSE19161_family.soft.gz',
+       output_dir = 'input/', 
+       gene = 'EIF4G2'
+   )
+   ```
+
+1. 现在目录结构如下：
+   <!-- `tree` --->
+   ```
+   gsea
+   ├── input
+   │   ├── GSE19161.chip
+   │   ├── GSE19161.cls
+   │   └── GSE19161.txt
+   └── raw
+       ├── GSE19161_family.soft.gz
+       └── GSE19161_series_matrix.txt.gz
+   ```
+
+### 运行GSEA {#run-gsea}
+
+打开 GSEA： `java -jar /path/to/gsea-x.y.jar`。
+
+1. 用文件管理器打开 `input/` 文件夹，将上述生成的文件拖拽到指定区域即可。
+
+   ![](.gitbook/assets/gsea-load-data.gif)
+
+   图1 载入数据
+
+2. 选择合适的参数。这里我们使用 [hallmark](https://doi.org/10.1016/j.cels.2015.12.004) 
+       这个 gene set collection (`h.all.v6.1.symbols.gmt`)。另外，由于我们使用的是连续性表型
+       （_EIF4G2_ 基因的表达量），Metric 要选 `Pearson`。
+
+![](.gitbook/assets/gsea-run.gif)
+
+图2 运行GSEA
+
+3. 运行成功后，`Status` 会显示为 `Success`，点击其即可查看输出。在本例中，
+        没有一个 gene set 通过了显著性检验。
+
+![](.gitbook/assets/gsea-result.gif)
+
+图3 GSEA 的输出
+
+### 在 command line 中运行
+
+GSEA 也可以以 command line 的方式运行，请参见 
+    <http://software.broadinstitute.org/gsea/doc/GSEAUserGuideTEXT.htm#_Running_GSEA_from_the%20Command%20Line>。
+
+官方推荐的方法是在 GUI 中运行成功后，点击 `Command` 按钮，即可获取本次运行所用的命令。
+
+![](.gitbook/assets/gsea-command.gif)
+
+图4 GSEA 获取 command
+
+在实践中，使用默认值的参数也可以不指定。例如，完成上述示例的最小命令如下：
+
+<!-- `java -cp /media/computer/opt/GSEA/gsea-3.0.jar` -->
+
+```
+java -cp /path/to/gsea-x.y.jar -Xmx512m xtools.gsea.Gsea \
+    -res input/GSE19161.txt -cls input/GSE19161.cls#EIF4G2 -chip input/GSE19161.chip -out output \
+    -gmx gseaftp.broadinstitute.org://pub/gsea/gene_sets_final/h.all.v6.2.symbols.gmt -metric Pearson
+```
+
+其中第一行指定运行的程序，第二行是输入/输出文件的路径（其中 `#EIF4G2` 应该归于下一条）。第三行参见[GUI流程](#run-gsea)的第 2 步。
+
+输出结果为 `output/my_analysis.Gsea.1534401449035/` （最后的数字每次运行都不尽相同）。其中 `my_analysis` 可以用 `-rpt_label` 指定为其它值，如 `-rpt_label GSE19161`。但GSEA会自动在其后添加 `Gsea.1534401449035` 来组成输出文件夹名。
+
+## Tips/Utilities
+
+1. 由于基因芯片仅分析一部分基因，有些 gene set 会因为包含的基因过少而被剔除
+        ^[比如某一 gene set 含有A、B、C、D、E、F等基因，而某一张芯片只有针对A、B
+        的探针，这时 GSEA 就会剔除该基因集。]。在极端情况下，可能所有的 gene set 
+        都会被剔除，这时就会发生如下错误：
+   
+   ![](.gitbook/assets/gsea-no-gene-set-error.png)
+
+   更多信息请参见 <http://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/1001>
+
+<!--
+
+use
+
+```r
+qGSEA::make_gsea_input(
+    system.file('extdata/GSE51280_series_matrix.txt.gz', package = 'rGEO'),
+    system.file('extdata/GSE51280_family.soft.gz', package = 'rGEO'), '.', 'MYC'
+)
+```
+
+and `h.all.v6.1.symbols.gmt` to reproduce this error
+
+-->
+
+1. 分析离散型表型
+
+1. 打开 qGSEA 生成的 `.chip` 文件可以找到基因名。
+
+## Homework and more
+
+1. 分析 GSE2251 中与转染载体（AdERalpha vs AdLacZ）显著相关的 gene set，分析与其中某一个基因的表达量显著相关的 gene set。
+1. 分析 GSE2251 中与 _TP53_ 基因的表达量显著相关的 gene set。
+
+<!--
+
+use
+
+```r
+download.file(rGEO::gse_soft_ftp('GSE2251'), 'GSE2251_family.soft.gz')
+download.file(rGEO::gse_matrix_ftp('GSE2251'), 'GSE2251_series_matrix.txt.gz')
+
+
+qGSEA::make_gsea_input(
+    matrix_file = 'GSE2251_series_matrix.txt.gz', 
+    soft_file = 'GSE2251_family.soft.gz',
+    '.', 'TP53'
+)
+```
+
+-->
 
 
