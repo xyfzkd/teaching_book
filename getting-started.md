@@ -44,24 +44,30 @@ _**MacOS**_
 
 
 ```bash
+##load image into docker
+docker load < ~/Desktop/bioinformatic.tar
+
 ##install and run a centos docker for the first time
-docker run -it --name=centos -h centos -v ~/Documents/centos/:/mac centos
+docker run -it --name=bioinfor -h bioinfor  ubuntu:latest
 # docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
 # simple version docker run -it centos
 
 ##add user
-useradd john
-passwd john
-su john
+useradd -m test -s /bin/bash
+passwd test
+usermod -aG sudo test
+chown -R test /home/cs/Bioinfo_Lab/
+su test
+
 
 ###detach (pause) and attach
 ctrl+p+q     # detach退出: 容器不关闭，容器内部正在运行的任务不会停止. ctrl+p+q表示按住ctrl不动，先按下p，后按下q
-docker attach container_name # attach进入
+docker attach bioinfor # attach进入
 
 
 ###exit and delete a container
 exit #inside docker as root, then exit
-docker rm container_name
+docker rm bioinfor
 ```
 
 
@@ -69,8 +75,8 @@ _**Windows**_
 
 安装好docker后，按照提示开启hyper-v功能。运行docker，打开**powershell**程序进行操作，操作命令同MacOS版本。
 
-> **注意：** 如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本。
-![](/.gitbook/assets/docker_switch.png)
+> **注意：** 如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本(Switch to Linux containers)。
+
 
 
 
