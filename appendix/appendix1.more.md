@@ -3,7 +3,7 @@
 
 ## I. Basics for Self-study
 
----
+------
 
 _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以上的程序； 2. 在线课程的正式或非正式认可，3. 任何其他官方official证书. Examples）_
 
@@ -104,12 +104,10 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 2. [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \[UC SanDiego\]
 3. Statistics: [Statistics 110](https://itunes.apple.com/us/course/statistics-110-probability/id502492375) @iTunes U
 
-## 
-
 
 ## II. Advanced Tutorial
 
----
+------
 
 [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
 
