@@ -7,26 +7,26 @@
 1. Set work directory
 
    ```r
-   setwd("~/gitbook")
+   setwd("/home/test/plot")
    ```
 
 1. Load the data
 
    ```r
-   data <-read.table("box_plots_mtcars.txt",header=T,sep="\t")
+   data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
    df <- data[, c("mpg", "cyl", "wt")]
    
-   df2 <-read.table("histogram_plots.txt",header=T,sep="\t")
+   df2 <-read.table("input/histogram_plots.txt",header=T,sep="\t")
    
-   df3 <- read.table("volcano_plots.txt", header=TRUE)
+   df3 <- read.table("input/volcano_plots.txt", header=TRUE)
    
-   df4 <- read.table("manhattan_plots_gwasResults.txt",header=T,sep="\t")
+   df4 <- read.table("input/manhattan_plots_gwasResults.txt",header=T,sep="\t")
    
-   df5 <-read.table("heatmaps.txt",header=T,sep="\t")
+   df5 <-read.table("input/heatmaps.txt",header=T,sep="\t")
    dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
    row.names(dm) <- df5[,1]
    
-   df6 <- read.table("ballon_plots_GO.txt", header=T, sep="\t")
+   df6 <- read.table("input/ballon_plots_GO.txt", header=T, sep="\t")
    ```
 
 1. Install and library packages
@@ -53,7 +53,7 @@
    For example,
    
    ```r
-   pdf("1.1.Basic_boxplot.pdf", height = 3, width = 3)
+   pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
    ggplot(df, aes(x=cyl, y=mpg)) + 
      geom_boxplot(fill="gray")+
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
@@ -68,7 +68,7 @@
      geom_boxplot(fill="gray")+
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
      theme_classic()
-   ggsave("1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
+   ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
    ```
 
 ## 1. Box plots {#box-plot}
