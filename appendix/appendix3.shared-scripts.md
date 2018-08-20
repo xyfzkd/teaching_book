@@ -1,24 +1,6 @@
-# Appendix III. Scripts and Plots
+# Appendix III. Plots & Scripts
 
-## Shared Scripts
-
-------
-
-### scripts
-
-* Lu Lab: https://github.com/lulab/shared_scripts
-* Zhi J. Lu: https://github.com/urluzhi/scripts
-
-### Plots
-
-------
-
-* Lu Lab: https://github.com/lulab/shared_scripts/tree/master/plots
-* Zhi J. Lu: https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot
-
-
-
-## Load the data and install packages {#plot-setup}
+## 0. Load the data and install packages {#plot-setup}
 
 1. Set work directory
 
@@ -87,7 +69,7 @@
    ggsave("1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
    ```
 
-## Box plots {#box-plot}
+## 1. Box plots {#box-plot}
 
 1. Basic box plot
 
@@ -129,7 +111,7 @@
    
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Violin plots {#violin-plot}
+## 2. Violin plots {#violin-plot}
 
 1. Basic violin plot
 
@@ -217,7 +199,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Histogram plots {#histogram-plot}
+## 3. Histogram plots {#histogram-plot}
 
 1. Basic histogram plot
 
@@ -279,7 +261,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-gu
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Density plots {#density-plot}
+## 4. Density plots {#density-plot}
 
 1. Basic density
    
@@ -375,7 +357,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
 
-## Dot plots {#dot-plot}
+## 5. Dot plots {#dot-plot}
 
 1. Basic dot plots
    
@@ -449,7 +431,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Scatter plots {#scatter-plot}
+## 6. Scatter plots {#scatter-plot}
 
 1. Basic scatter plots
    
@@ -488,7 +470,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
-## Volcano plots {#volcano-plot}
+## 7. Volcano plots {#volcano-plot}
 
 ```r
 head(df3)
@@ -527,7 +509,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ![](../.gitbook/assets/plot/7.Customized_volcanoplot.png)
 
-## Manhattan plots {#manhattan-plot}
+## 8. Manhattan plots {#manhattan-plot}
 
 ```r
 head(df4)
@@ -552,7 +534,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ![](../.gitbook/assets/plot/8.Customized_manhattannplot.png)
 
-## Heatmaps {#heatmap-plot}
+## 9. Heatmaps {#heatmap-plot}
 
 1. Draw the heatmap with the gplots package, heatmap.2 function
    
@@ -648,7 +630,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
    
    ![](../.gitbook/assets/plot/9.3.Customized_heatmap.png)
 
-## Ballon plots {#ballon-plot}
+## 10. Ballon plots {#ballon-plot}
 
 1. basic ballon plots
    
@@ -707,7 +689,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
    
    ![](../.gitbook/assets/plot/10.2.Customized_ballonplot.png)
 
-## Vennpie plots {#vennpie-plot}
+## 11. Vennpie plots {#vennpie-plot}
 
 The vennpie plot is the combination of a venn diagram and a pie chart.
    
@@ -787,7 +769,7 @@ legend(0, 6*iniR, gsub("_"," ",names(colors)[-1]),
 Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html](http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html)
 
 
-## Learn more {plot-more}
+## Learn more {#plot-more}
 
 1. Guide to Great Beautiful Graphics in R
 
@@ -800,6 +782,21 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 
 
+## Shared Scripts {#share-script}
+
+------
+
+### scripts
+
+* Lu Lab: https://github.com/lulab/shared_scripts
+* Zhi J. Lu: https://github.com/urluzhi/scripts
+
+### Plots
+
+------
+
+* Lu Lab: https://github.com/lulab/shared_scripts/tree/master/plots
+* Zhi J. Lu: https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot
 
 
 
