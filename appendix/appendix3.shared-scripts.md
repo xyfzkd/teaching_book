@@ -156,7 +156,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/plot/2.1.Basic_violinplot.png)
 
-### Add summary statistics on a violin plot {#-plot}
+### Add summary statistics on a violin plot
 
 1. Add median and quartile
 
@@ -165,14 +165,20 @@ ggplot(df, aes(x=cyl, y=mpg)) +
      geom_violin(trim=FALSE) +
      labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
      stat_summary(fun.y=mean, geom="point", shape=23, size=2, color="red")
-   ##or
+   ```
+   
+   ![](../.gitbook/assets/plot/2.2.1.Add_median_and_quartile1_violinplot.png)
+
+   or
+   
+   ```
    ggplot(df, aes(x=cyl, y=mpg)) + 
      geom_violin(trim=FALSE) +
      labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
      geom_boxplot(width=0.1)
    ```
    
-   ![](../.gitbook/assets/plot/2.2.1.Add_median&quartile1_violinplot.png)![](../.gitbook/assets/plot/2.2.1.Add_median&quartile2_violinplot.png)
+   ![](../.gitbook/assets/plot/2.2.1.Add_median_and_quartile2_violinplot.png)
 
 2. Add mean and standard deviation
 
@@ -181,14 +187,20 @@ ggplot(df, aes(x=cyl, y=mpg)) +
      geom_violin(trim=FALSE) +
      labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
      stat_summary(fun.data="mean_sdl", fun.args = list(mult = 1), geom="crossbar", width=0.1 )
-   ##or
+   ```
+
+   ![](../.gitbook/assets/plot/2.2.2.Add_mean_and_sd_violinplot1.png)
+   
+   or
+   
+   ```
    ggplot(df, aes(x=cyl, y=mpg)) + 
      geom_violin(trim=FALSE) +
      labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
      stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), geom="pointrange", color="red")
    ```
-   
-   ![](../.gitbook/assets/plot/2.2.2.Add_mean&sd_violinplot1.png)![](../.gitbook/assets/plot/2.2.2.Add_mean&sd_violinplot2.png)
+
+   ![](../.gitbook/assets/plot/2.2.2.Add_mean_and_sd_violinplot2.png)
 
 ### Change violin plot fill colors
 
@@ -399,13 +411,19 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 ggplot(df, aes(x=cyl, y=mpg)) + 
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1) + 
   stat_summary(fun.data="mean_sdl", fun.args = list(mult=1), geom="crossbar", width=0.5)
-##or
+```
+
+![](../.gitbook/assets/plot/5.2.Add_mean_and_sd1_dotplot.png)
+
+or
+
+```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1) + 
   stat_summary(fun.data="mean_sdl", fun.args = list(mult=1), geom="pointrange", color="red")
 ```
 
-![](../.gitbook/assets/plot/5.2.Add_mean&sd1_dotplot.png)![](../.gitbook/assets/plot/5.2.Add_mean&sd2_dotplot.png)
+![](../.gitbook/assets/plot/5.2.Add_mean_and_sd2_dotplot.png)
 
 ### Change dot colors
 
