@@ -63,7 +63,8 @@
 
 1. Save the plot
 
-   If you want to save the plot,  please use "pdf\(\), dev.off\(\)" or "ggsave\(\)". The second one is specific for  the ggplot2 package.
+   If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`. 
+       The second one is specific for the **ggplot2** package.
    
    For example,
    
@@ -74,7 +75,11 @@
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
      theme_classic()
    dev.off()
-   ##Or 
+   ```
+   
+   Or 
+
+   ```r
    p <- ggplot(df, aes(x=cyl, y=mpg)) + 
      geom_boxplot(fill="gray")+
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
@@ -108,7 +113,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
   theme_classic()
 ```
 
-![](../.gitbook/assets/1.1.Basic_boxplot.png)
+![](../.gitbook/assets/plot/1.1.Basic_boxplot.png)
 
 ### Change continuous color by groups
 
@@ -120,7 +125,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
   theme_bw()
 ```
 
-![](../.gitbook/assets/1.2.Customized_boxplot.png)
+![](../.gitbook/assets/plot/1.2.Customized_boxplot.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
@@ -149,7 +154,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg")
 ```
 
-### ![](../.gitbook/assets/2.1.Basic_violinplot.png)
+### ![](../.gitbook/assets/plot/2.1.Basic_violinplot.png)
 
 ### Add summary statistics on a violin plot {#-plot}
 
@@ -167,7 +172,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
      geom_boxplot(width=0.1)
    ```
    
-   ![](../.gitbook/assets/2.2.1.Add_median&quartile1_violinplot.png)![](../.gitbook/assets/2.2.1.Add_median&quartile2_violinplot.png)
+   ![](../.gitbook/assets/plot/2.2.1.Add_median&quartile1_violinplot.png)![](../.gitbook/assets/plot/2.2.1.Add_median&quartile2_violinplot.png)
 
 2. Add mean and standard deviation
 
@@ -183,7 +188,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
      stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), geom="pointrange", color="red")
    ```
    
-   ![](../.gitbook/assets/2.2.2.Add_mean&sd_violinplot1.png)![](../.gitbook/assets/2.2.2.Add_mean&sd_violinplot2.png)
+   ![](../.gitbook/assets/plot/2.2.2.Add_mean&sd_violinplot1.png)![](../.gitbook/assets/plot/2.2.2.Add_mean&sd_violinplot2.png)
 
 ### Change violin plot fill colors
 
@@ -196,7 +201,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
   theme_classic()
 ```
 
-![](../.gitbook/assets/2.3.Customized_violinplot.png)
+![](../.gitbook/assets/plot/2.3.Customized_violinplot.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
@@ -222,7 +227,7 @@ head(df2)
 ggplot(df2, aes(x=weight)) + geom_histogram(binwidth=1)
 ```
 
-### ![](../.gitbook/assets/3.1.Basic_histogramplot.png)
+### ![](../.gitbook/assets/plot/3.1.Basic_histogramplot.png)
 
 ### Add mean line on a histogram plot
 
@@ -232,7 +237,7 @@ ggplot(df2, aes(x=weight)) +
   geom_vline(aes(xintercept=mean(weight)),color="black", linetype="dashed", size=0.5)
 ```
 
-![](../.gitbook/assets/3.2.Add_meanline_histogramplot.png)
+![](../.gitbook/assets/plot/3.2.Add_meanline_histogramplot.png)
 
 ### Change histogram plot fill colors
 
@@ -258,7 +263,7 @@ ggplot(df2, aes(x=weight, color=sex)) +
   theme(legend.position="top")
 ```
 
-![](../.gitbook/assets/3.3.Customized_histogramplot.png)
+![](../.gitbook/assets/plot/3.3.Customized_histogramplot.png)
 
 
 
@@ -287,7 +292,7 @@ ggplot(df2, aes(x=weight)) +
   geom_density()
 ```
 
-![](../.gitbook/assets/4.1.Basic_densityplot.png)
+![](../.gitbook/assets/plot/4.1.Basic_densityplot.png)
 
 ### Add mean line on a density plot
 
@@ -297,7 +302,7 @@ ggplot(df2, aes(x=weight)) +
   geom_vline(aes(xintercept=mean(weight)), color="black", linetype="dashed", size=0.5)
 ```
 
-![](../.gitbook/assets/4.2.Add_meanline_densityplot.png)
+![](../.gitbook/assets/plot/4.2.Add_meanline_densityplot.png)
 
 ### Change density plot fill colors
 
@@ -329,7 +334,7 @@ head(mu)
      theme_classic()
    ```
    
-   ![](../.gitbook/assets/4.3.1.Customized_histogramplot1.png)
+   ![](../.gitbook/assets/plot/4.3.1.Customized_histogramplot1.png)
 
 2. Change line colors
 
@@ -342,7 +347,7 @@ head(mu)
      theme_classic()
    ```
    
-   ![](../.gitbook/assets/4.3.2.Customized_histogramplot2.png)
+   ![](../.gitbook/assets/plot/4.3.2.Customized_histogramplot2.png)
 
 3. Combine histogram and density plots
 
@@ -356,7 +361,7 @@ head(mu)
      theme_classic()
    ```
    
-   ![](../.gitbook/assets/4.3.3.Customized_histogramplot3.png)
+   ![](../.gitbook/assets/plot/4.3.3.Customized_histogramplot3.png)
 
 
 
@@ -386,7 +391,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1)
 ```
 
-![](../.gitbook/assets/5.1.Basic_dotplot.png)
+![](../.gitbook/assets/plot/5.1.Basic_dotplot.png)
 
 ### Add mean and standard deviation
 
@@ -400,7 +405,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
   stat_summary(fun.data="mean_sdl", fun.args = list(mult=1), geom="pointrange", color="red")
 ```
 
-![](../.gitbook/assets/5.2.Add_mean&sd1_dotplot.png)![](../.gitbook/assets/5.2.Add_mean&sd2_dotplot.png)
+![](../.gitbook/assets/plot/5.2.Add_mean&sd1_dotplot.png)![](../.gitbook/assets/plot/5.2.Add_mean&sd2_dotplot.png)
 
 ### Change dot colors
 
@@ -414,7 +419,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) +
   theme_classic()
 ```
 
-![](../.gitbook/assets/5.3.Customized_dotplot.png)
+![](../.gitbook/assets/plot/5.3.Customized_dotplot.png)
 
 ### Change dot colors, shapes and align types
 
@@ -426,7 +431,7 @@ ggplot(df, aes(x=cyl, y=mpg, color=cyl, shape=cyl)) +
   theme_classic()
 ```
 
-![](../.gitbook/assets/5.4.Customized_dotplot.png)
+![](../.gitbook/assets/plot/5.4.Customized_dotplot.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
@@ -454,7 +459,7 @@ ggplot(df, aes(x=wt, y=mpg)) +
   geom_point(size=1.5)
 ```
 
-![](../.gitbook/assets/6.1.Basic_scatterplot.png)
+![](../.gitbook/assets/plot/6.1.Basic_scatterplot.png)
 
 ### Add regression lines and change the point colors, shapes and sizes
 
@@ -465,7 +470,7 @@ ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
   theme_classic()
 ```
 
-![](../.gitbook/assets/6.2.Customized_scatterplot.png)
+![](../.gitbook/assets/plot/6.2.Customized_scatterplot.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
@@ -506,7 +511,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
   labs(x="log2FoldChange",y="-log10 (adjusted p-value)",title="Volcano plot of DEG", face="bold")
 ```
 
-![](../.gitbook/assets/7.Customized_volcanoplot.png)
+![](../.gitbook/assets/plot/7.Customized_volcanoplot.png)
 
 ## Manhattan plots {#-plot}
 
@@ -531,7 +536,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
           chrlabs = as.character(c(1:22)))
 ```
 
-![](../.gitbook/assets/8.Customized_manhattannplot.png)
+![](../.gitbook/assets/plot/8.Customized_manhattannplot.png)
 
 ## Heatmaps {#-plot}
 
@@ -573,7 +578,7 @@ heatmap.2(dm,
           Colv = T,Rowv = T #clusters by both row and col)
 ```
 
-![](../.gitbook/assets/9.1.Customized_heatmap.png)
+![](../.gitbook/assets/plot/9.1.Customized_heatmap.png)
 
 ### Draw the heatmap with the pheatmap package, pheatmap function
 
@@ -594,7 +599,7 @@ pheatmap(dm,
          annotation_col = annotation_col, annotation_row = annotation_row,annotation_colors = ann_colors)
 ```
 
-![](../.gitbook/assets/9.2.Customized_heatmap.png)
+![](../.gitbook/assets/plot/9.2.Customized_heatmap.png)
 
 ### Draw the heatmap with the ggplot2 package
 
@@ -627,7 +632,7 @@ ggplot(dm.reordered, aes(Var2, Var1)) +
   scale_y_continuous(expand = c(0, 0),labels=row_name,breaks=1:length(row_name))
 ```
 
-![](../.gitbook/assets/9.3.Customized_heatmap.png)
+![](../.gitbook/assets/plot/9.3.Customized_heatmap.png)
 
 ## Ballon plots {#-plot}
 
@@ -664,7 +669,7 @@ ggplot(df6, aes(x=Fold.enrichment, y=Biological.process)) +
   labs(x="Fold Enrichment",y="Biological Process",size="-log10(Pvalue)", title="GO Enrichment",face="bold")
 ```
 
-![](../.gitbook/assets/10.1.Basic_ballonplot.png)
+![](../.gitbook/assets/plot/10.1.Basic_ballonplot.png)
 
 ### change the dot colors
 
@@ -686,9 +691,7 @@ ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
   labs(y="Biological Process",size="Fold Enrichment", color="-Log10(Pvalue)",title="GO Enrichment",face="bold")
 ```
 
-![](../.gitbook/assets/10.2.Customized_ballonplot.png)
-
-
+![](../.gitbook/assets/plot/10.2.Customized_ballonplot.png)
 
 ## Vennpie plots {#-plot}
 
@@ -765,7 +768,7 @@ legend(0, 6*iniR, gsub("_"," ",names(colors)[-1]),
 ##       col=cl, pch=pchs,bty='n', ncol=1, cex=0.6)
 ```
 
-![](../.gitbook/assets/11.Customized_vennpieplot.png)
+![](../.gitbook/assets/plot/11.Customized_vennpieplot.png)
 
 Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html](http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html)
 
