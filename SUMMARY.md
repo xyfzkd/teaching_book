@@ -30,6 +30,19 @@
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
+  * [0.load the data and install packages](appendix/appendix1.more.md#README)
+  * [1.Box plots](appendix/appendix1.more.md#fag)
+  * [2.Violin plots](appendix/appendix1.more.md#2violin-plots)
+  * [3.Histogram plots](appendix/appendix1.more.md#3histogram-plots)
+  * [4.Density plots](appendix/appendix1.more.md#4density-plots)
+  * [5.Dot plots](appendix/appendix1.more.md#5dot-plots)
+  * [6.Scatter plots](appendix/appendix1.more.md#6scatter-plots)
+  * [7.Volcano plots](appendix/appendix1.more.md#7volcano-plots)
+  * [8.Manhattan plots](appendix/appendix1.more.md#8manhanton-plots)
+  * [9.Heatmaps](appendix/appendix1.more.md#9heatmaps)
+  * [10.Ballon plots](appendix/appendix1.more.md#10ballon-plots)
+  * [11.Vennpie plots](appendix/appendix1.more.md#11vennpie-plots)
+  * [Learn more](appendix/appendix1.more.md#learn-more)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Scripts & Plots](appendix/appendix3.shared-scripts.md)
 
