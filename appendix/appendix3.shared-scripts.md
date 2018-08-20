@@ -77,7 +77,7 @@
    ```
 
 For the following examples, you can find all code in Rscripts of 
-    `/home/test/plot/Rscripts` dicretory in docker (each file per chapter)
+    `/home/test/plot/Rscripts` dicretory in docker (a file per chapter)
 
 ## 1. Box plots {#box-plot}
 
