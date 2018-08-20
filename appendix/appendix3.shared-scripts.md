@@ -791,6 +791,10 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
    [http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
+3. Color Scheme Suggestion
+   
+   http://colorbrewer2.org/Files  
+   [Rcolor.pdf](https://xixiaochen.gitbooks.io/plots/content/1box-plots/Files/Rcolor.pdf)
 
 
 
