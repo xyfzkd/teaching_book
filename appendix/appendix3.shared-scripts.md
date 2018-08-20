@@ -76,8 +76,8 @@
    ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
    ```
 
-For the following examples, you can find all code in Rscripts of 
-    `/home/test/plot/Rscripts` dicretory in docker (a file per chapter)
+For the following examples, you can find all code in `/home/test/plot/Rscripts/` 
+    of docker (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
 ## 1. Box plots {#box-plot}
 
