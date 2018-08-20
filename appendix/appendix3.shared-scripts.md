@@ -1,6 +1,7 @@
 # Appendix III. Plots & Scripts
 
 ## 0. Load the data and install packages {#plot-setup}
+------
 
 1. Set work directory
 
@@ -70,6 +71,7 @@
    ```
 
 ## 1. Box plots {#box-plot}
+------
 
 1. Basic box plot
 
@@ -112,6 +114,7 @@
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
 ## 2. Violin plots {#violin-plot}
+------
 
 1. Basic violin plot
 
@@ -200,6 +203,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
 ## 3. Histogram plots {#histogram-plot}
+------
 
 1. Basic histogram plot
 
@@ -262,6 +266,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-gu
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
 ## 4. Density plots {#density-plot}
+------
 
 1. Basic density
    
@@ -357,6 +362,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 
 
 ## 5. Dot plots {#dot-plot}
+------
 
 1. Basic dot plots
    
@@ -431,6 +437,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
 ## 6. Scatter plots {#scatter-plot}
+------
 
 1. Basic scatter plots
    
@@ -470,6 +477,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
 ## 7. Volcano plots {#volcano-plot}
+------
 
 ```r
 head(df3)
@@ -509,6 +517,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 ![](../.gitbook/assets/plot/7.Customized_volcanoplot.png)
 
 ## 8. Manhattan plots {#manhattan-plot}
+------
 
 ```r
 head(df4)
@@ -534,6 +543,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 ![](../.gitbook/assets/plot/8.Customized_manhattannplot.png)
 
 ## 9. Heatmaps {#heatmap-plot}
+------
 
 1. Draw the heatmap with the gplots package, heatmap.2 function
    
@@ -630,6 +640,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
    ![](../.gitbook/assets/plot/9.3.Customized_heatmap.png)
 
 ## 10. Ballon plots {#ballon-plot}
+------
 
 1. basic ballon plots
    
@@ -689,6 +700,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
    ![](../.gitbook/assets/plot/10.2.Customized_ballonplot.png)
 
 ## 11. Vennpie plots {#vennpie-plot}
+------
 
 The vennpie plot is the combination of a venn diagram and a pie chart.
    
@@ -769,6 +781,7 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 
 ## Learn more {#plot-more}
+------
 
 1. Guide to Great Beautiful Graphics in R
 
@@ -792,7 +805,6 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 ### Plots
 
-------
 
 * Lu Lab: https://github.com/lulab/shared_scripts/tree/master/plots
 * Zhi J. Lu: https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot
