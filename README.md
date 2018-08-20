@@ -1,4 +1,4 @@
-# Bioinformatics Tutorial - Basics | 生物信息学实践教程
+# Bioinformatics Tutorial - Basics | 生物信息学实践教程 {#index}
 
 ------
 
