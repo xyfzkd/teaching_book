@@ -40,7 +40,7 @@
   * [5.Dot plots](appendix/appendix3.shared-scripts.md#dot-plot)
   * [6.Scatter plots](appendix/appendix3.shared-scripts.md#scatter-plot)
   * [7.Volcano plots](appendix/appendix3.shared-scripts.md#volcano-plot)
-  * [8.Manhattan plots](appendix/appendix3.shared-scripts.md#manhanton-plot)
+  * [8.Manhattan plots](appendix/appendix3.shared-scripts.md#manhattan-plot)
   * [9.Heatmaps](appendix/appendix3.shared-scripts.md#heatmap-plot)
   * [10.Ballon plots](appendix/appendix3.shared-scripts.md#ballon-plot)
   * [11.Vennpie plots](appendix/appendix3.shared-scripts.md#vennpie-plot)
