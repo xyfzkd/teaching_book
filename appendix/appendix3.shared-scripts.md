@@ -16,32 +16,34 @@
 * Lu Lab: https://github.com/lulab/shared_scripts/tree/master/plots
 * Zhi J. Lu: https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot
 
-## 0.Load the data and install packages
 
-### 0.1 Set work directory
 
-```r
-setwd("~/gitbook")
-```
+## Load the data and install packages {#plot-setup}
 
-### 0.2 Load the data
+1. Set work directory
 
-```r
-data <-read.table("box_plots_mtcars.txt",header=T,sep="\t")
-df <- data[, c("mpg", "cyl", "wt")]
+   ```r
+   setwd("~/gitbook")
+   ```
 
-df2 <-read.table("histogram_plots.txt",header=T,sep="\t")
+1. Load the data
 
-df3 <- read.table("volcano_plots.txt", header=TRUE)
-
-df4 <- read.table("manhattan_plots_gwasResults.txt",header=T,sep="\t")
-
-df5 <-read.table("heatmaps.txt",header=T,sep="\t")
-dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
-row.names(dm) <- df5[,1]
-
-df6 <- read.table("ballon_plots_GO.txt", header=T, sep="\t")
-```
+   ```r
+   data <-read.table("box_plots_mtcars.txt",header=T,sep="\t")
+   df <- data[, c("mpg", "cyl", "wt")]
+   
+   df2 <-read.table("histogram_plots.txt",header=T,sep="\t")
+   
+   df3 <- read.table("volcano_plots.txt", header=TRUE)
+   
+   df4 <- read.table("manhattan_plots_gwasResults.txt",header=T,sep="\t")
+   
+   df5 <-read.table("heatmaps.txt",header=T,sep="\t")
+   dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
+   row.names(dm) <- df5[,1]
+   
+   df6 <- read.table("ballon_plots_GO.txt", header=T, sep="\t")
+   ```
 
 ### 0.3 Install and library packages
 
