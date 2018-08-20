@@ -141,7 +141,7 @@ df$cyl <- as.factor(df$cyl)
 head(df)
 ```
 
-```r
+```
 ###                    mpg cyl    wt
 ### Mazda RX4         21.0   6 2.620
 ### Mazda RX4 Wag     21.0   6 2.875
@@ -151,7 +151,7 @@ head(df)
 ### Valiant           18.1   6 3.460
 ```
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg)) +
     geom_violin(trim=FALSE) +
     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg")
@@ -163,7 +163,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 #### 2.2.1 Add median and quartile
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
   geom_violin(trim=FALSE) +
   labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
@@ -179,7 +179,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 #### 2.2.2 Add mean and standard deviation
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
   geom_violin(trim=FALSE) +
   labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
@@ -195,7 +195,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ### 2.3 Change violin plot fill colors
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
   geom_violin(trim=FALSE) +
   geom_boxplot(width=0.1, fill="white") +
@@ -212,7 +212,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-gu
 
 ### 3.1 Basic histogram plot
 
-```
+```r
 head(df2)
 ```
 
@@ -226,7 +226,7 @@ head(df2)
 ### 6   F     58
 ```
 
-```
+```r
 ggplot(df2, aes(x=weight)) + geom_histogram(binwidth=1)
 ```
 
@@ -234,7 +234,7 @@ ggplot(df2, aes(x=weight)) + geom_histogram(binwidth=1)
 
 ### 3.2 Add mean line on a histogram plot
 
-```
+```r
 ggplot(df2, aes(x=weight)) + 
   geom_histogram(binwidth=1, color="black", fill="white") +
   geom_vline(aes(xintercept=mean(weight)),color="black", linetype="dashed", size=0.5)
@@ -244,7 +244,7 @@ ggplot(df2, aes(x=weight)) +
 
 ### 3.3 Change histogram plot fill colors
 
-```
+```r
 ##Use the plyr package to calculate the average weight of each group :
 mu <- ddply(df2, "sex", summarise, grp.mean=mean(weight))
 head(mu)
@@ -256,7 +256,7 @@ head(mu)
 ### 2   M    65.36
 ```
 
-```
+```r
 ##draw the plot
 ggplot(df2, aes(x=weight, color=sex)) +
   geom_histogram(binwidth=1, fill="white", position="dodge")+
@@ -276,7 +276,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start
 
 ### 4.1 Basic density
 
-```
+```r
 head(df2)
 ```
 
@@ -290,7 +290,7 @@ head(df2)
 ### 6   F     58
 ```
 
-```
+```r
 ggplot(df2, aes(x=weight)) + 
   geom_density()
 ```
@@ -299,7 +299,7 @@ ggplot(df2, aes(x=weight)) +
 
 ### 4.2 Add mean line on a density plot
 
-```
+```r
 ggplot(df2, aes(x=weight)) +
   geom_density() +
   geom_vline(aes(xintercept=mean(weight)), color="black", linetype="dashed", size=0.5)
@@ -309,7 +309,7 @@ ggplot(df2, aes(x=weight)) +
 
 ### 4.3 Change density plot fill colors
 
-```
+```r
 ##Use the plyr package plyr to calculate the average weight of each group :
 mu <- ddply(df2, "sex", summarise, grp.mean=mean(weight))
 head(mu)
@@ -327,7 +327,7 @@ head(mu)
 
 #### 4.3.1 Change fill colors
 
-```
+```r
 ggplot(df2, aes(x=weight, fill=sex)) +
   geom_density(alpha=0.7)+
   geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
@@ -341,7 +341,7 @@ ggplot(df2, aes(x=weight, fill=sex)) +
 
 #### 4.3.2 Change line colors
 
-```
+```r
 ggplot(df2, aes(x=weight, color=sex)) +
   geom_density()+
   geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
@@ -354,7 +354,7 @@ ggplot(df2, aes(x=weight, color=sex)) +
 
 #### 4.3.3 Combine histogram and density plots
 
-```
+```r
 ggplot(df2, aes(x=weight, color=sex, fill=sex)) + 
   geom_histogram(binwidth=1, aes(y=..density..), alpha=0.5, position="identity") +
   geom_density(alpha=.2) +
@@ -374,7 +374,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 
 ### 5.1 Basic dot plots
 
-```
+```r
 df$cyl <- as.factor(df$cyl)
 head(df)
 ```
@@ -389,7 +389,7 @@ head(df)
 ### Valiant           18.1   6 3.460
 ```
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1)
 ```
@@ -398,7 +398,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ### 5.2 Add mean and standard deviation
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1) + 
   stat_summary(fun.data="mean_sdl", fun.args = list(mult=1), geom="crossbar", width=0.5)
@@ -412,7 +412,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ### 5.3 Change dot colors
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) + 
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1, dotsize=0.8) + 
   labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg") +
@@ -426,7 +426,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) +
 
 ### 5.4 Change dot colors, shapes and align types
 
-```
+```r
 ggplot(df, aes(x=cyl, y=mpg, color=cyl, shape=cyl)) + 
   geom_jitter(position=position_jitter(0.1), cex=2)+
   labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg") + 
@@ -442,7 +442,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide
 
 ### 6.1 Basic scatter plots
 
-```
+```r
 df$cyl <- as.factor(df$cyl)
 head(df)
 ```
@@ -457,7 +457,7 @@ head(df)
 ### Valiant           18.1   6 3.460
 ```
 
-```
+```r
 ggplot(df, aes(x=wt, y=mpg)) + 
   geom_point(size=1.5)
 ```
@@ -466,7 +466,7 @@ ggplot(df, aes(x=wt, y=mpg)) +
 
 ### 6.2 Add regression lines and change the point colors, shapes and sizes
 
-```
+```r
 ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
   geom_point(size=1.5) + 
   geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
@@ -479,7 +479,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-
 
 ## 7.Volcano plots
 
-```
+```r
 head(df3)
 ```
 
@@ -493,7 +493,7 @@ head(df3)
 ### 6 EMILIN2         1.5340 2.976e-06 0.0068090
 ```
 
-```
+```r
 df3$threshold <- as.factor(ifelse(df3$padj < 0.05 & abs(df3$log2FoldChange) >=1,ifelse(df3$log2FoldChange > 1 ,'Up','Down'),'Not'))
 ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=threshold)) +
   scale_color_manual(values=c("blue", "grey","red"))+
@@ -518,7 +518,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ## 8.Manhattan plots
 
-```
+```r
 head(df4)
 ```
 
@@ -532,7 +532,7 @@ head(df4)
 ### 6 rs6   1  6 0.5190959
 ```
 
-```
+```r
 manhattan(df4, main = "GWAS results", ylim = c(0, 8),
           cex = 0.5, cex.axis=0.8, col=c("dodgerblue4","deepskyblue"),
           #suggestiveline = F, genomewideline = F, #remove the suggestive and genome-wide significance lines
@@ -545,7 +545,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ### 9.1.Draw the heatmap with the gplots package, heatmap.2 function
 
-```
+```r
 head(dm)
 ```
 
@@ -566,7 +566,7 @@ head(dm)
 ### Gene6 3.585366  1.0689000 2.563422  1.3465830
 ```
 
-```
+```r
 ##to draw high expression value in red, we use colorRampPalette instead of redblue in heatmap.2
 ##colorRampPalette is a function in the RColorBrewer package
 cr <- colorRampPalette(c("blue","white","red"))
@@ -585,7 +585,7 @@ heatmap.2(dm,
 
 ### 9.2.Draw the heatmap with the pheatmap package, pheatmap function
 
-```
+```r
 ##add column and row annotations
 annotation_col = data.frame(CellType = factor(rep(c("Control", "Tumor"), 5)), Time = 1:5)
 rownames(annotation_col) = colnames(dm)
@@ -606,7 +606,7 @@ pheatmap(dm,
 
 ### 9.3.Draw the heatmap with the ggplot2 package
 
-```
+```r
 ##9.3.1.cluster by row and col
 ##cluster and re-order rows
 rowclust = hclust(dist(dm))
@@ -641,7 +641,7 @@ ggplot(dm.reordered, aes(Var2, Var1)) +
 
 ### 10.1.basic ballon plots
 
-```
+```r
 head(df6)
 ```
 
@@ -655,7 +655,7 @@ head(df6)
 ### 6      Organic acid metabolic process             2.7              25   1
 ```
 
-```
+```r
 ggplot(df6, aes(x=Fold.enrichment, y=Biological.process)) +
   geom_point(aes(size = X.log10.Pvalue.)) +
   scale_x_continuous(limits=c(0,7),breaks=0:7) +
@@ -676,7 +676,7 @@ ggplot(df6, aes(x=Fold.enrichment, y=Biological.process)) +
 
 ### 10.2.change the dot colors
 
-```
+```r
 ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
   geom_point(aes(size = Fold.enrichment)) +
   scale_x_discrete(limits=c("1")) +
@@ -702,7 +702,7 @@ ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
 
 ### The vennpie plot is the combination of a venn diagram and a pie chart.
 
-```
+```r
 ##11.1.data input (number of reads mapped to each category)
 total=100
 rRNA=5
