@@ -789,7 +789,7 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 2. Top 50 ggplot2 Visualizations - The Master List \(With Full R Code\)
 
-   b[http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
+   [http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
 
 
