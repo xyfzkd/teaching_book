@@ -328,9 +328,8 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start
    ### 2   M    65.36
    ```
    
-   ```
-   ##draw the plot
-   ```
+   
+   draw the plot
    
    - Change fill colors
    
