@@ -129,7 +129,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Violin plots {#-plot}
+## Violin plots {#violin-plot}
 
 ### Basic violin plot
 
@@ -154,7 +154,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg")
 ```
 
-### ![](../.gitbook/assets/plot/2.1.Basic_violinplot.png)
+![](../.gitbook/assets/plot/2.1.Basic_violinplot.png)
 
 ### Add summary statistics on a violin plot {#-plot}
 
@@ -205,7 +205,7 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Histogram plots {#-plot}
+## Histogram plots {#histogram-plot}
 
 ### Basic histogram plot
 
@@ -227,7 +227,7 @@ head(df2)
 ggplot(df2, aes(x=weight)) + geom_histogram(binwidth=1)
 ```
 
-### ![](../.gitbook/assets/plot/3.1.Basic_histogramplot.png)
+![](../.gitbook/assets/plot/3.1.Basic_histogramplot.png)
 
 ### Add mean line on a histogram plot
 
@@ -269,7 +269,7 @@ ggplot(df2, aes(x=weight, color=sex)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Density plots {#-plot}
+## Density plots {#density-plot}
 
 ### Basic density
 
@@ -367,7 +367,7 @@ head(mu)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
-## Dot plots {#-plot}
+## Dot plots {#dot-plot}
 
 ### Basic dot plots
 
@@ -474,7 +474,7 @@ ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
-## Volcano plots {#-plot}
+## Volcano plots {#volcano-plot}
 
 ```r
 head(df3)
@@ -513,7 +513,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ![](../.gitbook/assets/plot/7.Customized_volcanoplot.png)
 
-## Manhattan plots {#-plot}
+## Manhattan plots {#manhattan-plot}
 
 ```r
 head(df4)
@@ -538,7 +538,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ![](../.gitbook/assets/plot/8.Customized_manhattannplot.png)
 
-## Heatmaps {#-plot}
+## Heatmaps {#heatmap-plot}
 
 ### Draw the heatmap with the gplots package, heatmap.2 function
 
@@ -634,7 +634,7 @@ ggplot(dm.reordered, aes(Var2, Var1)) +
 
 ![](../.gitbook/assets/plot/9.3.Customized_heatmap.png)
 
-## Ballon plots {#-plot}
+## Ballon plots {#ballon-plot}
 
 ### basic ballon plots
 
@@ -693,7 +693,7 @@ ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
 
 ![](../.gitbook/assets/plot/10.2.Customized_ballonplot.png)
 
-## Vennpie plots {#-plot}
+## Vennpie plots {#vennpie-plot}
 
 ### The vennpie plot is the combination of a venn diagram and a pie chart.
 
@@ -773,7 +773,7 @@ legend(0, 6*iniR, gsub("_"," ",names(colors)[-1]),
 Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html](http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html)
 
 
-## Learn more
+## Learn more {plot-more}
 
 1. Guide to Great Beautiful Graphics in R
 
