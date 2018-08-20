@@ -30,6 +30,8 @@
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
+* [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
+* [Appendix III. Scripts & Plots](appendix/appendix3.shared-scripts.md)
   * [0.load the data and install packages](appendix/appendix1.more.md#README)
   * [1.Box plots](appendix/appendix1.more.md#fag)
   * [2.Violin plots](appendix/appendix1.more.md#2violin-plots)
@@ -43,6 +45,4 @@
   * [10.Ballon plots](appendix/appendix1.more.md#10ballon-plots)
   * [11.Vennpie plots](appendix/appendix1.more.md#11vennpie-plots)
   * [Learn more](appendix/appendix1.more.md#learn-more)
-* [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
-* [Appendix III. Scripts & Plots](appendix/appendix3.shared-scripts.md)
 
