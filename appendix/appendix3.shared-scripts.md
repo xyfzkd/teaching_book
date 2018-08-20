@@ -9,6 +9,11 @@
    ```r
    setwd("/home/test/plot")
    ```
+1. prepare output directory
+
+   ```r
+   dir.create('output')
+   ```
 
 1. Load the data
 
@@ -70,6 +75,9 @@
      theme_classic()
    ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
    ```
+
+For the following examples, you can find all code in Rscripts of 
+    `/home/test/plot/Rscripts` dicretory in docker (each file per chapter)
 
 ## 1. Box plots {#box-plot}
 
