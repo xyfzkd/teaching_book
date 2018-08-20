@@ -45,54 +45,46 @@
    df6 <- read.table("ballon_plots_GO.txt", header=T, sep="\t")
    ```
 
-### 0.3 Install and library packages
+1. Install and library packages
 
-```r
-install.packages("ggplot2")
-library(ggplot2)
-install.packages("qqman")
-library(qqman)
-install.packages("gplots")
-library(gplots)
-install.packages("pheatmap")
-library(pheatmap)
-install.packages("scales")
-library(scales)
-install.packages("reshape2")
-library(reshape2)
-install.packages("RColorBrewer")
-library(RColorBrewer)
-install.packages("plyr")
-library(plyr)
-install.packages("plotrix")
-library(plotrix)
-```
+   ```r
+   install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer'))
 
-### 0.4. Save the plot
+   library(ggplot2)
+   library(qqman)
+   library(gplots)
+   library(pheatmap)
+   library(scales)
+   library(reshape2)
+   library(RColorBrewer)
+   library(plyr)
+   library(plotrix)
+   ```
 
-If you want to save the plot,  please use "pdf\(\), dev.off\(\)" or "ggsave\(\)". The second one is specific for  the ggplot2 package.
+1. Save the plot
 
-For example,
+   If you want to save the plot,  please use "pdf\(\), dev.off\(\)" or "ggsave\(\)". The second one is specific for  the ggplot2 package.
+   
+   For example,
+   
+   ```r
+   pdf("1.1.Basic_boxplot.pdf", height = 3, width = 3)
+   ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_boxplot(fill="gray")+
+     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+     theme_classic()
+   dev.off()
+   ##Or 
+   p <- ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_boxplot(fill="gray")+
+     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+     theme_classic()
+   ggsave("1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
+   ```
 
-```r
-pdf("1.1.Basic_boxplot.pdf", height = 3, width = 3)
-ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_boxplot(fill="gray")+
-  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-  theme_classic()
-dev.off()
-##Or 
-p <- ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_boxplot(fill="gray")+
-  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-  theme_classic()
-ggsave("1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
-```
+## Box plots {#box-plot}
 
-
-## 1.Box plots
-
-### 1.1 Basic box plot
+### Basic box plot
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -118,7 +110,7 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ![](../.gitbook/assets/1.1.Basic_boxplot.png)
 
-### 1.2 Change continuous color by groups
+### Change continuous color by groups
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
@@ -130,13 +122,11 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
 
 ![](../.gitbook/assets/1.2.Customized_boxplot.png)
 
-
-
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 2.Violin plots
+## Violin plots {#-plot}
 
-### 2.1 Basic violin plot
+### Basic violin plot
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -161,41 +151,41 @@ ggplot(df, aes(x=cyl, y=mpg)) +
 
 ### ![](../.gitbook/assets/2.1.Basic_violinplot.png)
 
-### 2.2 Add summary statistics on a violin plot
+### Add summary statistics on a violin plot {#-plot}
 
-#### 2.2.1 Add median and quartile
+1. Add median and quartile
 
-```r
-ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_violin(trim=FALSE) +
-  labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
-  stat_summary(fun.y=mean, geom="point", shape=23, size=2, color="red")
-##or
-ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_violin(trim=FALSE) +
-  labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
-  geom_boxplot(width=0.1)
-```
+   ```r
+   ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_violin(trim=FALSE) +
+     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
+     stat_summary(fun.y=mean, geom="point", shape=23, size=2, color="red")
+   ##or
+   ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_violin(trim=FALSE) +
+     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
+     geom_boxplot(width=0.1)
+   ```
+   
+   ![](../.gitbook/assets/2.2.1.Add_median&quartile1_violinplot.png)![](../.gitbook/assets/2.2.1.Add_median&quartile2_violinplot.png)
 
-![](../.gitbook/assets/2.2.1.Add_median&quartile1_violinplot.png)![](../.gitbook/assets/2.2.1.Add_median&quartile2_violinplot.png)
+2. Add mean and standard deviation
 
-#### 2.2.2 Add mean and standard deviation
+   ```r
+   ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_violin(trim=FALSE) +
+     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
+     stat_summary(fun.data="mean_sdl", fun.args = list(mult = 1), geom="crossbar", width=0.1 )
+   ##or
+   ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_violin(trim=FALSE) +
+     labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
+     stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), geom="pointrange", color="red")
+   ```
+   
+   ![](../.gitbook/assets/2.2.2.Add_mean&sd_violinplot1.png)![](../.gitbook/assets/2.2.2.Add_mean&sd_violinplot2.png)
 
-```r
-ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_violin(trim=FALSE) +
-  labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
-  stat_summary(fun.data="mean_sdl", fun.args = list(mult = 1), geom="crossbar", width=0.1 )
-##or
-ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_violin(trim=FALSE) +
-  labs(title="Plot of mpg per cyl", x="Cyl", y = "Mpg") +
-  stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), geom="pointrange", color="red")
-```
-
-![](../.gitbook/assets/2.2.2.Add_mean&sd_violinplot1.png)![](../.gitbook/assets/2.2.2.Add_mean&sd_violinplot2.png)
-
-### 2.3 Change violin plot fill colors
+### Change violin plot fill colors
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
@@ -210,9 +200,9 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 3.Histogram plots
+## Histogram plots {#-plot}
 
-### 3.1 Basic histogram plot
+### Basic histogram plot
 
 ```r
 head(df2)
@@ -234,7 +224,7 @@ ggplot(df2, aes(x=weight)) + geom_histogram(binwidth=1)
 
 ### ![](../.gitbook/assets/3.1.Basic_histogramplot.png)
 
-### 3.2 Add mean line on a histogram plot
+### Add mean line on a histogram plot
 
 ```r
 ggplot(df2, aes(x=weight)) + 
@@ -244,7 +234,7 @@ ggplot(df2, aes(x=weight)) +
 
 ![](../.gitbook/assets/3.2.Add_meanline_histogramplot.png)
 
-### 3.3 Change histogram plot fill colors
+### Change histogram plot fill colors
 
 ```r
 ##Use the plyr package to calculate the average weight of each group :
@@ -274,9 +264,9 @@ ggplot(df2, aes(x=weight, color=sex)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 4.Density plots
+## Density plots {#-plot}
 
-### 4.1 Basic density
+### Basic density
 
 ```r
 head(df2)
@@ -297,9 +287,9 @@ ggplot(df2, aes(x=weight)) +
   geom_density()
 ```
 
-### ![](../.gitbook/assets/4.1.Basic_densityplot.png)
+![](../.gitbook/assets/4.1.Basic_densityplot.png)
 
-### 4.2 Add mean line on a density plot
+### Add mean line on a density plot
 
 ```r
 ggplot(df2, aes(x=weight)) +
@@ -307,9 +297,9 @@ ggplot(df2, aes(x=weight)) +
   geom_vline(aes(xintercept=mean(weight)), color="black", linetype="dashed", size=0.5)
 ```
 
-### ![](../.gitbook/assets/4.2.Add_meanline_densityplot.png)
+![](../.gitbook/assets/4.2.Add_meanline_densityplot.png)
 
-### 4.3 Change density plot fill colors
+### Change density plot fill colors
 
 ```r
 ##Use the plyr package plyr to calculate the average weight of each group :
@@ -327,54 +317,54 @@ head(mu)
 ##draw the plot
 ```
 
-#### 4.3.1 Change fill colors
+1. Change fill colors
 
-```r
-ggplot(df2, aes(x=weight, fill=sex)) +
-  geom_density(alpha=0.7)+
-  geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
-  labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
-  scale_color_brewer(palette="Paired") +
-  scale_fill_brewer(palette="Blues") +
-  theme_classic()
-```
+   ```r
+   ggplot(df2, aes(x=weight, fill=sex)) +
+     geom_density(alpha=0.7)+
+     geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
+     labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
+     scale_color_brewer(palette="Paired") +
+     scale_fill_brewer(palette="Blues") +
+     theme_classic()
+   ```
+   
+   ![](../.gitbook/assets/4.3.1.Customized_histogramplot1.png)
 
-![](../.gitbook/assets/4.3.1.Customized_histogramplot1.png)
+2. Change line colors
 
-#### 4.3.2 Change line colors
+   ```r
+   ggplot(df2, aes(x=weight, color=sex)) +
+     geom_density()+
+     geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
+     labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
+     scale_color_brewer(palette="Paired") +
+     theme_classic()
+   ```
+   
+   ![](../.gitbook/assets/4.3.2.Customized_histogramplot2.png)
 
-```r
-ggplot(df2, aes(x=weight, color=sex)) +
-  geom_density()+
-  geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
-  labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
-  scale_color_brewer(palette="Paired") +
-  theme_classic()
-```
+3. Combine histogram and density plots
 
-#### ![](../.gitbook/assets/4.3.2.Customized_histogramplot2.png)
-
-#### 4.3.3 Combine histogram and density plots
-
-```r
-ggplot(df2, aes(x=weight, color=sex, fill=sex)) + 
-  geom_histogram(binwidth=1, aes(y=..density..), alpha=0.5, position="identity") +
-  geom_density(alpha=.2) +
-  labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
-  scale_color_brewer(palette="Paired") +
-  scale_fill_brewer(palette="Blues") +
-  theme_classic()
-```
-
-![](../.gitbook/assets/4.3.3.Customized_histogramplot3.png)
+   ```r
+   ggplot(df2, aes(x=weight, color=sex, fill=sex)) + 
+     geom_histogram(binwidth=1, aes(y=..density..), alpha=0.5, position="identity") +
+     geom_density(alpha=.2) +
+     labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
+     scale_color_brewer(palette="Paired") +
+     scale_fill_brewer(palette="Blues") +
+     theme_classic()
+   ```
+   
+   ![](../.gitbook/assets/4.3.3.Customized_histogramplot3.png)
 
 
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 5.Dot plots
+## Dot plots {#-plot}
 
-### 5.1 Basic dot plots
+### Basic dot plots
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -396,9 +386,9 @@ ggplot(df, aes(x=cyl, y=mpg)) +
   geom_dotplot(binaxis='y', stackdir='center', binwidth=1)
 ```
 
-### ![](../.gitbook/assets/5.1.Basic_dotplot.png)
+![](../.gitbook/assets/5.1.Basic_dotplot.png)
 
-### 5.2 Add mean and standard deviation
+### Add mean and standard deviation
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg)) + 
@@ -410,9 +400,9 @@ ggplot(df, aes(x=cyl, y=mpg)) +
   stat_summary(fun.data="mean_sdl", fun.args = list(mult=1), geom="pointrange", color="red")
 ```
 
-### ![](../.gitbook/assets/5.2.Add_mean&sd1_dotplot.png)![](../.gitbook/assets/5.2.Add_mean&sd2_dotplot.png)
+![](../.gitbook/assets/5.2.Add_mean&sd1_dotplot.png)![](../.gitbook/assets/5.2.Add_mean&sd2_dotplot.png)
 
-### 5.3 Change dot colors
+### Change dot colors
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) + 
@@ -424,9 +414,9 @@ ggplot(df, aes(x=cyl, y=mpg, fill=cyl, shape=cyl)) +
   theme_classic()
 ```
 
-### ![](../.gitbook/assets/5.3.Customized_dotplot.png)
+![](../.gitbook/assets/5.3.Customized_dotplot.png)
 
-### 5.4 Change dot colors, shapes and align types
+### Change dot colors, shapes and align types
 
 ```r
 ggplot(df, aes(x=cyl, y=mpg, color=cyl, shape=cyl)) + 
@@ -440,9 +430,9 @@ ggplot(df, aes(x=cyl, y=mpg, color=cyl, shape=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 6.Scatter plots
+## Scatter plots {#-plot}
 
-### 6.1 Basic scatter plots
+### Basic scatter plots
 
 ```r
 df$cyl <- as.factor(df$cyl)
@@ -464,9 +454,9 @@ ggplot(df, aes(x=wt, y=mpg)) +
   geom_point(size=1.5)
 ```
 
-### ![](../.gitbook/assets/6.1.Basic_scatterplot.png)
+![](../.gitbook/assets/6.1.Basic_scatterplot.png)
 
-### 6.2 Add regression lines and change the point colors, shapes and sizes
+### Add regression lines and change the point colors, shapes and sizes
 
 ```r
 ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
@@ -479,7 +469,7 @@ ggplot(df, aes(x=wt, y=mpg, color=cyl, shape=cyl)) +
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
-## 7.Volcano plots
+## Volcano plots {#-plot}
 
 ```r
 head(df3)
@@ -518,7 +508,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ![](../.gitbook/assets/7.Customized_volcanoplot.png)
 
-## 8.Manhattan plots
+## Manhattan plots {#-plot}
 
 ```r
 head(df4)
@@ -543,9 +533,9 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ![](../.gitbook/assets/8.Customized_manhattannplot.png)
 
-## 9.Heatmaps
+## Heatmaps {#-plot}
 
-### 9.1.Draw the heatmap with the gplots package, heatmap.2 function
+### Draw the heatmap with the gplots package, heatmap.2 function
 
 ```r
 head(dm)
@@ -583,9 +573,9 @@ heatmap.2(dm,
           Colv = T,Rowv = T #clusters by both row and col)
 ```
 
-### ![](../.gitbook/assets/9.1.Customized_heatmap.png)
+![](../.gitbook/assets/9.1.Customized_heatmap.png)
 
-### 9.2.Draw the heatmap with the pheatmap package, pheatmap function
+### Draw the heatmap with the pheatmap package, pheatmap function
 
 ```r
 ##add column and row annotations
@@ -604,9 +594,9 @@ pheatmap(dm,
          annotation_col = annotation_col, annotation_row = annotation_row,annotation_colors = ann_colors)
 ```
 
-### ![](../.gitbook/assets/9.2.Customized_heatmap.png)
+![](../.gitbook/assets/9.2.Customized_heatmap.png)
 
-### 9.3.Draw the heatmap with the ggplot2 package
+### Draw the heatmap with the ggplot2 package
 
 ```r
 ##9.3.1.cluster by row and col
@@ -639,9 +629,9 @@ ggplot(dm.reordered, aes(Var2, Var1)) +
 
 ![](../.gitbook/assets/9.3.Customized_heatmap.png)
 
-## 10.Ballon plots
+## Ballon plots {#-plot}
 
-### 10.1.basic ballon plots
+### basic ballon plots
 
 ```r
 head(df6)
@@ -674,9 +664,9 @@ ggplot(df6, aes(x=Fold.enrichment, y=Biological.process)) +
   labs(x="Fold Enrichment",y="Biological Process",size="-log10(Pvalue)", title="GO Enrichment",face="bold")
 ```
 
-### ![](../.gitbook/assets/10.1.Basic_ballonplot.png)
+![](../.gitbook/assets/10.1.Basic_ballonplot.png)
 
-### 10.2.change the dot colors
+### change the dot colors
 
 ```r
 ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
@@ -700,7 +690,7 @@ ggplot(df6, aes(x=col, y=Biological.process,color=X.log10.Pvalue.)) +
 
 
 
-## 11.Vennpie plots
+## Vennpie plots {#-plot}
 
 ### The vennpie plot is the combination of a venn diagram and a pie chart.
 
@@ -782,13 +772,13 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 ## Learn more
 
-### 1.Guide to Great Beautiful Graphics in R
+1. Guide to Great Beautiful Graphics in R
 
-[http://www.sthda.com/english/wiki/ggplot2-essentials](http://www.sthda.com/english/wiki/ggplot2-essentials)
+   [http://www.sthda.com/english/wiki/ggplot2-essentials](http://www.sthda.com/english/wiki/ggplot2-essentials)
 
-### 2.Top 50 ggplot2 Visualizations - The Master List \(With Full R Code\)
+2.T op 50 ggplot2 Visualizations - The Master List \(With Full R Code\)
 
-[http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
+   b[http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
 
 
