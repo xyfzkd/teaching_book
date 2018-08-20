@@ -794,7 +794,7 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 3. Color Scheme Suggestion
    
    http://colorbrewer2.org/Files  
-   [Rcolor.pdf](https://xixiaochen.gitbooks.io/plots/content/1box-plots/Files/Rcolor.pdf)
+   [Rcolor.pdf](https://dongzhuoer.gitlab.io/lulab-teaching_book/libs/Rcolor.pdf)
 
 
 
