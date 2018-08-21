@@ -1,0 +1,20 @@
+---
+header-includes:
+    - <meta charset="utf-8">
+    - <meta http-equiv="refresh" content="0;url=https://dongzhuoer.com/2018/05/24/package-development">
+site: bookdown::bookdown_site
+github-repo: lulab/teaching_book
+output: 
+    bookdown::epub_book: default   
+    bookdown::gitbook:
+        edit: https://github.com/lulab/teaching_book/edit/master/%s
+        download: no
+        sharing: 
+            github: yes
+            all: no
+        search: yes
+        fontsettings:
+            theme: sepia
+---
+
+
