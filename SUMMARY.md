@@ -45,5 +45,4 @@
   * [10.Ballon plots](appendix/appendix3.shared-scripts.md#ballon-plot)
   * [11.Vennpie plots](appendix/appendix3.shared-scripts.md#vennpie-plot)
   * [Learn more](appendix/appendix3.shared-scripts.md#plot-more)
-  * [Shared Scripts](appendix/appendix3.shared-scripts.md#share-script)
 

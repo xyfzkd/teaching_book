@@ -1,9 +1,8 @@
 # Appendix I. Keep Learning
 
-
 ## I. Basics for Self-study
 
-------
+---
 
 _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以上的程序； 2. 在线课程的正式或非正式认可，3. 任何其他官方official证书. Examples）_
 
@@ -89,6 +88,7 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
    * 《Beginning Perl for Bioinformatics》
 
 3. R \(or MATLAB\):
+
    * Quick R \([online](http://www.statmethods.net/)\)
    * 《R语言实战》 \(《R in action》\)
 
@@ -104,14 +104,27 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 2. [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \[UC SanDiego\]
 3. Statistics: [Statistics 110](https://itunes.apple.com/us/course/statistics-110-probability/id502492375) @iTunes U
 
-
 ## II. Advanced Tutorial
 
-------
+---
 
 [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
 
 
+
+## III. Shared Scripts {#share-script}
+
+---
+
+### scripts
+
+* Lu Lab: [https://github.com/lulab/shared\_scripts](https://github.com/lulab/shared_scripts)
+* Zhi J. Lu: [https://github.com/urluzhi/scripts](https://github.com/urluzhi/scripts)
+
+### Plots
+
+* Lu Lab: [https://github.com/lulab/shared\_scripts/tree/master/plots](https://github.com/lulab/shared_scripts/tree/master/plots)
+* Zhi J. Lu: [https://github.com/urluzhi/scripts/tree/master/Rscript/R\_plot](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
 
 
 
