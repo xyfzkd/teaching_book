@@ -24,7 +24,7 @@ rmd_files:
 
   - part-ii.-ngs-pipelines/5.seqbowtie.md
   - part-ii.-ngs-pipelines/6.rna-seq.md
-  - part-ii.-ngs-pipelines/6.1.basic_analyses.md
+  - part-ii.-ngs-pipelines/6.1.differential-expression.md
   - part-ii.-ngs-pipelines/6.2.alternative.md
   - part-ii.-ngs-pipelines/7.chip-seq.md
   - part-ii.-ngs-pipelines/7.1.peak-calling.md

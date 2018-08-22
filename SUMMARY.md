@@ -21,7 +21,7 @@
 
 * [5.Mapping](part-ii.-ngs-pipelines/5.seqbowtie.md)
 * [6.RNA-seq](part-ii.-ngs-pipelines/6.rna-seq.md)
-  * [6.1 Differential Expression](part-ii.-ngs-pipelines/6.1.basic_analyses.md)
+  * [6.1 Differential Expression](part-ii.-ngs-pipelines/6.1.differential-expression.md)
   * [6.2 Alternative Splicing](part-ii.-ngs-pipelines/6.2.alternative.md)
 * [7.ChIP-seq](part-ii.-ngs-pipelines/7.chip-seq.md)
   * [7.1 Peak Calling](part-ii.-ngs-pipelines/7.1.peak-calling.md)
