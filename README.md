@@ -1,4 +1,4 @@
-# Bioinformatics Tutorial - Basics  {#index}
+# Bioinformatics Tutorial - Basics
 
 ---
 
