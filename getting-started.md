@@ -45,7 +45,7 @@ _**MacOS**_
 首先检查docker程序已经运行，然后打开**Terminal**\(终端\)程序进行操作，基本命令如下：
 
 ```bash
-##load image into docker
+##load image file into docker
 docker load < ~/Desktop/bioinfo_docker.tar
 
 ## run the docker for the first time, create a container called bioinfo_docker
@@ -55,26 +55,25 @@ docker run -it bioinfo_docker
 # This is a hard start we recommend: 
 # 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和docker共享
 # docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
-docker run -it --name=bioinfo -h bioinfo  -v ~/Desktop/bioinfo:/desktop bioinfo_docker:2018
+docker run -it --name=bioinfo -h bioinfo  -v /Users/your_account/Desktop/bioinfo:/desktop bioinfo_docker
+# replace "your_account" to your own name
 
-
-
-##add user
-useradd -m test -s /bin/bash
-passwd test
-usermod -aG sudo test
+##add a user called cs
+useradd -m cs -s /bin/bash
+passwd cs
+usermod -aG sudo cs
 chown -R test /home/cs/Bioinfo_Lab/
-su test
+su cs
 
 
 ##detach (pause) and attach
 ctrl+p+q                      # detach: pause, not exit. The job will keep running in the background. 
-docker attach bioinfo_docker  # attach：re-enter your docker
+docker attach bioinfo         # attach：re-enter your docker
 
 
 ##exit and delete a container
 exit                          #inside docker as root, then exit
-docker rm bioinfo_docker      #delete the container we created by docker run
+docker rm bioinfo             #delete the container we created by docker run
 ```
 
 _**Windows**_
@@ -83,14 +82,10 @@ _**Windows**_
 
 > **注意：** 如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本\(Switch to Linux containers\)。
 
-
-
 ## Homework
 
 1. Register a github account, create your a repo. and write a README.md file online.
 2. Install docker on your own machine, dowload the docker image file \([Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)\) from this tutorial, then run it. 
-
-
 
 
 
