@@ -15,18 +15,18 @@
 
 > see more learning materials in _Appendix I. Keep Learning_
 
-## Document your work
+## Github - Document your work 
 
 * [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
 ## Virtual Machines
 
-### VirtualBox
+### Option 1. VirtualBox
 
 We provide a Linux virtual machine \(Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)\), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
 
-### Docker \(Recommended\)
+### Option 2. Docker \(Recommended\)
 
 We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
 
