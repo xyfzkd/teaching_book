@@ -7,6 +7,8 @@ github-repo: lulab/teaching_book
 output: 
     bookdown::epub_book: default   
     bookdown::gitbook:
+        toc:
+            collapse: section
         edit: https://github.com/lulab/teaching_book/edit/master/%s
         download: null
         sharing: 
