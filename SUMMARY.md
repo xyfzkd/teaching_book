@@ -31,8 +31,8 @@
 
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
-* [Appendix III. Plots](appendix/appendix3.plots.md)
-  * [0.load the data and install packages](appendix/appendix3.plots.md#plot-setup)
+* [Appendix III. Plot with R](appendix/appendix3.plots.md)
+  * [0.Prepare](appendix/appendix3.plots.md#plot-setup)
   * [1.Box plots](appendix/appendix3.plots.md#box-plot)
   * [2.Violin plots](appendix/appendix3.plots.md#violin-plot)
   * [3.Histogram plots](appendix/appendix3.plots.md#histogram-plot)

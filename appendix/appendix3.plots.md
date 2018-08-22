@@ -1,16 +1,18 @@
 # Appendix III. Plot with R
 
-## 0. Load the data and install packages {#plot-setup}
+## 0. Prepare {#plot-setup}
 
 ---
 
-1. Set work directory
+**How to load data and install packages**
+
+1. Set up working directory
 
    ```r
    setwd("/home/test/plot")
    ```
 
-2. prepare output directory
+2. Prepare output directory
 
    ```r
    dir.create('output')
