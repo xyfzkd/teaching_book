@@ -49,7 +49,7 @@ docker load < ~/Desktop/bioinfo_docker.tar
 docker run -it bioinfo_docker
 
 # This is a hard start we recommend: 
-# 先在桌面上建一个叫bioinfo文件夹, 该文件夹为主机和docker共享
+# 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和docker共享
 # docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
 docker run -it --name=bioinfo -h bioinfo  -v ~/Desktop/bioinfo:/desktop bioinfo_docker:2018
 
@@ -63,14 +63,14 @@ chown -R test /home/cs/Bioinfo_Lab/
 su test
 
 
-###detach (pause) and attach
-ctrl+p+q                      # detach: 暂停退出，容器不关闭，容器内部正在运行的任务不会停止. 
-docker attach bioinfo_docker  # attach：重新进入
+##detach (pause) and attach
+ctrl+p+q                      # detach: pause, not exit. The job will keep running in the background. 
+docker attach bioinfo_docker  # attach：re-enter your docker
 
 
-###exit and delete a container
-exit                       #inside docker as root, then exit
-docker rm bioinfo_docker   #delete the container we created by docker run
+##exit and delete a container
+exit                          #inside docker as root, then exit
+docker rm bioinfo_docker      #delete the container we created by docker run
 ```
 
 _**Windows**_
