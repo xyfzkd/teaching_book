@@ -9,12 +9,16 @@
 
 ## Learning Materials
 
-1. Tutorial 
-   * **Basic Tutorial** \(this one\) 
-   * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
-2. [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
+* Tutorial 
+  * **Basic Tutorial** \(this one\) 
+  * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
 
 > see more learning materials in _Appendix I. Keep Learning_
+
+## Document your work
+
+* [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
+  * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
 ## Virtual Machines
 
