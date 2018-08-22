@@ -1,4 +1,4 @@
-# Appendix III. Plots & Scripts
+# Appendix III. Plot with R
 
 ## 0. Load the data and install packages {#plot-setup}
 
@@ -53,7 +53,7 @@
 
 5. Save the plot
 
-   If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.   
+   If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
        The second one is specific for the **ggplot2** package.
 
    For example,
@@ -77,7 +77,7 @@
    ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
    ```
 
-For the following examples, you can find all code in `/home/test/plot/Rscripts/`   
+For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
     of docker \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
 
 ## 1. Box plots {#box-plot}
