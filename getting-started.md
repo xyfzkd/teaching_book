@@ -85,3 +85,12 @@ _**Windows**_
 
 
 
+## Homework
+
+1. Register a github account, create your a repo. and write a README.md file online.
+2. Install docker on your own machine, dowload the docker image file \([Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)\) from this tutorial, then run it. 
+
+
+
+
+
