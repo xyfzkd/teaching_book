@@ -8,7 +8,7 @@ for ( md_file in yaml::read_yaml('_bookdown.yml')$rmd_files) {
     if (basename(md_file) != 'index.Rmd')
         content = stringr::str_replace_all(content, '^---$', '------')
     # 
-    if (basename(md_file) != 'README.md')
+    if (basename(md_file) == 'README.md')
     content[1] = paste0(content[1], ' {#index}')
 
     readr::write_file(content, md_file)
