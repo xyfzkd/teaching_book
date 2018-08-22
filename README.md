@@ -1,15 +1,13 @@
-# Bioinformatics Tutorial - Basics  {#index}
+# Bioinformatics Tutorial - Basics | 生物信息学实践教程 {#index}
 
-**生物信息学实践教程 - 基础篇**
-
----
-
-![](.gitbook/assets/intro.png)
+------
 
 ## Teaching Philosophy
 
 **Study and Practice**  
 **格物致知 \| 知行合一**
+
+![](.gitbook/assets/intro.png)
 
 本书在清华大学《生物信息学导论》课和《生物信息学实践》课上机指南的基础上编写。
 
@@ -35,9 +33,27 @@
 
 [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
----
+------
 
 > [Markdown Syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) \| [Excel Table to Markdown](https://www.tablesgenerator.com/markdown_tables) \| [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)
 
 
+<!--
 
+## Pipeline
+
+## Data Structure
+
+### getting software & data
+
+### input
+
+### output
+
+## Running Scripts
+
+## Tips/Utilities
+
+## Homework and more
+
+-->
