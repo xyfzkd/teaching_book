@@ -2,7 +2,7 @@
 
 ## Projects
 
-------------
+---
 
 **1. ENCODE**:
 
@@ -25,7 +25,7 @@ most genetic variants with frequencies of at least 1% in the populations studied
 
 ## Databases
 
-------------
+---
 
 ### General
 
@@ -65,7 +65,7 @@ visualization, analysis and download of large-scale cancer genomics data sets. [
 
 ## Servers
 
-------------
+---
 
 
 
