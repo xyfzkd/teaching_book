@@ -8,7 +8,7 @@ output:
     bookdown::epub_book: default   
     bookdown::gitbook:
         toc:
-            collapse: section
+            collapse: chapter
         edit: https://github.com/lulab/teaching_book/edit/master/%s
         download: null
         sharing: 
@@ -20,3 +20,22 @@ output:
 ---
 
 
+<!--
+
+## Pipeline
+
+## Data Structure
+
+### getting software & data
+
+### input
+
+### output
+
+## Running Scripts
+
+## Tips/Utilities
+
+## Homework and more
+
+-->

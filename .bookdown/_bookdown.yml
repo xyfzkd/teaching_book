@@ -1,6 +1,7 @@
 book_filename: teaching_book.Rmd
 output_dir: output
 rmd_files: 
+#  - index.Rmd  
 # Summary
 
   - README.md
