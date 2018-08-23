@@ -1,6 +1,6 @@
 # Appendix I. Keep Learning
 
-## I. Basics for Self-study
+## I. Basics for Self-study {#self-study}
 
 ---
 
@@ -104,7 +104,7 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 2. [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) \[UC SanDiego\]
 3. Statistics: [Statistics 110](https://itunes.apple.com/us/course/statistics-110-probability/id502492375) @iTunes U
 
-## II. Advanced Tutorial
+## II. Advanced Tutorial {#advanced}
 
 ---
 
