@@ -116,15 +116,12 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 
 ---
 
-### scripts
+### Scripts
 
 * Lu Lab: [https://github.com/lulab/shared\_scripts](https://github.com/lulab/shared_scripts)
 * Zhi J. Lu: [https://github.com/urluzhi/scripts](https://github.com/urluzhi/scripts)
 
-### Plots
+### Plots 
 
 * Lu Lab: [https://github.com/lulab/shared\_scripts/tree/master/plots](https://github.com/lulab/shared_scripts/tree/master/plots)
 * Zhi J. Lu: [https://github.com/urluzhi/scripts/tree/master/Rscript/R\_plot](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
-
-
-
