@@ -807,6 +807,7 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 ---
 
+
 1. Guide to Great Beautiful Graphics in R
 
    [http://www.sthda.com/english/wiki/ggplot2-essentials](http://www.sthda.com/english/wiki/ggplot2-essentials)
@@ -819,6 +820,8 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
    [http://colorbrewer2.org](http://colorbrewer2.org)  
    [Rcolor.pdf](https://dongzhuoer.gitlab.io/lulab-teaching_book/libs/Rcolor.pdf)
+
+4. [Plots Gitbook](https://xixiaochen.gitbooks.io/plots/content/) of Xiaochen Xi
 
 
 
