@@ -10,7 +10,7 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 2. Python \(or Perl\)
 3. R \(or MATLAB\)
 
-### 1. Recommended Books and Tutorials
+### 1. Recommended Books and Tutorials {#read}
 
 **理论**：
 
@@ -20,7 +20,7 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 
 **编程实践**：
 
-1. Linux: 《鸟哥的Linux私房菜-基础学习篇》， 主要学习以下2部分  {#read}
+1. Linux: 《鸟哥的Linux私房菜-基础学习篇》， 主要学习以下2部分  
 
    * Editor \(e.g. VIM\)  
    * Shell Script \(e.g. bash\)
