@@ -28,24 +28,24 @@ We provide a Linux virtual machine (Download links: [TsinghuaCloud](https://clou
 
 ### Option 2. Docker (Recommended)
 
-We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the docker is based on Ubuntu, which means you need to use `apt` to install additional softwares.)
+We provide a Linux Docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu, which means you need to use `apt` to install additional softwares.)
 
-**I. 安装并运行docker程序：**
+**I. 安装并运行 Docker 程序：**
 
-从[docker官网](https://www.docker.com/get-docker)下载Mac或Windows版本的docker程序，安装并运行。
+从 [Docker 官网](https://www.docker.com/get-docker)下载 Mac 或Windows版本的 Docker 程序，安装并运行。
 
-> **注意：** 如果用的是Windows系统，只有64位的Windows才能安装docker。
+> **注意：** 如果用的是 Windows 系统，只有64位的 Windows 才能安装 Docker。
 
-**II. 装载docker镜像文件：**
+**II. 装载 Docker 镜像文件：**
 
 首先下载该教程的配套文件，[Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)，到本地目录，例如，可以下载到桌面 （`~/Desktop`）。
 
 _**MacOS**_
 
-首先检查docker程序已经运行，然后打开 **Terminal** （终端）程序进行操作，基本命令如下：
+首先检查 Docker 程序已经运行，然后打开 **Terminal** （终端）程序进行操作，基本命令如下：
 
 ```bash
-##load image file into docker
+##load image file into Docker
 docker load < ~/Desktop/bioinfo_docker.tar
 
 ## run the docker for the first time, create a container called bioinfo_docker
@@ -53,7 +53,7 @@ docker load < ~/Desktop/bioinfo_docker.tar
 docker run -it bioinfo_docker
 
 # This is a hard start we recommend: 
-# 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和docker共享
+# 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和Docker共享
 # docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
 docker run -it --name=bioinfo -h bioinfo  -v /Users/your_account/Desktop/bioinfo:/desktop bioinfo_docker
 # replace "your_account" to your own name
@@ -72,7 +72,7 @@ docker attach bioinfo         # attach：re-enter your docker
 
 
 ##exit and delete a container
-exit                          #inside docker as root, then exit
+exit                          #inside Docker as root, then exit
 docker rm bioinfo             #delete the container we created by docker run
 ```
 
@@ -80,7 +80,7 @@ _**Windows**_
 
 安装好 Docker后，按照提示开启 hyper-v 功能。运行 Docker，打开**powershell** 程序进行操作，操作命令同 MacOS 版本。
 
-> **注意：** 如果安装时选择了Windows容器版本，则需要在运行了 Docker之后，从选项卡选择切换到Linux容器版本（Switch to Linux containers）。
+> **注意：** 如果安装时选择了 Windows 容器版本，则需要在运行了  Docker 之后，从选项卡选择切换到 Linux 容器版本（Switch to Linux containers）。
 
 ## Homework
 
