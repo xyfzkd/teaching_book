@@ -15,9 +15,9 @@
 
 > see more learning materials in _Appendix I. Keep Learning_
 
-## Github - Document your work 
+## GitHub - Document your work 
 
-* [Github](https://github.com/lulab/Shared) for students (shared code and scripts）
+* [GitHub](https://github.com/lulab/Shared) for students (shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
 ## Virtual Machines

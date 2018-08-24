@@ -27,7 +27,7 @@
 * School of Life Sciences, Tsinghua University, Beijing, China
 * e-mai: lulab AT biomed.tsinghua.edu.cn
 * Hompage: <http://bioinfo.life.tsinghua.edu.cn>
-* Github: <https://lulab.github.io>
+* GitHub: <https://lulab.github.io>
 * Books: V1: <https://lulab.gitbooks.io>; V2: <https://lulab.gitbook.io>
 * Software: <http://software.ncrnalab.org>
 
