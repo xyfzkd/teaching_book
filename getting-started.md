@@ -10,25 +10,25 @@
 ## Learning Materials
 
 * Tutorial 
-  * **Basic Tutorial** \(this one\) 
+  * **Basic Tutorial** (this one) 
   * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
 
 > see more learning materials in _Appendix I. Keep Learning_
 
 ## Github - Document your work 
 
-* [Github](https://github.com/lulab/Shared) for students \(shared code and scripts）
+* [Github](https://github.com/lulab/Shared) for students (shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
 ## Virtual Machines
 
 ### Option 1. VirtualBox
 
-We provide a Linux virtual machine \(Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)\), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
+We provide a Linux virtual machine (Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
 
-### Option 2. Docker \(Recommended\)
+### Option 2. Docker (Recommended)
 
-We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
+We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the docker is based on Ubuntu, which means you need to use `apt` to install additional softwares.)
 
 **I. 安装并运行docker程序：**
 
@@ -38,11 +38,11 @@ We provide a Linux docker, which is a modern solution of setting up a virtual Li
 
 **II. 装载docker镜像文件：**
 
-首先下载该教程的配套文件，[Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)，到本地目录，例如，可以下载到桌面~/Desktop。
+首先下载该教程的配套文件，[Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)，到本地目录，例如，可以下载到桌面 （`~/Desktop`）。
 
 _**MacOS**_
 
-首先检查docker程序已经运行，然后打开**Terminal**\(终端\)程序进行操作，基本命令如下：
+首先检查docker程序已经运行，然后打开 **Terminal** （终端）程序进行操作，基本命令如下：
 
 ```bash
 ##load image file into docker
@@ -78,14 +78,14 @@ docker rm bioinfo             #delete the container we created by docker run
 
 _**Windows**_
 
-安装好docker后，按照提示开启hyper-v功能。运行docker，打开**powershell**程序进行操作，操作命令同MacOS版本。
+安装好 Docker后，按照提示开启 hyper-v 功能。运行 Docker，打开**powershell** 程序进行操作，操作命令同 MacOS 版本。
 
-> **注意：** 如果安装时选择了Windows容器版本，则需要在运行了docker之后，从选项卡选择切换到Linux容器版本\(Switch to Linux containers\)。
+> **注意：** 如果安装时选择了Windows容器版本，则需要在运行了 Docker之后，从选项卡选择切换到Linux容器版本（Switch to Linux containers）。
 
 ## Homework
 
-1. Register a github account, create your a repo. and write a README.md file online.
-2. Install docker on your own machine, dowload the docker image file \([Bioinfo\_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)\) from this tutorial, then run it. 
+1. Register a GitHub account, create a repository. and write a README.md file online.
+2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
 
 
 
