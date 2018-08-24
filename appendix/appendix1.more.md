@@ -4,11 +4,11 @@
 
 ---
 
-_Learn three basick techniques \(完成任何一个要求即可：1. 1000行以上的程序； 2. 在线课程的正式或非正式认可，3. 任何其他官方official证书. Examples）_
+_Learn three basick techniques (完成任何一个要求即可：1. 1000行以上的程序； 2. 在线课程的正式或非正式认可，3. 任何其他官方official证书. Examples）_
 
-1. Linux \(Editor \(e.g. VIM\) and Shell Script \(e.g. bash\)\)
-2. Python \(or Perl\)
-3. R \(or MATLAB\)
+1. Linux (Editor (e.g. VIM) and Shell Script (e.g. bash))
+2. Python (or Perl)
+3. R (or MATLAB)
 
 ### 1. Recommended Books and Tutorials {#read}
 
@@ -22,8 +22,8 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
 
 1. Linux: 《鸟哥的Linux私房菜-基础学习篇》， 主要学习以下2部分  
 
-   * Editor \(e.g. VIM\)  
-   * Shell Script \(e.g. bash\)
+   * Editor (e.g. VIM)  
+   * Shell Script (e.g. bash)
 
    > 推荐章节：  
    > 第5章
@@ -80,17 +80,17 @@ _Learn three basick techniques \(完成任何一个要求即可：1. 1000行以�
    >
    > 25.5重点回顾
 
-2. Python \(or Perl\)
+2. Python (or Perl)
 
    * 《笨办法学 Python》（《Learn Python The Hard Way》） 
    * 《Python编程入门》
    * [http://www.pythonlearn.com/](http://www.pythonlearn.com/)
    * 《Beginning Perl for Bioinformatics》
 
-3. R \(or MATLAB\):
+3. R (or MATLAB):
 
-   * Quick R \([online](http://www.statmethods.net/)\)
-   * 《R语言实战》 \(《R in action》\)
+   * Quick R ([online](http://www.statmethods.net/))
+   * 《R语言实战》 (《R in action》)
 
 ### 2. QUIZ for self-test
 

@@ -82,7 +82,7 @@
    ```
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-    of docker \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
+    of docker (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
 ## 1. Box plots {#box-plot}
 
@@ -812,7 +812,7 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
    [http://www.sthda.com/english/wiki/ggplot2-essentials](http://www.sthda.com/english/wiki/ggplot2-essentials)
 
-2. Top 50 ggplot2 Visualizations - The Master List \(With Full R Code\)
+2. Top 50 ggplot2 Visualizations - The Master List (With Full R Code)
 
    [http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
