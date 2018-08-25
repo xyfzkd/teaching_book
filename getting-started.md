@@ -88,4 +88,7 @@ _**Windows**_
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
 
 
-
+<video width="640" height="480" controls>
+  <source src=".gitbook/assets/test.mp4" type="video/mp4">
+  Gitbook can't use mp4
+</video>
