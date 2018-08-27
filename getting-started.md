@@ -89,6 +89,8 @@ _**Windows**_
 
 [如何在mac中使用docker youtube](https://youtu.be/c1ldhV7dAhg)
 [如何在mac中使用docker bilibili](https://www.bilibili.com/video/av30426956/)
+{% youtube src="https://www.youtube.com/watch?v=9bZkp7q19f0" %}{% endyoutube %}
+
 
 <video width="800" height="600" controls>
   <source src=".gitbook/assets/igv.mp4" type="video/mp4">
