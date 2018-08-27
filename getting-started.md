@@ -88,7 +88,7 @@ _**Windows**_
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
 
 
-
+{% video %}https://youtu.be/c1ldhV7dAhg{% endvideo %}
 
 <video width="800" height="600" controls>
   <source src=".gitbook/assets/igv.mp4" type="video/mp4">
