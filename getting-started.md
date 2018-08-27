@@ -93,15 +93,8 @@ _**Windows**_
 
 ### [如何在mac中使用docker bilibili](https://www.bilibili.com/video/av30426956/)
 
-<iframe width="800" height="600" src="https://www.bilibili.com/video/av30426956/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="600" height="500" src="https://www.bilibili.com/video/av30426956/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-{% bilibili %} 30426956 {% endbilibili %}
-
-{% bilibili %} 30426956@30426956@640x480 {% endbilibili %}
-
-{% bilibili %} 30426956@640x480@1@html5 {% endbilibili %}
-
-{% bilibili %} 30426956@544x415@2@flash {% endbilibili %}
 
 <video width="800" height="600" controls>
   <source src=".gitbook/assets/igv.mp4" type="video/mp4">
