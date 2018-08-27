@@ -31,7 +31,7 @@
   * [Advanced Tutorial](appendix/appendix1.more.md#advanced)
   * [Shared Scripts](appendix/appendix1.more.md#share-script)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
-* [Appendix III. Plot with R](appendix/appendix3.plots.md)
+* [Appendix. Plot with R](appendix/appendix.plots.md)
   * [0.Prepare](appendix/appendix3.plots.md#plot-setup)
   * [1.Box plots](appendix/appendix3.plots.md#box-plot)
   * [2.Violin plots](appendix/appendix3.plots.md#violin-plot)
