@@ -89,7 +89,7 @@ _**Windows**_
 
 [如何在mac中使用docker youtube](https://youtu.be/c1ldhV7dAhg)
 [如何在mac中使用docker bilibili](https://www.bilibili.com/video/av30426956/)
-{% youtube src="https://youtu.be/c1ldhV7dAhg" %}{% endyoutube %}
+{% youtube src="https://www.youtube.com/embed/c1ldhV7dAhg" %}{% endyoutube %}
 
 
 <video width="800" height="600" controls>
