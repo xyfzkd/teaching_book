@@ -95,8 +95,11 @@ _**Windows**_
 
 <iframe width="800" height="600" src="https://www.bilibili.com/video/av30426956/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-{% bilibili %} 30426956 @ [section] @ [800 x 600] {% endbilibili %}
+
 {% bilibili %} avCode @ [30426956] @ [800 x 600] {% endbilibili %}
+{% bilibili %} avCode @ 30426956 @ 800 x 600 {% endbilibili %}
+
+
 
 <video width="800" height="600" controls>
   <source src=".gitbook/assets/igv.mp4" type="video/mp4">
