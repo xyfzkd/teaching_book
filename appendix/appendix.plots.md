@@ -1,6 +1,5 @@
-# Appendix III. Plot with R
+# Appendix. Plot with R
 
-[![Build Status](https://travis-ci.com/dongzhuoer/docker-lulab-plot.svg?branch=master)](https://travis-ci.com/dongzhuoer/docker-lulab-plot)
 
 ## 0. Prepare {#plot-setup}
 
