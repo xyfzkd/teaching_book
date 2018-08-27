@@ -38,7 +38,7 @@ We provide a Linux Docker, which is a modern solution of setting up a virtual Li
 
 **II. 装载 Docker 镜像文件：**
 
-首先下载该教程的配套文件，[Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1)，到本地目录，例如，可以下载到桌面 （`~/Desktop`）。
+首先下载该教程的配套文件，[bioinfo_docker.tar.zip](https://cloud.tsinghua.edu.cn/f/b1f268dec4664c349cf8/)，到本地目录，例如，可以下载到桌面 （`~/Desktop`）。
 
 _**MacOS**_
 

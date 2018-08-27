@@ -567,7 +567,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ---
 
-1. Draw the heatmap with the gplots package, heatmap.2 function
+1. Draw the heatmap with the gplots package, `heatmap.2()` function
 
    ```r
    head(dm)

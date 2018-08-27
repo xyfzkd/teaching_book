@@ -4,7 +4,7 @@ git:
   submodules: false
 
 script:
-  - body='{ "request":{"branch":"master", "message":"lulab/teaching_book update"} }'
+  - body='{ "request":{"branch":"master", "message":"lulab/teaching_book updated"} }'
   - curl -s -X POST -H "Content-Type:application/json" -H "Accept:application/json" -H "Travis-API-Version:3" -H "Authorization:token $TRAVIS_TOKEN" -d "$body" https://api.travis-ci.com/repo/dongzhuoer%2Fbuild-teaching_book/requests
 
 notifications:
