@@ -89,3 +89,8 @@ _**Windows**_
 
 
 
+
+<video width="800" height="600" controls>
+  <source src=".gitbook/assets/igv.mp4" type="video/mp4">
+  Gitbook can't use mp4
+</video>
