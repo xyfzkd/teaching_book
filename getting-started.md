@@ -95,13 +95,13 @@ _**Windows**_
 
 <iframe width="800" height="600" src="https://www.bilibili.com/video/av30426956/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-{% bilibili %} 2440534 {% endbilibili %}
+{% bilibili %} 30426956 {% endbilibili %}
 
-{% bilibili %} 2440534@640x480 {% endbilibili %}
+{% bilibili %} 30426956@30426956@640x480 {% endbilibili %}
 
-{% bilibili %} 2440534@640x480@1@html5 {% endbilibili %}
+{% bilibili %} 30426956@640x480@1@html5 {% endbilibili %}
 
-{% bilibili %} 4950805@544x415@2@flash {% endbilibili %}
+{% bilibili %} 30426956@544x415@2@flash {% endbilibili %}
 
 <video width="800" height="600" controls>
   <source src=".gitbook/assets/igv.mp4" type="video/mp4">
