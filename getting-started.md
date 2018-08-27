@@ -88,6 +88,7 @@ _**Windows**_
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
 
 [如何在mac中使用docker youtube](https://youtu.be/c1ldhV7dAhg)
+<iframe src="//player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <video width="800" height="600" controls>
   <source src=".gitbook/assets/igv.mp4" type="video/mp4">
