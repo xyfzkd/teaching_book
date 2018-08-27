@@ -34,7 +34,7 @@
 * [Appendix. Plot with R](appendix/appendix.plots.md)
   * [0.Prepare](appendix/appendix.plots.md#plot-setup)
   * [1.Box plots](appendix/appendix.plots.md#box-plot)
-  * [2.Violin plots](appendix/appendix3.plots.md#violin-plot)
+  * [2.Violin plots](appendix/appendix.plots.md#violin-plot)
   * [3.Histogram plots](appendix/appendix.plots.md#histogram-plot)
   * [4.Density plots](appendix/appendix.plots.md#density-plot)
   * [5.Dot plots](appendix/appendix.plots.md#dot-plot)
