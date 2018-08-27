@@ -95,6 +95,7 @@ _**Windows**_
 
 <iframe width="800" height="600" src="https://www.bilibili.com/video/av30426956/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
+<iframe src="//player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 <video width="800" height="600" controls>
