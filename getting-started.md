@@ -20,6 +20,12 @@
 * [GitHub](https://github.com/lulab/Shared) for students (shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
+## 使用说明
+
+每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为章节目录。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
+
+每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
+
 ## Virtual Machines
 
 ### Option 1. VirtualBox
