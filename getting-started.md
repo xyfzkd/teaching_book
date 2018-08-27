@@ -96,7 +96,12 @@ _**Windows**_
 <iframe width="800" height="600" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
 
-<video width="800" height="600" controls>
-  <source src=".gitbook/assets/igv.mp4" type="video/mp4">
-  Gitbook can't use mp4
-</video>
+### [如何使用 UCSC genome browse youtube](https://youtu.be/c1ldhV7dAhg)
+
+<iframe width="800" height="600" src="https://youtu.be/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+### [如何使用 IGV genome browse youtube](https://youtu.be/c1ldhV7dAhg)
+
+<iframe width="800" height="600" src="https://youtu.be/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
