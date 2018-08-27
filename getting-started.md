@@ -96,7 +96,7 @@ _**Windows**_
 <iframe width="800" height="600" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
 
-### [如何使用 UCSC genome browse youtube](https://youtu.be/c1ldhV7dAhg)
+### [如何使用 UCSC genome browse youtube](https://youtu.be/eTgEtfI65hA)
 
 <iframe width="800" height="600" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -107,7 +107,7 @@ _**Windows**_
 
 
 
-### [如何使用 IGV genome browse youtube](https://youtu.be/c1ldhV7dAhg)
+### [如何使用 IGV genome browse youtube](https://youtu.be/6_1ZcVw7ptU)
 
 <iframe width="800" height="600" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
