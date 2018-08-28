@@ -91,9 +91,7 @@ _**Windows**_
 
 |演示视频|演示视频|
 |-|-|
-|[@youtube](https://youtu.be/c1ldhV7dAhg)
-|[@bilibili](https://www.bilibili.com/video/av30426956/)
-|  
+|[@youtube](https://youtu.be/c1ldhV7dAhg)|[@bilibili](https://www.bilibili.com/video/av30426956/)|  
 
 <iframe width="395" height="300" style="float: left; position:relative" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 <iframe width="375" height="300" style="float: left; position:relative" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
