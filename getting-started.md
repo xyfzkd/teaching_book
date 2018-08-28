@@ -93,33 +93,33 @@ _**Windows**_
 1. Register a GitHub account, create a repository. and write a README.md file online.
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
 
- [如何在mac中使用docker ](https://youtu.be/c1ldhV7dAhg)
+[如何在mac中使用docker ](https://youtu.be/c1ldhV7dAhg)
 @youtube
-<iframe width="800" height="600" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
- [如何在mac中使用docker ](https://www.bilibili.com/video/av30426956/)
+[如何在mac中使用docker ](https://www.bilibili.com/video/av30426956/)
 @bilibili
-<iframe width="800" height="600" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
 
- [如何使用 UCSC genome browser](https://youtu.be/eTgEtfI65hA)
+[如何使用 UCSC genome browser](https://youtu.be/eTgEtfI65hA)
 @youtube
-<iframe width="800" height="600" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
- [如何使用 UCSC genome browser](https://www.bilibili.com/video/av30448417/)
+[如何使用 UCSC genome browser](https://www.bilibili.com/video/av30448417/)
 @bilibili
-<iframe width="800" height="600" src="https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1" allowfullscreen></iframe>
 
 
 
 
- [如何使用 IGV genome browser ](https://youtu.be/6_1ZcVw7ptU)
+[如何使用 IGV genome browser ](https://youtu.be/6_1ZcVw7ptU)
 @youtube
-<iframe width="800" height="600" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
- [如何使用 IGV genome browser](https://www.bilibili.com/video/av30448472/)
+[如何使用 IGV genome browser](https://www.bilibili.com/video/av30448472/)
 @bilibili
-<iframe width="800" height="600" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
+<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
 
 
 
