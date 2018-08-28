@@ -91,8 +91,8 @@ _**Windows**_
 
 演示视频
 @youtube
-<iframe width="400" height="300" style="folate:left;" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-<iframe width="400" height="300" style="folate:left;" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
+<iframe width="300" height="300" style="float: left;" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+<iframe width="300" height="300" style="float: left;" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
 ## Homework
 
