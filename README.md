@@ -9,13 +9,16 @@
 ## Teaching Philosophy
 
 **Study and Practice**  
-**格物致知 | 知行合一**
+**格物致知 \| 知行合一**
 
-本书在清华大学《生物信息学导论》课和《生物信息学实践》课上机指南的基础上编写。
+We teach professional skills in bioinformatics. These skills are not just running software. They will give you freedom of exploring various real data.
 
 鲁志
-
 2018年8月于清华园
+
+> 本书在清华大学《生物信息学导论》课和《生物信息学实践》课上机指南的基础上编写。
+
+
 
 ## Contributors
 
