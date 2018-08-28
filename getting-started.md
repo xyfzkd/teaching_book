@@ -87,6 +87,12 @@ _**Windows**_
 安装好 Docker后，按照提示开启 hyper-v 功能。运行 Docker，打开**powershell** 程序进行操作，操作命令同 MacOS 版本。
 
 > **注意：** 如果安装时选择了 Windows 容器版本，则需要在运行了  Docker 之后，从选项卡选择切换到 Linux 容器版本（Switch to Linux containers）。
+|Youbute|Bilibili|
+|-|-|
+|<iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>|<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>|
+
+
+|
 
 ## Homework
 
