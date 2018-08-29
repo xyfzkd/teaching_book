@@ -112,6 +112,15 @@ _**Windows**_
 <iframe width="395" height="300" style="float: left; position:relative" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 <iframe width="375" height="300" style="float: left; position:relative" src="https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1" allowfullscreen></iframe>
 
+如何使用 IGV genome browser
+
+|演示视频|演示视频|
+|-|-|
+|[@youtube](https://youtu.be/6_1ZcVw7ptU)|[@bilibili](https://www.bilibili.com/video/av30448472/)| 
+
+<iframe width="395" height="300" style="float: left; position:relative" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+<iframe width="375" height="300" style="float: left; position:relative" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
+
 
 
 
