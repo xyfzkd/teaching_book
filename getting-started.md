@@ -110,19 +110,26 @@ _**Windows**_
 * Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
 
 * 如何使用 UCSC genome browser*
-* 演示视频
+
+* 演示视频  
 [@youtube](https://youtu.be/eTgEtfI65hA)
+  
 <iframe width="400" height="300" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 * 演示视频
 [@bilibili](https://www.bilibili.com/video/av30448417/)
+
 <iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1" allowfullscreen></iframe>
 
 * 如何使用 IGV genome browser*
-* 演示视频
+
+* 演示视频  
 [@youtube](https://youtu.be/6_1ZcVw7ptU)
+
 <iframe width="400" height="300" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-* 演示视频
+* 演示视频  
 [@bilibili](https://www.bilibili.com/video/av30448472/)
+
 <iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
 
 
