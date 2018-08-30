@@ -123,12 +123,12 @@ _**Windows**_
 
 * 如何使用 IGV genome browser*
 
-* 演示视频  
+* 演示视频   
 [@youtube](https://youtu.be/6_1ZcVw7ptU)
 
 <iframe width="400" height="300" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-* 演示视频    
+* 演示视频      
 [@bilibili](https://www.bilibili.com/video/av30448472/)
 
 <iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
