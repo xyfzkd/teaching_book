@@ -90,11 +90,11 @@ _**Windows**_
 
 
 演示视频 . 
-[@youtube](https://youtu.be/c1ldhV7dAhg) . 
+[@youtube](https://youtu.be/c1ldhV7dAhg)   
 <iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 
 演示视频 . 
-[@bilibili](https://www.bilibili.com/video/av30426956/) . 
+[@bilibili](https://www.bilibili.com/video/av30426956/)   
 <iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
 ###  
@@ -106,24 +106,27 @@ _**Windows**_
 
 如何使用 UCSC genome browser 
 
-演示视频 . 
+演示视频 
 [@youtube](https://youtu.be/eTgEtfI65hA)
 
 <iframe width="400" height="300" style="float: left; position:relative" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 
-演示视频 . 
-[@bilibili](https://www.bilibili.com/video/av30448417/)
+演示视频 
+[@bilibili](https://www.bilibili.com/video/av30448417/)   
 <iframe width="400" height="300" style="float: left; position:relative" src="https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1" allowfullscreen></iframe>
 
 如何使用 IGV genome browser
 
-演示视频 . 
-[@youtube](https://youtu.be/6_1ZcVw7ptU) . 
+演示视频 
+[@youtube](https://youtu.be/6_1ZcVw7ptU)  
+
 <iframe width="400" height="300" style="float: left; position:relative" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 
 
-演示视频 . 
-[@bilibili](https://www.bilibili.com/video/av30448472/)
+演示视频 
+
+[@bilibili](https://www.bilibili.com/video/av30448472/)  
+
 <iframe width="400" height="300" style="float: left; position:relative" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
 
 
