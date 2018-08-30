@@ -1,13 +1,13 @@
 # Getting Started
 
-## 预修课程准备
+## 1）预修课程准备
 
 1. 基本生物课程：    如《遗传学》和/或《分子生物学》
 2. 基本统计课程：    如《概率论》和/或《生物统计》
 3. 基本数学课程：    如《线性代数》
 4. 基本计算机课程：如《C语言》
 
-## Learning Materials
+## 2）Learning Materials
 
 * Tutorial 
   * **Basic Tutorial** (this one) 
@@ -15,24 +15,24 @@
 
 > see more learning materials in _Appendix I. Keep Learning_
 
-## GitHub - Document your work 
+## 3）GitHub - Document your work 
 
 * [GitHub](https://github.com/lulab/Shared) for students (shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
-## 使用说明
+## 4)使用说明
 
 每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为章节目录。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
 
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
 
-## Virtual Machines
+## 5）Virtual Machines
 
-### Option 1. VirtualBox
+### 5a) Option 1. VirtualBox
 
 We provide a Linux virtual machine (Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
 
-### Option 2. Docker (Recommended)
+### 5b) Option 2. Docker (Recommended)
 
 We provide a Linux Docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu, which means you need to use `apt` to install additional softwares.)
 
@@ -99,7 +99,7 @@ _**Windows**_
 
 ###  
 
-## Homework
+## 6) Homework
 
 1. Register a GitHub account, create a repository. and write a README.md file online.
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
