@@ -66,6 +66,47 @@ visualization, analysis and download of large-scale cancer genomics data sets. [
 ## Servers
 
 ---
+### General
+
+**1. BLAST**:
+
+finds regions of similarity between biological sequences. [https://blast.ncbi.nlm.nih.gov/Blast.cgi](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
+
+### Gene functional analysis
+
+**2. David**:
+
+gene functional classification tool. [https://david.ncifcrf.gov/](https://david.ncifcrf.gov/)
+
+**3. KAAS**:
+
+KEGG Automatic Annotation Server. [https://www.genome.jp/kegg/kaas/](https://www.genome.jp/kegg/kaas/)
+
+**4. agriGO**:
+
+gene ontology (GO) enrichment analyses of plant and agricultural species. [http://systemsbiology.cau.edu.cn/agriGOv2/]( http://systemsbiology.cau.edu.cn/agriGOv2/)
+
+### RNA secondary structure
+
+**5. RNAfold**:
+
+predict secondary structures of single stranded RNA or DNA sequences. [http://rna.tbi.univie.ac.at/cgi-bin/RNAWebSuite/RNAfold.cgi](http://rna.tbi.univie.ac.at/cgi-bin/RNAWebSuite/RNAfold.cgi)
+
+**6. RNAstructure**:
+
+RNA secondary structure prediction and analysis. [http://rna.urmc.rochester.edu/RNAstructureWeb/](http://rna.urmc.rochester.edu/RNAstructureWeb/)
+
+### miRNA targets prediction
+
+**7. TargetScan**:
+
+search for predicted microRNA targets in mammals [http://www.targetscan.org/vert_72/](http://www.targetscan.org/vert_72/)
+
+**8. psRNATarget**:
+
+plant small RNA target analysis [https://plantgrn.noble.org/psRNATarget/](https://plantgrn.noble.org/psRNATarget/)
+
+
 
 
 
