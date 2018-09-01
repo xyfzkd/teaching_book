@@ -202,6 +202,8 @@ docker rmi image_ID #删除镜像（参数为镜像ID）
 ---
 ## Tips/Utilitie
 
+![](../.gitbook/assets/use-docker.gif)
+
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8MwFb4pWLhbpyg4yk%2Fdocker%20guazai.png?alt=media&token=10aa8057-085e-46ac-a65c-14c854be1251)
 
 上图所示的命令是新建name=bioinfo容器，并将bioinfo容器中的Desktop下路径挂载到mac主机桌面上的bioinfo文件夹中。
