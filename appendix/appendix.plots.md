@@ -21,7 +21,7 @@
 3. Load the data
 
    ```r
-   # Read the input file
+   # Read the input files
    data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
    df <- data[, c("mpg", "cyl", "wt")]
 
