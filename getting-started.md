@@ -111,7 +111,7 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 * 在比较不同样本的数据时，需要根据样本本身测序深度的不同来对纵坐标进行调整,从而保证该区域/位点测序数据能够显示完整并且可以相互比较。
 * 有时，用bedtools genomecov scale之后的bigwig文件纵坐标仍然会出现显示不完整等现象，此时需要手动调整下。
 
-### 6b) 如何使用 IGV genome browser
+### 6c) 如何使用 IGV genome browser
 
 * 演示视频   
 [@youtube](https://youtu.be/6_1ZcVw7ptU)
