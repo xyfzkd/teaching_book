@@ -21,6 +21,7 @@
 3. Load the data
 
    ```r
+   # Read the input file
    data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
    df <- data[, c("mpg", "cyl", "wt")]
 
@@ -31,7 +32,11 @@
    df4 <- read.table("input/manhattan_plots_gwasResults.txt",header=T,sep="\t")
 
    df5 <-read.table("input/heatmaps.txt",header=T,sep="\t")
+   
+   # Covert data into matrix format
    dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
+
+   # Get the row names
    row.names(dm) <- df5[,1]
 
    df6 <- read.table("input/ballon_plots_GO.txt", header=T, sep="\t")
@@ -40,8 +45,9 @@
 4. Install and library packages
 
    ```r
+   # Install the necessary packages
    install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer', 'plotrix'))
-
+   # Load the specific packages
    library(ggplot2)
    library(qqman)
    library(gplots)
