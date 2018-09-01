@@ -96,34 +96,6 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 <iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
 
-### 6b) 如何使用 UCSC genome browser
-
-[@youtube](https://youtu.be/eTgEtfI65hA)
-  
-<iframe width="400" height="300" src="https://www.youtube.com/embed/eTgEtfI65hA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-[@bilibili](https://www.bilibili.com/video/av30448417/)
-
-<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448417&cid=53132461&page=1" allowfullscreen></iframe>
-
-**注意**：
-* 对于处理好的测序数据（bigWig，BAM,bigBed)，UCSC仅支持通过提供URL链接或直接输入。
-* 在比较不同样本的数据时，需要根据样本本身测序深度的不同来对纵坐标进行调整,从而保证该区域/位点测序数据能够显示完整并且可以相互比较。
-* 有时，用bedtools genomecov scale之后的bigwig文件纵坐标仍然会出现显示不完整等现象，此时需要手动调整下。
-
-### 6c) 如何使用 IGV genome browser
-
-* 演示视频   
-[@youtube](https://youtu.be/6_1ZcVw7ptU)
-
-<iframe width="400" height="300" src="https://www.youtube.com/embed/6_1ZcVw7ptU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-* 演示视频      
-[@bilibili](https://www.bilibili.com/video/av30448472/)
-
-<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30448472&cid=53133093&page=1" allowfullscreen></iframe>
-
-
 
 ## 7) Homework
 
