@@ -13,55 +13,62 @@
   * **Basic Tutorial** (this one) 
   * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
 
-> see more learning materials in _Appendix I. Keep Learning_
+> see more learning materials in [Appendix I. Keep Learning](https://lulab.gitbooks.io/teaching/content/appendix/appendix1.more.html)
 
 ## 3）GitHub - Document your work 
 
 * [GitHub](https://github.com/lulab/Shared) for students (shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
-## 4)使用说明
+## 4) 使用说明
 
-每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为章节目录。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
+每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为**章节目录**。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
 
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
 
-## 5）Virtual Machines
+## 5）Docker
 
-### 5a) Option 1. VirtualBox
+We provide a Linux Docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
 
-We provide a Linux virtual machine (Download links: [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/08cb34ba57cf44b8aea9/) or [BaiduYun](https://pan.baidu.com/s/1ETkey)), which has some bioinfo software pre-installed. You can download the file and open it with [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) in Windows or Mac.
+### 5a）安装 Docker
 
-### 5b) Option 2. Docker (Recommended)
+从 [Docker 官网](https://www.docker.com/get-docker)下载 Mac 版本的 Docker 程序，安装并运行。
 
-We provide a Linux Docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu, which means you need to use `apt` to install additional softwares.)
+> **注意：** Windows 系统不予介绍，因为 Docker 官网只支持 64 位的企业版 Windows。
 
-**I. 安装并运行 Docker 程序：**
+运行以下命令，检查 Docker 是否正常安装
 
-从 [Docker 官网](https://www.docker.com/get-docker)下载 Mac 或Windows版本的 Docker 程序，安装并运行。
+```
+docker info
+```
 
-> **注意：** 如果用的是 Windows 系统，只有64位的 Windows 才能安装 Docker。
+## 5b) 使用Docker
 
-**II. 装载 Docker 镜像文件：**
+首先将该教程配套的 Docker image，[bioinfo_docker.tar.zip](https://cloud.tsinghua.edu.cn/f/b1f268dec4664c349cf8/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
 
-首先下载该教程的配套文件，[bioinfo_docker.tar.zip](https://cloud.tsinghua.edu.cn/f/b1f268dec4664c349cf8/)，到本地目录，例如，可以下载到桌面 （`~/Desktop`）。
-
-_**MacOS**_
-
-首先检查 Docker 程序已经运行，然后打开 **Terminal** （终端）程序进行操作，基本命令如下：
+打开 **Terminal** （终端），
 
 ```bash
-##load image file into Docker
+## load image file
 docker load < ~/Desktop/bioinfo_docker.tar
+
+## create a container
+docker run --name=bioinfo -v ~/Desktop/share:/home/test/share -dt --restart unless-stopped bioinfo_docker
+```
+
+这里我们新建了一个名为 `bioinfo` 的容器，除非有特殊说明，接下来的章节中所有操作均在该容器中进行。
+
+每次运行书中的命令前，先进入到容器中的 bash：`docker exec -it bioinfo bash`。然后再执行相关操作, 如下图所示。
+
+![](.gitbook/assets/bash in container.gif)
+
 
 ## run the docker for the first time, create a container called bioinfo_docker
 # You can run docker using a simple mode (but a hard start will make your life easier later):
 docker run -it bioinfo_docker
 
 # This is a hard start we recommend: 
-# 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和Docker共享
 # docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
-docker run -it --name=bioinfo -h bioinfo  -v /Users/your_account/Desktop/bioinfo:/desktop bioinfo_docker
 # replace "your_account" to your own name
 
 ##add a user called cs
@@ -81,6 +88,8 @@ docker attach bioinfo         # attach：re-enter your docker
 exit                          #inside Docker as root, then exit
 docker rm bioinfo             #delete the container we created by docker run
 ```
+
+# 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和Docker共享
 
 _**Windows**_
 
@@ -137,7 +146,7 @@ _**Windows**_
 #### **注意**：
 * 对于处理好的测序数据（bigWig，BAM,bigBed)，UCSC仅支持通过提供URL链接或直接输入。
 * 在比较不同样本的数据时，需要根据样本本身测序深度的不同来对纵坐标进行调整,从而保证该区域/位点测序数据能够显示完整并且可以相互比较。
-* 有时，用bedtools genomecov scale之后的wigbig文件纵坐标仍然会出现显示不完整等现象，此时需要手动调整下。
+* 有时，用bedtools genomecov scale之后的bigwig文件纵坐标仍然会出现显示不完整等现象，此时需要手动调整下。
 
 
 
