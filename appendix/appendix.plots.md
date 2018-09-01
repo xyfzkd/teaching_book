@@ -67,21 +67,27 @@
    For example,
 
    ```r
+   # Begin to plot
+   # Output as pdf
    pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
    ggplot(df, aes(x=cyl, y=mpg)) + 
      geom_boxplot(fill="gray")+
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
      theme_classic()
+   
+   # Save the plot
    dev.off()
    ```
 
    Or
 
    ```r
+   # Begin to plot
    p <- ggplot(df, aes(x=cyl, y=mpg)) + 
      geom_boxplot(fill="gray")+
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
      theme_classic()
+   # Sava as pdf
    ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
    ```
 
