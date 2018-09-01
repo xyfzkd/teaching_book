@@ -46,23 +46,23 @@ docker info
 
 ### 5b）载入镜像
 
-首先将该教程配套的 Docker image，[bioinfo_docker.tar.zip](https://cloud.tsinghua.edu.cn/f/9880ab2c56104b858173/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
+首先将该教程配套的 Docker image，[lulab.tar.gz](https://cloud.tsinghua.edu.cn/f/9880ab2c56104b858173/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
 
 ```bash
-docker load < ~/Desktop/bioinfo_docker.tar
+docker load < ~/Desktop/lulab.tar.gz
 ```
 
 ### 5c) 创建容器 {#create-container}
 
 ```bash
-docker run --name=bioinfo -v ~/Desktop/share:/home/test/share -dt --restart unless-stopped bioinfo_docker
+docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless-stopped lulab
 ```
 
-这里我们新建了一个名为 `bioinfo` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart`），并且该容器的 `/home/test/share` 与自己电脑的 `~/Desktop/share` 共享文件。
+这里我们新建了一个名为 `lulab` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart`），并且该容器的 `/home/test/share` 与自己电脑的 `~/Desktop/share` 共享文件。
 
 ### 5d）使用容器 {#use-container}
 
-每次运行书中的命令前，先进入到容器中的 bash：`docker exec -it bioinfo bash`。然后再执行相关操作, 如下图所示。
+每次运行书中的命令前，先进入到容器中的 bash：`docker exec -it lulab bash`。然后再执行相关操作, 如下图所示。
 
 ![](.gitbook/assets/bash in container.gif)
 
@@ -74,7 +74,7 @@ docker run --name=bioinfo -v ~/Desktop/share:/home/test/share -dt --restart unle
 
 如果你不小心执行了错误操作，以至于无法正常执行本教程中的某个 pipeline，可以删除该容器，然后新建一个干净的容器，从头开始。
 
-`docker rm -f bioinfo`
+`docker rm -f lulab`
 
 然后重复 [创建容器](#create-container) 命令
 
