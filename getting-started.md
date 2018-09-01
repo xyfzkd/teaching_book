@@ -55,6 +55,7 @@ docker load < ~/Desktop/lulab.tar.gz
 ### 5c) 创建容器 {#create-container}
 
 ```bash
+mkdir ~/Desktop/share
 docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless-stopped lulab
 ```
 
@@ -76,7 +77,7 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 
 `docker rm -f lulab`
 
-然后重复 [创建容器](#create-container) 命令
+然后重复 5c) [创建容器](#create-container) 命令
 
 
 ## 6）演示视频
