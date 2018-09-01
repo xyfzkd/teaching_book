@@ -1,6 +1,5 @@
 # Appendix. Plot with R
 
-
 ## 0. Prepare {#plot-setup}
 
 ---
@@ -41,7 +40,7 @@
 4. Install and library packages
 
    ```r
-   install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer'))
+   install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer', 'plotrix'))
 
    library(ggplot2)
    library(qqman)
@@ -57,7 +56,7 @@
 5. Save the plot
 
    If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
-       The second one is specific for the **ggplot2** package.
+   The second one is specific for the **ggplot2** package.
 
    For example,
 
@@ -81,7 +80,7 @@
    ```
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-    of Docker (a file per chapter), and demo output in `/home/test/plot/success/output/`.
+    of Docker \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
 
 ## 1. Box plots {#box-plot}
 
@@ -601,7 +600,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
              ColSideColors=c(rep(c("blue","red"),5)),
              density.info="none",trace="none",
              #dendrogram='none', #if you want to remove dendrogram 
-             Colv = T,Rowv = T #clusters by both row and col)
+             Colv = T,Rowv = T) #clusters by both row and col
    ```
 
    ![](../.gitbook/assets/plot/9.1.Customized_heatmap.png)
@@ -806,12 +805,11 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 ---
 
-
 1. Guide to Great Beautiful Graphics in R
 
    [http://www.sthda.com/english/wiki/ggplot2-essentials](http://www.sthda.com/english/wiki/ggplot2-essentials)
 
-2. Top 50 ggplot2 Visualizations - The Master List (With Full R Code)
+2. Top 50 ggplot2 Visualizations - The Master List \(With Full R Code\)
 
    [http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html)
 
