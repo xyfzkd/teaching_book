@@ -22,6 +22,8 @@
 
 ## 4) 使用说明
 
+除非特殊说明，本章中的命令均是在自己电脑的 Terminal （终端）程序中进行。
+
 每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为**章节目录**。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
 
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
@@ -42,71 +44,52 @@ We provide a Linux Docker, which is a modern solution of setting up a virtual Li
 docker info
 ```
 
-## 5b) 使用Docker
+### 5b）载入镜像
 
-首先将该教程配套的 Docker image，[bioinfo_docker.tar.zip](https://cloud.tsinghua.edu.cn/f/b1f268dec4664c349cf8/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
-
-打开 **Terminal** （终端），
+首先将该教程配套的 Docker image，[bioinfo_docker.tar.zip](https://cloud.tsinghua.edu.cn/f/9880ab2c56104b858173/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
 
 ```bash
-## load image file
 docker load < ~/Desktop/bioinfo_docker.tar
+```
 
-## create a container
+### 5c) 创建容器 {#create-container}
+
+```bash
 docker run --name=bioinfo -v ~/Desktop/share:/home/test/share -dt --restart unless-stopped bioinfo_docker
 ```
 
-这里我们新建了一个名为 `bioinfo` 的容器，除非有特殊说明，接下来的章节中所有操作均在该容器中进行。
+这里我们新建了一个名为 `bioinfo` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart`），并且该容器的 `/home/test/share` 与自己电脑的 `~/Desktop/share` 共享文件。
+
+### 5d）使用容器 {# use-container}
 
 每次运行书中的命令前，先进入到容器中的 bash：`docker exec -it bioinfo bash`。然后再执行相关操作, 如下图所示。
 
 ![](.gitbook/assets/bash in container.gif)
 
+图1. 进入容器中的 bash（这里演示的是 Linux 的 Ternimal）
 
-## run the docker for the first time, create a container called bioinfo_docker
-# You can run docker using a simple mode (but a hard start will make your life easier later):
-docker run -it bioinfo_docker
+如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/share` 文件夹。
 
-# This is a hard start we recommend: 
-# docker run -it --name=container_name -h hostname -v /HOST_ABSOLUTE_DIR:/CONTAINER_ABSOLUTE_DIR image_name:tag
-# replace "your_account" to your own name
+### 5e）恢复容器
 
-##add a user called cs
-useradd -m cs -s /bin/bash
-passwd cs
-usermod -aG sudo cs
-chown -R test /home/cs/Bioinfo_Lab/
-su cs
+如果你不小心执行了错误操作，以至于无法正常执行本教程中的某个 pipeline，可以删除该容器，然后新建一个干净的容器，从头开始。
+
+`docker rm -f bioinfo`
+
+然后重复 [创建容器](#create-container) 命令
 
 
-##detach (pause) and attach
-ctrl+p+q                      # detach: pause, not exit. The job will keep running in the background. 
-docker attach bioinfo         # attach：re-enter your docker
+## 6）演示视频
 
+如何在mac电脑使用docker
 
-##exit and delete a container
-exit                          #inside Docker as root, then exit
-docker rm bioinfo             #delete the container we created by docker run
-```
-
-# 先在桌面上建一个文件夹 "bioinfo" , 该文件夹为主机和Docker共享
-
-_**Windows**_
-
-安装好 Docker后，按照提示开启 hyper-v 功能。运行 Docker，打开**powershell** 程序进行操作，操作命令同 MacOS 版本。
-
-> **注意：** 如果安装时选择了 Windows 容器版本，则需要在运行了  Docker 之后，从选项卡选择切换到 Linux 容器版本（Switch to Linux containers）。    
-
-
-演示视频 . 
 [@youtube](https://youtu.be/c1ldhV7dAhg)   
 <iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
 
-演示视频 . 
 [@bilibili](https://www.bilibili.com/video/av30426956/)   
 <iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
 
-###  
+##  
 
 ## 6) Homework
 
