@@ -119,7 +119,7 @@ docker run --name=bioinfo -v ~/Desktop/share:/home/test/share -dt --restart unle
 
 
 
-## 6) Homework
+## 7) Homework
 
 1. Register a GitHub account, create a repository. and write a README.md file online.
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
