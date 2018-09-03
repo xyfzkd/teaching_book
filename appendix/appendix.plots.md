@@ -24,7 +24,7 @@
    # Read the input files
    # “header=T” means that the data has a title, and sep="\t" is used as the separator
    data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
-   #  The function c(,,) means create the vector type data 
+   # The function c(,,) means create the vector type data 
    df <- data[, c("mpg", "cyl", "wt")]
 
    df2 <-read.table("input/histogram_plots.txt",header=T,sep="\t")
@@ -73,8 +73,12 @@
    # Begin to plot
    # Output as pdf
    pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
-   ggplot(df, aes(x=cyl, y=mpg)) + 
+   # Mapping the X and Y 
+   # Components are constructed by using "+"
+   ggplot(df, aes(x=cyl, y=mpg))+ 
+   # Set the color to grey
      geom_boxplot(fill="gray")+
+   # Use the labs function to set the title and modify x and y
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
      theme_classic()
    
