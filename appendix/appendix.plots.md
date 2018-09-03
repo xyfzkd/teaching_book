@@ -76,7 +76,7 @@
    # Mapping the X and Y 
    # Components are constructed by using "+"
    ggplot(df, aes(x=cyl, y=mpg))+ 
-   # Set the color to grey
+   # Set the color to gray
      geom_boxplot(fill="gray")+
    # Use the labs function to set the title and modify x and y
      labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
