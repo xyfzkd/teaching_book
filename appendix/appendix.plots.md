@@ -22,7 +22,9 @@
 
    ```r
    # Read the input files
+   # “header=T” means that the data has a title, and sep="\t" is used as the separator
    data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
+   #  The function c(,,) means create the vector type data 
    df <- data[, c("mpg", "cyl", "wt")]
 
    df2 <-read.table("input/histogram_plots.txt",header=T,sep="\t")
@@ -34,6 +36,7 @@
    df5 <-read.table("input/heatmaps.txt",header=T,sep="\t")
    
    # Covert data into matrix format
+   # nrow(df5) and ncol(df5) return the number of rows and columns of matrix df5 respectively.
    dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
 
    # Get the row names
