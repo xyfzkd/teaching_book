@@ -18,7 +18,7 @@
 
 ## Part II. NGS Pipelines
 
-* [5.Mapping](part-ii.-ngs-pipelines/5.seqbowtie.md)
+* [5.Mapping](part-ii.-ngs-pipelines/5.mapping.md)
 * [6.RNA-seq](part-ii.-ngs-pipelines/6.rna-seq.md)
   * [6.1 Differential Expression](part-ii.-ngs-pipelines/6.1.differential-expression.md)
   * [6.2 Alternative Splicing](part-ii.-ngs-pipelines/6.2.alternative.md)

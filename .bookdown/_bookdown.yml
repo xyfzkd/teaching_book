@@ -22,7 +22,7 @@ rmd_files:
 
 ## Part II. NGS Pipelines
 
-  - part-ii.-ngs-pipelines/5.seqbowtie.md
+  - part-ii.-ngs-pipelines/5.mapping.md
   - part-ii.-ngs-pipelines/6.rna-seq.md
   - part-ii.-ngs-pipelines/6.1.differential-expression.md
   - part-ii.-ngs-pipelines/6.2.alternative.md
