@@ -85,9 +85,7 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 然后重复 5c) [创建容器](#create-container) 命令
 
 
-## 6）演示视频
-
-### 6a) 如何在mac电脑使用docker
+## 6）如何在mac电脑使用docker
 
 [@youtube](https://youtu.be/c1ldhV7dAhg)   
 <iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
