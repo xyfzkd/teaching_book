@@ -29,7 +29,7 @@
 
    df2 <-read.table("input/histogram_plots.txt",header=T,sep="\t")
 
-   df3 <- read.table("input/volcano_plots.txt", header=TRUE)
+   df3 <- read.table("input/volcano_plots.txt", header=T)
 
    df4 <- read.table("input/manhattan_plots_gwasResults.txt",header=T,sep="\t")
 
@@ -43,6 +43,9 @@
    row.names(dm) <- df5[,1]
 
    df6 <- read.table("input/ballon_plots_GO.txt", header=T, sep="\t")
+   
+   df7 <- read.table("input/box_plots_David_GO.txt",header=T,sep="\t")
+   df7 <- df7[1:10,]
    ```
 
 4. Install and library packages
@@ -132,7 +135,7 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
 
    ![](../.gitbook/assets/plot/1.1.Basic_boxplot.png)
 
-2. Change continuous color by groups
+1. Change continuous color by groups
 
    ```r
    ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
@@ -143,6 +146,52 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
    ```
 
    ![](../.gitbook/assets/plot/1.2.Customized_boxplot.png)
+
+1. Box plot for GO results
+
+   ```r
+   df7$Term <- sapply(strsplit(as.vector(df7$Term),'~'),'[',2)
+   head(df7)
+   ```
+   
+   ```
+   #          Category                                                         Term Count       X.      PValue
+   #1 GOTERM_BP_DIRECT                               chemical synaptic transmission     6 4.651163 0.003873106
+   #2 GOTERM_BP_DIRECT                                                cell motility     3 2.325581 0.007016402
+   #3 GOTERM_BP_DIRECT negative regulation of intrinsic apoptotic signaling pathway     3 2.325581 0.011455205
+   #4 GOTERM_BP_DIRECT                protein N-linked glycosylation via asparagine     3 2.325581 0.014940498
+   #5 GOTERM_BP_DIRECT            positive regulation of androgen receptor activity     2 1.550388 0.017976476
+   #6 GOTERM_BP_DIRECT                               photoreceptor cell maintenance     3 2.325581 0.024198625
+   #                                                                                                                   Genes
+   #1 ENSMUSG00000032360, ENSMUSG00000020882, ENSMUSG00000000766, ENSMUSG00000020745, ENSMUSG00000029763, ENSMUSG00000066392
+   #2                                                             ENSMUSG00000022665, ENSMUSG00000043850, ENSMUSG00000031078
+   #3                                                             ENSMUSG00000095567, ENSMUSG00000036199, ENSMUSG00000030421
+   #4                                                             ENSMUSG00000031232, ENSMUSG00000028277, ENSMUSG00000024172
+   #5                                                                                 ENSMUSG00000038722, ENSMUSG00000028964
+   #6                                                             ENSMUSG00000037493, ENSMUSG00000043850, ENSMUSG00000020212
+   #  List.Total Pop.Hits Pop.Total Fold.Enrichment Bonferroni Benjamini       FDR
+   #1        110      172     18082        5.734249  0.8975036 0.8975036  5.554012
+   #2        110       21     18082       23.483117  0.9839676 0.8733810  9.848665
+   #3        110       27     18082       18.264646  0.9988443 0.8950571 15.604073
+   #4        110       31     18082       15.907918  0.9998546 0.8901964 19.881092
+   #5        110        3     18082      109.587879  0.9999763 0.8811197 23.441198
+   #6        110       40     18082       12.328636  0.9999994 0.9089683 30.281607
+   ```
+   
+   ```r
+   ggplot(df7) + geom_bar(stat="identity", width=0.6, aes(Term,Fold.Enrichment, fill=-1*log10(PValue)),colour="#1d2a33") + 
+     coord_flip() +
+     scale_fill_gradient(low="#e8f3f7",high="#236eba")+
+     labs(fill=expression(-log10_Pvalue), x="GO Terms",y="foldEnrichment", title="GO Biological Process") +
+     theme_bw() +
+     theme(plot.title = element_text(hjust = 0.5))  +
+     theme(axis.title.x =element_text(size=16), 
+           axis.title.y=element_text(size=14)) +
+     theme(axis.text.y = element_text(size = 10,face="bold"),
+           axis.text.x = element_text(size = 12,face="bold"))
+   ```
+   
+   ![](../.gitbook/assets/plot/1.3.Customized_boxplot2.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
