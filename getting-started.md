@@ -20,6 +20,15 @@
 * [GitHub](https://github.com/lulab/Shared) for students (shared code and scripts）
   * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
 
+
+GitHub是目前主流的项目托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。在 GitHub，用户可以通过Explore轻而易举地找到海量的开源代码。在GitHub，用户可以与大神们“零距离”接触、共同碰撞出思维的火花，实现Social Coding 的梦想。
+
+
+如果我们在GitHub上建立自己的仓库，托管自己的项目，所有的描述行文档包括README.md，都是用Markdown语言编写的。
+
+Markdown语言是一种目前流行的通用标记语言，用简洁的语法代替排版格式，书写与排版同步进行，省去了类似于Word先写后排版的麻烦，同时兼容多种格式，可以导出 HTML 格式的文件用来网站发布，也可以十分方便的导出 PDF 格式。目前支持Markdown编辑的在线和离线工具有很多，Evernote也正在推出支持Markdown书写的版本。
+
+
 ## 4) 使用说明
 
 除非特殊说明，本章中的命令均是在自己电脑的 Terminal （终端）程序中进行。
