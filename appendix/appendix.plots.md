@@ -100,7 +100,7 @@
    ```
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-    of Docker \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
+    of Docker (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
 ## 1. Box plots {#box-plot}
 
