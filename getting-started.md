@@ -1,33 +1,27 @@
 # Getting Started
 
-## 1）预修课程准备
+## 1) 预修课程准备
 
 1. 基本生物课程：    如《遗传学》和/或《分子生物学》
 2. 基本统计课程：    如《概率论》和/或《生物统计》
 3. 基本数学课程：    如《线性代数》
 4. 基本计算机课程：如《C语言》
 
-## 2）Learning Materials
+## 2) Learning Materials
 
 * Tutorial 
   * **Basic Tutorial** (this one) 
-  * [**Advanced Tutorial**](https://lulab.gitbook.io/training)  
+  * **[Advanced Tutorial](https://lulab.gitbook.io/training)**
 
 > see more learning materials in [Appendix I. Keep Learning](https://lulab.gitbooks.io/teaching/content/appendix/appendix1.more.html)
 
-## 3）GitHub - Document your work 
+## 3) GitHub - Document your work 
 
-* [GitHub](https://github.com/lulab/Shared) for students (shared code and scripts）
-  * Write documents with [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) Language
+[GitHub](https://github.com/lulab/Shared) 是目前最流行的源代码托管平台，在这里可以找到海量的优秀开源代码，也可以与大神们“零距离”接触、共同碰撞出思维的火花，更可以实现 Social Coding 的梦想。我们鼓励学生在 GitHub 上建立自己的仓库来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作，。
 
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；同时支持远比 word 广泛，可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，而不用担心别人的 Office 版本比你低，甚至根本没安装 Office（Evernote 也正在推出支持 Markdown 的版本）。
 
-GitHub是目前主流的项目托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。在 GitHub，用户可以通过Explore轻而易举地找到海量的开源代码。在GitHub，用户可以与大神们“零距离”接触、共同碰撞出思维的火花，实现Social Coding 的梦想。
-
-
-如果我们在GitHub上建立自己的仓库，托管自己的项目，所有的描述行文档包括README.md，都是用Markdown语言编写的。
-
-Markdown语言是一种目前流行的通用标记语言，用简洁的语法代替排版格式，书写与排版同步进行，省去了类似于Word先写后排版的麻烦，同时兼容多种格式，可以导出 HTML 格式的文件用来网站发布，也可以十分方便的导出 PDF 格式。目前支持Markdown编辑的在线和离线工具有很多，Evernote也正在推出支持Markdown书写的版本。
-
+本教程即是建立在 Markdown 的基础上。
 
 ## 4) 使用说明
 
@@ -37,11 +31,13 @@ Markdown语言是一种目前流行的通用标记语言，用简洁的语法代
 
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
 
-## 5）Docker
+本教程全部作业均要求提供源代码和输出文件。标有 "optional" 的题目选做，做对可获得额外加分。
+
+## 5) Docker
 
 We provide a Linux Docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
 
-### 5a）安装 Docker
+### 5a) 安装 Docker
 
 从 [Docker 官网](https://www.docker.com/get-docker)下载 Mac 版本的 Docker 程序，安装并运行。
 
@@ -53,7 +49,7 @@ We provide a Linux Docker, which is a modern solution of setting up a virtual Li
 docker info
 ```
 
-### 5b）载入镜像
+### 5b) 载入镜像
 
 首先将该教程配套的 Docker image，[lulab.tar.gz](https://cloud.tsinghua.edu.cn/f/9880ab2c56104b858173/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
 
@@ -70,7 +66,7 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 
 这里我们新建了一个名为 `lulab` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart`），并且该容器的 `/home/test/share` 与自己电脑的 `~/Desktop/share` 共享文件。
 
-### 5d）使用容器 {#use-container}
+### 5d) 使用容器 {#use-container}
 每次运行书中的命令前，先进入到容器中的 bash 
 
 ```bash
@@ -85,7 +81,7 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 
 如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/share` 文件夹。
 
-### 5e）恢复容器
+### 5e) 恢复容器
 
 如果你不小心执行了错误操作，以至于无法正常执行本教程中的某个 pipeline，可以删除该容器，然后新建一个干净的容器，从头开始。
 
@@ -94,7 +90,7 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 然后重复 5c) [创建容器](#create-container) 命令
 
 
-## 6）如何在mac电脑使用docker
+## 6) 如何在mac电脑使用docker
 
 [@youtube](https://youtu.be/c1ldhV7dAhg)   
 <iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
@@ -108,15 +104,4 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 
 1. Register a GitHub account, create a repository. and write a README.md file online.
 2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
-
-
-
-
-
-
-
-
-
-
-
 
