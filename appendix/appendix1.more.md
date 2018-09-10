@@ -102,7 +102,6 @@ _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to th
 
 1. Bioinformatics: [生物信息导论和方法](https://www.coursera.org/course/pkubioinfo) (北大, MOOC)
 2. [Bioinformatics Specialization](https://www.coursera.org/specializations/bioinformatics?utm_medium=courseDescripTop) (UC SanDiego)
-3. Statistics: [Statistics 110](https://itunes.apple.com/us/course/statistics-110-probability/id502492375) @iTunes U
 
 ## II. Advanced Tutorial {#advanced}
 
