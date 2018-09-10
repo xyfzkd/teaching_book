@@ -16,6 +16,17 @@ output:
             search: yes
 ---
 
+<!--
+
+```bash
+docker tag dongzhuoer/lulab:full bioinfo_tsinghua
+docker save bioinfo_tsinghua | gzip -c > lulab.tar.gz
+```
+
+-->
+
+
+
 
 <!--
 
