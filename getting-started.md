@@ -68,17 +68,17 @@ docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/sha
 
 ### 5d) 使用容器 {#use-container}
 
-每次运行书中的命令前，先进入到容器中的 bash 
+每次运行本书中的其它章节的命令前，先进入到容器中的 bash 
 
 ```bash
 docker exec -it bioinfo_tsinghua bash
 ``` 
 
-然后再执行相关操作, 如下图所示。
+然后再执行相关操作, 如下图所示（图中使用的是 Linux 的 Ternimal，但 Mac 的操作是一样的）。
 
-![](.gitbook/assets/bash in container.gif)
+![](.gitbook/assets/bash-in-container.gif)
 
-图1. 进入容器中的 bash（这里演示的是 Linux 的 Ternimal）
+图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）
 
 如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/share` 文件夹。
 
