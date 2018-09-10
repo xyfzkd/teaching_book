@@ -25,7 +25,7 @@ rmd_files:
   - part-ii.-ngs-pipelines/5.mapping.md
   - part-ii.-ngs-pipelines/6.rna-seq.md
   - part-ii.-ngs-pipelines/6.1.differential-expression.md
-  - part-ii.-ngs-pipelines/6.2.alternative.md
+  - part-ii.-ngs-pipelines/6.2.alternative-splicing.md
   - part-ii.-ngs-pipelines/7.chip-seq.md
 
 ## Appendix
