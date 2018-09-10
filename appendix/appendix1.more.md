@@ -94,7 +94,7 @@ _Learn three basick techniques (完成任何一个要求即可：1. 1000行以�
 
 ### 2. QUIZ for self-test
 
-[Link to the Quiz](https://jianguoyun.com/p/Dam5hOYQ0NLuBRj4kQ4#dir=%2Fquiz::mode=0)
+[Link to the Quiz](https://lulab.gitbook.io/training/part-iii.-advanced-bioinfo-analyses/quiz-and-challenge)
 
 _If you passed 1-2 of the three tasks in QUIZ, Congratulations! You may go to the advanced courses and/or join our lab to start your scientific research._
 
