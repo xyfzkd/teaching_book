@@ -103,5 +103,5 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 ## 7) Homework
 
 1. Register a GitHub account, create a repository. and write a README.md file online.
-2. Install Docker on your own machine, dowload the docker image file, [Bioinfo_docker.tar](https://cloud.tsinghua.edu.cn/f/fef06408bbc446f6bb6e/?dl=1), from this tutorial, then run it. 
+2. Install Docker on your [lulab.tar.gz](https://cloud.tsinghua.edu.cn/f/9880ab2c56104b858173/) own machine, dowload the docker image file, , from this tutorial, then run it. 
 
