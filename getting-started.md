@@ -67,10 +67,11 @@ docker run --name=lulab -v ~/Desktop/share:/home/test/share -dt --restart unless
 这里我们新建了一个名为 `lulab` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart`），并且该容器的 `/home/test/share` 与自己电脑的 `~/Desktop/share` 共享文件。
 
 ### 5d) 使用容器 {#use-container}
+
 每次运行书中的命令前，先进入到容器中的 bash 
 
 ```bash
-> docker exec -it lulab bash
+docker exec -it lulab bash
 ``` 
 
 然后再执行相关操作, 如下图所示。
