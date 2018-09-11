@@ -5,7 +5,8 @@
 
 ## Part I. Basic Tools
 
-* [1.Linux上机指南](part-i.-basic-tools/1.linux.md)
+* [1.Linux（上）： 基本命令](part-i.-basic-tools/1.linux-command.md)
+* [1.Linux（下）：上机指南](part-i.-basic-tools/1.linux-task.md)
 * [2.Blast](part-i.-basic-tools/2.seqblast.md)
 * [3.Conservation Analysis](part-i.-basic-tools/3.conservation.md)
 * [4.Function Analysis](part-i.-basic-tools/4.function-analysis.md)
