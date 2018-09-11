@@ -16,6 +16,4 @@ for ( md_file in yaml::read_yaml('_bookdown.yml')$rmd_files) {
     readr::write_lines(content, md_file)
 }
 
-readr::write_lines('# Linux', 'part-i.-basic-tools/1.linux.md')
-
 

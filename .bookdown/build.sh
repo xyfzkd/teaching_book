@@ -1,11 +1,10 @@
 #!/bin/bash
 
+pwd
 rm -r bookdown
 cp -r . ../bookdown && mv ../bookdown .
 
-cp -r bookdown/.gitbook/assets bookdown 
-mv bookdown/assets bookdown/images
-
+cp -r bookdown/.gitbook/assets bookdown && mv bookdown/assets bookdown/images
 cp -t bookdown .bookdown/{as_bookdown.R,index.Rmd,_bookdown.yml}
 
 R --slave -e "setwd('bookdown'); source('as_bookdown.R')"
