@@ -13,6 +13,8 @@ We provide a Linux docker, which is a modern solution of setting up a virtual Li
 
 1**. 安装并运行docker程序：**
 
+我们为大家准备好了一个虚拟机 [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)
+
 ![](../.gitbook/assets/VM-1.png)
 ![](../.gitbook/assets/VM-2.png)
 ![](../.gitbook/assets/VM-3.png)
