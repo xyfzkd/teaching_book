@@ -1,17 +1,24 @@
 # Docker
----
+
 
 ##  {#pipeline}
 
 ## Pipeline {#pipeline}
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LKzy_S2L64ALvymCkQn%2F-LKzzmAQ2xzEohrbgIIV%2Fdocker pipeline.png?alt=media&token=fcf6d5c0-47ea-4494-9e78-22b46ff0229e)
----
+
 ## Data Structure {#data-structure}
 
 We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
 
 1**. 安装并运行docker程序：**
+
+![](../.gitbook/assets/VM-1.png)
+![](../.gitbook/assets/VM-2.png)
+![](../.gitbook/assets/VM-3.png)
+![](../.gitbook/assets/VM-4.png)
+![](../.gitbook/assets/VM-5.png)
+
 
 从[docker官网](https://www.docker.com/get-docker)下载Mac或Windows版本的docker程序，下载注册docker账号，然后安装。安装完成后，需要检查软件是否正常运行，docker官网有docker get started，例如MAC用户可以按照进入[get started](https://docs.docker.com/docker-for-mac/)地址，按照提示启动并设置Docker Desktop。
 
@@ -57,7 +64,7 @@ docker rm contianer_name #删除容器（参数为容器name)
 docker rmi image_ID #删除镜像（参数为镜像ID）
 ```
 
----
+
 ## Running Scripts（MacOS+**Terminal**\(终端\)程序进行操作）
 
 #### 1.Load image
@@ -199,7 +206,7 @@ docker rmi image_ID #删除镜像（参数为镜像ID）
 
 最后可以通过`docker images`命令查看镜像是否还存在。
 
----
+
 ## Tips/Utilitie
 
 ![](../.gitbook/assets/use-docker.gif)
