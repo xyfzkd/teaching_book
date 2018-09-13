@@ -9,7 +9,6 @@
 
 1**. 安装并运行docker程序：**
 
-
 ![](../.gitbook/assets/VM-1.png)
 
 ![](../.gitbook/assets/VM-2.png)
@@ -21,7 +20,7 @@
 ![](../.gitbook/assets/VM-5.png)
 
 
-安装完成后，需要检查软件是否正常运行，docker官网有docker get started，例如MAC用户可以按照进入[get started](https://docs.docker.com/docker-for-mac/)地址，按照提示启动并设置Docker Desktop。
+MAC 用户在安装完 Docker 后，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
 
 
 
@@ -39,12 +38,10 @@ docker ps #查看当前正在运行的容器
 docker ps -a #查看所有容器
 docker images #查看所有镜像
 
-docker start contianer_name_or_id # 启动容器
-docker stop contianer_name_or_id  #停止容器
-docker rm contianer_name_or_id # 删除容器
-docker rmi image_name_or_id # 删除镜像
 ```
 
+
+有些命令没有在此列出，感兴趣（且不怕把 Docker 弄坏）的读者可自行
 
 #### 4.exit
 
@@ -59,15 +56,17 @@ qianqiandexiaopingguodeMacBook-Pro:
 ```
 
 
-#### 7.delete/clean containers and images
+### 清理环境
 
-删除镜像image前必须先删除使用此镜像的所有容器
+如果你完成了本教程的全部内容（本章后面还有一章），可以使用如下命令清理你的电脑：
 
+```bash
+docker rm -f bioinfo_tsinghua  # 强行删除容器
+docker rmi bioinfo_tsinghua    # 删除镜像
+rm ~/Desktop/bioinfo_tsinghua.tar.gz # 删除下载的文件
+```
 
-
-## Tips/Utilitie
-
-![](../.gitbook/assets/use-docker.gif)
+### 容器共享主机文件夹
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8MwFb4pWLhbpyg4yk%2Fdocker%20guazai.png?alt=media&token=10aa8057-085e-46ac-a65c-14c854be1251)
 
@@ -80,6 +79,11 @@ qianqiandexiaopingguodeMacBook-Pro:
 **so，同步的前提是，工作目录与挂载主机目录一致。也就是说，在所有章节running scripts前切换docker工作目录到Desktop，也就是输入`cd Desktop`命令，否则将无法同步，如下图所示。**
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8S9iBryidWsDkFnpf%2Fimage.png?alt=media&token=f92da308-1b53-419b-b456-81522f294bbf)
+
+
+## Tips/Utilitie
+
+
 
 ### 参考阅读
 
