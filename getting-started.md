@@ -39,9 +39,10 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 ### 5a) 安装 Docker
 
-64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。
+> Tips:
+> 64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。
 
-64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)，使用方法参见 [Appendix III](https://lulab.gitbooks.io/teaching/content/appendix/appendix3.docker.html)
+> 64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)，使用方法参见 [Appendix III](https://lulab.gitbooks.io/teaching/content/appendix/appendix3.docker.html)
 
 打开 Ternimal, 运行以下命令，检查 Docker 是否正常安装
 
