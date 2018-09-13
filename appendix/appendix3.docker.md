@@ -1,28 +1,27 @@
 # Docker
 
+## Pipeline 
 
-##  {#pipeline}
+<!-- ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LKzy_S2L64ALvymCkQn%2F-LKzzmAQ2xzEohrbgIIV%2Fdocker pipeline.png?alt=media&token=fcf6d5c0-47ea-4494-9e78-22b46ff0229e) -->
 
-## Pipeline {#pipeline}
+## Data Structure 
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LKzy_S2L64ALvymCkQn%2F-LKzzmAQ2xzEohrbgIIV%2Fdocker pipeline.png?alt=media&token=fcf6d5c0-47ea-4494-9e78-22b46ff0229e)
-
-## Data Structure {#data-structure}
-
-We provide a Linux docker, which is a modern solution of setting up a virtual Linux OS.
 
 1**. 安装并运行docker程序：**
 
-我们为大家准备好了一个虚拟机 [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)
 
 ![](../.gitbook/assets/VM-1.png)
+
 ![](../.gitbook/assets/VM-2.png)
+
 ![](../.gitbook/assets/VM-3.png)
+
 ![](../.gitbook/assets/VM-4.png)
+
 ![](../.gitbook/assets/VM-5.png)
 
 
-从[docker官网](https://www.docker.com/get-docker)下载Mac或Windows版本的docker程序，下载注册docker账号，然后安装。安装完成后，需要检查软件是否正常运行，docker官网有docker get started，例如MAC用户可以按照进入[get started](https://docs.docker.com/docker-for-mac/)地址，按照提示启动并设置Docker Desktop。
+Mac或Windows版本的docker程序，下载注册docker账号，然后安装。安装完成后，需要检查软件是否正常运行，docker官网有docker get started，例如MAC用户可以按照进入[get started](https://docs.docker.com/docker-for-mac/)地址，按照提示启动并设置Docker Desktop。
 
 > 这里推荐阅读两篇Docker安装教程，分别是[《macOS 安装 Docker》](https://yeasy.gitbooks.io/docker_practice/install/mac.html)和[《Windows 10 PC 安装 Docker CE》](https://yeasy.gitbooks.io/docker_practice/install/windows.html)，来自于[《Docker——从入门到实践》](https://legacy.gitbook.com/book/yeasy/docker_practice/details)书，这本书对Docker进行了深入浅出的讲解，对于初学者理解和学习docker技术有所帮助。另外，网上也有很多docker教程，有深入学习兴趣的同学可以自行检索学习。
 
