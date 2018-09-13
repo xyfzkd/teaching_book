@@ -21,14 +21,18 @@
 ![](../.gitbook/assets/VM-5.png)
 
 
-Mac或Windows版本的docker程序，下载注册docker账号，然后安装。安装完成后，需要检查软件是否正常运行，docker官网有docker get started，例如MAC用户可以按照进入[get started](https://docs.docker.com/docker-for-mac/)地址，按照提示启动并设置Docker Desktop。
+安装完成后，需要检查软件是否正常运行，docker官网有docker get started，例如MAC用户可以按照进入[get started](https://docs.docker.com/docker-for-mac/)地址，按照提示启动并设置Docker Desktop。
 
-> 这里推荐阅读两篇Docker安装教程，分别是[《macOS 安装 Docker》](https://yeasy.gitbooks.io/docker_practice/install/mac.html)和[《Windows 10 PC 安装 Docker CE》](https://yeasy.gitbooks.io/docker_practice/install/windows.html)，来自于[《Docker——从入门到实践》](https://legacy.gitbook.com/book/yeasy/docker_practice/details)书，这本书对Docker进行了深入浅出的讲解，对于初学者理解和学习docker技术有所帮助。另外，网上也有很多docker教程，有深入学习兴趣的同学可以自行检索学习。
+
 
 ​
 
 
-### Inputs & \#Outputs--Notes {#inputs-and-outputs-notes}
+
+
+## Running Scripts（MacOS+**Terminal**\(终端\)程序进行操作）
+
+### docker 
 
 ```bash
 docker ps #查看当前正在运行的容器
@@ -40,10 +44,6 @@ docker stop contianer_name_or_id  #停止容器
 docker rm contianer_name_or_id # 删除容器
 docker rmi image_name_or_id # 删除镜像
 ```
-
-
-## Running Scripts（MacOS+**Terminal**\(终端\)程序进行操作）
-
 
 
 #### 4.exit
@@ -81,7 +81,9 @@ qianqiandexiaopingguodeMacBook-Pro:
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8S9iBryidWsDkFnpf%2Fimage.png?alt=media&token=f92da308-1b53-419b-b456-81522f294bbf)
 
-**​**
+### 参考阅读
+
+> 这里推荐阅读两篇Docker安装教程，分别是[《macOS 安装 Docker》](https://yeasy.gitbooks.io/docker_practice/install/mac.html)和[《Windows 10 PC 安装 Docker CE》](https://yeasy.gitbooks.io/docker_practice/install/windows.html)，来自于[《Docker——从入门到实践》](https://legacy.gitbook.com/book/yeasy/docker_practice/details)书，这本书对Docker进行了深入浅出的讲解，对于初学者理解和学习docker技术有所帮助。另外，网上也有很多docker教程，有深入学习兴趣的同学可以自行检索学习。
 
 ## Homework and more
 
