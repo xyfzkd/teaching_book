@@ -35,15 +35,15 @@
 
 ## 5) Docker
 
-We provide a Linux Docker, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
+We provide a Docker image, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
 
 ### 5a) 安装 Docker
 
-从 [Docker 官网](https://www.docker.com/get-docker)下载 Mac 版本的 Docker 程序，安装并运行。
+64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。
 
-> **注意：** Windows 系统不予介绍，因为 Docker 官网只支持 64 位的企业版 Windows。
+64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)，使用方法参见 [Appendix III](https://lulab.gitbooks.io/teaching/content/appendix/appendix3.docker.html)
 
-运行以下命令，检查 Docker 是否正常安装
+打开 Ternimal, 运行以下命令，检查 Docker 是否正常安装
 
 ```
 docker info
