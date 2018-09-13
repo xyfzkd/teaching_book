@@ -39,12 +39,12 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 ### 5a) 安装 Docker
 
-> Tips:
-> 64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。
+- 64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。（需要注册账号、登录方可下载，觉得麻烦的读者也可以到 [这里](https://cloud.tsinghua.edu.cn/d/95ab4853f1e941ca8aeb/) 直接下载）
 
-> 64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)，使用方法参见 [Appendix III](https://lulab.gitbooks.io/teaching/content/appendix/appendix3.docker.html)
+- 64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) （用户名和密码均为 `test`），使用方法参见 [Appendix III](https://lulab.gitbooks.io/teaching/content/appendix/appendix3.docker.html)。
 
-打开 Ternimal, 运行以下命令，检查 Docker 是否正常安装
+
+安装完成后，打开 Ternimal, 运行以下命令，检查 Docker 是否正常安装
 
 ```
 docker info
@@ -52,7 +52,7 @@ docker info
 
 ### 5b) 载入镜像
 
-首先将该教程配套的 Docker image，[bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/)，下载到桌面。（高级用户也可以使用其它目录，但下文的 `~/Desktop` 也要作出相应修改）。
+首先将该教程配套的 Docker image，[bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/)，下载到桌面（`~/Desktop`）。
 
 ```bash
 docker load < ~/Desktop/bioinfo_tsinghua.tar.gz
@@ -61,11 +61,11 @@ docker load < ~/Desktop/bioinfo_tsinghua.tar.gz
 ### 5c) 创建容器 {#create-container}
 
 ```bash
-mkdir ~/Desktop/share
-docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/share:/home/test/share bioinfo_tsinghua
+mkdir ~/Desktop/bioinfo_tsinghua_share
+docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
 ```
 
-这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑的 `~/Desktop/share` 共享文件。
+这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件  。
 
 ### 5d) 使用容器 {#use-container}
 
@@ -85,9 +85,13 @@ docker exec -it bioinfo_tsinghua bash
 
 ### 5e) 恢复容器
 
-如果你不小心执行了错误操作，以至于无法正常执行本教程中的某个 pipeline，可以删除该容器，然后新建一个干净的容器，从头开始。
+如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器，从该章节的最前面开始重新执行。
 
-`docker rm -f bioinfo_tsinghua`
+```bash
+docker rm -f bioinfo_tsinghua
+```
+
+> **Tips**：之前提到过 `bioinfo_tsinghua` 一直保持运行状态，所以我们这里用 `-f` 来强制（force）删除。 
 
 然后重复 5c) [创建容器](#create-container) 命令
 
