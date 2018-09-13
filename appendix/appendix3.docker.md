@@ -4,10 +4,13 @@
 
 <!-- ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LKzy_S2L64ALvymCkQn%2F-LKzzmAQ2xzEohrbgIIV%2Fdocker pipeline.png?alt=media&token=fcf6d5c0-47ea-4494-9e78-22b46ff0229e) -->
 
+
+## Running Scripts
+
 ## Data Structure 
 
 
-1**. 安装并运行docker程序：**
+### Windows 用户使用 Docker（基于Virtual Box）
 
 ![](../.gitbook/assets/VM-1.png)
 
@@ -20,16 +23,9 @@
 ![](../.gitbook/assets/VM-5.png)
 
 
+### MAC 用户使用 Docker
+
 MAC 用户在安装完 Docker 后，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
-
-
-
-​
-
-
-
-
-## Running Scripts（MacOS+**Terminal**\(终端\)程序进行操作）
 
 ### docker 常用命令
 
@@ -40,7 +36,7 @@ docker images #查看所有镜像
 ```
 
 
-有些命令没有在此列出，感兴趣（且不怕把 Docker 弄坏）的读者可自行
+有些命令没有在此列出，感兴趣（且不怕把 Docker 弄坏）的读者可自行相关教程（本章最后面有一些推荐）。
 
 
 
