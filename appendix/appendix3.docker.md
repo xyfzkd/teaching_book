@@ -31,29 +31,17 @@ MAC 用户在安装完 Docker 后，如果遇到使用问题，可以参考官�
 
 ## Running Scripts（MacOS+**Terminal**\(终端\)程序进行操作）
 
-### docker 
+### docker 常用命令
 
 ```bash
 docker ps #查看当前正在运行的容器
 docker ps -a #查看所有容器
 docker images #查看所有镜像
-
 ```
 
 
 有些命令没有在此列出，感兴趣（且不怕把 Docker 弄坏）的读者可自行
 
-#### 4.exit
-
-输入命令`exit`，则会一层一层退出，直到进入terminal用户界面。
-
-例如
-
-```
-test@bioinfo_tsinghua:/$ exit
-exit
-qianqiandexiaopingguodeMacBook-Pro:
-```
 
 
 ### 清理环境
@@ -70,9 +58,8 @@ rm ~/Desktop/bioinfo_tsinghua.tar.gz # 删除下载的文件
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8MwFb4pWLhbpyg4yk%2Fdocker%20guazai.png?alt=media&token=10aa8057-085e-46ac-a65c-14c854be1251)
 
-上图所示的命令是新建name=bioinfo容器，并将bioinfo容器中的Desktop下路径挂载到mac主机桌面上的bioinfo文件夹中。
+上图所示的命令是新建name=bioinfo容器，并将bioinfo容器中的 `～/share` 路径挂载到mac主机桌面上的 `bioinfo_tsinghua_share` 文件夹中。
 
-因此，在mac的terminal终端输入docker 挂载宿主机目录命令前，必须确定两件事，第一件事是mac桌面上有bioinfo文件夹，没有则需要新创建；第二件事是已经load了ubuntu：latest 镜像。然后才能输入挂载主机目录的命令。
 
 **推荐使用挂载主机目录的方法创建的容器去练习本教程接下来的章节，在所有章节running scripts前切换docker工作目录到Desktop，最后你会发现所有inputs&outputs的文件都会同步到mac桌面的bioinfo文件夹中，便于管理和查看结果。同时，从本地添加到bioinfo文件夹下面的文件或子文件夹，也可以在docker中`ls`查看。**
 

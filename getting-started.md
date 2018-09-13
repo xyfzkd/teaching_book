@@ -81,7 +81,15 @@ docker exec -it bioinfo_tsinghua bash
 
 图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）
 
-如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/share` 文件夹。
+如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/bioinfo_tsinghua_share` 文件夹。
+
+在每一章的流程跑完之后，用以下命令退出容器
+
+```bash
+exit
+```
+
+
 
 ### 5e) 恢复容器
 
