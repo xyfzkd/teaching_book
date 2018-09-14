@@ -12,6 +12,8 @@
 
 ### Windows 用户使用 Docker（基于Virtual Box）
 
+virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) 
+
 ![](../.gitbook/assets/VM-1.png)
 
 ![](../.gitbook/assets/VM-2.png)
