@@ -39,7 +39,7 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 ### 5a) 安装 Docker
 
-- 64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。（需要注册账号、登录方可下载，觉得麻烦的读者也可以到 [这里](https://cloud.tsinghua.edu.cn/d/95ab4853f1e941ca8aeb/) 直接下载）
+- 64 位专业版以上版 Windows 和 Mac 用户 从 [Docker 官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序，下载并运行。（需要注册账号、登录方可下载，觉得麻烦的读者也可以到 [这里](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) 直接下载）
 
 - 64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) （用户名和密码均为 `test`），使用方法参见 [Appendix III](https://lulab.gitbooks.io/teaching/content/appendix/appendix3.docker.html)。
 
@@ -62,7 +62,8 @@ docker load < ~/Desktop/bioinfo_tsinghua.tar.gz
 
 ```bash
 mkdir ~/Desktop/bioinfo_tsinghua_share
-docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
+docker run --name=bioinfo_tsinghua -dt --restart unless-stopped \
+    -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
 ```
 
 这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件  。
