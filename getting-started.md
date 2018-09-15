@@ -50,7 +50,7 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 Docker 的下载链接如上表所示，想要最新版的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载）
 
 
-- 64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) （用户名和密码均为 `test`），使用方法参见 [Appendix III. Docker](appendix/appendix3.docker.md)
+- 64 位其他版本的 Windows 可以请用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) （用户名和密码均为 `test`），使用方法参见 [Appendix III. Docker](appendix/appendix3.docker.md#win-use-docker)
 。
 
 
