@@ -42,7 +42,7 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 |系统 | 版本|安装策略 |
 |-  |   - |  -    |
 |Windows|  Windows 10 pro (64位) |[Docker](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/) |
-|Windows|  Windows 其它版本 (64位)|[VirtualBox](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) |
+|Windows|  Windows 其它版本 (64位)|[VirtualBox](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) (在Linux虚拟机中操作Docker) |
 |Mac    |   2010 or newer model|[Docker](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/) |
 |Linux| Linux kernel version 3.10 or higher. |[Docker](https://docs.docker.com/install/linux/docker-ce/centos/) + [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/) |
 
