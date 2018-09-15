@@ -10,19 +10,24 @@
 
 virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) 
 
++ 点击管理，导入虚拟电脑。
+
 ![](../.gitbook/assets/VM-1.png)
+
++ 导入下载完成 bioinfo_tsinghua.ova
 
 ![](../.gitbook/assets/VM-2.png)
 
 ![](../.gitbook/assets/VM-3.png)
 
++ 点击确认
+
 ![](../.gitbook/assets/VM-4.png)
++ 导入完成后，启动 bioinfo_tinghua, 等待2至5分钟，ubuntu 系统启动。
 
 ![](../.gitbook/assets/VM-5.png)
 
-安装完成，请参考[Getting Started](getting-started.md#5b) 载入镜像
-
-) 载入镜像
+系统启动完成后，打开 ubuntu command terminal，请参考[Getting Started 5b) 载入镜像](getting-started.md) 载入镜像。
 
 )进行操作。
 
