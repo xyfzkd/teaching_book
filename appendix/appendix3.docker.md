@@ -22,7 +22,7 @@ virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](h
 
 ![](../.gitbook/assets/VM-5.png)
 
-系统启动完成后，打开 ubuntu command terminal，请参考[Getting Started 5b) 载入镜像](getting-started.md) 载入镜像。
+系统启动完成后，打开 ubuntu command terminal，到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
 
 )进行操作。
 
