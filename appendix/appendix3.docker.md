@@ -20,7 +20,9 @@ virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](h
 
 ![](../.gitbook/assets/VM-5.png)
 
-安装完成，请参考[Getting Started](getting-started.md### 5b) 载入镜像
+安装完成，请参考[Getting Started](getting-started.md#5b) 载入镜像
+
+) 载入镜像
 
 )进行操作。
 
