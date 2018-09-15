@@ -51,9 +51,8 @@ Docker 的下载链接如上表所示，想要最新版的用户也可以去  [�
 
 > **Tips 1**  
 > 使用 64 位其他版本的 Windows 请使用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) （用户名和密码均为 `test`）。  
-> 使用方法参见 [Appendix III. Docker](appendix/appendix3.docker.md) a) Windows 用户使用 Docker（基于Virtual Box）, 安装完成后从 Getting Started 5b) 载入镜像 开始进行操作
+> 使用方法参见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) , 安装完成后从 Getting Started 5b) 载入镜像 开始进行操作
 
-- 可以， [Appendix III. Docker](appendix/appendix3.docker.md#win-use-docker)
 
 
 
