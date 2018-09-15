@@ -2,15 +2,11 @@
 
 ## Pipeline 
 
-<!-- ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LKzy_S2L64ALvymCkQn%2F-LKzzmAQ2xzEohrbgIIV%2Fdocker pipeline.png?alt=media&token=fcf6d5c0-47ea-4494-9e78-22b46ff0229e) -->
-
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LKzy_S2L64ALvymCkQn%2F-LKzzmAQ2xzEohrbgIIV%2Fdocker pipeline.png?alt=media&token=fcf6d5c0-47ea-4494-9e78-22b46ff0229e)
 
 ## Running Scripts
 
-## Data Structure 
-
-
-### Windows 用户使用 Docker（基于Virtual Box）
+### a) Windows 用户使用 Docker（基于Virtual Box）
 
 virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) 
 
@@ -24,12 +20,16 @@ virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](h
 
 ![](../.gitbook/assets/VM-5.png)
 
+安装完成，请参考[Getting Started](getting-started.md### 5b) 载入镜像
 
-### MAC 用户使用 Docker
+)进行操作。
+
+
+### b) MAC 用户使用 Docker
 
 MAC 用户在安装完 Docker 后，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
 
-### docker 常用命令
+### c) docker 常用命令
 
 ```bash
 docker ps #查看当前正在运行的容器
@@ -37,22 +37,7 @@ docker ps -a #查看所有容器
 docker images #查看所有镜像
 ```
 
-
-有些命令没有在此列出，感兴趣（且不怕把 Docker 弄坏）的读者可自行相关教程（本章最后面有一些推荐）。
-
-
-
-### 清理环境
-
-如果你完成了本教程的全部内容（本章后面还有一章），可以使用如下命令清理你的电脑：
-
-```bash
-docker rm -f bioinfo_tsinghua  # 强行删除容器
-docker rmi bioinfo_tsinghua    # 删除镜像
-rm ~/Desktop/bioinfo_tsinghua.tar.gz # 删除下载的文件
-```
-
-### 容器共享主机文件夹
+### d) 容器共享主机文件夹
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8MwFb4pWLhbpyg4yk%2Fdocker%20guazai.png?alt=media&token=10aa8057-085e-46ac-a65c-14c854be1251)
 
@@ -64,6 +49,21 @@ rm ~/Desktop/bioinfo_tsinghua.tar.gz # 删除下载的文件
 **so，同步的前提是，工作目录与挂载主机目录一致。也就是说，在所有章节running scripts前切换docker工作目录到Desktop，也就是输入`cd Desktop`命令，否则将无法同步，如下图所示。**
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8S9iBryidWsDkFnpf%2Fimage.png?alt=media&token=f92da308-1b53-419b-b456-81522f294bbf)
+
+
+有些命令没有在此列出，感兴趣（且不怕把 Docker 弄坏）的读者可自行相关教程（本章最后面有一些推荐）。
+
+
+
+### e) 清理环境
+
+如果你完成了本教程的全部内容（本章后面还有一章），可以使用如下命令清理你的电脑：
+
+```bash
+docker rm -f bioinfo_tsinghua  # 强行删除容器
+docker rmi bioinfo_tsinghua    # 删除镜像
+rm ~/Desktop/bioinfo_tsinghua.tar.gz # 删除下载的文件
+```
 
 
 ## Tips/Utilitie
