@@ -35,11 +35,32 @@
 ![](../.gitbook/assets/win_docker1.png)
 ![](../.gitbook/assets/win_docker2.png)
 ![](../.gitbook/assets/win_docker3.png)
+
+确认 打开 Hyper-V 。
+
 ![](../.gitbook/assets/win_docker4.png)
 ![](../.gitbook/assets/win_docker5.png)
+
+在开始菜单搜索 PowerShall, 并启动。
+
 ![](../.gitbook/assets/win_docker6.png)
+
+输入 'docker info' 检查安装完成，之后将下载在桌面的 [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) image 文件导入到 Docker 中。  
+
+```sh
+docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
+```
+
 ![](../.gitbook/assets/win_docker7.png)
 ![](../.gitbook/assets/win_docker8.png)
+
+启动 Docker image
+
+```sh
+docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share_bioinfo_tsinghua
+```    
+    
+
 ![](../.gitbook/assets/win_docker9.png)
 ![](../.gitbook/assets/win_docker10.png)
 
