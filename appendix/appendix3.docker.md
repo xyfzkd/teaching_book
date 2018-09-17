@@ -4,7 +4,7 @@
 
 ## 1a) windows 10 非 pro 64 安装和使用方法 (基于Virtual Box) {#win-use-docker}
 
-[virtual box 官网](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) 
+[virtual box 官网](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 
 
 请使用这个虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
 

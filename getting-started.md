@@ -45,7 +45,7 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 | 系统      | 版本                      | 安装策略                                                                                                                                                        | 备注                               |  
 |---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)   | -                                |    
-| Windows | Windows 其它版本 (64位)      | [VirtualBox](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/)    | 详见下文的 Tips 2|    
+| Windows | Windows 其它版本 (64位)      | [VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/)    | 详见下文的 Tips 2|    
 | Mac     | 2010 or newer model     | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)   |                       -           |    
 | Linux   | kernel 3.10 or higher.  | [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) |                      -            |
 
