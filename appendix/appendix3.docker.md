@@ -57,7 +57,7 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 启动 Docker image
 
 ```sh
-docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share_bioinfo_tsinghua
+docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
 ```    
     
 
