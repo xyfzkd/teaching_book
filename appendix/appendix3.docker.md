@@ -1,9 +1,10 @@
 # Docker
 
+## 1) Windows 用户使用 Docker
 
-## 1) Windows 用户使用 Docker（基于Virtual Box) {#win-use-docker}
+## 1a) windows 10 非 pro 64 安装和使用方法 (基于Virtual Box) {#win-use-docker}
 
-virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) 
+[virtual box 官网](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) 
 
 请使用这个虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
 
@@ -25,6 +26,10 @@ virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](h
 ![](../.gitbook/assets/VM-5.png)
 
 系统启动完成后，打开 ubuntu command terminal，到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
+
+
+
+## 1b) windows 10 pro 64 安装和使用方法 
 
 
 
