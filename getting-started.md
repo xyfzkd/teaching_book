@@ -45,7 +45,7 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 | 系统      | 版本                      | 安装策略                                                                                                                                                        | 备注                               |  
 |---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)   | -                                |    
-| Windows | Windows 其它版本 (64位)      | [VirtualBox](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/)    | 在 Linux 虚拟机中使用Docker，详见下文 Tips 1 |    
+| Windows | Windows 其它版本 (64位)      | [VirtualBox](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/)    | 详见下文的 Tips 2|    
 | Mac     | 2010 or newer model     | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)   |                       -           |    
 | Linux   | kernel 3.10 or higher.  | [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) |                      -            |
 
@@ -53,11 +53,22 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 ### 5a) 安装 Docker，准备镜像
 
-- 对于 Mac，Windows 10 Pro, Linux 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker（Linux 用户请自行寻找安装程序或联系助教）。然后将该教程配套的 Docker image，[bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)，下载到桌面（`~/Desktop`）。
-- 对于其他系统，以及用以上方法安装 Docker 失败的用户，安装 Virtual Box 并使用我们提供的虚拟机，具体见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) 。`bioinfo_tsinghua.tar.gz` 在该虚拟机中已下载好。
+对于 Mac，Windows 10 Pro, Linux 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker（Linux 用户请自行寻找安装程序或联系助教）。然后将该教程配套的 Docker image，[bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)，下载到桌面（`~/Desktop`）。
+- 对于其他系统，的用户，安装 Virtual Box 并使用我们提供的虚拟机 (用户名和密码均为 `test`)，具体见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) 。`bioinfo_tsinghua.docker.tar.gz` 在该虚拟机中已下载好。
 
-> **Tips**
+
+> **Tips 1**  
 > 想要最新版 Docker 的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载）
+
+> **Tips 2**  
+> 使用 64 位其他版本的 Windows （以及用以上方法安装 Docker 失败）的用户，请使用我们提供的虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
+> 使用方法参见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) , 安装完成后从 Getting Started 5b) 载入镜像 开始进行操作
+
+
+<br/>
+
+
+
 
 安装完成后，打开 Ternimal (Windows 下用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
 
