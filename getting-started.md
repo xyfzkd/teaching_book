@@ -58,11 +58,11 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 
 > **Tips 1**  
-> 想要最新版 Docker 的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载）
+> 想要最新版 Docker 的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载。）
 
 > **Tips 2**  
 > 使用 64 位其他版本的 Windows （以及用以上方法安装 Docker 失败）的用户，请使用我们提供的虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
-> 使用方法参见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) , 安装完成后从 Getting Started 5b) 载入镜像 开始进行操作
+> 使用方法参见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) , 安装完成后从本章的 "5b) 载入镜像" 开始进行操作。
 
 
 <br/>
