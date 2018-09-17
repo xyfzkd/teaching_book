@@ -3,7 +3,9 @@
 
 ## 1) Windows 用户使用 Docker（基于Virtual Box) {#win-use-docker}
 
-virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) 
+virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) 
+
+请使用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
 
 + 点击管理，导入虚拟电脑。
 
