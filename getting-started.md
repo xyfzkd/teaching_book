@@ -53,7 +53,7 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 ### 5a) 安装 Docker，准备镜像
 
-对于 Mac，Windows 10 Pro, Linux 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker（Linux 用户请自行寻找安装程序或联系助教）。然后将该教程配套的 Docker image，[bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)，下载到桌面（`~/Desktop`）。
+对于 Mac，Windows 10 Pro 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker。然后将该教程配套的 Docker image，[bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)，下载到桌面（`~/Desktop`）。
 
 
 > **Tips 1**  
