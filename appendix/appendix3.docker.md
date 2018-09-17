@@ -2,7 +2,7 @@
 
 ## 1) Windows 用户使用 Docker
 
-## 1a) windows 10 非 pro 64 安装和使用方法 (基于Virtual Box) {#win-use-docker}
+## 1a) windows 10 非 pro 64 安装和使用方法 (基于Virtual Box) {#win-vb-use-docker}
 
 [virtual box 官网](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 
 
@@ -29,7 +29,7 @@
 
 
 
-## 1b) windows 10 pro 64 安装和使用方法 
+## 1b) windows 10 pro 64 安装和使用方法  {#win-pro-use-docker}
 从 [官网](https://store.docker.com/editions/community/docker-ce-desktop-windows) 或者 [清华云盘](https://cloud.tsinghua.edu.cn/f/a28251b47d0e471a8d8f/) 安装 。
 
 ![](../.gitbook/assets/win_docker1.png)
@@ -84,7 +84,7 @@ docker exec -it bioinfo_tsinghua bash
 
 
 
-
+完成以上操作后，请回到 [Getting Started 5e)](../getting-started.md#recover-container) 继续阅读。
 
 
 ## 2) MAC 用户使用 Docker
