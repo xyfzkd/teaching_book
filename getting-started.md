@@ -51,20 +51,13 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
 
 ### 5a) 安装 Docker，准备镜像
 
-- 对于 Mac，Windows 10 Pro, Linux 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker（Linux 用户请自行寻找安装程序或联系助教）。想要最新版的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载）
-- 对于其他系统，以及用以上方法安装 Docker 失败的用户，安装 Virtual Box 并使用我们提供的虚拟机，具体见
-Docker 的下载链接如上表所示，
+- 对于 Mac，Windows 10 Pro, Linux 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker（Linux 用户请自行寻找安装程序或联系助教）。然后将该教程配套的 Docker image，[bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)，下载到桌面（`~/Desktop`）。
+- 对于其他系统，以及用以上方法安装 Docker 失败的用户，安装 Virtual Box 并使用我们提供的虚拟机，具体见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) 
 
-> **Tips 1**  
-> 使用 64 位其他版本的 Windows 请使用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/) （用户名和密码均为 `test`）。  
-> 使用方法参见 [Appendix III. Docker 1)](appendix/appendix3.docker.md#win-use-docker) , 安装完成后从 Getting Started 5b) 载入镜像 开始进行操作
+> **Tips**
+> 想要最新版 Docker 的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载）
 
-
-
-安装完成后，打开 Ternimal, 运行以下命令，检查 Docker 是否正常安装
-
-> Ternimal  在 Windows 下用 PowerShell （cmd 不支持 `~`）
-
+安装完成后，打开 Ternimal (Windows 下用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
 
 ```
 docker info
@@ -72,7 +65,7 @@ docker info
 
 ### 5b) 载入镜像 {#load-image}
 
-首先将该教程配套的 Docker image，[bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/)，下载到桌面（`~/Desktop`），使用我们提供的虚拟机的用户可以不用下载。
+使用我们提供的虚拟机的用户可以不用下载。
 
 ```bash
 docker load < ~/Desktop/bioinfo_tsinghua.tar.gz
