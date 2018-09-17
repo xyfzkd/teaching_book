@@ -54,10 +54,14 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 ![](../.gitbook/assets/win_docker7.png)
 ![](../.gitbook/assets/win_docker8.png)
 
-启动 Docker image
+启动 Docker image。
 
 ```sh
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
+
+docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
+
+
 ```    
     
 
@@ -67,6 +71,8 @@ docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bio
 进入容器。
 ```sh
 docker exec -it bioinfo_tsinghua bash
+
+
 ```
 
 ![](../.gitbook/assets/win_docker11.png)
