@@ -40,7 +40,6 @@
 ## 6) Docker
 
 We provide a Docker image, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
-                                                                                                                                    | [Docker](https://docs.docker.com/install/linux/docker-ce/centos/) + image: [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/) | -                                |
 
 
 | 系统      | 版本                      | 安装策略                                                                                                                                                        | 备注                               |  
