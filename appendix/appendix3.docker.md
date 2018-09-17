@@ -45,16 +45,17 @@
 
 ![](../.gitbook/assets/win_docker6.png)
 
-输入 'docker info' 检查安装完成，之后将下载在桌面的 [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) image 文件导入到 Docker 中。  
+检查安装完成。之后将下载在桌面的 [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) image 文件导入到 Docker 中。  
 
 ```sh
+docker info
 docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 ```
 
 ![](../.gitbook/assets/win_docker7.png)
 ![](../.gitbook/assets/win_docker8.png)
 
-启动 Docker image。
+创建容器。
 
 ```sh
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
@@ -69,10 +70,9 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 ![](../.gitbook/assets/win_docker10.png)
 
 进入容器。
+
 ```sh
 docker exec -it bioinfo_tsinghua bash
-
-
 ```
 
 ![](../.gitbook/assets/win_docker11.png)
