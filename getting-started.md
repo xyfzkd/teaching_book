@@ -87,6 +87,7 @@ docker load < ~/Desktop/bioinfo_tsinghua.docker.tar.gz
 mkdir ~/Desktop/bioinfo_tsinghua_share
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped \
     -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
+docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 ```
 
 这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件  。
