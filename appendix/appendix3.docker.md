@@ -64,6 +64,14 @@ docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bio
 ![](../.gitbook/assets/win_docker9.png)
 ![](../.gitbook/assets/win_docker10.png)
 
+进入容器。
+```sh
+docker exec -it bioinfo_tsinghua bash
+```
+
+![](../.gitbook/assets/win_docker11.png)
+
+
 
 ## 2) MAC 用户使用 Docker
 
