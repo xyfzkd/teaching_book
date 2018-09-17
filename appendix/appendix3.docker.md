@@ -71,6 +71,14 @@ docker exec -it bioinfo_tsinghua bash
 
 ![](../.gitbook/assets/win_docker11.png)
 
+调整PowerShall,之后可以重新打开 PowerShall。
+
+![](../.gitbook/assets/win_docker12.png)
+![](../.gitbook/assets/win_docker13.png)
+
+
+
+
 
 
 ## 2) MAC 用户使用 Docker
