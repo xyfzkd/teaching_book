@@ -26,7 +26,6 @@ virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](h
 
 系统启动完成后，打开 ubuntu command terminal，到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
 
-)进行操作。
 
 
 ## 2) MAC 用户使用 Docker
