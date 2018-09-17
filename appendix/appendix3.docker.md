@@ -30,6 +30,14 @@
 
 
 ## 1b) windows 10 pro 64 安装和使用方法 
+从 [官网](https://store.docker.com/editions/community/docker-ce-desktop-windows) 或者 [清华云盘](https://cloud.tsinghua.edu.cn/f/a28251b47d0e471a8d8f/) 安装 。
+
+![](../.gitbook/assets/win_docker1.png)
+![](../.gitbook/assets/win_docker2.png)
+![](../.gitbook/assets/win_docker3.png)
+![](../.gitbook/assets/win_docker4.png)
+![](../.gitbook/assets/win_docker5.png)
+![](../.gitbook/assets/win_docker6.png)
 
 
 
