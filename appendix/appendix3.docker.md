@@ -5,13 +5,13 @@
 
 virtual box 官网 [](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/994fb1e9612547a49170/) 
 
-请使用这个虚拟机： [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
+请使用这个虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
 
 + 点击管理，导入虚拟电脑。
 
 ![](../.gitbook/assets/VM-1.png)
 
-+ 导入下载完成 bioinfo_tsinghua.ova
++ 导入下载完成 bioinfo_tsinghua.virtualbox.ova
 
 ![](../.gitbook/assets/VM-2.png)
 
@@ -38,10 +38,10 @@ MAC 用户在安装完 Docker 后，如果遇到使用问题，可以参考官�
 
 ![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LKVqnYQRAUMNxYIv37L%2F-LL8EsLuKx_pfq1os-gu%2F-LL8MwFb4pWLhbpyg4yk%2Fdocker%20guazai.png?alt=media&token=10aa8057-085e-46ac-a65c-14c854be1251)
 
-上图所示的命令是新建name=bioinfo容器，并将bioinfo容器中的 `～/share` 路径挂载到mac主机桌面上的 `bioinfo_tsinghua_share` 文件夹中。
+上图所示的命令是新建 名为 bioinfo_tsinghua 的容器，并将该容器中的 `～/share` 路径挂载到mac主机桌面上的 `bioinfo_tsinghua_share` 文件夹中。
 
 
-**推荐使用挂载主机目录的方法创建的容器去练习本教程接下来的章节，在所有章节running scripts前切换docker工作目录到Desktop，最后你会发现所有inputs&outputs的文件都会同步到mac桌面的bioinfo文件夹中，便于管理和查看结果。同时，从本地添加到bioinfo文件夹下面的文件或子文件夹，也可以在docker中`ls`查看。**
+**推荐使用挂载主机目录的方法创建的容器去练习本教程接下来的章节，在所有章节running scripts前切换docker工作目录到Desktop，最后你会发现所有inputs&outputs的文件都会同步到mac桌面的 `bioinfo_tsinghua_share` 文件夹中，便于管理和查看结果。同时，从本地添加到 `bioinfo_tsinghua_share` 文件夹下面的文件或子文件夹，也可以在docker中`ls`查看。**
 
 **so，同步的前提是，工作目录与挂载主机目录一致。也就是说，在所有章节running scripts前切换docker工作目录到Desktop，也就是输入`cd Desktop`命令，否则将无法同步，如下图所示。**
 
@@ -66,7 +66,7 @@ docker images #查看所有镜像
 ```bash
 docker rm -f bioinfo_tsinghua  # 强行删除容器
 docker rmi bioinfo_tsinghua    # 删除镜像
-rm ~/Desktop/bioinfo_tsinghua.tar.gz # 删除下载的文件
+rm ~/Desktop/bioinfo_tsinghua.docker.tar.gz # 删除下载的文件
 ```
 
 ## 6) 参考阅读
