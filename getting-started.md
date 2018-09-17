@@ -43,10 +43,13 @@ We provide a Docker image, which is a modern solution of setting up a virtual Li
                                                                                                                                     | [Docker](https://docs.docker.com/install/linux/docker-ce/centos/) + image: [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/) | -                                |
 
 
-| 系统                            | 安装策略                |
-|-------------------------------|---------------------|
-| Mac，Windows 10 Pro, Linux | 安装 Docker，下载镜像      |
-| 其它                            | 安装 VirtualBox，下载虚拟机 |
+| 系统      | 版本                      | 安装策略                                                                                                                                                        | 备注                               |  
+|---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + image: [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/)   | -                                |    
+| Windows | Windows 其它版本 (64位)      | [VirtualBox](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + 虚拟机: [bioinfo_tsinghua.ova](https://cloud.tsinghua.edu.cn/f/83be1c6b1ab948238c86/)    | 在 Linux 虚拟机中使用Docker，详见下文 Tips 1 |    
+| Mac     | 2010 or newer model     | [Docker](https://cloud.tsinghua.edu.cn/d/d03116f6f8e843f38236/) + image: [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/)   |                       -           |    
+| Linux   | kernel 3.10 or higher.  | [Docker](https://docs.docker.com/install/linux/docker-ce/centos/) + image: [bioinfo_tsinghua.tar.gz](https://cloud.tsinghua.edu.cn/f/f702094935d14c88bd3e/) |                      -            |
+
 
 
 ### 5a) 安装 Docker，准备镜像
@@ -64,8 +67,6 @@ docker info
 ```
 
 ### 5b) 载入镜像 {#load-image}
-
-使用我们提供的虚拟机的用户可以不用下载。
 
 ```bash
 docker load < ~/Desktop/bioinfo_tsinghua.tar.gz
