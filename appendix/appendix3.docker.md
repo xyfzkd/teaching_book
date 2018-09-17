@@ -40,6 +40,8 @@
 ![](../.gitbook/assets/win_docker6.png)
 ![](../.gitbook/assets/win_docker7.png)
 ![](../.gitbook/assets/win_docker8.png)
+![](../.gitbook/assets/win_docker9.png)
+![](../.gitbook/assets/win_docker10.png)
 
 
 ## 2) MAC 用户使用 Docker
