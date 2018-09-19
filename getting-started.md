@@ -157,7 +157,31 @@ docker rm -f bioinfo_tsinghua
 
 
 
-## 7) Homework
+## 7) 在容器中使用 R
+
+在 “4.3. GSEA” 和 “Appendix. Plot with R” 使用到了 R 语言 ，这里我们讲解一下如何在容器中使用 R。
+
+进入容器后，用以下命令进入 R 语言环境
+
+```bash
+R
+```
+
+然后将书中的代码复制到 Terminal 中运行，例如
+
+```r
+mean(1:10)
+```
+
+运行完之后，用以下命令退出（按完 Enter 后，按 n 和 Enter）
+
+```r
+q()
+```
+
+
+
+## 8) Homework
 
 1. Register a GitHub account, create a repository. and write a README.md file online.
 
