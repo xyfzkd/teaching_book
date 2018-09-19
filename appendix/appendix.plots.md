@@ -13,7 +13,7 @@ cd /home/test/plot/
 
 本章命令均在 R 中操作。
 
-## 0. Prepare {#plot-setup}
+## 0) Prepare {#plot-setup}
 
 **How to load data and install packages**
 
@@ -114,7 +114,7 @@ cd /home/test/plot/
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
     or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
-## 1. Box plots {#box-plot}
+## 1) Box plots {#box-plot}
 
 
 1. Basic box plot
@@ -203,7 +203,7 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 2. Violin plots {#violin-plot}
+## 2) Violin plots {#violin-plot}
 
 
 
@@ -293,7 +293,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 3. Histogram plots {#histogram-plot}
+## 3) Histogram plots {#histogram-plot}
 
 
 
@@ -357,7 +357,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-gu
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 4. Density plots {#density-plot}
+## 4) Density plots {#density-plot}
 
 
 
@@ -453,7 +453,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 5. Dot plots {#dot-plot}
+## 5) Dot plots {#dot-plot}
 
 
 
@@ -529,7 +529,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 6. Scatter plots {#scatter-plot}
+## 6) Scatter plots {#scatter-plot}
 
 
 
@@ -570,7 +570,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
-## 7. Volcano plots {#volcano-plot}
+## 7) Volcano plots {#volcano-plot}
 
 
 
@@ -611,7 +611,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ![](../.gitbook/assets/plot/7.Customized_volcanoplot.png)
 
-## 8. Manhattan plots {#manhattan-plot}
+## 8) Manhattan plots {#manhattan-plot}
 
 
 
@@ -638,7 +638,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ![](../.gitbook/assets/plot/8.Customized_manhattannplot.png)
 
-## 9. Heatmaps {#heatmap-plot}
+## 9) Heatmaps {#heatmap-plot}
 
 
 
@@ -736,7 +736,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
    ![](../.gitbook/assets/plot/9.3.Customized_heatmap.png)
 
-## 10. Ballon plots {#ballon-plot}
+## 10) Ballon plots {#ballon-plot}
 
 
 
@@ -797,7 +797,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
    ![](../.gitbook/assets/plot/10.2.Customized_ballonplot.png)
 
-## 11. Vennpie plots {#vennpie-plot}
+## 11) Vennpie plots {#vennpie-plot}
 
 
 
@@ -878,7 +878,7 @@ legend(0, 6*iniR, gsub("_"," ",names(colors)[-1]),
 
 Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html](http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html)
 
-## Learn more {#plot-more}
+## 12) Learn more {#plot-more}
 
 
 

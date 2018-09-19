@@ -91,7 +91,7 @@
 
    RNA secondary structure prediction and analysis. [http://rna.urmc.rochester.edu/RNAstructureWeb/](http://rna.urmc.rochester.edu/RNAstructureWeb/)
 
-### 3b) miRNA targets prediction
+### 3d) miRNA targets prediction
 
 7. TargetScan
 
