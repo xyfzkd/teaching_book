@@ -33,7 +33,9 @@
 
 每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为**章节目录**。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
 
+<!--
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
+-->
 
 本教程全部作业均要求提供源代码和输出文件。标有 "optional" 的题目选做，做对可获得额外加分。
 
@@ -41,6 +43,17 @@
 
 We provide a Docker image, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
 
+<!--
+
+I think we should use this table
+
+| 系统                            | 安装策略                |
+|-------------------------------|---------------------|
+| Mac，Windows 10 Pro, Linux | 安装 Docker，下载镜像      |
+| 其它                            | 安装 VirtualBox，下载虚拟机 |
+
+maybe update in the next version
+-->
 
 | 系统      | 版本                      | 安装策略                                                                                                                                                        | 备注                               |  
 |---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
