@@ -29,12 +29,16 @@
    ![](../.gitbook/assets/VM-4.png)
 
    <br>
-   
+
 1. 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
 
    ![](../.gitbook/assets/VM-5.png)
 
-系统启动完成后，打开 ubuntu command terminal，到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
+1. 打开 Terminal 
+
+   ![](../.gitbook/assets/ubuntu-terminal.gif)
+
+顺利完成以上步骤后，请到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
 
 
 
