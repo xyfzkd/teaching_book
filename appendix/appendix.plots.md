@@ -1,24 +1,29 @@
 # Appendix. Plot with R
 
-## 0. Prepare {#plot-setup}
 
----
+```bash
+docker exec -it bioinfo_tsinghua bash
+```
+
+以下步骤均在 `/home/test/plot/` 下进行:  
+
+```bash
+cd /home/test/plot/
+```
+
+本章命令均在 R 中操作。
+
+## 0. Prepare {#plot-setup}
 
 **How to load data and install packages**
 
-1. Set up working directory
-
-   ```r
-   setwd("/home/test/plot")
-   ```
-
-2. Prepare output directory
+1. Prepare output directory
 
    ```r
    dir.create('output')
    ```
 
-3. Load the data
+1. Load the data
 
    ```r
    # Read the input files
@@ -48,12 +53,16 @@
    df7 <- df7[1:10,]
    ```
 
-4. Install and library packages
+1. Install and library packages
 
+   安装需要的 R 包（Docker 中已经装好，无需运行）
    ```r
-   # Install the necessary packages
    install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer', 'plotrix'))
-   # Load the specific packages
+   ```
+
+   载入需要的 R 包
+   
+   ```r
    library(ggplot2)
    library(qqman)
    library(gplots)
@@ -65,7 +74,7 @@
    library(plotrix)
    ```
 
-5. Save the plot
+1. Save the plot
 
    If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
    The second one is specific for the **ggplot2** package.
@@ -107,7 +116,6 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
 
 ## 1. Box plots {#box-plot}
 
----
 
 1. Basic box plot
 
@@ -197,7 +205,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide
 
 ## 2. Violin plots {#violin-plot}
 
----
+
 
 1. Basic violin plot
 
@@ -287,7 +295,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-gu
 
 ## 3. Histogram plots {#histogram-plot}
 
----
+
 
 1. Basic histogram plot
 
@@ -351,7 +359,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start
 
 ## 4. Density plots {#density-plot}
 
----
+
 
 1. Basic density
 
@@ -447,7 +455,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 
 ## 5. Dot plots {#dot-plot}
 
----
+
 
 1. Basic dot plots
 
@@ -523,7 +531,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide
 
 ## 6. Scatter plots {#scatter-plot}
 
----
+
 
 1. Basic scatter plots
 
@@ -564,7 +572,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-
 
 ## 7. Volcano plots {#volcano-plot}
 
----
+
 
 ```r
 head(df3)
@@ -605,7 +613,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ## 8. Manhattan plots {#manhattan-plot}
 
----
+
 
 ```r
 head(df4)
@@ -632,7 +640,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ## 9. Heatmaps {#heatmap-plot}
 
----
+
 
 1. Draw the heatmap with the gplots package, `heatmap.2()` function
 
@@ -730,7 +738,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ## 10. Ballon plots {#ballon-plot}
 
----
+
 
 1. basic ballon plots
 
@@ -791,7 +799,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ## 11. Vennpie plots {#vennpie-plot}
 
----
+
 
 The vennpie plot is the combination of a venn diagram and a pie chart.
 
@@ -872,7 +880,7 @@ Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-ven
 
 ## Learn more {#plot-more}
 
----
+
 
 1. Guide to Great Beautiful Graphics in R
 
