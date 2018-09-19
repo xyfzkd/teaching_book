@@ -176,7 +176,7 @@ q()
 
 以上操作如下图所示：
 
-![图2. 在容器中的使用R（这里我们计算 1, 2, ..., 10 的平均数）](.gitbook/assets/bash-in-container.gif)
+![图2. 在容器中的使用R（这里我们计算 1, 2, ..., 10 的平均数）](.gitbook/assets/R-in-container.gif)
 
 ## 8) Homework
 
