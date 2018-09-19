@@ -4,26 +4,35 @@
 
 ## 1a) windows 10 非 pro 64 安装和使用方法 (基于Virtual Box) {#win-vb-use-docker}
 
-[virtual box 官网](https://www.virtualbox.org/wiki/Downloads)  或 [这里](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 
+1. 安装 Virtual Box 
 
-请使用这个虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
+   至 [官网](https://www.virtualbox.org/wiki/Downloads) 或 [清华云](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 下载安装程序，运行，按照提示完成安装。
 
-+ 点击管理，导入虚拟电脑。
+1. 下载我们提供的 Ubuntu 虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
 
-![](../.gitbook/assets/VM-1.png)
+1. 导入虚拟机
+   
+   <br>
+   `管理` -> `导入虚拟电脑`
+   ![](../.gitbook/assets/VM-1.png)
 
-+ 导入下载完成 bioinfo_tsinghua.virtualbox.ova
+   <br>
+   选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova`
+   ![](../.gitbook/assets/VM-2.png)
+   
+   <br>
+   **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。
+   ![](../.gitbook/assets/VM-3.png)
 
-![](../.gitbook/assets/VM-2.png)
+   <br>
+   导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。
+   ![](../.gitbook/assets/VM-4.png)
 
-![](../.gitbook/assets/VM-3.png)
+   <br>
+   
+1. 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
 
-+ 点击确认
-
-![](../.gitbook/assets/VM-4.png)
-+ 导入完成后，启动 bioinfo_tinghua, 等待2至5分钟，ubuntu 系统启动。
-
-![](../.gitbook/assets/VM-5.png)
+   ![](../.gitbook/assets/VM-5.png)
 
 系统启动完成后，打开 ubuntu command terminal，到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
 
