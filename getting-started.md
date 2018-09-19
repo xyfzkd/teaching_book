@@ -13,7 +13,7 @@
   * **Basic Tutorial** (this one) 
   * **[Advanced Tutorial](https://lulab.gitbook.io/training)**
 
-> see more learning materials in [Appendix I. Keep Learning](https://lulab.gitbooks.io/teaching/content/appendix/appendix1.more.html)
+> see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.more.md)
 
 ## 3) GitHub - Document your work 
 
@@ -31,7 +31,7 @@
 
 除非特殊说明，本章中的命令均是在自己电脑的 Terminal （终端）程序中进行。
 
-每一章的操作都在一个独立的目录（位于用户家目录下）下进行，我们称其为**章节目录**。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作。
+后面每一章的操作都在 Docker 中的一个独立的目录（位于用户家目录下）下进行，我们称其为**章节目录**。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作，所有相对目录均是相对于该目录。
 
 <!--
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
