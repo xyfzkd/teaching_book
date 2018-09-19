@@ -87,7 +87,7 @@ maybe update in the next version
 
 
 
-安装完成后，打开 Ternimal (Windows 下用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
+安装完成后，打开 Terminal (Windows 下用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
 
 ```
 docker info
@@ -118,7 +118,7 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 docker exec -it bioinfo_tsinghua bash
 ``` 
 
-然后再执行相关操作, 如下图所示（图中使用的是 Linux 的 Ternimal，但 Mac 的操作是一样的）。
+然后再执行相关操作, 如下图所示（图中使用的是 Linux 的 Terminal，但 Mac 的操作是一样的）。
 
 ![](.gitbook/assets/bash-in-container.gif)
 
