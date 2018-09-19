@@ -9,6 +9,7 @@ rmd_files:
 
 ## Part I. Basic Tools
 
+  - part-i.-basic-tools/1.linux.md
   - part-i.-basic-tools/1.linux-command.md
   - part-i.-basic-tools/1.linux-task.md
   - part-i.-basic-tools/2.seqblast.md

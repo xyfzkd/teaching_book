@@ -5,7 +5,7 @@
 
 ## Part I. Basic Tools
 
-* [1.Linux](part-i.-basic-tools/1linux.md)
+* [1.Linux](part-i.-basic-tools/1.linux.md)
   * [1.1 Basic Command](part-i.-basic-tools/1.linux-command.md)
   * [1.2 Practice Guide](part-i.-basic-tools/1.linux-task.md)
 * [2.Blast](part-i.-basic-tools/2.seqblast.md)
