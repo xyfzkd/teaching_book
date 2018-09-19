@@ -84,9 +84,6 @@ maybe update in the next version
 
 <br/>
 
-
-
-
 安装完成后，打开 Terminal (Windows 下用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
 
 ```
@@ -96,7 +93,7 @@ docker info
 ### 5b) 载入镜像 {#load-image}
 
 ```bash
-docker load < ~/Desktop/bioinfo_tsinghua.docker.tar.gz
+docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz
 ```
 
 ### 5c) 创建容器 {#create-container}
@@ -120,9 +117,7 @@ docker exec -it bioinfo_tsinghua bash
 
 然后再执行相关操作, 如下图所示（图中使用的是 Linux 的 Terminal，但 Mac 的操作是一样的）。
 
-![](.gitbook/assets/bash-in-container.gif)
-
-图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）
+![图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）](.gitbook/assets/bash-in-container.gif)
 
 如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/bioinfo_tsinghua_share` 文件夹。
 
@@ -179,7 +174,9 @@ mean(1:10)
 q()
 ```
 
+以上操作如下图所示：
 
+![图2. 在容器中的使用R（这里我们计算 1, 2, ..., 10 的平均数）](.gitbook/assets/bash-in-container.gif)
 
 ## 8) Homework
 
