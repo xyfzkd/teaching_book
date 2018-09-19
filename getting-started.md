@@ -180,5 +180,5 @@ q()
 
 ## 8) Homework
 
-1. Register a GitHub account, create a repository. and write a README.md file online.
-
+1. Register a GitHub account, create a repository, and write a `README.md` file online.
+1. 熟练掌握如何使用 Docker
