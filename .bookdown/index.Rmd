@@ -20,7 +20,7 @@ output:
 
 ```bash
 docker tag dongzhuoer/lulab:full bioinfo_tsinghua
-docker save bioinfo_tsinghua | gzip -c > lulab.tar.gz
+docker save bioinfo_tsinghua | gzip -c > bioinfo_tsinghua.docker.tar.gz
 ```
 
 -->
@@ -30,20 +30,20 @@ docker save bioinfo_tsinghua | gzip -c > lulab.tar.gz
 
 <!--
 
-## Pipeline
+## 1) Pipeline
 
-## Data Structure
+## 2) Data Structure
 
-### getting software & data
+### 2a) getting software & data
 
-### input
+### 2b) input
 
-### output
+### 2c) output
 
-## Running Steps
+## 3) Running Steps
 
-## Tips/Utilities
+## 4) Tips/Utilities
 
-## Homework and more
+## 5) Homework and more
 
 -->
