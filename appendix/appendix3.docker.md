@@ -10,10 +10,10 @@
 
 至 [官网](https://www.virtualbox.org/wiki/Downloads) 或 [清华云](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 下载安装程序，运行，按照提示完成安装。
 
-#### 1b.1) 下载我们提供的 Ubuntu 虚拟机
+#### 1a.2) 下载我们提供的 Ubuntu 虚拟机
 [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
 
-#### 1c.1) 导入虚拟机
+#### 1a.3) 导入虚拟机
 
 `管理` -> `导入虚拟电脑`
 ![](../.gitbook/assets/VM-1.png)
@@ -29,11 +29,11 @@
 
 <br>
 
-#### 1d.1) 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
+#### 1a.4) 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
 
 ![](../.gitbook/assets/VM-5.png)
 
-#### 1e.1) 打开 Terminal
+#### 1a.5) 打开 Terminal
 
 ![](../.gitbook/assets/ubuntu-terminal.gif)
 
