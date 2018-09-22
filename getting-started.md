@@ -93,7 +93,10 @@ docker info
 ### 5b) 载入镜像 {#load-image}
 
 ```bash
-docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz
+docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz  # only if Mac or Windows 10 Pro
+
+docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz  # Otherwise
+
 ```
 
 ### 5c) 创建容器 {#create-container}
