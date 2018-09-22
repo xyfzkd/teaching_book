@@ -70,15 +70,15 @@ maybe update in the next version
 
 ### 5b) 各操作系统与版本安装docker指南
 
-#### 5b.1)Mac用户
+#### 5b.1) Mac用户
 按照5a)相应要求下载并安装Docker，下载image并将image放置到桌面（`~/Desktop`），安装完成后从本章的 "5d) 载入镜像" 开始进行操作。
 
-#### 5b.2)Windows 10 非Pro
+#### 5b.2) Windows 10 非Pro
 使用 64 位其他版本的 Windows （以及用表中的方法安装 Docker 失败）的用户，请使用我们提供的虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
 
 使用方法参见 [Appendix III. Docker 1a)](appendix/appendix3.docker.md#win-vb-use-docker) , 安装完成后从本章的 "5d) 载入镜像" 开始进行操作。
 
-#### 5b.3)Windows 10 Pro
+#### 5b.3) Windows 10 Pro
 
 使用 Windows Pro 64 位的用户，请参见 [Appendix III. Docker 1b)](appendix/appendix3.docker.md#win-pro-use-docker) , 即可完成整个docker安装和容器创建工作。
 
@@ -123,7 +123,7 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 
 ### 5f) 重复使用容器 {#use-container}
 
-#### 5f.1)进入容器
+#### 5f.1) 进入容器
 
 到此为止，我们已经成功地安装了Docker，成功地载入一个镜像并且创建了容器。以后我们再使用Docker并进入该容器练习，只需要打开docker，然后在终端/Powershell中输入以下命令，即可进入容器：
 
@@ -135,10 +135,10 @@ docker exec -it bioinfo_tsinghua bash
 
 ![图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）](.gitbook/assets/bash-in-container.gif)
 
-#### 5f.2)在本地查看容器中的文件
+#### 5f.2) 在本地查看容器中的文件
 如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑本地的 `~/Desktop/bioinfo_tsinghua_share` 文件夹，即可看到容器中希望查看的文件。
 
-#### 5f.3)退出容器
+#### 5f.3) 退出容器
 
 用以下命令退出容器：
 
