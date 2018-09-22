@@ -1,4 +1,4 @@
-# Docker安装与使用指南附注
+# Docker安装与使用指南附录
 
 ## 1) Windows 用户使用 Docker 指南
 
@@ -13,7 +13,7 @@
 #### 1b.1) 下载我们提供的 Ubuntu 虚拟机
 [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
 
-#### 1c.1)导入虚拟机
+#### 1c.1) 导入虚拟机
 
 `管理` -> `导入虚拟电脑`
 ![](../.gitbook/assets/VM-1.png)
@@ -33,11 +33,11 @@
 
 ![](../.gitbook/assets/VM-5.png)
 
-#### 1e.1)打开 Terminal
+#### 1e.1) 打开 Terminal
 
 ![](../.gitbook/assets/ubuntu-terminal.gif)
 
-顺利完成以上步骤后，请到 [Getting Started 5b)](../getting-started.md#load-image) 完成后续操作。
+顺利完成以上步骤后，请到 [Getting Started 5d)](../getting-started.md#load-image) 完成后续操作。
 
 
 
@@ -47,6 +47,7 @@
 从 [官网](https://store.docker.com/editions/community/docker-ce-desktop-windows) 或者 [清华云盘](https://cloud.tsinghua.edu.cn/f/a28251b47d0e471a8d8f/) 下载Docker，并进行安装。
 
 **打开 Hyper-V**
+
 选择`Enable & Restart`以打开Hyper-V
 
 ![](../.gitbook/assets/win_docker5.png)
@@ -67,7 +68,7 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 ![](../.gitbook/assets/win_docker7.png)
 ![](../.gitbook/assets/win_docker8.png)
 
-#### 1b.4)首次创建容器
+#### 1b.4) 首次创建容器
 
 ```sh
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
@@ -79,7 +80,7 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 ![](../.gitbook/assets/win_docker10.png)
 选择`Share it`
 
-#### 1b.5)进入容器
+#### 1b.5)使用容器
 如果容器创建成功，之后每次只需要启动Docker程序，然后在Powershell中输入以下命令即可进入容器：
 
 ```sh
@@ -90,7 +91,7 @@ docker exec -it bioinfo_tsinghua bash
 
 
 
-完成以上操作后，请回到 [Getting Started 5e)](../getting-started.md#recover-container) 继续阅读。
+完成以上操作后，请回到 [Getting Started 5g)](../getting-started.md#recover-container) 继续阅读。
 
 
 ## 2) MAC 用户使用 Docker 
