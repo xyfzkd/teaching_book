@@ -2,32 +2,29 @@
 
 ## 1) 预修课程准备
 
-1. 基本生物课程：    如《遗传学》和/或《分子生物学》
-2. 基本统计课程：    如《概率论》和/或《生物统计》
-3. 基本数学课程：    如《线性代数》
+1. 基本生物课程： 如《遗传学》和/或《分子生物学》
+2. 基本统计课程： 如《概率论》和/或《生物统计》
+3. 基本数学课程： 如《微积分》和《线性代数》
 4. 基本计算机课程：如《C语言》
 
 ## 2) Learning Materials
 
-* Tutorial 
-  * **Basic Tutorial** (this one) 
-  * **[Advanced Tutorial](https://lulab.gitbook.io/training)**
+* Tutorial
+* **Basic Tutorial** (this one)
+* **[Advanced Tutorial](https://lulab.gitbook.io/training)**
 
 > see more learning materials in [Appendix I. Keep Learning](appendix/appendix1.more.md)
 
-## 3) GitHub - Document your work 
+## 3) GitHub - Document your work
 
 [GitHub](https://github.com/lulab/Shared) 是目前最流行的源代码托管平台，在这里可以找到海量的优秀开源代码，也可以与大神们“零距离”接触、共同碰撞出思维的火花，更可以实现 Social Coding 的梦想。我们鼓励学生在 GitHub 上建立自己的仓库来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作，。
 
-[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；同时支持远比 word 广泛，可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，而不用担心别人的 Office 版本比你低，甚至根本没安装 Office（Evernote 也正在推出支持 Markdown 的版本）。
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，具有很高的兼容性。（Mac用户可以尝试[Bear](https://bear.app/), [MWeb](https://zh.mweb.im/);Windows用户可以尝试[typora](https://typora.io/), [Madoko](https://www.madoko.net/)来体验简洁的Markdown语言）
 
-本教程即是建立在 Markdown 的基础上。
+本教程也使用Markdown编写。
 
-## 4) 要求
 
-完成本教程需要一台 64 位的电脑。
-
-## 5) 使用说明
+## 4) 教程使用说明
 
 除非特殊说明，本章中的命令均是在自己电脑的 Terminal （终端）程序中进行。
 
@@ -39,92 +36,111 @@
 
 本教程全部作业均要求提供源代码和输出文件。标有 "optional" 的题目选做，做对可获得额外加分。
 
-## 6) Docker
+## 5) Docker
 
-We provide a Docker image, which is a modern solution of setting up a virtual Linux OS. (For advanced users, the Docker is based on Ubuntu 18.04, which means you need to use `apt` to install additional softwares.)
+Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker技术比虚拟机技术更为轻便、快捷（[为什么使用Docker](https://yeasy.gitbooks.io/docker_practice/introduction/why.html)）。
+
+### 5a) Docker软件及Docker镜像下载
+我们为读者提供了**Docker软件**以及我们为本课程制作的**Docker image**，如下表所示。（注意Docker需要用户的机器为64位操作系统，对Windows非pro用户我们提供虚拟机内部安装Docker的方案。）
+
 
 <!--
 
 I think we should use this table
 
-| 系统                            | 安装策略                |
+| 系统 | 安装策略 |
 |-------------------------------|---------------------|
-| Mac，Windows 10 Pro, Linux | 安装 Docker，下载镜像      |
-| 其它                            | 安装 VirtualBox，下载虚拟机 |
+| Mac，Windows 10 Pro, Linux | 安装 Docker，下载镜像 |
+| 其它 | 安装 VirtualBox，下载虚拟机 |
 
 maybe update in the next version
 -->
 
-| 系统      | 版本                      | 安装策略                                                                                                                                                        | 备注                               |  
+| 系统 | 版本 | 安装策略 | 备注 |
 |---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)   | 详见下文的 Tips 1                                |    
-| Windows | Windows 其它版本 (64位)      | [VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/)    | 详见下文的 Tips 2|    
-| Mac     | 2010 or newer model     | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)   |                       -           |    
-| Linux   | kernel 3.10 or higher.  | [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) |                      -            |
+| Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并将image放置到桌面（`~/Desktop`）|
+| Windows | Windows 其它版本 (64位) | [VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) | 下载VirtualBox及虚拟机文件|
+| Mac | 2010 or newer model | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并将image放置到桌面（`~/Desktop`） |
+| Linux | kernel 3.10 or higher. | [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | - |
+
+
+> 需要下载最新版 Docker 软件的用户也可以去 [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号）
 
 
 
-### 5a) 安装 Docker，准备镜像
+### 5b) 各操作系统与版本安装docker指南
 
-对于 Mac，Windows 10 Pro 用户，在 [这里](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) 获取对应的安装程序，在自己的电脑上安装 Docker。然后将该教程配套的 Docker image，[bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)，下载到桌面（`~/Desktop`）。
+#### 5b.1)Mac用户
+按照5a)相应要求下载并安装Docker，下载image并将image放置到桌面（`~/Desktop`），安装完成后从本章的 "5d) 载入镜像" 开始进行操作。
+
+#### 5b.2)Windows 10 非Pro
+使用 64 位其他版本的 Windows （以及用表中的方法安装 Docker 失败）的用户，请使用我们提供的虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
+
+使用方法参见 [Appendix III. Docker 1a)](appendix/appendix3.docker.md#win-vb-use-docker) , 安装完成后从本章的 "5d) 载入镜像" 开始进行操作。
+
+#### 5b.3)Windows 10 Pro
+
+使用 Windows Pro 64 位的用户，请参见 [Appendix III. Docker 1b)](appendix/appendix3.docker.md#win-pro-use-docker) , 即可完成整个docker安装和容器创建工作。
+
+完成后可继续阅读本章的[5g)彻底删除容器](../getting-started.md#recover-container)
 
 
-
-> **Tips 1**  
-> 使用 Windows Pro 64 位的用户，请参见 [Appendix III. Docker 1b)](appendix/appendix3.docker.md#win-pro-use-docker) , 安装完成后从本章的 "5e) 恢复容器" 继续阅读。
-
-
-> **Tips 2**  
-> 使用 64 位其他版本的 Windows （以及用表中的方法安装 Docker 失败）的用户，请使用我们提供的虚拟机： [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。  
-> 使用方法参见 [Appendix III. Docker 1a)](appendix/appendix3.docker.md#win-vb-use-docker) , 安装完成后从本章的 "5b) 载入镜像" 开始进行操作。
-
-> **Tips 3**  
-> 想要最新版 Docker 的用户也可以去  [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号、登录方可下载。）
-
-
-<br/>
-
-安装完成后，打开 Terminal (Windows 下用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
+以上三种用户安装完成后，均可打开 Terminal (Windows 下使用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
 
 ```
 docker info
 ```
 
-### 5b) 载入镜像 {#load-image}
+### 5c) 视频教程：如何使用docker（基于Mac）
+可以选择观看视频教程，也可以跳过视频按照文字教程安装和配置docker。
+
+[youtube](https://youtu.be/c1ldhV7dAhg)
+
+[bilibili](https://www.bilibili.com/video/av30426956/)
+
+### 5d) 载入镜像 {#load-image}
 
 ```bash
-docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz  # only if Mac or Windows 10 Pro
+docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz # only if Mac or Windows 10 Pro
 
-docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz  # Otherwise
+docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz # Otherwise
 
 ```
 
-### 5c) 创建容器 {#create-container}
+### 5e) 创建容器 {#create-container}
 
 ```bash
 mkdir ~/Desktop/bioinfo_tsinghua_share
+
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped \
-    -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
+-v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
+
 docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 ```
+（`\`符号表示第二行与第三行是同一行，如果是手动输入命令，请不要输入`\`符号）
 
-这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件  。
+这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件 。
 
-### 5d) 使用容器 {#use-container}
+### 5f) 重复使用容器 {#use-container}
 
-每次运行本书中的其它章节的命令前，先进入到容器中的 bash 
+#### 5f.1)进入容器
+
+到此为止，我们已经成功地安装了Docker，成功地载入一个镜像并且创建了容器。以后我们再使用Docker并进入该容器练习，只需要打开docker，然后在终端/Powershell中输入以下命令，即可进入容器：
 
 ```bash
 docker exec -it bioinfo_tsinghua bash
-``` 
+```
 
-然后再执行相关操作, 如下图所示（图中使用的是 Linux 的 Terminal，但 Mac 的操作是一样的）。
+正确输入该命令后会进入容器内部，可以看到我们准备的本教程相关的文件和软件。如下图所示
 
 ![图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）](.gitbook/assets/bash-in-container.gif)
 
-如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑的 `~/Desktop/bioinfo_tsinghua_share` 文件夹。
+#### 5f.2)在本地查看容器中的文件
+如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑本地的 `~/Desktop/bioinfo_tsinghua_share` 文件夹，即可看到容器中希望查看的文件。
 
-在每一章的流程跑完之后，用以下命令退出容器
+#### 5f.3)退出容器
+
+用以下命令退出容器：
 
 ```bash
 exit
@@ -132,56 +148,24 @@ exit
 
 
 
-### 5e) 恢复容器 {#recover-container}
+### 5g) 彻底删除容器 {#recover-container}
 
-如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器，从该章节的最前面开始重新执行。
+如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器，从本章的[5e)创建容器](#create-container) 部分重新开始。
 
 ```bash
 docker rm -f bioinfo_tsinghua
 ```
 
-> **Tips 4**：之前提到过 `bioinfo_tsinghua` 一直保持运行状态，所以我们这里用 `-f` 来强制（force）删除。 
+> **Tips 3**：之前提到过 `bioinfo_tsinghua` 一直保持运行状态，所以我们这里用 `-f` 来强制（force）删除。
 
-然后重复 5c) [创建容器](#create-container) 命令
-
-
-## 6) 如何在mac电脑使用docker
-
-[@youtube](https://youtu.be/c1ldhV7dAhg)   
-<iframe width="400" height="300" src="https://www.youtube.com/embed/c1ldhV7dAhg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-
-[@bilibili](https://www.bilibili.com/video/av30426956/)   
-<iframe width="400" height="300" src="https://player.bilibili.com/player.html?aid=30426956&cid=53094338&page=1" allowfullscreen></iframe>
+然后重复  [5e)创建容器](#create-container) 命令
 
 
 
-## 7) 在容器中使用 R
 
-在 “4.3. GSEA” 和 “Appendix. Plot with R” 使用到了 R 语言 ，这里我们讲解一下如何在容器中使用 R。
-
-进入容器后，用以下命令进入 R 语言环境
-
-```bash
-R
-```
-
-然后将书中的代码复制到 Terminal 中运行，例如
-
-```r
-mean(1:10)
-```
-
-运行完之后，用以下命令退出（按完 Enter 后，按 n 和 Enter）
-
-```r
-q()
-```
-
-以上操作如下图所示：
-
-![图2. 在容器中的使用R（这里我们计算 1, 2, ..., 10 的平均数）](.gitbook/assets/R-in-container.gif)
-
-## 8) Homework
+## 6) Homework
 
 1. Register a GitHub account, create a repository, and write a `README.md` file online.
 1. 熟练掌握如何使用 Docker
+
+
