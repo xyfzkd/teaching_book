@@ -71,18 +71,18 @@ maybe update in the next version
 ### 5b) 各操作系统与版本安装docker指南
 
 #### 5b.1) Mac用户
-按照5a)相应要求下载并安装Docker，下载image并将image放置到桌面（`~/Desktop`），安装完成后从本章的 "5d) 载入镜像" 开始进行操作。
+按照5a)相应要求下载并安装Docker，下载image并将image放置到桌面（`~/Desktop`），安装完成后从本章的[5d) 载入镜像](#load-image)开始进行操作。
 
 #### 5b.2) Windows 10 非Pro
 使用 64 位其他版本的 Windows （以及用表中的方法安装 Docker 失败）的用户，请使用我们提供的虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
 
-使用方法参见 [Appendix III. Docker 1a)](appendix/appendix3.docker.md#win-vb-use-docker) , 安装完成后从本章的 "5d) 载入镜像" 开始进行操作。
+使用方法参见 [Appendix III. Docker 1a)](appendix/appendix3.docker.md#win-vb-use-docker) , 安装和配置虚拟机完成后从本章的 [5d) 载入镜像](#load-image)开始进行操作。
 
 #### 5b.3) Windows 10 Pro
 
 使用 Windows Pro 64 位的用户，请参见 [Appendix III. Docker 1b)](appendix/appendix3.docker.md#win-pro-use-docker) , 即可完成整个docker安装和容器创建工作。
 
-完成后可继续阅读本章的[5g)彻底删除容器](../getting-started.md#recover-container)
+完成后可继续阅读本章的[5g) 彻底删除容器](../getting-started.md#recover-container)
 
 
 以上三种用户安装完成后，均可打开 Terminal (Windows 下使用 PowerShell), 运行以下命令，检查 Docker 是否正常安装
