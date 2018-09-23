@@ -1,4 +1,4 @@
-# Docker安装与使用指南附录
+# Docker安装与使用指南
 
 ## 1) Windows 用户使用 Docker 指南
 
@@ -71,6 +71,8 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 #### 1b.4) 首次创建容器
 
 ```sh
+mkdir ~/Desktop/bioinfo_tsinghua_share
+
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
 
 docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
