@@ -85,13 +85,16 @@ maybe update in the next version
 完成后可继续阅读本章的[5g) 彻底删除容器](../getting-started.md#recover-container)及后续内容。
 
 
+
+
+**检查Docker是否安装成功**
 以上三种用户安装完成后，均可打开 Terminal (Windows 下使用 PowerShell), 运行以下命令，检查 Docker 是否正常安装：
 
 ```
 docker info
 ```
 
-另外请读者注意，教程列出的命令中的空格符是必须的，不可以省略空格，否则命令会无法正确执行
+另外请读者注意，教程列出的命令中的空格符是必须的，**不可以省略空格**，否则命令会无法正确执行。
 
 ### 5c) 视频教程：如何使用docker（基于Mac）
 可以选择观看视频教程，也可以跳过视频按照文字教程安装和配置docker。
