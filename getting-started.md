@@ -30,6 +30,9 @@
 
 * 除非特殊说明，本章中的命令均是在自己电脑的 **Terminal** （终端）程序中进行。
 
+> **特别注意:** 在Linux中空格有着专门的意义，所以要特别关注教程中列出的命令行中的空格符，**不可以省略空格**，否则Terminal里的命令会无法正确执行。
+
+
 * 后面每一章的操作都在 Docker 中的一个独立的目录（位于用户家目录（`/home/test`）下）下进行，我们称其为**章节目录**。
 
 > 例如， GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作，所有相对目录均是相对于该目录。
@@ -39,6 +42,10 @@
 -->
 
 * 本教程全部作业均要求提供源代码和输出内容。提交作业格式可以是.doc/.txt/.md/.sh等，标有 "optional" 的题目选做，做对可获得额外加分。
+
+
+
+
 
 ## 5) Docker
 
@@ -90,26 +97,28 @@ maybe update in the next version
 
 使用 Windows Pro 64 位的用户，请参见 [Appendix III. Docker 1b)](appendix/appendix3.docker.md#win-pro-use-docker) , 即可完成整个docker安装和容器创建工作。
 
-完成后可继续阅读本章的[5g) 彻底删除容器](../getting-started.md#recover-container)及后续内容。
+完成后可继续阅读本章的[5h) 彻底删除容器](../getting-started.md#recover-container)及后续内容。
 
 
 
 
-**检查Docker是否安装成功**
-以上三种用户安装完成后，均可打开 Terminal (Windows 下使用 PowerShell), 运行以下命令，检查 Docker 是否正常安装：
+> **检查Docker是否安装成功**
+> 以上三种用户安装完成后，均可打开 Terminal (Windows 下使用 PowerShell), > 运行以下命令，检查 Docker 是否正常安装：
+> ```
+> docker info
+> ```
 
-```
-docker info
-```
 
-另外请读者注意，教程列出的命令中的空格符是必须的，**不可以省略空格**，否则命令会无法正确执行。
+
 
 ### 5c) 视频教程：如何使用docker（基于Mac）
+
 可以选择观看视频教程，也可以跳过视频按照文字教程安装和配置docker。
 
 [youtube](https://youtu.be/c1ldhV7dAhg)
 
 [bilibili](https://www.bilibili.com/video/av30426956/)
+
 
 ### 5d) 载入镜像 {#load-image}
 
@@ -119,6 +128,9 @@ docker load -i ~/Desktop/bioinfo_tsinghua.docker.tar.gz # only if Mac or Windows
 docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz # Otherwise
 
 ```
+
+
+
 
 ### 5e) 创建并运行容器 {#create-container}
 
@@ -134,7 +146,7 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件 。
 
 
-#### 5f) 退出容器
+### 5f) 退出容器
 
 用以下命令退出容器：
 
