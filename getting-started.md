@@ -37,9 +37,6 @@
 
 > 例如， GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作，所有相对目录均是相对于该目录。
 
-<!--
-每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
--->
 
 * 本教程全部作业均要求提供源代码和输出内容。提交作业格式可以是.doc/.txt/.md/.sh等，标有 "optional" 的题目选做，做对可获得额外加分。
 
@@ -51,24 +48,17 @@
 
 Docker 因为其灵活性和资源占用少等优势开始取代过去传统的虚拟机（如VMWARE, Virtual Box等）。Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker技术比传统虚拟机技术更为轻便、快捷（[为什么使用Docker](https://yeasy.gitbooks.io/docker_practice/introduction/why.html)）。
 
-### 5a) Docker软件及Docker镜像下载
-我们为读者提供了我们为本课程制作的**Docker image**，如下表所示。
+### 5a.1) Docker程序(software）下载
 
->读者需要先安装**Docker软件**，才能运行该image，具体安装教程见5b。
+读者可以去 [官方下载页面](https://www.docker.com/get-docker) 获取对应不同操作系统的docker软件的安装程序。（需要注册账号）
 
-<!--
+> windows 10 非pro版本的读者请注意：只有pro版本才能安装docker程序，所以如果不是pro版本，请下载并安装虚拟机 [VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 。
 
-I think we should use this table
+### 5a.2) Docker镜像(image）下载
 
-| 系统 | 安装策略 |
-|-------------------------------|---------------------|
-| Mac，Windows 10 Pro, Linux | 安装 Docker，下载镜像 |
-| 其它 | 安装 VirtualBox，下载虚拟机 |
+我们为读者提供了我们为本课程制作的用于Docker的一个**image（镜像）**，如下表所示。
 
-maybe update in the next version
--->
-
-| 系统 | 版本 | 软件程序 | image | 备注 |
+| 操作系统 | 系统版本 | 软件程序（software） | 镜像（image） | 备注 |
 |---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) | [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`）|
 | Windows | Windows 其它版本 (64位) | 虚拟机[VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) |  [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) | 安装VirtualBox程序并下载虚拟机image文件到桌面（`~/Desktop`）|
@@ -78,11 +68,7 @@ maybe update in the next version
 
 
 
-
-
-### 5b) 各操作系统与版本安装docker指南
-
-> 需要下载最新版 Docker 软件的用户也可以去 [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号）
+### 5b) 各操作系统下的安装docker程序和加载docker镜像指南
 
 
 #### 5b.1) Mac用户
@@ -111,7 +97,7 @@ maybe update in the next version
 
 
 
-### 5c) 视频教程：如何使用docker（基于Mac）
+### 5c) 观看视频教程：如何使用docker（基于Mac）
 
 可以选择观看视频教程，也可以跳过视频按照文字教程安装和配置docker。
 
