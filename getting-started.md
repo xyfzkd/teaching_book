@@ -17,7 +17,9 @@
 
 ## 3) GitHub - Document your work
 
-[GitHub](https://github.com/lulab/Shared) 是目前最流行的源代码托管平台，在这里可以找到海量的优秀开源代码，也可以与大神们“零距离”接触、共同碰撞出思维的火花，更可以实现 Social Coding 的梦想。我们鼓励学生在 GitHub 上建立自己的仓库来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作，。
+[GitHub](https://github.com) 是目前最流行的源代码托管平台，在这里可以找到海量的优秀开源项目代码，也可以与大神们“零距离”接触、共同碰撞出思维的火花，更可以实现 Social Coding 的梦想。我们鼓励学生在 GitHub 上建立自己的仓库来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作。
+
+我们也推荐有经验的读者用Git管理自己的代码，可以看这个[简易Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，具有很高的兼容性。（Mac用户可以尝试[Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows用户可以尝试[typora](https://typora.io/), [Madoko](https://www.madoko.net/)来体验简洁的Markdown语言）
 
@@ -169,7 +171,8 @@ docker rm -f bioinfo_tsinghua
 
 ## 6) Homework
 
-1. Register a GitHub account, create a repository, and write a `README.md` file online.
-1. 熟练掌握如何使用 Docker
+1. 注册一个GitHub账户，创建一个仓库，写好`README.md`。尝试使用Git管理自己的代码并同步至GitHub。
+2. 尝试使用Markdown语言，熟悉其语法。
+1. 熟练掌握如何使用 Docker。
 
 
