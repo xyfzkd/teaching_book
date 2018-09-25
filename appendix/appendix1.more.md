@@ -101,7 +101,7 @@ _Learn three basick techniques (完成任何一个要求即可：1. 1000行以�
 ## 2) Advanced Tutorial {#advanced}
 
 
-* [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io)
+* [Bioinformatics Tutorial - Advanced](http://lulab.gitbook.io/training)
 
 
 
