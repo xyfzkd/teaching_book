@@ -124,8 +124,6 @@ docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz # Otherwise
 mkdir ~/Desktop/bioinfo_tsinghua_share
 
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
-
-docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 ```
 <!--（`\`符号表示第二行与第三行是同一行，如果是手动输入命令，请不要输入`\`符号）-->
 
