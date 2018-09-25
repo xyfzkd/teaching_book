@@ -5,9 +5,9 @@
 
 _Learn three basick techniques (完成任何一个要求即可：1. 1000行以上的程序； 2. 在线课程的正式或非正式认可，3. 任何其他官方official证书. Examples）_
 
-1. Linux (Editor (e.g. VIM) and Shell Script (e.g. bash))
-2. R (or MATLAB)
-3. Python (or Perl)
+* Linux (Editor (e.g. VIM) and Shell Script (e.g. bash))
+* R (or MATLAB)
+* Python (or Perl)
 
 ### 1a) Recommended Books and Tutorials {#read}
 
@@ -108,12 +108,12 @@ _Learn three basick techniques (完成任何一个要求即可：1. 1000行以�
 ## 3) Shared Scripts {#share-script}
 
 
-1. Scripts
+* Scripts
 
    * Lu Lab: [https://github.com/lulab/shared\_scripts](https://github.com/lulab/shared_scripts)
    * Zhi J. Lu: [https://github.com/urluzhi/scripts](https://github.com/urluzhi/scripts)
 
-2. Plots 
+* Plots 
 
    * Lu Lab: [https://github.com/lulab/shared\_scripts/tree/master/plots](https://github.com/lulab/shared_scripts/tree/master/plots)
    * Zhi J. Lu: [https://github.com/urluzhi/scripts/tree/master/Rscript/R\_plot](https://github.com/urluzhi/scripts/tree/master/Rscript/R_plot)
