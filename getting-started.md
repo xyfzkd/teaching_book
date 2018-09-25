@@ -173,7 +173,9 @@ exit
 
 ### 5h) 彻底删除容器 {#recover-container}
 
-如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器，从本章的[5e)创建容器](#create-container) 部分重新开始。
+如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器。
+
+首先，
 
 ```bash
 docker rm -f bioinfo_tsinghua
@@ -181,7 +183,7 @@ docker rm -f bioinfo_tsinghua
 
 > **Tips**：之前提到过 `bioinfo_tsinghua` 一直保持运行状态，所以我们这里用 `-f` 来强制（force）删除。
 
-然后重复  [5e)创建容器](#create-container) 命令
+然后，重复  [5e)创建容器](#create-container) 命令
 
 
 
