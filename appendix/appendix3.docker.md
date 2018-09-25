@@ -1,19 +1,24 @@
 # Docker安装与使用指南
 
-## 1) Windows 用户使用 Docker 指南
+## 1) MAC 用户使用 Docker 指南
 
-### 1a) windows 10 非 pro 用户 通过Virtual Box 运行docker {#win-vb-use-docker}
+MAC 用户在安装和使用Docker 参见[Getting Started 5)](https://lulab.gitbooks.io/teaching/getting-started.html)，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
+
+
+
+## 2) Windows 用户使用 Docker 指南
+### 2a) windows 10 非 pro 用户 通过Virtual Box 运行docker {#win-vb-use-docker}
 
 此部分教程将介绍如何在windows 10 非pro机器上使用virtual box，安装并配置好virtual box后即可在内部运行docker。
 
-#### 1a.1) 安装 Virtual Box
+#### 2a.1) 安装 Virtual Box
 
 至 [官网](https://www.virtualbox.org/wiki/Downloads) 或 [清华云](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 下载安装程序，运行，按照提示完成安装。
 
-#### 1a.2) 下载我们提供的 Ubuntu 虚拟机
+#### 2a.2) 下载我们提供的 Ubuntu 虚拟机
 [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
 
-#### 1a.3) 导入虚拟机
+#### 2a.3) 导入虚拟机
 
 `管理` -> `导入虚拟电脑`
 ![](../.gitbook/assets/VM-1.png)
@@ -29,21 +34,24 @@
 
 <br>
 
-#### 1a.4) 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
+#### 2a.4) 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
 
 ![](../.gitbook/assets/VM-5.png)
 
-#### 1a.5) 打开 Terminal
+#### 2a.5) 打开 Terminal
 
 ![](../.gitbook/assets/ubuntu-terminal.gif)
 
 顺利完成以上步骤后，请到 [Getting Started 5d)](../getting-started.md#load-image) 完成后续操作。
 
 
+---
 
-### 1b) windows 10 pro 64 安装和使用方法 {#win-pro-use-docker}
 
-#### 1b.1) 安装 Docker
+
+### 2b) windows 10 pro 64 安装和使用方法 {#win-pro-use-docker}
+
+#### 2b.1) 安装 Docker
 从 [官网](https://store.docker.com/editions/community/docker-ce-desktop-windows) 或者 [清华云盘](https://cloud.tsinghua.edu.cn/f/a28251b47d0e471a8d8f/) 下载Docker，并进行安装。
 
 **打开 Hyper-V**
@@ -52,12 +60,12 @@
 
 ![](../.gitbook/assets/win_docker5.png)
 
-#### 1b.2) 启动PowerShell
+#### 2b.2) 启动PowerShell
 在开始菜单搜索 PowerShall, 并启动。
 
 ![](../.gitbook/assets/win_docker6.png)
 
-#### 1b.3) 在PowerShell中输入命令导入docker镜像
+#### 2b.3) 在PowerShell中输入命令导入docker镜像
 将Docker image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)下载到桌面，并且通过在PowerShell中输入以下命令导入将镜像导入到 Docker 中。
 
 ```sh
@@ -68,7 +76,7 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 ![](../.gitbook/assets/win_docker7.png)
 ![](../.gitbook/assets/win_docker8.png)
 
-#### 1b.4) 首次创建容器
+#### 2b.4) 首次创建容器
 
 ```sh
 mkdir ~/Desktop/bioinfo_tsinghua_share
@@ -82,7 +90,7 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 ![](../.gitbook/assets/win_docker10.png)
 选择`Share it`
 
-#### 1b.5)使用容器
+#### 2b.5)使用容器
 如果容器创建成功，之后每次只需要启动Docker程序，然后在Powershell中输入以下命令即可进入容器：
 
 ```sh
@@ -96,9 +104,7 @@ docker exec -it bioinfo_tsinghua bash
 完成以上操作后，请回到 [Getting Started 5g)](../getting-started.md#recover-container) 继续阅读。
 
 
-## 2) MAC 用户使用 Docker 
 
-MAC 用户在安装和使用Docker 参见[Getting Started 5)](https://lulab.gitbooks.io/teaching/getting-started.html)，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
 
 
 <!--

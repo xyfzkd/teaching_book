@@ -26,25 +26,28 @@
 本教程也使用Markdown编写。
 
 
-## 4) 教程使用说明
+## 4) 本教程使用说明
 
-除非特殊说明，本章中的命令均是在自己电脑的 Terminal （终端）程序中进行。
+* 除非特殊说明，本章中的命令均是在自己电脑的 **Terminal** （终端）程序中进行。
 
-后面每一章的操作都在 Docker 中的一个独立的目录（位于用户家目录（`/home/test`）下）下进行，我们称其为**章节目录**。如 GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作，所有相对目录均是相对于该目录。
+* 后面每一章的操作都在 Docker 中的一个独立的目录（位于用户家目录（`/home/test`）下）下进行，我们称其为**章节目录**。
+
+> 例如， GSEA 这一章中提到 “以下操作均在 `gsea/` 目录下进行。”，指的就是在 `/home/test/gsea` 下进行该章所有操作，所有相对目录均是相对于该目录。
 
 <!--
 每一步的结果都可以在章节目录的 `success/` 的相应文件夹中查看。（比如第一步没有在 `gsea/input/` 中生成要求的文件的话，可以直接从 `gsea/success/input` 中拷贝，然后继续下一步。）
 -->
 
-本教程全部作业均要求提供源代码和输出内容。提交作业格式可以是.doc/.txt/.md/.sh等，标有 "optional" 的题目选做，做对可获得额外加分。
+* 本教程全部作业均要求提供源代码和输出内容。提交作业格式可以是.doc/.txt/.md/.sh等，标有 "optional" 的题目选做，做对可获得额外加分。
 
 ## 5) Docker
 
-Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker技术比虚拟机技术更为轻便、快捷（[为什么使用Docker](https://yeasy.gitbooks.io/docker_practice/introduction/why.html)）。
+Docker 因为其灵活性和资源占用少等优势开始取代过去传统的虚拟机（如VMWARE, Virtual Box等）。Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker技术比传统虚拟机技术更为轻便、快捷（[为什么使用Docker](https://yeasy.gitbooks.io/docker_practice/introduction/why.html)）。
 
 ### 5a) Docker软件及Docker镜像下载
-我们为读者提供了**Docker软件**以及我们为本课程制作的**Docker image**，如下表所示。（注意Docker需要用户的机器为64位操作系统，对Windows非pro用户我们提供虚拟机内部安装Docker的方案。）
+我们为读者提供了我们为本课程制作的**Docker image**，如下表所示。
 
+>读者需要先安装**Docker软件**，才能运行该image，具体安装教程见5b。
 
 <!--
 
@@ -58,19 +61,22 @@ I think we should use this table
 maybe update in the next version
 -->
 
-| 系统 | 版本 | 安装策略 | 备注 |
+| 系统 | 版本 | 软件程序 | image | 备注 |
 |---------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并将image放置到桌面（`~/Desktop`）|
-| Windows | Windows 其它版本 (64位) | [VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) + 虚拟机: [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) | 下载VirtualBox及虚拟机文件|
-| Mac | 2010 or newer model | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并将image放置到桌面（`~/Desktop`） |
-| Linux | kernel 3.10 or higher. | [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) + image: [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | - |
+| Windows | Windows 10 pro及以上 (64位) | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) | [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`）|
+| Windows | Windows 其它版本 (64位) | 虚拟机[VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) |  [bioinfo_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) | 安装VirtualBox程序并下载虚拟机image文件到桌面（`~/Desktop`）|
+| Mac | 2010 or newer model | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) |  [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
+| Linux | kernel 3.10 or higher. | [Docker](https://cloud.tsinghua.edu.cn/d/d6b2d37d9dc942eb9a6e/) | [bioinfo_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/) | 安装Docker程序并下载image文件到桌面（`~/Desktop`） |
 
 
-> 需要下载最新版 Docker 软件的用户也可以去 [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号）
+
 
 
 
 ### 5b) 各操作系统与版本安装docker指南
+
+> 需要下载最新版 Docker 软件的用户也可以去 [官方下载页面](https://www.docker.com/get-docker) 获取对应的安装程序。（需要注册账号）
+
 
 #### 5b.1) Mac用户
 按照5a)相应要求下载并安装Docker，下载image并将image放置到桌面（`~/Desktop`），安装完成后从本章的[5d) 载入镜像](#load-image)开始进行操作。
@@ -114,7 +120,7 @@ docker load -i ~/Desktop/bioinfo_tsinghua.tar.gz # Otherwise
 
 ```
 
-### 5e) 创建容器 {#create-container}
+### 5e) 创建并运行容器 {#create-container}
 
 ```bash
 mkdir ~/Desktop/bioinfo_tsinghua_share
@@ -127,11 +133,24 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 
 这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件 。
 
-### 5f) 重复使用容器 {#use-container}
 
-#### 5f.1) 进入容器
+#### 5f) 退出容器
 
-到此为止，我们已经成功地安装了Docker，成功地载入一个镜像并且创建了容器。以后我们再使用Docker并进入该容器练习，只需要打开docker，然后在终端/Powershell中输入以下命令，即可进入容器：
+用以下命令退出容器：
+
+```bash
+exit
+```
+
+### 5g) 重复使用容器 {#use-container}
+
+到此为止，我们已经成功地安装了Docker，成功地载入一个镜像并且创建了容器（container）。以后我们再使用Docker并进入该容器练习，只需要反复执行3个步骤:
+
+#### 5g.1) 双击运行docker程序
+
+#### 5g.2) 运行该教程创建的容器（container）
+
+在终端/Powershell中输入以下命令，即可进入容器：
 
 ```bash
 docker exec -it bioinfo_tsinghua bash
@@ -141,10 +160,10 @@ docker exec -it bioinfo_tsinghua bash
 
 ![图1. 进入容器中的 bash（这里演示运行第一章中的 `ls -hl`）](.gitbook/assets/bash-in-container.gif)
 
-#### 5f.2) 在本地查看容器中的文件
-如果想要查看容器中的文件，可在容器中将其复制（`cp`）到 `/home/test/share`，然后打开自己电脑本地的 `~/Desktop/bioinfo_tsinghua_share` 文件夹，即可看到容器中希望查看的文件。
+#### 5g.3) 在容器进行Linux操作
 
-#### 5f.3) 退出容器
+
+#### 5g.4) 退出容器
 
 用以下命令退出容器：
 
@@ -154,7 +173,7 @@ exit
 
 
 
-### 5g) 彻底删除容器 {#recover-container}
+### 5h) 彻底删除容器 {#recover-container}
 
 如果你不小心执行了错误操作，以至于无法正常执行本教程中的某一章节，可以删除该容器，然后新建一个干净的容器，从本章的[5e)创建容器](#create-container) 部分重新开始。
 
@@ -173,6 +192,6 @@ docker rm -f bioinfo_tsinghua
 
 1. 注册一个GitHub账户，创建一个仓库，写好`README.md`。尝试使用Git管理自己的代码并同步至GitHub。
 2. 尝试使用Markdown语言，熟悉其语法。
-1. 熟练掌握如何使用 Docker。
+3. 熟练掌握如何使用 Docker。
 
 
