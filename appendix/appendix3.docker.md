@@ -83,7 +83,7 @@ mkdir ~/Desktop/bioinfo_tsinghua_share
 
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
 
-docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
+docker exec -u root bioinfo_tsinghua chown test:test /home/test/share  # Windows 10 pro set dir use root as default user, we need to set it be owned by test
 ```
 
 ![](../.gitbook/assets/win_docker9.png)
