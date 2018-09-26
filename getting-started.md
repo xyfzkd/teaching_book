@@ -127,7 +127,11 @@ docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bio
 ```
 <!--（`\`符号表示第二行与第三行是同一行，如果是手动输入命令，请不要输入`\`符号）-->
 
-这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行），同时设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`），并且该容器的 `/home/test/share` 与自己电脑桌面上的 `bioinfo_tsinghua_share` 文件夹（`~/Desktop/bioinfo_tsinghua_share`）共享文件 。
+这里我们新建了一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行）。
+> 参数说明：
+> 设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`）
+> 主机(host, 例如Mac或者Windows）和docker容器（例如Linux）设置了一个文件夹同步，可以互传文件：
+> LINUX: `/home/test/share` == HOST: `~/Desktop/bioinfo_tsinghua_share`
 
 
 ### 5f) 退出容器
