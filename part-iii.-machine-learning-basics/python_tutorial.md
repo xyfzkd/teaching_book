@@ -1374,6 +1374,7 @@ for i in tqdm(range(20)):
 ## 课外阅读
 - [Recommendation: Python tutorial by Shibinbin](https://shibinbin.gitbooks.io/bioinfomatics-training-program/content/python_basics.html#install_python)
 - [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
+- [Scipy Lectures](http://www.scipy-lectures.org/)
 - [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
 ## Homework
