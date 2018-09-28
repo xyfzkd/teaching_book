@@ -691,6 +691,8 @@ scipy.stats contains a large number probability distributions:
 ### 操作data frames的工具包：pandas
 URL: (http://pandas.pydata.org/pandas-docs/stable/)
 
+请[下载gene.bed文件](https://github.com/lulab/teaching_book/tree/master/part-iii.-machine-learning-basics/data/)并将`data`文件夹放置在于本教程文件相同的目录下。
+
 
 ```python
 import pandas as pd
