@@ -1369,19 +1369,7 @@ for i in tqdm(range(20)):
 ```
 
 
-<p>Failed to display Jupyter Widget of type <code>HBox</code>.</p>
-<p>
-  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
-  that the widgets JavaScript is still loading. If this message persists, it
-  likely means that the widgets JavaScript library is either not installed or
-  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html">Jupyter
-  Widgets Documentation</a> for setup instructions.
-</p>
-<p>
-  If you're reading this message in another frontend (for example, a static
-  rendering on GitHub or <a href="https://nbviewer.jupyter.org/">NBViewer</a>),
-  it may mean that your frontend doesn't currently support widgets.
-</p>
+
 
 
 
@@ -1394,4 +1382,4 @@ for i in tqdm(range(20)):
 - [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
 # Homework
-- 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出
+- 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出.
