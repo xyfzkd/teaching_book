@@ -23,6 +23,10 @@
   * [6.2 Alternative Splicing](part-ii.-ngs-pipelines/6.2.alternative-splicing.md)
 * [7.ChIP-seq](part-ii.-ngs-pipelines/7.chip-seq.md)
 
+## Part III. Machine Learning Basics
+* [8.Python Tutorials](part-iii.-machine-learning-basics/python_tutorial.md)
+* [9.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics.md)
+
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
