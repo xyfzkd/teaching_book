@@ -1,7 +1,7 @@
 
 # Python Tutorial {#python_tutorial}
 - 本教程默认使用**python3**
-- **强烈建议** 安装好Anaconda，下载本教程的.ipynb文件[python_tutorial.ipynb](./python_tutorial.ipynb)，使用jupyter notebook打开并运行。
+- **强烈建议** 安装好Anaconda，下载本教程的.ipynb文件[python_tutorial.ipynb](https://github.com/lulab/teaching_book/tree/master/part-iii.-machine-learning-basics/python_tutorial.ipynb)，使用jupyter notebook打开并运行。
 
 ![life_is_short](assets/life_is_short.png)
 
