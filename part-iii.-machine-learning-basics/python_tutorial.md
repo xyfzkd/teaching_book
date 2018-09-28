@@ -1,4 +1,3 @@
-
 # Python Tutorial {#python_tutorial}
 - 本教程默认使用**python3**
 - **强烈建议** 安装好Anaconda，下载本教程的.ipynb文件[python_tutorial.ipynb](https://github.com/lulab/teaching_book/tree/master/part-iii.-machine-learning-basics/python_tutorial.ipynb)，使用jupyter notebook打开并运行。
@@ -1385,3 +1384,6 @@ for i in tqdm(range(20)):
 
 # Homework
 - 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出.
+
+
+<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
