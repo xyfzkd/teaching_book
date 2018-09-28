@@ -89,9 +89,9 @@ pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 ```
 
-# Basic 
+## Basic 
 
-## python语法规范
+### python语法规范
 python非常注意规范的书写语法，以缩进为例，python强制要求使用tabs/spaces来缩进。推荐使用tab或四个空格来缩进。
 ```python
 # use a tab
@@ -105,7 +105,7 @@ for i in range(3):
     print(i)
 ```
 
-## 在终端运行python脚本
+### 在终端运行python脚本
 创建一个python脚本`welcome.py`
 ```python
 print('welcome to python!')
@@ -131,7 +131,7 @@ chmod +x welcome.py  #set the python script as executable
 ./welcome.py
 ```
 
-## Hello World!
+### Hello World!
 
 
 ```python
@@ -198,7 +198,7 @@ help(firstVariable.lower)
     
 
 
-## Simple Math
+### Simple Math
 
 
 ```python
@@ -219,7 +219,7 @@ print (10%3)
     1
 
 
-## if statement
+### if statement
 Comparison Operator | Function
 --- | --- 
 < | less than
@@ -256,7 +256,7 @@ if num > 0 and num  < 15:
     3
 
 
-## else and elif
+### else and elif
 
 
 ```python
@@ -272,7 +272,7 @@ else:
     Your number is odd
 
 
-## Swap values
+### Swap values
 
 
 ```python
@@ -285,7 +285,7 @@ print(a, b)
     2 1
 
 
-## List
+### List
 请务必注意，python的索引都是**从0开始的**，而不是1！
 
  |  |  |  |
@@ -293,7 +293,7 @@ print(a, b)
 z =| [3, | 7, | 4, | 2]
 index | 0 | 1 | 2 | 3
 
-### Accessing Values in List
+#### Accessing Values in List
 
 
 ```python
@@ -327,7 +327,7 @@ z[-1]
 
 
 
-### Slicing Lists
+#### Slicing Lists
 
 
 ```python
@@ -369,14 +369,14 @@ z[1:]
 
 
 
-### Minimum, Maximum, Length, and Sum of a list
+#### Minimum, Maximum, Length, and Sum of a list
 
 
 ```python
 print(min(z), max(z), len(z), sum(z))
 ```
 
-### Add to the End of List
+#### Add to the End of List
 
 
 ```python
@@ -392,7 +392,7 @@ print (y)
     ['Steve', 'Rachel', 'Michael', 'Adam', 'Monica', 'Jessica', 'Lester', 'James']
 
 
-### list comprehension
+#### list comprehension
 
 
 ```python
@@ -416,7 +416,7 @@ print(a)
     [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
 
-## Dictionary
+### Dictionary
 
 字典是另一种可变容器模型，且可存储任意类型对象。
 
@@ -424,7 +424,7 @@ print(a)
 
 键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一
 
-### 定义和获取字典中的值
+#### 定义和获取字典中的值
 
 
 ```python
@@ -439,7 +439,7 @@ dict['b']
 
 
 
-### 修改字典
+#### 修改字典
 
 
 ```python
@@ -457,7 +457,7 @@ print ("dict['School']: ", dict['School'])
     dict['School']:  DPS School
 
 
-### Dict comprehension
+#### Dict comprehension
 
 
 ```python
@@ -481,12 +481,12 @@ print(a)
     {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J'}
 
 
-# Scientific computation
+## Scientific computation
 
-## Scientific computing相关的python工具包
+### Scientific computing相关的python工具包
 ![scipy ecosystem](assets/scipy_ecosystem.jpg)
 
-## 使用python工具包
+### 使用python工具包
 python的开发者提供了数以万计的python工具包，以原生工具包`os`和矩阵计算工具包`numpy`为例，导入方法如下：
 
 
@@ -507,7 +507,7 @@ import numpy as np
 - scikit-learn
 - Keras/Tensorflow/Pytorh
 
-### 矩阵计算工具: Numpy
+#### 矩阵计算工具: Numpy
 URL: (http://www.numpy.org/)
 
 
@@ -681,13 +681,13 @@ A
 
 
 
-### 数值分析工具(概率分布，信号分析等.): Scipy
+#### 数值分析工具(概率分布，信号分析等.): Scipy
 URL: (https://www.scipy.org/)
 
 scipy.stats contains a large number probability distributions:
 ![scipy_stats](assets/scipy_stats.png)
 
-### 操作data frames的工具包：pandas
+#### 操作data frames的工具包：pandas
 URL: (http://pandas.pydata.org/pandas-docs/stable/)
 
 请[下载gene.bed文件](https://github.com/lulab/teaching_book/tree/master/part-iii.-machine-learning-basics/data/)并将`data`文件夹放置在于本教程文件相同的目录下。
@@ -1337,18 +1337,18 @@ genes.head()
 length_table.to_excel('data/length_table.xlsx')
 ```
 
-### Basic graphics and plotting: matplotlib
+#### Basic graphics and plotting: matplotlib
 URL: (https://matplotlib.org/contents.html)
 
 ![matplotlib](assets/matplotlib.png)
 
-### Statistical data visualization: seaborn
+#### Statistical data visualization: seaborn
 URL: (https://seaborn.pydata.org/)
 
 ![seaborn](assets/seaborn.png)
 
 
-### Progress bar: tqdm
+#### Progress bar: tqdm
 URL: (https://pypi.python.org/pypi/tqdm)
 
 一个有用的计时工具，可以使用`pip`或者`conda`安装：
@@ -1371,18 +1371,12 @@ for i in tqdm(range(20)):
 
 
 
-
-
-
-    
-
-
-# 课外阅读
+## 课外阅读
 - [Recommendation: Python tutorial by Shibinbin](https://shibinbin.gitbooks.io/bioinfomatics-training-program/content/python_basics.html#install_python)
 - [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
 - [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
-# Homework
+## Homework
 - 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出.
 
 
