@@ -19,11 +19,24 @@
 
 [GitHub](https://github.com) 是目前最流行的源代码托管平台，在这里可以找到海量的优秀开源项目代码，也可以与大神们“零距离”接触、共同碰撞出思维的火花，更可以实现 Social Coding 的梦想。我们鼓励学生在 GitHub 上建立自己的仓库来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作。
 
-我们也推荐有经验的读者用Git管理自己的代码，可以看这个[简易Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+> 我们也推荐有经验的读者用Git管理自己的代码，可以看这个[简易Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
-[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，具有很高的兼容性。（Mac用户可以尝试[Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows用户可以尝试[typora](https://typora.io/), [Madoko](https://www.madoko.net/)来体验简洁的Markdown语言）
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，具有很高的兼容性。
 
-本教程也使用Markdown编写。
+实例：
+
+* github (例如：[README.md](https://github.com/lulab/Ribowave/blob/master/README.md) 及其 [wiki](https://github.com/lulab/Ribowave/wiki) )
+* 清华云（例如： [README.md](https://cloud.tsinghua.edu.cn/f/0018b4eb647a487d8b27/) )
+* github page （例如：https://lulab.github.io 的 [source code](https://github.com/lulab/lulab.github.io/blob/master/README.md)）
+* gitbook (例如：本文档）
+
+
+
+
+> 我们鼓励利用github，github自带的wiki，gitbook,清华云等云服务；对习惯离线编辑同学有如下软件推荐：
+> Mac: [Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); 
+> Windows: [typora](https://typora.io/), [Madoko](https://www.madoko.net/)
+
 
 
 ## 4) 本教程使用说明
