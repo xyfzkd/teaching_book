@@ -17,13 +17,18 @@
 
 ## 3) GitHub - Document your work
 
-[GitHub](https://github.com) 是目前最流行的源代码托管平台，在这里可以找到海量的优秀开源项目代码，也可以与大神们“零距离”接触、共同碰撞出思维的火花，更可以实现 Social Coding 的梦想。我们鼓励学生在 GitHub 上建立自己的仓库来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作。
+[GitHub](https://github.com) 是一个源代码托管平台。 
+* 我们鼓励学生在 GitHub 上建立自己的仓库（repo）来托管项目，并添加好 `README.md` ，使用下文介绍的 Markdown 语言来解释你的工作。
+* 我们也推荐有经验的读者用Git管理自己的代码，可以看这个[简易Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)。
+* 在这里还可以找到海量的优秀开源项目代码，共同碰撞出思维的火花，实现 Social Coding。
 
-> 我们也推荐有经验的读者用Git管理自己的代码，可以看这个[简易Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
-[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种非常流行的通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心；可以生成 HTML 文件发布在网站上，也可以生成 PDF 分享他人，具有很高的兼容性。
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心。
+* 我们建议在Linux里**每个重要工作目录**都用这个语言来编辑一个README.md文件。
+* md可以生成 HTML 文件发布在网站上。
+* md也可以生成 PDF，具有很高的兼容性。
 
-实例：
+实例有：
 
 * github (例如：[README.md](https://github.com/lulab/Ribowave/blob/master/README.md) 及其 [wiki](https://github.com/lulab/Ribowave/wiki) )
 * 清华云（例如： [README.md](https://cloud.tsinghua.edu.cn/f/0018b4eb647a487d8b27/) )
