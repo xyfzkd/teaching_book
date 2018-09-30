@@ -505,7 +505,7 @@ import numpy as np
 
 如果读者对机器学习和深度学习感兴趣，可以进一步了解以下工具包：
 - scikit-learn
-- Keras/Tensorflow/Pytorh
+- Keras/Tensorflow/Pytorch
 
 #### 矩阵计算工具: Numpy
 URL: (http://www.numpy.org/)
