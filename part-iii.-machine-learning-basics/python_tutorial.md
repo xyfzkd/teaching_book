@@ -192,6 +192,7 @@ print (10%3)
 
 
 ### if statement
+
 Comparison Operator | Function
 --- | --- 
 < | less than
@@ -254,10 +255,11 @@ print(a, b)
 ### List
 请务必注意，python的索引都是**从0开始的**，而不是1！
 
- |  |  |  |
+
+index | 0 | 1 | 2 | 3
 --- | --- | --- | --- | ---
 z =| [3, | 7, | 4, | 2]
-index | 0 | 1 | 2 | 3
+
 
 #### Accessing Values in List
 
