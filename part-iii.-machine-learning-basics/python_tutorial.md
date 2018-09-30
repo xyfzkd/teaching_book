@@ -194,13 +194,13 @@ print (10%3)
 ### if statement
 
 Comparison Operator | Function
---- | --- 
-< | less than
-<= | less than or equal to
->| greater than
->= | greater than or equal to
-== | equal
-!= | not equal
+---- | ----
+<    | less than
+<=   | less than or equal to
+>    | greater than
+>=   | greater than or equal to
+==   | equal
+!=   | not equal
 
 
 ```python
