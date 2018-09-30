@@ -139,20 +139,12 @@ chmod +x welcome.py  #set the python script as executable
 print('Hello World!')
 ```
 
-    Hello World!
-
-
 
 ```python
 print("The \n makes a new line")
 print("The \t is a tab")
 print('I\'m going to the movies')
 ```
-
-    The 
-     makes a new line
-    The 	 is a tab
-    I'm going to the movies
 
 
 
@@ -161,7 +153,6 @@ firstVariable = 'Hello World!'
 print(firstVariable)
 ```
 
-    Hello World!
 
 
 
@@ -171,11 +162,6 @@ print(firstVariable.lower())
 print(firstVariable.upper())
 print(firstVariable.title())
 ```
-
-    hello world!
-    HELLO WORLD!
-    Hello World!
-
 
 
 ```python
@@ -188,13 +174,6 @@ firstVariable.lower?
 # Can also use help
 help(firstVariable.lower)
 ```
-
-    Help on built-in function lower:
-    
-    lower(...) method of builtins.str instance
-        S.lower() -> str
-        
-        Return a copy of the string S converted to lowercase.
     
 
 
@@ -210,13 +189,6 @@ print (2*3)
 print (2**3)
 print (10%3)
 ```
-
-    2
-    128.0
-    42.0
-    6
-    8
-    1
 
 
 ### if statement
@@ -236,8 +208,6 @@ if num % 3 == 0:
     print("if statement satisfied")
 ```
 
-    if statement satisfied
-
 
 Logical Operator | Description
 --- | ---
@@ -253,8 +223,6 @@ if num > 0 and num  < 15:
     print(num)
 ```
 
-    3
-
 
 ### else and elif
 
@@ -269,7 +237,6 @@ else:
     print("Are you sure your number is an integer?")
 ```
 
-    Your number is odd
 
 
 ### Swap values
@@ -282,7 +249,6 @@ b, a = a, b
 print(a, b)
 ```
 
-    2 1
 
 
 ### List
@@ -309,21 +275,12 @@ z[0]
 
 
 
-
-    3
-
-
-
-
 ```python
 # Access Last Element of List 
 z[-1]
 ```
 
 
-
-
-    2
 
 
 
@@ -339,8 +296,6 @@ z[0:2]
 
 
 
-    [3, 7]
-
 
 
 
@@ -350,9 +305,6 @@ z[:3]
 ```
 
 
-
-
-    [3, 7, 4]
 
 
 
@@ -365,7 +317,6 @@ z[1:]
 
 
 
-    [7, 4, 2]
 
 
 
@@ -388,10 +339,6 @@ print(x)
 print (y)
 ```
 
-    [3, 7, 2, 11, 8, 10, 4, 3]
-    ['Steve', 'Rachel', 'Michael', 'Adam', 'Monica', 'Jessica', 'Lester', 'James']
-
-
 #### list comprehension
 
 
@@ -403,8 +350,6 @@ for i in range(10):
 print(a)
 ```
 
-    [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-
 
 
 ```python
@@ -412,8 +357,6 @@ print(a)
 a = [i + 10 for i in range(10)]
 print(a)
 ```
-
-    [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 
 
 ### Dictionary
@@ -434,11 +377,6 @@ dict['b']
 
 
 
-
-    '3'
-
-
-
 #### 修改字典
 
 
@@ -453,8 +391,7 @@ print ("dict['Age']: ", dict['Age'])
 print ("dict['School']: ", dict['School'])
 ```
 
-    dict['Age']:  8
-    dict['School']:  DPS School
+
 
 
 #### Dict comprehension
@@ -468,7 +405,7 @@ for i in range(10):
 print(a)
 ```
 
-    {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J'}
+
 
 
 
@@ -478,7 +415,6 @@ a = {i:chr(ord('A') + i) for i in range(10)}
 print(a)
 ```
 
-    {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J'}
 
 
 ## Scientific computation
@@ -525,13 +461,6 @@ X
 
 
 
-    array([[0, 0, 0, 0],
-           [0, 0, 0, 0],
-           [0, 0, 0, 0],
-           [0, 0, 0, 0],
-           [0, 0, 0, 0]], dtype=int32)
-
-
 
 
 ```python
@@ -543,7 +472,6 @@ y
 
 
 
-    array([0, 1, 2, 3, 4])
 
 
 
@@ -557,7 +485,6 @@ z
 
 
 
-    array([0, 1, 2, 3])
 
 
 
@@ -573,29 +500,11 @@ X
 
 
 
-    array([[0, 1, 2, 3],
-           [1, 1, 1, 1],
-           [0, 0, 0, 0],
-           [0, 0, 0, 0],
-           [0, 0, 0, 0]], dtype=int32)
-
-
-
-
 ```python
 # add 1 to all elements
 X += 1
 X
 ```
-
-
-
-
-    array([[1, 2, 3, 4],
-           [2, 2, 2, 2],
-           [1, 1, 1, 1],
-           [1, 1, 1, 1],
-           [1, 1, 1, 1]], dtype=int32)
 
 
 
@@ -609,13 +518,6 @@ X
 
 
 
-    array([[1, 2, 3, 4],
-           [3, 3, 3, 3],
-           [3, 3, 3, 3],
-           [4, 4, 4, 4],
-           [5, 5, 5, 5]], dtype=int32)
-
-
 
 
 ```python
@@ -624,14 +526,6 @@ X += z.reshape((1, -1))
 X
 ```
 
-
-
-
-    array([[1, 3, 5, 7],
-           [3, 4, 5, 6],
-           [3, 4, 5, 6],
-           [4, 5, 6, 7],
-           [5, 6, 7, 8]], dtype=int32)
 
 
 
@@ -645,8 +539,6 @@ row_sums
 
 
 
-    array([16, 18, 18, 22, 26])
-
 
 
 
@@ -659,8 +551,6 @@ col_sums
 
 
 
-    array([16, 22, 28, 34])
-
 
 
 
@@ -670,14 +560,6 @@ A = X.dot(X.T)
 A
 ```
 
-
-
-
-    array([[ 84,  82,  82,  98, 114],
-           [ 82,  86,  86, 104, 122],
-           [ 82,  86,  86, 104, 122],
-           [ 98, 104, 104, 126, 148],
-           [114, 122, 122, 148, 174]], dtype=int32)
 
 
 
