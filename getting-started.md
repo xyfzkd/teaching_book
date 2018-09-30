@@ -217,5 +217,3 @@ docker rm -f bioinfo_tsinghua
 1. 注册一个GitHub账户，创建一个仓库，写好`README.md`。尝试使用Git管理自己的代码并同步至GitHub。
 2. 尝试使用Markdown语言，熟悉其语法。
 3. 熟练掌握如何使用 Docker。
-
-
