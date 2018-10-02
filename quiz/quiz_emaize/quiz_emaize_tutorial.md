@@ -368,7 +368,6 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 ### ANOVA加速算法
 思路简要提示：
 
-- Step 1. Calculate $$ y,{y}^2,N,{SS}_{tot} $$
 ![fastanova](quiz_emaize_tutorial_files/anova.png)       
 
 
