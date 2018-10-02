@@ -1,25 +1,28 @@
 
 # eMaize玉米育种挑战赛
 
-在[quiz_emaize_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件，解压后打开`quiz_emaize_tutorial.ipynb`文件阅读详细的**Quiz指南**
+打开`quiz_emaize_tutorial.ipynb`文件阅读详细的**Quiz指南**，在[quiz_emaize_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件。
 
 ## eMaize背景简介
 eMaize挑战赛是[一个通过机器学习方法预测玉米性状的比赛](http://emaize.imaze.org/emaize/emaize_cn.php)，要求我们以SNP作为特征，通过训练一个模型，**对玉米的三个性状进行预测**。
 
-我们的大作业将会以此为背景，要求大家
-- 完成对要求样本的性状的预测
-- 以及完成其他的一些工作
-- 完成一份报告
 
 本教程将会包括：
 - 介绍数据的情况，使用方式
-- 一些机器学习的概念方法，工具使用
 - 具体任务要求
+- 一些机器学习的概念方法以及工具使用
+
 
 ## 编程工具介绍
 
 
-大作业需要使用python完成，推荐读者使用python3。我们需要一些python的工具包来实现部分功能。推荐使用包管理软件Anaconda来预装一些必需的包以及安装其他需要的包。另外强烈建议使用jupyter notebook进行代码编辑、运行和调试。具体使用方法请参考教程[Anaconda 和 jupyter](https://lulab.gitbooks.io/teaching/content/part-iii.-machine-learning-basics/python_tutorial.html)相关指南
+大作业需要使用python完成，推荐读者使用python3。我们需要一些python的工具包来实现部分功能。推荐使用包管理软件Anaconda来预装一些必需的包以及安装其他需要的包。另外强烈建议使用jupyter notebook进行代码编辑、运行和调试。具体使用方法请参考教程[Anaconda 和 jupyter](https://lulab.gitbooks.io/teaching/content/part-iii.-machine-learning-basics/python_tutorial.html)相关指南。
+如果本地缺少下列可能需要的包，请使用`pip`或者`conda`进行安装。如:
+
+```
+pip install tqdm
+conda install sklearn
+```
 
 
 ```python
@@ -49,11 +52,6 @@ import warnings
 warnings.filterwarnings('ignore')
 ```
 
-    Populating the interactive namespace from numpy and matplotlib
-
-
-    /home/chenxupeng/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
-      from ._conv import register_converters as _register_converters
 
 
 
@@ -87,35 +85,8 @@ cd至文件路径下，输入：h5ls filename
 with h5py.File('data/snp_5000','r') as f:
     print (list(f.keys()))
     snps = f['snp'][:]
-snps.shape
 ```
 
-    ['snp']
-
-
-
-
-
-    (5001, 6214)
-
-
-
-
-```python
-snps
-```
-
-
-
-
-    array([[b'snp', b'alleles', b'chrom', ..., b'L6208', b'L6209', b'L6210'],
-           [b'chr1.s_164125122', b'C/A', b'1', ..., b'CC', b'CA', b'CC'],
-           [b'chr1.s_274182854', b'T/A', b'1', ..., b'TT', b'TT', b'TT'],
-           ...,
-           [b'chr1.s_45679299', b'A/G', b'1', ..., b'AA', b'AA', b'AA'],
-           [b'chr1.s_130850989', b'A/G', b'1', ..., b'AA', b'AA', b'AA'],
-           [b'chr1.s_70612772', b'G/A', b'1', ..., b'GG', b'GG', b'GG']],
-          dtype='|S16')
 
 
 
@@ -128,33 +99,6 @@ with h5py.File('data/2bit_geno','r') as f:
 snps_2bit.shape
 ```
 
-    ['data']
-
-
-
-
-
-    (10000, 6210)
-
-
-
-
-```python
-snps_2bit
-```
-
-
-
-
-    array([[1, 1, 1, ..., 0, 1, 0],
-           [0, 0, 0, ..., 1, 0, 1],
-           [0, 0, 0, ..., 0, 0, 0],
-           ...,
-           [1, 1, 1, ..., 1, 1, 1],
-           [0, 0, 1, ..., 0, 0, 0],
-           [1, 1, 0, ..., 1, 1, 1]])
-
-
 
 
 ```python
@@ -164,14 +108,6 @@ with h5py.File('data/genotype_2bit/chr1.h5','r') as f:
     chr1_snps = f['data'][:]
 chr1_snps.shape, chr1_snps.dtype
 ```
-
-    ['data']
-
-
-
-
-
-    ((575304, 6210), dtype('uint8'))
 
 
 
@@ -363,18 +299,18 @@ ax[2].set_title('Normalized Trait3: Yield',fontsize=14)
 
 
 
-    Text(0.5,1,'Normalized Trait3: Yield')
-
-
-
-
 ![png](quiz_emaize_tutorial_files/quiz_emaize_tutorial_17_1.png)
 
 
 ## Quiz具体要求
 之前的部分我们介绍了基本的背景知识，接下来我们会提出解答本题目的具体要求：
 
-### 进行特征选择和冗余特征筛除
+- 完成**特征选择和特征筛除工作**。
+- 完成**对三种性状的预测**并提交预测结果，允许多次提交预测结果以获得更好的结果。
+- 提交一份**工作报告**，中英文不限，同时提交**源代码**。
+- 选择性完成加分项内容。
+
+### 特征选择和冗余特征筛除
 
 本挑战原始特征数量接近2,000,000，超过大多数机器学习模型的输入限制，特征间相关性很强，冗余特征很多，且过多的特征数量导致计算开销非常大，这都需要完成特征选择和去除冗余的步骤。
 
@@ -396,6 +332,9 @@ ax[2].set_title('Normalized Trait3: Yield',fontsize=14)
 - 请思考和探索使用何种回归模型，读者可以尝试多种模型并比较其结果，在*编程工具介绍*部分读者可以看到一些机器学习模型的方法，也推荐读者思考和使用其他模型。
 - 思考和探索是否对每个性状使用不同的模型
 - 根据训练集与测试集的特殊划分方式（见*查看训练集与测试集的划分*部分）思考可以使用的策略。
+
+
+
 
 ### 加分内容
 为了更完整地展示emaize挑战的困难与有趣之处，我们为有余力的读者设置了更多的挑战。
@@ -477,13 +416,6 @@ ax.imshow(testexample,cmap='jet')
 ```
 
 
-
-
-    <matplotlib.image.AxesImage at 0x7efd16e654a8>
-
-
-
-
 ![png](quiz_emaize_tutorial_files/quiz_emaize_tutorial_31_1.png)
 
 
@@ -535,12 +467,6 @@ convert_2bit(snps[2].astype('str'))
 
 
 
-    array([[0, 0, 0, ..., 0, 0, 0],
-           [1, 1, 1, ..., 1, 1, 1]])
-
-
-
-
 ```python
 geno_conv = np.ndarray([10000,6210])
 for i in tqdm(range(5000)):
@@ -553,11 +479,6 @@ for i in tqdm(range(5000)):
 fig, ax = plt.subplots(figsize=(20,10))
 ax.matshow(geno_conv[:100,:50],cmap = cm.binary_r)
 ```
-
-
-
-
-    <matplotlib.image.AxesImage at 0x7efd16df2ba8>
 
 
 
@@ -612,22 +533,20 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 ![png](quiz_emaize_tutorial_files/quiz_emaize_tutorial_43_3.png)
 
 
-![plots]('plots/0.png')
+![plots](plots/0.png)
 
-![plots]('plots/1.png')
+![plots](plots/1.png)
 
-![plots]('plots/2.png')
+![plots](plots/2.png)
 
-![plots]('plots/3.png')
+![plots](plots/3.png)
 
-![plots]('plots/4.png')
+![plots](plots/4.png)
 
-![plots]('plots/5.png')
+![plots](plots/5.png)
 
 
-```python
-![plots]('plots/6.png')
-```
+![plots](plots/6.png)
 
 ### ANOVA加速算法
 思路简要提示：
