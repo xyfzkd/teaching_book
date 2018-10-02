@@ -265,10 +265,11 @@ ax.imshow(testexample,cmap='jet')
 
 
 ##### 评价指标
-对于回归问题，我们一般使用$ r^2 $和pearson correlation coefficient(PCC)衡量，其定义如下：
 
-$ r^2 = 1-\frac{SS_{res}}{SS_{tot}} $<br>
-$ pcc = \frac{cov(X,Y)}{\sigma_X \sigma_Y} = \frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X \sigma_Y}  $<br>
+对于回归问题，我们一般使用$$ r^2 $$和pearson correlation coefficient(PCC)衡量，其定义如下：
+
+$$ r^2 = 1-\frac{SS_{res}}{SS_{tot}} $$<br>
+$$ PCC = \frac{cov(X,Y)}{\sigma_X \sigma_Y} = \frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X \sigma_Y}  $$<br>
 
 ###  将SNP数据编码为向量
 每个位点的碱基只有三种情况，不会出现更多碱基组合的可能，比如某位点仅有AA，AT，TT三种可能的情况<br>
