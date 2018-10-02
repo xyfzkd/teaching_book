@@ -368,6 +368,39 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 ### ANOVA加速算法
 思路简要提示：
 
+- Step 1. Calculate $$ y,{y}^2,N,{SS}_{tot} $$
+
+$$ 
+y = y - \bar y\\
+{y}^2 = y * y\\
+{SS}_{tot} = \sum({y}^2) 
+$$
+    And N is the first dimension of X
+
+
+- Step 2. We calculate $$ {SS}_{bn} $$by the following operations:
+
+    - We first define a mask which indicate three different genotypes:$$ [0,1],[1,0],[1,1] $$ using logical operations.
+
+    - Then we calculate every features' (genotypes' rows') sum and define it as $$ {N}_i $$, we use logic calculation to define A which is the positive position of $$ {N}_i $$
+
+    - Use masks to pick up three kinds of y  and calculate the sum each.
+
+    - for three conditions calculate the sum of y and mask's multiplication as S.
+
+    - At last we calculate $$ {SS}_{bn}  =  {S}^2 $$ and we construct the $$ {SS}_{bn} $$ matrix by indices A. At the True position we fill in the value of $$ {SS}_{bn} $$, at the False position we fill in zero.
+
+- Step 3. We calculate F at this step
+first we calculate $$ {SS}_{wn}  =  {SS}_{tot}  -  {SS}_{bn} $$
+
+M is the sum of A by rows, then we have:
+
+$$ 
+F = \frac{{MS}_{between}}{{MS}_{within}} = \frac{{SS}_{between}/(M-1)}{{SS}_{within}/(N-M)} 
+$$
+
+
+- Step 4. Use scipy.stats module and F to calculate p-value 
      
 
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
