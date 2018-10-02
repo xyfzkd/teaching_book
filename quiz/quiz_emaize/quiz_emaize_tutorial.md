@@ -202,7 +202,7 @@ ax[2].set_title('Normalized Trait3: Yield',fontsize=14)
 
 - 可以研究并调用[FaST-LMM package](https://github.com/MicrosoftGenomics/FaST-LMM)，研究其原理并应用于我们的数据中，试图在测试集上获得好的预测结果(5')
 
-- 根据其思路进行改进，设计一个类似的混合线性模型，并且可以通过快速的交叉验证挑选超参数，最终在测试集上获得好的效果。详细内容可以参考[这篇文档](https://lulab.gitbooks.io/teaching/content/quiz/quiz_emaize/assets/Mixed_ridge&Fast_cv.pdf)。(15')
+- 根据其思路进行改进，设计一个类似的混合线性模型，并且可以通过快速的交叉验证挑选超参数，最终在测试集上获得好的效果。详细内容可以参考[这篇文档](assets/Mixed_ridge&Fast_cv.pdf)。(15')
 
 ## 补充知识（选读）
 
