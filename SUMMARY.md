@@ -27,6 +27,11 @@
 * [8.Python Tutorials](part-iii.-machine-learning-basics/python_tutorial.md)
 * [9.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics.md)
 
+## Part IV. Quiz
+
+* [1.eMaize](quiz/quiz_emaize/quiz_emaize_tutorial.md)
+* [2.exRNA](quiz/quiz_exRNA/quiz_exRNA_tutorial.md)
+
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
