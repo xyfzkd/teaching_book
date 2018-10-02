@@ -202,6 +202,7 @@ display(traits.tail())
 
 
 
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -420,17 +421,17 @@ ax.imshow(testexample,cmap='jet')
 
 
 ##### 评价指标
-对于回归问题，我们一般使用$r^2$和pearson correlation coefficient(PCC)衡量，其定义如下：
+对于回归问题，我们一般使用$ r^2 $和pearson correlation coefficient(PCC)衡量，其定义如下：
 
-$r^2 = 1-\frac{SS_{res}}{SS_{tot}}$<br>
-$pcc = \frac{cov(X,Y)}{\sigma_X \sigma_Y} = \frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X \sigma_Y} $<br>
+$ r^2 = 1-\frac{SS_{res}}{SS_{tot}} $<br>
+$ pcc = \frac{cov(X,Y)}{\sigma_X \sigma_Y} = \frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X \sigma_Y}  $<br>
 
 ###  将SNP数据编码为向量
 每个位点的碱基只有三种情况，不会出现更多碱基组合的可能，比如某位点仅有AA，AT，TT三种可能的情况<br>
 我们可以采取三种方式对其编码：
 - 转化为0、1、2。找到minor allele frequency（MAF），即两种碱基（如A、T）中出现频率低的那个，以A作为MAF为例，则TT为0，AT为1，AA为2，这样可以突出MAF
-- 转化为3-bit one hot vector,$[1,0,0]^T,[0,1,0]^T,[0,0,1]^T$这样可以保持三种向量在空间距离的一致
-- 转化为2-bit vector,则AA，AT，TT分别编为$[1,0]^T,[1,1]^T,[0,1]^T$,不需要考虑MAF
+- 转化为3-bit one hot vector,$ [1,0,0]^T,[0,1,0]^T,[0,0,1]^T $这样可以保持三种向量在空间距离的一致
+- 转化为2-bit vector,则AA，AT，TT分别编为$ [1,0]^T,[1,1]^T,[0,1]^T $,不需要考虑MAF
 我们采取第三种方式处理了数据并提供给读者
 
 #### 具体处理过程
@@ -551,34 +552,38 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 ### ANOVA加速算法
 思路简要提示：
 
-- Step 1. Calculate $y,{y}^2,N,{SS}_{tot}$
+- Step 1. Calculate $ y,{y}^2,N,{SS}_{tot} $
 
-$$
+$$ 
 y = y - \bar y\\
 {y}^2 = y * y\\
-{SS}_{tot} = \sum({y}^2)
+{SS}_{tot} = \sum({y}^2) 
 $$
     And N is the first dimension of X
 
-- Step 2. We calculate ${SS}_{bn}$by the following operations:
+- Step 2. We calculate $ {SS}_{bn} $by the following operations:
 
-    - We first define a mask which indicate three different genotypes:$[0,1],[1,0],[1,1]$ using logical operations.
+    - We first define a mask which indicate three different genotypes:$ [0,1],[1,0],[1,1] $ using logical operations.
 
-    - Then we calculate every features' (genotypes' rows') sum and define it as ${N}_i$, we use logic calculation to define A which is the positive position of ${N}_i$ 
+    - Then we calculate every features' (genotypes' rows') sum and define it as $ {N}_i $, we use logic calculation to define A which is the positive position of $ {N}_i $ 
 
     - Use masks to pick up three kinds of y  and calculate the sum each.
 
     - for three conditions calculate the sum of y and mask's mutiplication as S.
 
-    - At last we calculate ${SS}_{bn}$ = ${S}^2$ and we construct the ${SS}_{bn}$ matrix by indices A. At the True position we fill in the value of ${SS}_{bn}$, at the False position we fill in zero.
+    - At last we calculate $ {SS}_{bn} $ = $ {S}^2 $ and we construct the $ {SS}_{bn} $ matrix by indices A. At the True position we fill in the value of $ {SS}_{bn} $, at the False position we fill in zero.
 
 - Step 3. We calculate F at this step
-first we calculate ${SS}_{wn}$ = ${SS}_{tot}$ - ${SS}_{bn}$
+first we calculate $ {SS}_{wn} $ = $ {SS}_{tot} $ - $ {SS}_{bn} $
 
 M is the sum of A by rows, then we have:
 
-$$
+$$ 
 F = \frac{{MS}_{between}}{{MS}_{within}} = \frac{{SS}_{between}/(M-1)}{{SS}_{within}/(N-M)}
-$$
+ $$
 
 - Step 4. Use scipy.stats module and F to calculate p-value         
+
+
+<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
