@@ -394,9 +394,7 @@ first we calculate $ {SS}_{wn} $ = $ {SS}_{tot} $ - $ {SS}_{bn} $
 
 M is the sum of A by rows, then we have:
 
-$$ 
-F = \frac{{MS}_{between}}{{MS}_{within}} = \frac{{SS}_{between}/(M-1)}{{SS}_{within}/(N-M)}
- $$
+$$ F = \frac{{MS}_{between}}{{MS}_{within}} = \frac{{SS}_{between}/(M-1)}{{SS}_{within}/(N-M)} $$
 
 - Step 4. Use scipy.stats module and F to calculate p-value         
 
