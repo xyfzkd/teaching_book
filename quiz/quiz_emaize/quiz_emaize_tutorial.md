@@ -265,7 +265,6 @@ ax.imshow(testexample,cmap='jet')
 
 
 ##### 评价指标
-
 对于回归问题，我们一般使用$$ r^2 $$和pearson correlation coefficient(PCC)衡量，其定义如下：
 
 $$ r^2 = 1-\frac{SS_{res}}{SS_{tot}} $$<br>
@@ -376,8 +375,8 @@ y = y - \bar y\\
 {y}^2 = y * y\\
 {SS}_{tot} = \sum({y}^2) 
 $$
-    And N is the first dimension of X
 
+N is the first dimension of X
 
 - Step 2. We calculate $$ {SS}_{bn} $$by the following operations:
 
@@ -397,11 +396,11 @@ first we calculate $$ {SS}_{wn}  =  {SS}_{tot}  -  {SS}_{bn} $$
 M is the sum of A by rows, then we have:
 
 $$ 
-F = \frac{{MS}_{between}}{{MS}_{within}} =\frac{{SS}_{between}/(M-1)}{{SS}_{within}/(N-M)} 
+F = \frac{{MS}_{between}}{{MS}_{within}} = \frac{{SS}_{between}/(M-1)}{{SS}_{within}/(N-M)} 
 $$
 
+- Step 4. Use scipy.stats module and F to calculate p-value           
 
-- Step 4. Use scipy.stats module and F to calculate p-value 
-     
 
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
