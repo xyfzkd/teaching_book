@@ -54,7 +54,6 @@ warnings.filterwarnings('ignore')
 
 
 
-
 ```python
 styles = ["white","dark",'whitegrid',"darkgrid"]
 contexts = ['paper','talk','poster','notebook']
@@ -122,86 +121,6 @@ traits = pd.read_csv('data/pheno_emaize.txt','\t')
 display(traits.head())
 display(traits.tail())
 ```
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>type</th>
-      <th>id</th>
-      <th>pedigree</th>
-      <th>trait1</th>
-      <th>trait2</th>
-      <th>trait3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>training</td>
-      <td>L0001</td>
-      <td>f1_X_m1</td>
-      <td>-1.746103</td>
-      <td>-0.785525</td>
-      <td>-0.331637</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>training</td>
-      <td>L0002</td>
-      <td>f2_X_m1</td>
-      <td>-1.679248</td>
-      <td>-1.569490</td>
-      <td>-2.572614</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>training</td>
-      <td>L0003</td>
-      <td>f3_X_m1</td>
-      <td>-2.748920</td>
-      <td>-0.608644</td>
-      <td>-1.108812</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>training</td>
-      <td>L0004</td>
-      <td>f4_X_m1</td>
-      <td>-2.414647</td>
-      <td>-0.672045</td>
-      <td>-1.315051</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>training</td>
-      <td>L0005</td>
-      <td>f5_X_m1</td>
-      <td>-1.879812</td>
-      <td>-0.740913</td>
-      <td>-1.879181</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
 
 
 
