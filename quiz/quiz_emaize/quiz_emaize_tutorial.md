@@ -370,6 +370,4 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 
      
 
-
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
-
