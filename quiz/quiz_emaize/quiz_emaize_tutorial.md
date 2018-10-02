@@ -1,7 +1,7 @@
 
 # eMaize玉米育种挑战赛
 
-在[]()下载相关文件，解压后打开`quiz_emaize_tutorial.ipynb`文件阅读详细的**Quiz指南**
+在[quiz_emaize_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件，解压后打开`quiz_emaize_tutorial.ipynb`文件阅读详细的**Quiz指南**
 
 ## eMaize背景简介
 eMaize挑战赛是[一个通过机器学习方法预测玉米性状的比赛](http://emaize.imaze.org/emaize/emaize_cn.php)，要求我们以SNP作为特征，通过训练一个模型，**对玉米的三个性状进行预测**。
