@@ -54,4 +54,3 @@
   * [10.Ballon plots](appendix/appendix.plots.md#ballon-plot)
   * [11.Vennpie plots](appendix/appendix.plots.md#vennpie-plot)
   * [Learn more](appendix/appendix.plots.md#plot-more)
-
