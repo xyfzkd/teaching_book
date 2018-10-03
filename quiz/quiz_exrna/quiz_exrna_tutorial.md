@@ -6,6 +6,8 @@
 在[quiz_exrna_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件。
 ```
 
+请在[quiz_exrna_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件，并下载该[文件夹](https://github.com/lulab/teaching_book/tree/master/quiz/quiz_exrna)下的内容，打开`quiz_exrna_tutorial.ipynb`文件阅读详细的**Quiz指南**。
+
 ## 背景介绍
 （adapt from Young Lee）
 
@@ -890,3 +892,7 @@ def knn_score(X, y, K=10):
 ![pngs](plots/hccrefdensity.png)
 
 ![pngs](plots/hccrefcvbox.png)
+
+
+<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
