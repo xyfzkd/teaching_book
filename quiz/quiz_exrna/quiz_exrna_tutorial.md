@@ -13,8 +13,6 @@
 
 ## 编程工具介绍
 
-## 编程工具介绍
-
 
 大作业需要使用python完成，推荐读者使用python3。我们需要一些python的工具包来实现部分功能。推荐使用包管理软件Anaconda来预装一些必需的包以及安装其他需要的包。另外强烈建议使用jupyter notebook进行代码编辑、运行和调试。具体使用方法请参考教程[Anaconda 和 jupyter](https://lulab.gitbooks.io/teaching/content/part-iii.-machine-learning-basics/python_tutorial.html)相关指南。
 如果本地缺少下列可能需要的包，请使用`pip`或者`conda`进行安装。如:
@@ -706,8 +704,8 @@ scireprnastats.head()
 ### 基本统计分析
 - 统计一套数据中不同RNA type在不同样本的counts分布，hcc和scirep测到的主要是小RNA，exoRBase测到的主要是长RNA，观察分布能否得到这样的结论。
 - 统计某套数据中某种类型的RNA在不同样本中的counts数量，可以分析一些希望重点关注的RNA类型，如lncRNA等。
-- 对exoRBase和scirep数据做基本的quality control，通过counts或者PCA中明显离群点去除部分样本。参考*sample QC*部分
-- 统计expression matrix中counts数量排在top 20的feature的占比，分析过高的占比可能对scaling造成的影响。参考*top k feature*部分
+- 对exoRBase和scirep数据做基本的quality control，通过counts或者PCA中明显离群点去除部分样本。参考[*sample QC*](#sampleqc)部分
+- 统计expression matrix中counts数量排在top 20的feature的占比，分析过高的占比可能对scaling造成的影响。参考[*top k feature*](#topk)部分
 
 ### 稳健的特征选择方法
 - 我们希望读者设计一个稳健的特征选择方法，完成以下几种情况下的feature selection，给出针对每套数据，每种分类条件所挑选的feature。
@@ -737,8 +735,8 @@ scireprnastats.head()
 读者可以设计自己的稳健的特征选择方法，请注意必须要体现出自己的方法的稳健性。
 
 ### 模型效果分析
-- 绘制挑选出的feature counts（经过适当的scale）的clustermap，用颜色块表示class。请参考*特征选择结果可视化*。
-- 绘制二分类和多分类模型的ROC曲线，请注意本问题ROC曲线的特殊之处，具体细节请参考*用选出的feature进行分类并绘制ROC曲线*。
+- 绘制挑选出的feature counts（经过适当的scale）的clustermap，用颜色块表示class。请参考[*特征选择结果可视化*](#visfeature)。
+- 绘制二分类和多分类模型的ROC曲线，请注意本问题ROC曲线的特殊之处，具体细节请参考[*用选出的feature进行分类并绘制ROC曲线*](#roc)。
 - 对比hcc数据的full length与peak在挑选出的feature以及分类的结果（ROC曲线）的差异，思考为什么会使用peak数据。
 
 ### 加分内容
@@ -747,13 +745,13 @@ scireprnastats.head()
 #### 更多模型效果分析 (20')
 - 尝试减少feature数量（如1-10个feature），分析模型AUROC和ROC曲线。(5')
 - 针对不同数据中的同一种疾病，如exoRBase和HCC数据中的同一种疾病HCC，比较挑出的feature的异同。(5')
-- 比较挑出的feature，参考*比较挑出的feature*部分。(10')
+- 比较挑出的feature，参考[*比较挑出的feature*](#comparefeature)部分。(10')
     - 不同模型、不同数据挑出的feature的异同，可以使用Venn图、heatmap图等表示。
     - 分析feature的鲁棒性，分析不同的条件设置（如模型超参数，scale方案，交叉验证方法）下被挑出的feature。
 
 #### 预处理（30'）
-此部分预处理数据不要求读者将处理后的数据再做整个的feature selection流程，只需要使用PCA/t-SNE可视化效果，并且使用我们提供的alignment score量化不同的scale方法的效果。以下问题只要求在**hcc_peak数据和scirep数据**上尝试即可。参考*预处理部分教程*
-- 尝试不同的scale方法（对样本），请参考*不同的scale策略*部分
+此部分预处理数据不要求读者将处理后的数据再做整个的feature selection流程，只需要使用PCA/t-SNE可视化效果，并且使用我们提供的alignment score量化不同的scale方法的效果。以下问题只要求在**hcc_peak数据和scirep数据**上尝试即可。参考[*预处理部分教程*](#preprocessing)
+- 尝试不同的scale方法（对样本），请参考[*不同的scale策略*](#scalemethod)部分
     - 使用内参基因对样本做normalization。(5')
     - 去掉piRNA，miRNA后再做normalization。(5')
     - SCnorm, TMM等方法做normalization（需使用R）(10')
@@ -761,6 +759,7 @@ scireprnastats.head()
 尝试使用RUVs, combat等R package去除batch effect，并分析去除效果。
 
 #### 解释选出的feature（5'）
+通过查阅文献，阐释挑选出的feature的生物学意义，尤其是研究所挑选出的feature是否被其他文献报道在相关癌症检测中起到作用。
 
 ## 补充知识（选读）
 
@@ -820,7 +819,7 @@ def knn_score(X, y, K=10):
 
 ![pngs](plots/stackbarhcc.png)
 
-#### sample QC
+#### sample QC {#sampleqc}
 #####  QC by counts
 
 ![pngs](plots/exoqc.png)
@@ -829,17 +828,17 @@ def knn_score(X, y, K=10):
 
 ![pngs](plots/scireportqc.jpeg)
 
-#### top k feature
+#### top k feature {#topk}
 
 ![pngs](plots/top30.png)
 
 ### 可视化结果
-#### 特征选择结果可视化
+#### 特征选择结果可视化 {#visfeature}
 使用seaborn的clustermap功能，将挑选出的feature的counts（做过合适的scale）绘制heatmap图并聚类，上方的颜色表示类别，可见同一类被很好的聚在了一起。
 
 ![pngs](plots/clustermap.png)
 
-#### 用选出的feature进行分类并绘制ROC曲线
+#### 用选出的feature进行分类并绘制ROC曲线{#roc}
 请特别注意，这里的ROC曲线有其特殊之处。针对我们样本很少的问题，我们不能专门划分出一部分测试集供测试和绘制曲线。我们使用两种方式划分数据集：
 - leave one out, 即每轮随机选择一个样本作为validation set，其他样本作为训练集，对validation set进行预测，最终保证每个样本恰好作为validation set一次。
 - shuffle split, 即每轮随机选择一些样本作为validation set，其他样本作为训练集，对validation set进行预测，最终每个样本可能在不同轮中一共被预测数次。
@@ -852,7 +851,7 @@ def knn_score(X, y, K=10):
 
 ![pngs](plots/roc_cv.png)
 
-### 比较挑出的feature
+### 比较挑出的feature{#comparefeature}
 
 #### 比较不同的模型和参数挑出的feature的差异
 图中有颜色的色块儿表示在该参数条件下被选中的feature，可以发现线性模型挑出的feature更相似，而random forest在不同参数设置下挑出的feature比较稳定。
@@ -869,11 +868,11 @@ def knn_score(X, y, K=10):
 
 ![pngs](plots/selected_features_overlap.png)
 
-### 预处理部分教程
+### 预处理部分教程{#preprocessing}
 - [normalization](https://youngleebbs.gitbook.io/bioinfo-training/part-ii/4.-qc-and-normalization)
 - [deal with confounders](https://youngleebbs.gitbook.io/bioinfo-training/part-ii/5.-imputation-and-confounders)
 
-#### 不同的scale策略
+#### 不同的scale策略{#scalemethod}
 ##### 不同scale策略比较
 - 使用CPM(counts per million)
 - 或者使用可能的内参基因：'MIR1228', 'MIR16-1', 'MIR16-2', 'MIR21', 'MIR23A', 'MIR23B', 'MIR23C',
