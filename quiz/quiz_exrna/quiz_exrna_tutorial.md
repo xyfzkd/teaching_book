@@ -40,15 +40,21 @@ from sklearn.manifold import TSNE
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import LinearSVC
+from sklearn.metrics import roc_auc_score, accuracy_score, get_scorer
+from sklearn.preprocessing import StandardScaler, RobustScaler, MinMaxScaler, MaxAbsScaler
+from sklearn.model_selection import GridSearchCV
+from sklearn.feature_selection import RFE, RFECV
+from sklearn.utils.class_weight import compute_sample_weight
+from sklearn.model_selection import KFold, StratifiedKFold, ShuffleSplit, LeaveOneOut, \
+    RepeatedKFold, RepeatedStratifiedKFold, LeaveOneOut, StratifiedShuffleSplit
 from sklearn.metrics import roc_curve, auc
 from tqdm import tqdm_notebook as tqdm
 from scipy.stats import pearsonr
 import warnings
 warnings.filterwarnings('ignore')
 ```
-
-    Populating the interactive namespace from numpy and matplotlib
-
 
 
 ```python
@@ -77,13 +83,8 @@ hcc_full_count = pd.read_table('data/expression_matrix/transcripts_exrna.txt')
 hcc_peak_count = pd.read_table('data/expression_matrix/piranha_peaks.txt')
 hcc_peak_iter_count = pd.read_table('data/expression_matrix/piranha_peaks_iterative.txt')
 exorbase = pd.read_table('data/expression_matrix/exoRBase.txt')
-```
-
-
-```python
 scirepount.head()
 ```
-
 
 
 
