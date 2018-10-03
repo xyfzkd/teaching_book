@@ -195,7 +195,7 @@ ax[2].set_title('Normalized Trait3: Yield',fontsize=14)
 #### 使用ANOVA进行特征选择的加速算法 (5')
 方差分析方法可以利用p值挑选feature <br>
 调用scipy.stats.f_oneway,利用SNPs和性状可以很容易地计算出p-value，进而挑选特征，但是对于大量数据来说速度较慢 <br>
-我们可以设计一种加速ANOVA计算的方法完成计算，相比于scipy.stats的方法可以提升计算速度数百倍。为了帮助读者实现这一功能，我们提供给读者设计的基本思路，请参考*ANOVA加速算法部分*，有能力的读者可以根据基本思路实现ANOVA的加速算法。
+我们可以设计一种加速ANOVA计算的方法完成计算，相比于scipy.stats的方法可以提升计算速度数百倍。为了帮助读者实现这一功能，我们提供给读者设计的基本思路，请参考[*ANOVA加速算法部分*](#fastanova)，有能力的读者可以根据基本思路实现ANOVA的加速算法。
 
 #### 混合线性模型 (20')
 育种领域的一个经典模型是混合线性模型(linear mixed model)，请尝试设计一个混合线性模型来解决本问题。
@@ -365,7 +365,7 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 请在jupyter文件中查看相关图片。
 
 
-### ANOVA加速算法
+### ANOVA加速算法{#fastanova}
 思路简要提示：
 
 ![fastanova](quiz_emaize_tutorial_files/anova.png)       
