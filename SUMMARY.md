@@ -30,7 +30,7 @@
 ## Part IV. Quiz
 
 * [1.eMaize](quiz/quiz_emaize/quiz_emaize_tutorial.md)
-* [2.exRNA](quiz/quiz_exRNA/quiz_exRNA_tutorial.md)
+* [2.exRNA](quiz/quiz_exrna/quiz_exrna_tutorial.md)
 
 ## Appendix
 
