@@ -201,6 +201,21 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
    
    ![](../.gitbook/assets/plot/1.3.Customized_boxplot2.png)
 
+   ```r
+   ggplot(df7) + geom_bar(stat="identity", width=0.6, aes(Term,Fold.Enrichment, fill=-1*log10(PValue)),colour="#1d2a33") + 
+     coord_flip() +
+     scale_fill_gradient(low="#feff2b",high="#fe0100")+
+     labs(fill=expression(-log10_Pvalue), x="GO Terms",y="foldEnrichment", title="GO Biological Process") +
+     theme_bw() +
+     theme(plot.title = element_text(hjust = 0.5))  +
+     theme(axis.title.x =element_text(size=16), 
+           axis.title.y=element_text(size=14)) +
+     theme(axis.text.y = element_text(size = 10,face="bold"),
+           axis.text.x = element_text(size = 12,face="bold"))
+   ```
+   
+   ![](../.gitbook/assets/plot/1.4.Customized_boxplot3.png)
+
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
 ## 2) Violin plots {#violin-plot}
