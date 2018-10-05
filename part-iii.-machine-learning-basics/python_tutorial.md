@@ -1,8 +1,10 @@
 # Python Tutorial {#python_tutorial}
-- 本教程默认使用**python3**
-- **强烈建议** 安装好Anaconda，下载本教程的.ipynb文件[python_tutorial.ipynb](https://github.com/lulab/teaching_book/tree/master/part-iii.-machine-learning-basics/python_tutorial.ipynb)，使用jupyter notebook打开并运行。
+
 
 ![life_is_short](assets/life_is_short.png)
+
+- 本教程默认使用**python3**
+- **强烈建议** 安装好Anaconda，下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，使用Jupyter notebook打开并运行其中的`part-iii.-machine-learning-basics/python_tutorial.ipynb`文件。
 
 ## Anaconda 和 jupyter
 
@@ -106,7 +108,7 @@ for i in range(3):
 ```
 
 ### 在终端运行python脚本
-创建一个python脚本`welcome.py`
+创建一个python脚本`welcome.py`，在文件中写入如下内容：
 ```python
 print('welcome to python!')
 ```
@@ -155,7 +157,6 @@ print(firstVariable)
 
 
 
-
 ```python
 # go over ? mark after if you are not sure what method does. 
 print(firstVariable.lower())
@@ -174,6 +175,7 @@ firstVariable.lower?
 # Can also use help
 help(firstVariable.lower)
 ```
+
     
 
 
@@ -181,7 +183,6 @@ help(firstVariable.lower)
 
 
 ```python
-# Addition, add two int together
 print (1+1)
 print (130-2.0)
 print (126/3)
@@ -192,15 +193,14 @@ print (10%3)
 
 
 ### if statement
-
-Function  |Comparison Operator
----- | ----
-less than |  <
-less than or equal to | <=   
-greater than  |  > 
-greater than or equal to  | >=  
-equal   | == 
-not equal   |  != 
+Comparison Operator | Function
+--- | --- 
+< | less than
+<= | less than or equal to
+> | greater than
+>= | greater than or equal to
+== | equal
+!= | not equal
 
 
 ```python
@@ -208,6 +208,7 @@ num = 3
 if num % 3 == 0:
     print("if statement satisfied")
 ```
+
 
 
 Logical Operator | Description
@@ -224,7 +225,7 @@ if num > 0 and num  < 15:
     print(num)
 ```
 
-
+   
 ### else and elif
 
 
@@ -232,7 +233,7 @@ if num > 0 and num  < 15:
 my_num = 5
 if my_num % 2 == 0:
     print("Your number is even")
-elif my_num % 2 != 0:
+elif my_num % 2 == 0:
     print("Your number is odd")
 else: 
     print("Are you sure your number is an integer?")
@@ -255,11 +256,10 @@ print(a, b)
 ### List
 请务必注意，python的索引都是**从0开始的**，而不是1！
 
-
-index | 0 | 1 | 2 | 3
+ |  |  |  |
 --- | --- | --- | --- | ---
 z =| [3, | 7, | 4, | 2]
-
+index | 0 | 1 | 2 | 3
 
 #### Accessing Values in List
 
@@ -276,13 +276,10 @@ z[0]
 ```
 
 
-
 ```python
 # Access Last Element of List 
 z[-1]
 ```
-
-
 
 
 
@@ -297,10 +294,6 @@ z[0:2]
 
 
 
-
-
-
-
 ```python
 # everything up to index 3
 z[:3]
@@ -309,17 +302,10 @@ z[:3]
 
 
 
-
-
 ```python
 # index 1 to end of list
 z[1:]
 ```
-
-
-
-
-
 
 
 #### Minimum, Maximum, Length, and Sum of a list
@@ -338,8 +324,10 @@ y = ['Steve', 'Rachel', 'Michael', 'Adam', 'Monica', 'Jessica', 'Lester']
 x.append(3)
 y.append('James')
 print(x)
-print (y)
+print(y)
 ```
+
+ 
 
 #### list comprehension
 
@@ -363,9 +351,9 @@ print(a)
 
 ### Dictionary
 
-字典是另一种可变容器模型，且可存储任意类型对象。
+字典是另一种可变容器模型，可存储任意类型对象。
 
-字典的每个键值 `key=>value` 对用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中
+字典的每个键值 `key->value` 对用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中
 
 键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一
 
@@ -376,6 +364,7 @@ print(a)
 dict = {'a': 1, 'b': 2, 'b': '3'};
 dict['b']
 ```
+
 
 
 
@@ -395,7 +384,6 @@ print ("dict['School']: ", dict['School'])
 
 
 
-
 #### Dict comprehension
 
 
@@ -407,16 +395,13 @@ for i in range(10):
 print(a)
 ```
 
-
-
-
+  
 
 ```python
 #Use dict comprehension:
 a = {i:chr(ord('A') + i) for i in range(10)}
 print(a)
 ```
-
 
 
 ## Scientific computation
@@ -443,7 +428,7 @@ import numpy as np
 
 如果读者对机器学习和深度学习感兴趣，可以进一步了解以下工具包：
 - scikit-learn
-- Keras/Tensorflow/Pytorch
+- Keras/Tensorflow/Pytorh
 
 #### 矩阵计算工具: Numpy
 URL: (http://www.numpy.org/)
@@ -463,8 +448,6 @@ X
 
 
 
-
-
 ```python
 # create an array of length 5: [0, 1, 2, 3, 4]
 y = np.arange(0,5)
@@ -474,17 +457,11 @@ y
 
 
 
-
-
-
-
 ```python
 # create an array of length 4: [0, 1, 2, 3]
 z = np.arange(4)
 z
 ```
-
-
 
 
 
@@ -502,6 +479,8 @@ X
 
 
 
+
+
 ```python
 # add 1 to all elements
 X += 1
@@ -511,12 +490,12 @@ X
 
 
 
+
 ```python
 # add y to each row of X
-X += y.reshape((-1, 1))
+X += y.reshape((-1, 1)) #reshape用于改变y的shape为5*1
 X
 ```
-
 
 
 
@@ -532,16 +511,12 @@ X
 
 
 
+
 ```python
 # get row sums => 
 row_sums = X.sum(axis=1)
 row_sums
 ```
-
-
-
-
-
 
 
 ```python
@@ -553,12 +528,9 @@ col_sums
 
 
 
-
-
-
 ```python
 # matrix multiplication
-A = X.dot(X.T)
+A = X.dot(X.T) #X.T表示X的转置
 A
 ```
 
@@ -1266,3 +1238,5 @@ for i in tqdm(range(20)):
 
 
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
+
