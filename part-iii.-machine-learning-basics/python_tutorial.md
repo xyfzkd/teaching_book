@@ -4,7 +4,7 @@
 ![life_is_short](assets/life_is_short.png)
 
 - 本教程默认使用**python3**
-- **强烈建议** 安装好Anaconda，下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，使用Jupyter notebook打开并运行其中的`part-iii.-machine-learning-basics/python_tutorial.ipynb`文件。
+- **强烈建议** 安装好Anaconda，下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，使用Jupyter notebook打开并运行其中的`python_tutorial.ipynb`文件。
 
 ## Anaconda 和 jupyter
 
