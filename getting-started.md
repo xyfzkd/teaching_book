@@ -23,7 +23,7 @@
 * 在这里还可以找到海量的优秀开源项目代码，共同碰撞出思维的火花，实现 Social Coding。
 
 
-[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种通用标记语言，其语法远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心。
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 是一种通用标记语言，其[语法](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)远比 LaTeX 简洁，易于上手，使得用户能专心于写作，而不会被排版分心。
 * 我们建议在Linux里**每个重要工作目录**都用这个语言来编辑一个README.md文件。
 * md可以生成 HTML 文件发布在网站上。
 * md也可以生成 PDF，具有很高的兼容性。
