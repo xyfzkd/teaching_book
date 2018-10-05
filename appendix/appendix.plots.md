@@ -1,11 +1,10 @@
 # Appendix. Plot with R
 
-
 ```bash
 docker exec -it bioinfo_tsinghua bash
 ```
 
-以下步骤均在 `/home/test/plot/` 下进行:  
+以下步骤均在 `/home/test/plot/` 下进行:
 
 ```bash
 cd /home/test/plot/
@@ -13,9 +12,36 @@ cd /home/test/plot/
 
 本章命令均在 R 中操作。
 
-## 0) Prepare {#plot-setup}
+## 0\) Prepare {#plot-setup}
 
-**How to load data and install packages**
+### 0a\) 在容器中使用 R {\#R-in-container}
+
+  
+这里我们讲解一下如何在容器中使用 R 语言。
+
+进入容器后，用以下命令进入 R 语言环境
+
+```bash
+R
+```
+
+然后将书中的代码复制到 Terminal 中运行，例如
+
+```r
+mean(1:10)
+```
+
+运行完之后，用以下命令退出（按完 Enter 后，按 n 和 Enter）
+
+```r
+q()
+```
+
+以上操作如下图所示：
+
+![](/assets/R-in-container.gif)
+
+### 0b\) load data, install packages, etc
 
 1. Prepare output directory
 
@@ -23,7 +49,7 @@ cd /home/test/plot/
    dir.create('output')
    ```
 
-1. Load the data
+2. Load the data
 
    ```r
    # Read the input files
@@ -39,7 +65,7 @@ cd /home/test/plot/
    df4 <- read.table("input/manhattan_plots_gwasResults.txt",header=T,sep="\t")
 
    df5 <-read.table("input/heatmaps.txt",header=T,sep="\t")
-   
+
    # Covert data into matrix format
    # nrow(df5) and ncol(df5) return the number of rows and columns of matrix df5 respectively.
    dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
@@ -48,20 +74,21 @@ cd /home/test/plot/
    row.names(dm) <- df5[,1]
 
    df6 <- read.table("input/ballon_plots_GO.txt", header=T, sep="\t")
-   
+
    df7 <- read.table("input/box_plots_David_GO.txt",header=T,sep="\t")
    df7 <- df7[1:10,]
    ```
 
-1. Install and library packages
+3. Install and library packages
 
    安装需要的 R 包（Docker 中已经装好，无需运行）
+
    ```r
    install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer', 'plotrix'))
    ```
 
    载入需要的 R 包
-   
+
    ```r
    library(ggplot2)
    library(qqman)
@@ -74,48 +101,47 @@ cd /home/test/plot/
    library(plotrix)
    ```
 
-1. Save the plot
+### 0c\) Save the plot
 
-   If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
-   The second one is specific for the **ggplot2** package.
+If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
+The second one is specific for the **ggplot2** package.
 
-   For example,
+For example,
 
-   ```r
-   # Begin to plot
-   # Output as pdf
-   pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
-   # Mapping the X and Y 
-   # Components are constructed by using "+"
-   ggplot(df, aes(x=cyl, y=mpg))+ 
-   # draw the boxplot and fill it with gray
-     geom_boxplot(fill="gray")+
-   # Use the labs function to set the title and modify x and y
-     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-   # Set the theme style
-     theme_classic()
-   
-   # Save the plot
-   dev.off()
-   ```
+```r
+# Begin to plot
+# Output as pdf
+pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
+# Mapping the X and Y 
+# Components are constructed by using "+"
+ggplot(df, aes(x=cyl, y=mpg))+ 
+# draw the boxplot and fill it with gray
+  geom_boxplot(fill="gray")+
+# Use the labs function to set the title and modify x and y
+  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+# Set the theme style
+  theme_classic()
 
-   Or
+# Save the plot
+dev.off()
+```
 
-   ```r
-   # Begin to plot
-   p <- ggplot(df, aes(x=cyl, y=mpg)) + 
-     geom_boxplot(fill="gray")+
-     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-     theme_classic()
-   # Sava as pdf
-   ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
-   ```
+Or
+
+```r
+# Begin to plot
+p <- ggplot(df, aes(x=cyl, y=mpg)) + 
+  geom_boxplot(fill="gray")+
+  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+  theme_classic()
+# Sava as pdf
+ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
+```
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-    or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
+    or [here](https://github.com/lulab/shared_scripts/tree/master/plots) \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
 
-## 1) Box plots {#box-plot}
-
+## 1\) Box plots {#box-plot}
 
 1. Basic box plot
 
@@ -143,7 +169,7 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
 
    ![](../.gitbook/assets/plot/1.1.Basic_boxplot.png)
 
-1. Change continuous color by groups
+2. Change continuous color by groups
 
    ```r
    ggplot(df, aes(x=cyl, y=mpg, fill=cyl)) + 
@@ -155,13 +181,13 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
 
    ![](../.gitbook/assets/plot/1.2.Customized_boxplot.png)
 
-1. Box plot for GO results
+3. Box plot for GO results
 
    ```r
    df7$Term <- sapply(strsplit(as.vector(df7$Term),'~'),'[',2)
    head(df7)
    ```
-   
+
    ```
    #          Category                                                         Term Count       X.      PValue
    #1 GOTERM_BP_DIRECT                               chemical synaptic transmission     6 4.651163 0.003873106
@@ -185,7 +211,7 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
    #5        110        3     18082      109.587879  0.9999763 0.8811197 23.441198
    #6        110       40     18082       12.328636  0.9999994 0.9089683 30.281607
    ```
-   
+
    ```r
    ggplot(df7) + geom_bar(stat="identity", width=0.6, aes(Term,Fold.Enrichment, fill=-1*log10(PValue)),colour="#1d2a33") + 
      coord_flip() +
@@ -198,7 +224,7 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
      theme(axis.text.y = element_text(size = 10,face="bold"),
            axis.text.x = element_text(size = 12,face="bold"))
    ```
-   
+
    ![](../.gitbook/assets/plot/1.3.Customized_boxplot2.png)
 
    ```r
@@ -213,14 +239,12 @@ For the following examples, you can find all code in `/home/test/plot/Rscripts/`
      theme(axis.text.y = element_text(size = 10,face="bold"),
            axis.text.x = element_text(size = 12,face="bold"))
    ```
-   
+
    ![](../.gitbook/assets/plot/1.4.Customized_boxplot3.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 2) Violin plots {#violin-plot}
-
-
+## 2\) Violin plots {#violin-plot}
 
 1. Basic violin plot
 
@@ -308,9 +332,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 3) Histogram plots {#histogram-plot}
-
-
+## 3\) Histogram plots {#histogram-plot}
 
 1. Basic histogram plot
 
@@ -372,9 +394,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-gu
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 4) Density plots {#density-plot}
-
-
+## 4\) Density plots {#density-plot}
 
 1. Basic density
 
@@ -468,9 +488,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-histogram-plot-quick-start
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 5) Dot plots {#dot-plot}
-
-
+## 5\) Dot plots {#dot-plot}
 
 1. Basic dot plots
 
@@ -544,9 +562,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-g
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide-r-software-and-data-visualization)
 
-## 6) Scatter plots {#scatter-plot}
-
-
+## 6\) Scatter plots {#scatter-plot}
 
 1. Basic scatter plots
 
@@ -585,9 +601,7 @@ Reference: [http://www.sthda.com/english/wiki/ggplot2-dot-plot-quick-start-guide
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization)
 
-## 7) Volcano plots {#volcano-plot}
-
-
+## 7\) Volcano plots {#volcano-plot}
 
 ```r
 head(df3)
@@ -626,9 +640,7 @@ ggplot(data=df3, aes(x=log2FoldChange, y =-log10(padj), color=threshold,fill=thr
 
 ![](../.gitbook/assets/plot/7.Customized_volcanoplot.png)
 
-## 8) Manhattan plots {#manhattan-plot}
-
-
+## 8\) Manhattan plots {#manhattan-plot}
 
 ```r
 head(df4)
@@ -653,9 +665,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
 ![](../.gitbook/assets/plot/8.Customized_manhattannplot.png)
 
-## 9) Heatmaps {#heatmap-plot}
-
-
+## 9\) Heatmaps {#heatmap-plot}
 
 1. Draw the heatmap with the gplots package, `heatmap.2()` function
 
@@ -751,9 +761,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
    ![](../.gitbook/assets/plot/9.3.Customized_heatmap.png)
 
-## 10) Ballon plots {#ballon-plot}
-
-
+## 10\) Ballon plots {#ballon-plot}
 
 1. basic ballon plots
 
@@ -812,9 +820,7 @@ manhattan(df4, main = "GWAS results", ylim = c(0, 8),
 
    ![](../.gitbook/assets/plot/10.2.Customized_ballonplot.png)
 
-## 11) Vennpie plots {#vennpie-plot}
-
-
+## 11\) Vennpie plots {#vennpie-plot}
 
 The vennpie plot is the combination of a venn diagram and a pie chart.
 
@@ -893,9 +899,7 @@ legend(0, 6*iniR, gsub("_"," ",names(colors)[-1]),
 
 Reference: [http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html](http://onetipperday.sterding.com/2014/09/vennpier-combination-of-venn-diagram.html)
 
-## 12) Learn more {#plot-more}
-
-
+## 12\) Learn more {#plot-more}
 
 1. Guide to Great Beautiful Graphics in R
 
