@@ -1,7 +1,7 @@
 # 从exRNA测序数据中鉴定癌症的生物标志物
 
 
-请在[quiz_exrna_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件，并下载该[文件夹](https://github.com/lulab/teaching_book/tree/master/quiz/quiz_exrna)下的内容，打开`quiz_exrna_tutorial.ipynb`文件阅读详细的**Quiz指南**。
+请在[quiz_exrna_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件，并下载该[文件夹](https://cloud.tsinghua.edu.cn/f/ae9a9d63d1db435ab6e2/)下的内容，打开`quiz_exrna_tutorial.ipynb`文件阅读详细的**Quiz指南**。
 
 ## 背景介绍
 （adapt from Young Lee）
@@ -262,7 +262,7 @@ scireprnastats = pd.read_csv('data/other_annotations/scirep_rna_stats.csv',index
 
 ### 模型效果分析
 - 绘制挑选出的feature counts（经过适当的scale）的clustermap，用颜色块表示class。请参考[*特征选择结果可视化*](#visfeature)。
-- 绘制二分类和多分类模型的ROC曲线，请注意本问题ROC曲线的特殊之处，具体细节请参考[*用选出的feature进行分类并绘制ROC曲线*](#roc)。
+- 绘制二分类模型的ROC曲线，请注意本问题ROC曲线的特殊之处，具体细节请参考[*用选出的feature进行分类并绘制ROC曲线*](#roc)。
 - 对比hcc数据的full length与peak在挑选出的feature以及分类的结果（ROC曲线）的差异，思考为什么会使用peak数据。
 
 ### 加分内容
