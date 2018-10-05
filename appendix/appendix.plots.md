@@ -12,9 +12,9 @@ cd /home/test/plot/
 
 本章命令均在 R 中操作。
 
-## 0\) Prepare {#plot-setup}
+## 0) Prepare {#plot-setup}
 
-### 0a\) 在容器中使用 R {\#R-in-container}
+### 0a) 在容器中使用 R {#R-in-container}
 
   
 这里我们讲解一下如何在容器中使用 R 语言。
@@ -41,7 +41,7 @@ q()
 
 ![](/assets/R-in-container.gif)
 
-### 0b\) load data, install packages, etc
+### 0b) load data, install packages, etc
 
 1. Prepare output directory
 
@@ -101,7 +101,7 @@ q()
    library(plotrix)
    ```
 
-### 0c\) Save the plot
+### 0c) Save the plot
 
 If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
 The second one is specific for the **ggplot2** package.
