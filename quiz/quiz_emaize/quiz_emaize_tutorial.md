@@ -1,7 +1,7 @@
 
 # eMaize玉米育种挑战赛
 
-请在[quiz_emaize_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关数据，并下载该[文件夹](https://github.com/lulab/teaching_book/tree/master/quiz/quiz_emaize)下的内容，打开`quiz_emaize_tutorial.ipynb`文件阅读详细的**Quiz指南**。
+请在[quiz_emaize_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关数据，并下载该[文件夹](https://cloud.tsinghua.edu.cn/f/def95f1d1beb4031bf2f/)下的内容，打开`quiz_emaize_tutorial.ipynb`文件阅读详细的**Quiz指南**。
 
 ## eMaize背景简介
 eMaize挑战赛是[一个通过机器学习方法预测玉米性状的比赛](http://emaize.imaze.org/emaize/emaize_cn.php)，要求我们以SNP作为特征，通过训练一个模型，**对玉米的三个性状进行预测**。
@@ -367,9 +367,8 @@ for method in ('random', 'by_female', 'by_male', 'cross'):
 
 ### ANOVA加速算法{#fastanova}
 思路简要提示：
-
-![fastanova](quiz_emaize_tutorial_files/anova.png)       
-
+          
+![fastanova](quiz_emaize_tutorial_files/anova.png)
 
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
 
