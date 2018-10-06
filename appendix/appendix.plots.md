@@ -39,7 +39,7 @@ q()
 
 以上操作如下图所示：
 
-![](/assets/R-in-container.gif)
+![](../.gitbook/assets/R-in-container.gif)
 
 ### 0b) load data, install packages, etc
 
