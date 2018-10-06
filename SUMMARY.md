@@ -24,13 +24,13 @@
 * [7.ChIP-seq](part-ii.-ngs-pipelines/7.chip-seq.md)
 
 ## Part III. Machine Learning Basics
-* [8.Python Tutorials](part-iii.-machine-learning-basics/python_tutorial.md)
-* [9.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics.md)
+
+* [8.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics.md)
 
 ## Part IV. Quiz
 
-* [1.eMaize](quiz/quiz_emaize/quiz_emaize_tutorial.md)
-* [2.exRNA](quiz/quiz_exrna/quiz_exrna_tutorial.md)
+* [A. eMaize](quiz/quiz_emaize/quiz_emaize_tutorial.md)
+* [B. exRNA](quiz/quiz_exrna/quiz_exrna_tutorial.md)
 
 ## Appendix
 
@@ -40,6 +40,7 @@
   * [Shared Scripts](appendix/appendix1.more.md#share-script)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Docker](appendix/appendix3.docker.md)
+* [Appendix IV. Python](part-iii.-machine-learning-basics/python_tutorial.md)
 * [Appendix. Plot with R](appendix/appendix.plots.md)
   * [0.Prepare](appendix/appendix.plots.md#plot-setup)
   * [1.Box plots](appendix/appendix.plots.md#box-plot)
@@ -54,3 +55,4 @@
   * [10.Ballon plots](appendix/appendix.plots.md#ballon-plot)
   * [11.Vennpie plots](appendix/appendix.plots.md#vennpie-plot)
   * [Learn more](appendix/appendix.plots.md#plot-more)
+
