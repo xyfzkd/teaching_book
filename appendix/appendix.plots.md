@@ -12,11 +12,10 @@ cd /home/test/plot/
 
 本章命令均在 R 中操作。
 
-## 0) Prepare {#plot-setup}
+## 0\) Prepare {#plot-setup}
 
-### 0a) 在容器中使用 R {#R-in-container}
+### 0a\) 在容器中使用 R {#R-in-container}
 
-  
 这里我们讲解一下如何在容器中使用 R 语言。
 
 进入容器后，用以下命令进入 R 语言环境
@@ -41,7 +40,7 @@ q()
 
 ![](../.gitbook/assets/R-in-container.gif)
 
-### 0b) load data, install packages, etc
+### 0b\) load data, install packages, etc
 
 1. Prepare output directory
 
@@ -101,7 +100,7 @@ q()
    library(plotrix)
    ```
 
-### 0c) Save the plot and view it
+### 0c\) Save the plot and view it
 
 If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
 The second one is specific for the **ggplot2** package.
@@ -138,13 +137,13 @@ p <- ggplot(df, aes(x=cyl, y=mpg)) +
 ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
 ```
 
-If you want view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. (Note, the following code is executed in Terminal, i.e., you need to quit R.)
+If you want view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. \(Note, the following code is executed in Terminal, i.e., you need to quit R.\)
 
 ```bash
 cp output/1.1.Basic_boxplot.pdf /home/test/share/
 ```
 
-
+![](/assets/plot-view-pdf.gif)
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
     or [here](https://github.com/lulab/shared_scripts/tree/master/plots) \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
