@@ -137,18 +137,24 @@ p <- ggplot(df, aes(x=cyl, y=mpg)) +
 ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
 ```
 
-If you want view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. \(Note, the following code is executed in Terminal, i.e., you need to quit R.\)
+If you want view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. 
+
+> the following code is executed in Terminal, i.e., you need to quit R.
 
 ```bash
 cp output/1.1.Basic_boxplot.pdf /home/test/share/
 ```
 
-![](/assets/plot-view-pdf.gif)
+The whole process is as follows:
+
+> After you copy some text to the clipboard, you can press `Ctrl` + `Insert` to paste it to the terminal.
+
+![](../.gitbook/assets/docker-plot-view-VM.gif)
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-    or [here](https://github.com/lulab/shared_scripts/tree/master/plots) \(a file per chapter\), and demo output in `/home/test/plot/success/output/`.
+    or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
-## 1\) Box plots {#box-plot}
+## 1) Box plots {#box-plot}
 
 1. Basic box plot
 
