@@ -1,4 +1,54 @@
+
+
+
+
+
+
+
 # Appendix. Plot with R
+
+
+## 0\) Prepare {#plot-setup}
+
+我们提供两种方案来完成本教程内容，方案一可以在本地使用Rstudio打开`Rmd`文件，提供读者更好的可视化和交互；方案二可以在Docker容器中使用R完成教程。
+
+### 0a\) 方案一: Rstudio中使用 R {#R-in-Rstudio}
+
+#### 0a.1\) 在本地下载R和Rstudio {#R-in-container}
+
+下载[相关资源](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/)中的R, Rstudio软件及lulab-plot-master.zip
+
+
+1. 安装 R
+
+1. 安装 RStudio
+
+1. 下载并解压 `lulab-plot-master.zip`, 双击其中的`lulab-plot.Rproj`.
+
+1. 安装需要的package:
+
+![](resources/image/install-lulab-plot.gif)
+
+#### 0a.2\) 打开Rmd文件
+
+用Rstudio打开`all.Rmd`文件, 即可以阅读教程，并且执行相关代码。
+
+![](resources/image/all-Rmd.gif)
+
+> tips: 如果想单独执行其中一个部分的代码，首先打开`index.Rmd`，加载需要的package，然后运行其中某部分代码，如`1.box-plots.Rmd` & `2.violin-plots.Rmd`
+
+
+![](resources/image/index-1-2-Rmd.gif)
+
+### 0b\) 方案二: 在容器中使用 R {#R-in-container}
+
+在方案二中我们会讲解如何在Docker容器中使用 R 完成本章节内容。
+
+#### 0b.1\) 进入容器并打开R {#R-in-container}
+
+
+
+首先进入容器
 
 ```bash
 docker exec -it bioinfo_tsinghua bash
@@ -9,14 +59,6 @@ docker exec -it bioinfo_tsinghua bash
 ```bash
 cd /home/test/plot/
 ```
-
-本章命令均在 R 中操作。
-
-## 0\) Prepare {#plot-setup}
-
-### 0a\) 在容器中使用 R {#R-in-container}
-
-这里我们讲解一下如何在容器中使用 R 语言。
 
 进入容器后，用以下命令进入 R 语言环境
 
@@ -40,7 +82,7 @@ q()
 
 ![](../.gitbook/assets/R-in-container.gif)
 
-### 0b\) load data, install packages, etc
+#### 0b.2\) load data, install packages, etc
 
 1. Prepare output directory
 
@@ -100,7 +142,7 @@ q()
    library(plotrix)
    ```
 
-### 0c\) Save the plot and view it
+#### 0b.3\) Save the plot and view it
 
 If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
 The second one is specific for the **ggplot2** package.
@@ -152,7 +194,7 @@ The whole process is as follows:
 ![](../.gitbook/assets/docker-plot-view-VM.gif)
 
 For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-    or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
+        or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
 ## 1) Box plots {#box-plot}
 
