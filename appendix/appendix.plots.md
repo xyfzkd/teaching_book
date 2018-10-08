@@ -173,7 +173,7 @@ Let's see an example:
    ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3,    width = 3)
    ```
 
-If you want view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. 
+If you want to view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. 
 
 > the following code is executed in Terminal, i.e., you need to quit R.
 
@@ -190,6 +190,8 @@ Here we only show one plot, in real use, you should replace the code for plot an
 > After you copy some text to the clipboard, you can press `Ctrl` + `Insert` to paste it to the terminal.
 
 ![](../.gitbook/assets/plot/save-view-in-VM.gif)
+
+动画中演示的是虚拟机中的操作步骤，我们首先用浏览器打开这一章，然后将一些代码复制到 Terminal 中去运行，最后查看生成的 plot。（On linux, you can use `Ctrl` + `Insert` to paste text in the clipboard to the terminal.）
 
 正如你所看到的，方案二使用起来还是比较不方便的，所以如果没有特别的原因，我们还是推荐优先考虑方案一。
 
