@@ -1,7 +1,7 @@
 # 从exRNA测序数据中鉴定癌症的生物标志物
 
 
-请在[quiz_exrna_tutorial_shared](https://cloud.tsinghua.edu.cn/f/3f4fc999720d45f198ca/)下载相关文件，并下载该[文件夹](https://cloud.tsinghua.edu.cn/f/ae9a9d63d1db435ab6e2/)下的内容，打开`quiz_exrna_tutorial.ipynb`文件阅读详细的**Quiz指南**。
+请在[quiz_exrna_tutorial_shared](https://cloud.tsinghua.edu.cn/f/655707dfd78243bca7f2/)下载相关文件，并下载该[文件夹](https://cloud.tsinghua.edu.cn/f/ae9a9d63d1db435ab6e2/)下的内容，打开`quiz_exrna_tutorial.ipynb`文件阅读详细的**Quiz指南**。
 
 ## 背景介绍
 （adapt from Young Lee）
