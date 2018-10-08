@@ -187,8 +187,6 @@ Here we only show one plot, in real use, you should replace the code for plot an
 
 为了更清楚地展示方案二，我们制作了一个完整的动画：
 
-> After you copy some text to the clipboard, you can press `Ctrl` + `Insert` to paste it to the terminal.
-
 ![](../.gitbook/assets/plot/save-view-in-VM.gif)
 
 动画中演示的是虚拟机中的操作步骤，我们首先用浏览器打开这一章，然后将一些代码复制到 Terminal 中去运行，最后查看生成的 plot。（On linux, you can use `Ctrl` + `Insert` to paste text in the clipboard to the terminal.）
