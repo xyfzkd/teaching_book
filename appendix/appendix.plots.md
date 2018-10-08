@@ -8,81 +8,77 @@
 # Appendix. Plot with R
 
 
-## 0\) Prepare {#plot-setup}
+## 0) Prepare {#plot-setup}
 
-我们提供两种方案来完成本教程内容，方案一可以在本地使用Rstudio打开`Rmd`文件，提供读者更好的可视化和交互；方案二可以在Docker容器中使用R完成教程。
+本章我们介绍如何使用 R 进行数据可视化，我们将提供两种方案：一是在自己电脑使用 Rstudio 来画图（基于 `.Rmd` 文件)，优点是使用方便，交互性强；一是在 Docker 容器中用命令行的方式来画图，优点是无需额外的安装和配置。
 
-### 0a\) 方案一: Rstudio中使用 R {#R-in-Rstudio}
+### 0a) 方案一: 在自己电脑上用 Rstudio 画图 {#plot-in-Rstudio}
 
-#### 0a.1\) 在本地下载R和Rstudio {#R-in-container}
+1. 在自己电脑安装软件和配置
 
-下载[相关资源](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/)中的R, Rstudio软件及lulab-plot-master.zip
+   下载 [相关资源](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/)中的 R, Rstudio 软件及 `lulab-plot-master.zip`。
+   
+   1. 安装 R。
+   
+   1. 安装 RStudio。
+   
+   1. 下载并解压 `lulab-plot-master.zip`, 双击其中的   `lulab-plot.Rproj`。
+   
+   1. 安装需要的package:
+   
+      ![](../.gitbook/assets/plot/install-lulab-plot.gif)
 
+2. 打开 `.Rmd` 文件
 
-1. 安装 R
+   用Rstudio打开`all.Rmd`文件, 即可阅读教程，并执行相关代码。
 
-1. 安装 RStudio
+   ![](../.gitbook/assets/plot/all-Rmd.gif)
 
-1. 下载并解压 `lulab-plot-master.zip`, 双击其中的`lulab-plot.Rproj`.
+   > tips: 如果你更喜欢每个文件仅包含一节的内容（一种 plot 类型），可以先打开 `index.Rmd`，安装需要的 packages，然后依次打开每一节对应的 `.Rmd` 文件（动画展示了第1、2小节对应的 `1.box-plots.Rmd` 和 `2.violin-plots.Rmd`）
+   >
+   > ![](../.gitbook/assets/plot/index-1-2-Rmd.gif)
 
-1. 安装需要的package:
+### 0b) 方案二: 在 Docker 中使用 R 来画图
 
-![](resources/image/install-lulab-plot.gif)
+如果你在使用方案一时遇到了问题，也可以用我们提供的 Docker（里面已经预装好了 R 语言和需要的 packages）。
 
-#### 0a.2\) 打开Rmd文件
+#### 0b.1) 在容器中使用R {#R-in-container}
 
-用Rstudio打开`all.Rmd`文件, 即可以阅读教程，并且执行相关代码。
+![](../.gitbook/assets/plot/R-in-container.gif)
 
-![](resources/image/all-Rmd.gif)
-
-> tips: 如果想单独执行其中一个部分的代码，首先打开`index.Rmd`，加载需要的package，然后运行其中某部分代码，如`1.box-plots.Rmd` & `2.violin-plots.Rmd`
-
-
-![](resources/image/index-1-2-Rmd.gif)
-
-### 0b\) 方案二: 在容器中使用 R {#R-in-container}
-
-在方案二中我们会讲解如何在Docker容器中使用 R 完成本章节内容。
-
-#### 0b.1\) 进入容器并打开R {#R-in-container}
-
-
-
-首先进入容器
+首先进入容器：
 
 ```bash
 docker exec -it bioinfo_tsinghua bash
 ```
 
-以下步骤均在 `/home/test/plot/` 下进行:
+本章的操作均在 `/home/test/plot/` 下进行:
 
 ```bash
 cd /home/test/plot/
 ```
 
-进入容器后，用以下命令进入 R 语言环境
+进入容器后，用以下命令进入 R 语言环境：
 
 ```bash
 R
 ```
 
-然后将书中的代码复制到 Terminal 中运行，例如
+现在就可以运行 R 代码了，这里我们展示了计算 1, 2, ..., 10 的平均数。
 
 ```r
 mean(1:10)
 ```
 
-运行完之后，用以下命令退出（按完 Enter 后，按 n 和 Enter）
+在实际画图时，依次将下文给出的 R 代码复制到 Terminal 中运行。
+
+运行完毕之后，用以下命令退出（按完 Enter 后，按 n 和 Enter），返回到容器：
 
 ```r
 q()
 ```
 
-以上操作如下图所示：
-
-![](../.gitbook/assets/R-in-container.gif)
-
-#### 0b.2\) load data, install packages, etc
+#### 0b.2) load data, install packages, etc
 
 1. Prepare output directory
 
@@ -120,15 +116,11 @@ q()
    df7 <- df7[1:10,]
    ```
 
-3. Install and library packages
+3. Install R packages
+   
+   Docker 中已经装好所需要的 R 包，如果你是在自己电脑上运行，则需要安装 ggplot2, qqman, gplots, pheatmap, scales, reshape2, RColorBrewer 和 plotrix（使用 `install.packages()`, 如 `install.packages('ggplot2')`）。
 
-   安装需要的 R 包（Docker 中已经装好，无需运行）
-
-   ```r
-   install.packages(c('ggplot2', 'qqman', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer', 'plotrix'))
-   ```
-
-   载入需要的 R 包
+4. library R packages
 
    ```r
    library(ggplot2)
@@ -142,42 +134,44 @@ q()
    library(plotrix)
    ```
 
-#### 0b.3\) Save the plot and view it
+#### 0b.3) Save the plot and view it
 
-If you want to save the plot,  please use `pdf()`, `dev.off()` or `ggsave()`.  
-The second one is specific for the **ggplot2** package.
+If you want to save the plot,  please use either `pdf()` + `dev.off()` or `ggsave()`.  
+The second one is specific for the **ggplot2** package (i.e., if the code for plot starts with `ggplot`, then you can use the second one).
 
-For example,
+Let's see an example:
 
-```r
-# Begin to plot
-# Output as pdf
-pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
-# Mapping the X and Y 
-# Components are constructed by using "+"
-ggplot(df, aes(x=cyl, y=mpg))+ 
-# draw the boxplot and fill it with gray
-  geom_boxplot(fill="gray")+
-# Use the labs function to set the title and modify x and y
-  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-# Set the theme style
-  theme_classic()
+1. `pdf()` + `dev.off()`
 
-# Save the plot
-dev.off()
-```
+   ```r
+   # Begin to plot
+   # Output as pdf
+   pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
+   # Mapping the X and Y 
+   # Components are constructed by using "+"
+   ggplot(df, aes(x=cyl, y=mpg))+ 
+   # draw the boxplot and fill it with gray
+     geom_boxplot(fill="gray")+
+   # Use the labs function to set the title and modify x and y
+     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+   # Set the theme style
+     theme_classic()
+   
+   # Save the plot
+   dev.off()
+   ```
 
-Or
+1. `ggsave()`
 
-```r
-# Begin to plot
-p <- ggplot(df, aes(x=cyl, y=mpg)) + 
-  geom_boxplot(fill="gray")+
-  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-  theme_classic()
-# Sava as pdf
-ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
-```
+   ```r
+   # Begin to plot
+   p <- ggplot(df, aes(x=cyl, y=mpg)) + 
+     geom_boxplot(fill="gray")+
+     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+     theme_classic()
+   # Sava as pdf
+   ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3,    width = 3)
+   ```
 
 If you want view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine. 
 
@@ -187,14 +181,21 @@ If you want view the produced file, you need to copy the file to `/home/test/sha
 cp output/1.1.Basic_boxplot.pdf /home/test/share/
 ```
 
-The whole process is as follows:
+Here we only show one plot, in real use, you should replace the code for plot and change output file name to do more plots.
+
+#### 0b.4) 以上 3 步的动画
+
+为了更清楚地展示方案二，我们制作了一个完整的动画：
 
 > After you copy some text to the clipboard, you can press `Ctrl` + `Insert` to paste it to the terminal.
 
-![](../.gitbook/assets/docker-plot-view-VM.gif)
+![](../.gitbook/assets/plot/save-view-in-VM.gif)
 
-For the following examples, you can find all code in `/home/test/plot/Rscripts/`  
-        or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
+正如你所看到的，方案二使用起来还是比较不方便的，所以如果没有特别的原因，我们还是推荐优先考虑方案一。
+
+---------
+
+For the following sections, you can find all code in `/home/test/plot/Rscripts/` or [here](https://github.com/lulab/shared_scripts/tree/master/plots) (a file per chapter), and demo output in `/home/test/plot/success/output/`.
 
 ## 1) Box plots {#box-plot}
 
