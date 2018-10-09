@@ -1,4 +1,8 @@
-# 2.R\_basics
+# R Basics
+
+<!--
+https://youngleebbs.gitbook.io/bioinfo-training/part-i/2.r_basics
+-->
 
 **R: How to make professional and beautiful plots**
 
