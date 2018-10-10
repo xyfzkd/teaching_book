@@ -8,9 +8,11 @@ How to make professional and beautiful plots
 >
 > Efficient Writing: Bash &gt; R &gt; Perl/Python &gt; Excel &gt; C,C++
 
-## 1. Install R
+## 1. Install and Use R
 
-R: https://www.r-project.org/​
+** a. Install R**
+
+See the official site of R: https://www.r-project.org/​
 
 Here is an example of installation in Linux (centos):
 
@@ -18,6 +20,14 @@ Here is an example of installation in Linux (centos):
 yum -y install epel-release
 yum -y install R
 ```
+
+** b. Install R Studio **
+
+If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
+
+We have some instruction of Rstudio in [Appendix. Plot with R](/appendix/appendix.plots.md)
+
+** c. Use R**
 
 * How to quit?
 
@@ -27,14 +37,9 @@ yum -y install R
 
 `?t.test`
 
-## 2. Install Rstudio
-
-**RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
-
-See details of Rstudio in [Appendix. Plot with R](/appendix/appendix.plots.md)
 
 
-## 3. Basic Data Types
+## 2. Basic Data Types
 
 ```r
 > x = 10.5 # assign a decimal value
@@ -125,11 +130,11 @@ n s b
 
 
 
-## 4. Examples
+## 3. Examples
 
 **A simple example of t test: **
 
-* First, make two files, foo1 and foo2, the write some numbers in each file, for example:
+* First, make two files, foo1 and foo2, write some numbers in each file, for example:
 ```
 5.6
 7.9
@@ -161,7 +166,7 @@ t.test(x,y,altrenative=c("less"),paired=TRUE) # paired t test
 
 
 
-## 5. More Readings and Practices
+## 4. More Readings and Practices
 
 **Basic:**
 
