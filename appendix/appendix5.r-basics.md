@@ -10,6 +10,8 @@ How to make professional and beautiful plots
 
 ## 1. Install R
 
+R: https://www.r-project.org/​
+
 ```text
 yum -y install epel-release
 yum -y install R
