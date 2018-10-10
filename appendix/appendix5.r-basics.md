@@ -123,25 +123,34 @@ n s b
 
 ## 4. Examples
 
-* a simple t test
+**A simple example of t test: **
 
-sh\# R
-
-```r
-x<-read.table("foo1")
-y<-read.table("foo2")
-t.test(x,y,alternative=c("less") )
-
-x=x[,1]
-y=y[,1]
-t.test(x,y,altrenative=c("less"),paired=TRUE)
+* First, make two files, foo1 and foo2, the write some numbers in each file, for example:
+```
+5.6
+7.9
+8.9
+19.5
+20.5
+39.5
 ```
 
-or write these into a file, script.R, then run  
+* Then, start R and type:
+
+```r
+x<-read.table("foo1") # read the file
+y<-read.table("foo2") # read the file
+x=x[,1]  # read the first column
+y=y[,1]  # read the first column
+t.test(x,y,alternative=c("less") )
+t.test(x,y,altrenative=c("less"),paired=TRUE) # paired t test
+```
+
+* You can also write these into a file, script.R, then run  
 `R CMD BATCH script.R`
 
 
-* [more R Examples](https://github.com/urluzhi/scripts/tree/master/Rscript) @ Github
+**[More R Examples @ Github](https://github.com/urluzhi/scripts/tree/master/Rscript)  **
 
 
 
