@@ -12,7 +12,9 @@ How to make professional and beautiful plots
 
 R: https://www.r-project.org/​
 
-```text
+Here is an example of installation in Linux (centos):
+
+```bash
 yum -y install epel-release
 yum -y install R
 ```
@@ -29,10 +31,12 @@ yum -y install R
 
 **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
+See details of Rstudio in [Appendix. Plot with R](/appendix/appendix.plots.md)
+
 
 ## 3. Basic Data Types
 
-```text
+```r
 > x = 10.5 # assign a decimal value
 > x # print the value of x
 [1] 10.5
@@ -67,7 +71,7 @@ yum -y install R
 
 * **vector**
 
-```text
+```r
 > c(2, 3, 5)
 [1] 2 3 5
 
@@ -83,7 +87,7 @@ yum -y install R
 
 * **matrix**
 
-```text
+```r
 > B = matrix(
 + c(2, 4, 3, 1, 5, 7),
 + nrow=3,
@@ -98,7 +102,7 @@ yum -y install R
 
 * **list**
 
-```text
+```r
 > n = c(2, 3, 5)
 > s = c("aa", "bb", "cc", "dd", "ee")
 > b = c(TRUE, FALSE, TRUE, FALSE, FALSE)
@@ -107,7 +111,7 @@ yum -y install R
 
 * **data frame**
 
-```text
+```r
 > n = c(2, 3, 5)
 > s = c("aa", "bb", "cc")
 > b = c(TRUE, FALSE, TRUE)
@@ -150,9 +154,10 @@ t.test(x,y,altrenative=c("less"),paired=TRUE) # paired t test
 `R CMD BATCH script.R`
 
 
-**[More R Examples @ Github](https://github.com/urluzhi/scripts/tree/master/Rscript)  **
+**More R Examples:**
 
-
+* [Appendix. Plot with R](/appendix/appendix.plots.md)
+* [John's Github](https://github.com/urluzhi/scripts/tree/master/Rscript) 
 
 
 
