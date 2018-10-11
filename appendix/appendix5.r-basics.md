@@ -12,9 +12,9 @@ How to make professional and beautiful plots
 
 ** a. Install R**
 
-See the official site of R: https://www.r-project.org/
+See the official site of R: https://www.r-project.org/ （Docker中已经安装好）
 
-Here is an example of installation in Linux (centos):
+Here is an example of installation in Linux:
 
 - For CentOS
 
