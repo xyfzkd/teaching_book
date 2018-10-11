@@ -16,10 +16,18 @@ See the official site of R: https://www.r-project.org/
 
 Here is an example of installation in Linux (centos):
 
-```bash
-yum -y install epel-release
-yum -y install R
-```
+- For CentOS
+
+  ```bash
+  yum -y install epel-release
+  yum -y install R
+  ```
+  
+- For Ubuntu
+
+  ```bash
+  apt -y install r-base
+  ```
 
 ** b. Install R Studio **
 
