@@ -37,13 +37,18 @@ We have some instruction of Rstudio in [Appendix. Plot with R](/appendix/appendi
 
 ** c. Use R**
 
+* how to enter?
+
+  - On Mac or Linux, you can open a Terminal and type `R` 
+  - On Windows or Mac, you can find a program with this   logo: ![](../.gitbook/assets/R-logo.png)
+
 * How to quit?
 
-`q()`
+  `q()`
 
 * How to get help?
 
-`?t.test`
+  `?t.test`
 
 
 
