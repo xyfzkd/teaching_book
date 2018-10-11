@@ -12,7 +12,7 @@ How to make professional and beautiful plots
 
 ** a. Install R**
 
-See the official site of R: https://www.r-project.org/​
+See the official site of R: https://www.r-project.org/
 
 Here is an example of installation in Linux (centos):
 
