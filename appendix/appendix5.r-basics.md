@@ -29,7 +29,7 @@ Here is an example of installation in Linux (centos):
   apt -y install r-base
   ```
 
-** b. Install R Studio **
+** b. Install RStudio **
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
