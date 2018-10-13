@@ -4,7 +4,8 @@
 ![life_is_short](assets/life_is_short.png)
 
 - 本教程默认使用**python3**
-- **强烈建议** 安装好Anaconda，下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，使用Jupyter notebook打开并运行其中的`python_tutorial.ipynb`文件。
+- **建议** 安装好Anaconda，使用`jupyter notebook`运行代码。
+- 读者可以下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，并运行其中的`python_tutorial.ipynb`文件，但是推荐初学者自己输入代码，体会python的代码风格和规范。
 
 ## software installation
 
