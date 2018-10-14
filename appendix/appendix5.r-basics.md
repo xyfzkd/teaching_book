@@ -150,7 +150,8 @@ n s b
 
 **A simple example of t test: **
 
-* First, make two files, foo1 and foo2, write some numbers in each file, for example:
+* First, make two files, foo1 and foo2, write some numbers in each file, for example:  
+foo1
 ```
 5.6
 7.9
@@ -159,6 +160,7 @@ n s b
 20.5
 39.5
 ```
+foo2
 ```
 6.5
 8.3
