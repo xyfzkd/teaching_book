@@ -149,38 +149,19 @@ n s b
 ## 3. Examples
 
 **A simple example of t test: **
-
-* First, make two files, foo1 and foo2, write some numbers in each file, for example:  
-foo1
-```
-5.6
-7.9
-8.9
-19.5
-20.5
-39.5
-```
-foo2
-```
-6.5
-8.3
-9.1
-17.9
-29.4
-22.8
-```
-
-
-
-* Then, start R and type:
+* start R and type:
 
 ```r
-x<-read.table("foo1") # read the file
-y<-read.table("foo2") # read the file
-x=x[,1]  # read the first column
-y=y[,1]  # read the first column
-t.test(x,y,alternative=c("less") )
-t.test(x,y,altrenative=c("less"),paired=TRUE) # paired t test
+x=c(5.6,7.9,8.9,19.5,20.5,39.5)
+y=c(6.5,8.3,9.1,17.9,29.4,22.8)
+write.table(x, file = "foo1")
+write.table(y, file = "foo2")
+
+a<-read.table("foo1") # read the file
+b<-read.table("foo2") # read the file
+
+t.test(a,b,alternative=c("less") )
+t.test(a,b,altrenative=c("less"),paired=TRUE) # paired t test
 ```
 
 * You can also write these into a file, script.R, then run  
