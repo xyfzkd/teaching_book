@@ -10,7 +10,7 @@ How to make professional and beautiful plots
 
 ## 1. Install and Use R
 
-** a. Install R**
+**a. Install R**
 
 See the official site of R: https://www.r-project.org/ （Docker中已经安装好）
 
@@ -29,13 +29,13 @@ Here is an example of installation in Linux:
   apt -y install r-base
   ```
 
-** b. Install RStudio **
+**b. Install RStudio**
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
 We have some instruction of Rstudio in [Appendix. Plot with R](/appendix/appendix.plots.md)
 
-** c. Use R**
+**c. Use R**
 
 * how to enter?
 
