@@ -226,7 +226,7 @@ docker rm -f bioinfo_tsinghua
 **Craig Venter & Francis Collins**
 人类基因组计划竞赛的故事
 
-![](/assets/hg 2000.png)
+![](/assets/hg-2000.png)
 
 2000年6月26日，美国总统Clinton等六国领导人共同宣布人类基因组计划的草图完成。在新闻发布会现场，站在Clinton身侧的两位“科研明星”分别是人类基因组计划的官方领导人Collins和Celera 公司的领导人Venter。
 
