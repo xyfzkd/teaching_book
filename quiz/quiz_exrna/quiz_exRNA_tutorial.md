@@ -9,11 +9,12 @@
 
 
 ### 总体流程图
-![pngs](plots/wholepipe.png)
+![](plots/wholepipe.png)
 
 ### 主要目标
 利用构建出的expression matrix，分别对Colorectal Cancer vs Healthy Control和Prostate Cancer vs Healthy Control建立分类模型，找出稳健的可以区分癌症和正常样本的Feature，并进行相关分析。
-![pngs](plots/expression_matrix_demo.png)
+
+![](plots/expression_matrix_demo.png)
 
 ## 数据介绍
 我们使用的[数据](https://www.nature.com/articles/srep19413)主要包括两种癌症和正常人样本，其中Colorectal Cancer, Prostate Cancer和Healthy Control的样本数量分别为99，36和50。数据存放公共目录为cnode服务器的`/BioII/chenxupeng/student/`目录。
@@ -164,17 +165,6 @@ scirep_samplenames.head()
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -253,17 +243,6 @@ geneannotation.iloc[:,:5].head()
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -343,17 +322,6 @@ scirepbatch.head()
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -418,17 +386,6 @@ scireprnastats.iloc[:,:5].head()
 
 <div>
 <style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -631,7 +588,7 @@ tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作，其中产生的bam文件供下一步构建expression matrix使用。
 
 **总体流程图**
-![pngs](plots/mappingpipe.png)
+![](plots/mappingpipe.png)
 
 
 
@@ -818,7 +775,7 @@ index文件夹下，有各种类型RNA的index，我们所要做的，就是把r
 [**参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/1.mapping-annotation-and-qc)，请注意不要照搬教程。
 
 ###  Construct Expression Matrix 指南{#expmatrixhelp}
-![pngs](plots/countpipe.png)
+![](plots/countpipe.png)
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix构建工作，使用mapping产生的bam文件，使用`Sample_N1, Sample_N7`的counts检查mapping和construct expression matrix是否有误。
 
@@ -892,16 +849,16 @@ pearsonr(X,Y)
 **注意，自己map的五个样本也需要加入到统计中，不能只统计已经提供的样本的信息**
 #### 基本信息统计{#statsbasic}
 #####  统计不同RNA类型reads的比例并以饼图展示
-![pngs](plots/pie.png)
+![](plots/pie.png)
 ##### 统计不同RNA类型mapped reads的长度分布
-![pngs](plots/length.png)
+![](plots/length.png)
 ##### 统计一套数据中不同RNA type在不同样本的counts
-![pngs](plots/boxplot_rnatype.png)
+![](plots/boxplot_rnatype.png)
 ##### 统计某套数据中某种类型的RNA在不同样本中的counts数量。
-![pngs](plots/countsoflnc.png)
+![](plots/countsoflnc.png)
 ##### 分析每个样本不同RNA所占的比例
-![pngs](plots/stackbarhccorigin.png)
-![pngs](plots/stackbarhcc.png)
+![](plots/stackbarhccorigin.png)
+![](plots/stackbarhcc.png)
 
 #### 代码示例
 ##### pie plot of ratio
@@ -985,17 +942,17 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 - 去除piRNA和miRNA后使用CPM(counts per million)
 - 使用SCNorm, RLE, TMM等package
 
-![pngs](plots/normalized_compare.png)
+![](plots/normalized_compare.png)
 
 ##### 内参基因的选择
 我们可以绘制density plot或者violin plot来分析不同内参基因的变异系数，选择变异系数小的，比较稳定的miRNA作为内参。可以看到MIR1228, MIR15B的变异系数较大，不够稳定，不应该作为内参
 
-![pngs](plots/hccrefdensity.png)
-![pngs](plots/hccrefcvbox.png)
+![](plots/hccrefdensity.png)
+![](plots/hccrefcvbox.png)
 
 #### remove batch effect
 #####  visualize batch effect
-![pngs](plots/boxplotbatch.png)
+![](plots/boxplotbatch.png)
 
 #####  不同去除batch effect方法
 - RUVs，可以设置factor的数量
@@ -1040,10 +997,10 @@ def knn_score(X, y, K=10):
 
 如下图所示，可以通过*knn_score*计算出以batch信息所谓label时scirep数据的alignment score。0.27996表示不同batch的分离程度比较差，基本混合在一起
 
-![pngs](plots/alignment_score.png)
+![](plots/alignment_score.png)
 
 #### 通过挑选出的feature的分类效果（AUC）比较
-![pngs](plots/auroc_eval_method.png)
+![](plots/auroc_eval_method.png)
 
 #### 预处理部分代码示例
 **注意，本部分代码均由R语言书写**
@@ -1119,7 +1076,7 @@ combat <- ComBat(
 
 #### top k feature{#topk}
 由于top20 feature占据了counts中的较大比例，请分别对top20feature和其他feature进行normalization。对feature进行的normalization比较简单，可以使用`sklearn.preprocessing`中`MaxAbsScaler/MinMaxScaler/RobustScaler/StandardScaler`的任意一个。
-![pngs](plots/top30.png)
+![](plots/top30.png)
 
 #### scalar使用方法
 
@@ -1150,7 +1107,7 @@ for i in range(4):
 
 #### 特征选择结果可视化{#clustermap}
 使用seaborn的clustermap功能，将挑选出的feature的counts（做过合适的scale）绘制heatmap图并聚类，上方的颜色表示类别，可见同一类被很好的聚在了一起。
-![pngs](plots/clustermap.png)
+![](plots/clustermap.png)
 
 #### 用选出的feature进行分类并绘制ROC曲线{#rocplot}
 请特别注意，这里的ROC曲线有其特殊之处。针对我们样本很少的问题，我们不能专门划分出一部分测试集供测试和绘制曲线。我们使用两种方式划分数据集：
@@ -1161,25 +1118,25 @@ for i in range(4):
 
 - 而对于shuffle split方法，每个样本被预测多次，没法放在一起绘制ROC曲线，但是其每轮都可以单独画一条ROC曲线，下面的图片展示的即为“将各条曲线综合起来”的情况，我们使用阴影区域表示每个点的均值的置信区间。
 
-![pngs](plots/roc.png)
-![pngs](plots/roc_cv.png)
+![](plots/roc.png)
+![](plots/roc_cv.png)
 
 #### 用AUC评估挑选不同数量feature的效果{#aucline}
 读者可以分析挑选不同数量的feature时模型的拟合效果，评估指标为AUC
-![pngs](plots/auc_line.png)
+![](plots/auc_line.png)
 
 #### 比较不同的模型和参数挑出的feature的差异
 图中有颜色的色块儿表示在该参数条件下被选中的feature，可以发现线性模型挑出的feature更相似，而random forest在不同参数设置下挑出的feature比较稳定。
-![pngs](plots/compare_models.png)
+![](plots/compare_models.png)
 
 #### 查看feature的鲁棒性
 每一列是一轮测试，可以发现大多数feature在每轮测试中都被挑中，证明这些feature具有很强的鲁棒性，我们可以设置一个阈值，选取在超过50%的轮数中都出现的feature作为最终选择的feature。
-![pngs](plots/feature_robustness.png)
+![](plots/feature_robustness.png)
 
 #### 利用Venn图分析feature的重合
 这里利用Venn图分析了HCC三种类型的数据（full length, peak, peak_iterative）的重合情况，每一个子图是一个模型。
 
-![pngs](plots/selected_features_overlap.png)
+![](plots/selected_features_overlap.png)
 
 
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
