@@ -1,12 +1,6 @@
-
-
-
-
-
-
-
 # Appendix. Plot with R
 
+---
 
 ## 0) Prepare {#plot-setup}
 

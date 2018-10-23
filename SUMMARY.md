@@ -40,7 +40,7 @@
   * [Shared Scripts](appendix/appendix1.more.md#share-script)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Docker](appendix/appendix3.docker.md)
-* [Appendix IV. Python](appendix/python_tutorial.md)
+* [Appendix IV. Python Basics](appendix/python_tutorial.md)
 * [Appendix V. R Basics](appendix/appendix5.r-basics.md)
 * [Appendix. Plot with R](appendix/appendix.plots.md)
   * [0.Prepare](appendix/appendix.plots.md#plot-setup)

@@ -1,5 +1,7 @@
 # R Basics
 
+---
+
 How to make professional and beautiful plots
 
 > **Tips:**

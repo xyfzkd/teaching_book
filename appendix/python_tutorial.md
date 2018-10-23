@@ -2,7 +2,7 @@
 
 ---
 
-- 本教程默认使用**python3**
+本教程默认使用**python3**
 
 > **Life is Short**
 > **(You Need Python)**
