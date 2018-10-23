@@ -1,12 +1,15 @@
 # Python Basics
 
-![life_is_short](assets/life_is_short.png)
+---
 
 - 本教程默认使用**python3**
 
-## 1. Basic Practice Guide
+> **Life is Short**
+> **(You Need Python)**
+>     -- Bruce Ecke (Thinking in C++)
 
-### python语法规范
+
+## 0. python语法规范
 python非常注意规范的书写语法，以缩进为例，python强制要求使用tabs/spaces来缩进。推荐使用tab或四个空格来缩进。
 ```python
 # use a tab
@@ -20,39 +23,40 @@ for i in range(3):
     print(i)
 ```
 
-### 在终端运行python脚本
+
+## 1. Basic Practice Guide
+
+### 1.0 在终端运行python脚本
+
 创建一个python脚本`welcome.py`，在文件中写入如下内容：
+
 ```python
 print('welcome to python!')
 ```
 
 在相同目录下运行:
+
 ```bash
-chmod +x welcome.py  #set the python script as executable
 python welcome.py    #use python to run welcome.py
 ```
 
-用shebang符号可以不需要指明python解释器，即在python脚本的第一行添加`#! /usr/bin/env python`
-```python
-#! /usr/bin/env python
-# -*- coding: UTF-8 -*-
-print('welcome to python!')
-```
-
-现在就可以不需要指明python解释器，直接运行python脚本了。
+> 你也可以将python的脚本文件做成一个可执行文件，直接执行，
+> 即在python脚本的第一行添加 python的路径：
+> 
+> ```python
+> #! /usr/bin/env python
+> print('welcome to python!')
+> ```
+> 
+> 现在就可以不需要指明python解释器，直接运行python脚本了:
 
 ```bash
 chmod +x welcome.py  #set the python script as executable
 ./welcome.py
 ```
 
-### Hello World!
 
-
-```python
-# This is a one line comment
-print('Hello World!')
-```
+### 1.1 Basic print
 
 
 ```python
@@ -62,37 +66,18 @@ print('I\'m going to the movies')
 ```
 
 
-
 ```python
 firstVariable = 'Hello World!'
 print(firstVariable)
-```
-
-
-
-```python
-# go over ? mark after if you are not sure what method does. 
 print(firstVariable.lower())
 print(firstVariable.upper())
 print(firstVariable.title())
 ```
 
-
-```python
-# To look up what each method does in jupyter notebook
-firstVariable.lower?
-```
-
-
-```python
-# Can also use help
-help(firstVariable.lower)
-```
-
     
 
 
-### Simple Math
+### 1.2 Simple Math
 
 
 ```python
@@ -105,7 +90,7 @@ print (10%3)
 ```
 
 
-### if statement
+### 1.3 if statement
 Comparison Operator | Function
 --- | --- 
 < | less than
@@ -139,7 +124,7 @@ if num > 0 and num  < 15:
 ```
 
    
-### else and elif
+### 1.4 else and elif
 
 
 ```python
@@ -154,7 +139,7 @@ else:
 
 
 
-### Swap values
+### 1.5 Swap values
 
 
 ```python
@@ -166,15 +151,15 @@ print(a, b)
 
 
 
-### List
+### 1.6 List
 请务必注意，python的索引都是**从0开始的**，而不是1！
 
- |  |  |  |
---- | --- | --- | --- | ---
 z =| [3, | 7, | 4, | 2]
+--- | --- | --- | --- | ---
 index | 0 | 1 | 2 | 3
 
-#### Accessing Values in List
+
+* **Accessing Values in List:**
 
 
 ```python
@@ -196,7 +181,7 @@ z[-1]
 
 
 
-#### Slicing Lists
+* **Slicing Lists:**
 
 
 ```python
@@ -221,14 +206,14 @@ z[1:]
 ```
 
 
-#### Minimum, Maximum, Length, and Sum of a list
+* **Minimum, Maximum, Length, and Sum of a list:**
 
 
 ```python
 print(min(z), max(z), len(z), sum(z))
 ```
 
-#### Add to the End of List
+* **Add to the End of List:**
 
 
 ```python
@@ -242,7 +227,7 @@ print(y)
 
  
 
-#### list comprehension
+* **list comprehension:**
 
 
 ```python
@@ -262,15 +247,16 @@ print(a)
 ```
 
 
-### Dictionary
+### 1.7 Dictionary
 
 字典是另一种可变容器模型，可存储任意类型对象。
 
-字典的每个键值 `key->value` 对用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中
+字典的每个键值 `key->value` 对用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中。
 
-键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一
+键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。
 
-#### 定义和获取字典中的值
+
+* **定义和获取字典中的值:**
 
 
 ```python
@@ -278,10 +264,7 @@ dict = {'a': 1, 'b': 2, 'b': '3'};
 dict['b']
 ```
 
-
-
-
-#### 修改字典
+* **修改字典：**
 
 
 ```python
@@ -297,7 +280,7 @@ print ("dict['School']: ", dict['School'])
 
 
 
-#### Dict comprehension
+* **Dict comprehension：**
 
 
 ```python
@@ -381,14 +364,14 @@ pip install --upgrade h5py
 
 [jupyter notebook](http://jupyter.org/) 是一款基于浏览器的交互性极强的python开发环境，在科研和工业界都广泛使用，可以帮助使用者方便的可视化结果，快速书写和调整代码，**非常推荐使用。**
 
-**安装 jupyter notebook**
+* **安装 jupyter notebook**
 
 ```
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 ```
 
-**打开 jupyter notebook**
+* **打开 jupyter notebook**
 
 ```bash
 jupyter notebook --no-browser
@@ -397,29 +380,31 @@ jupyter notebook --no-browser
 或者使用软件版的Anaconda中集成的jupyter软件打开。
 
 
-**使用 jupyter notebook**
+* **使用 jupyter notebook**
 
-- 保存，增加，删除，复制，粘贴代码框，上下移动代码框，运行，终止代码框，重启kernel（将会**清空内存**），切换代码框版式；
-- 使用shift+enter运行代码框，使用enter换行；
-- 可以搭配插件nbextenstion使用，提供更多功能。
+  - 保存，增加，删除，复制，粘贴代码框，上下移动代码框，运行，终止代码框，重启kernel（将会**清空内存**），切换代码框版式；
+  - 使用shift+enter运行代码框，使用enter换行；
+  - 可以搭配插件nbextenstion使用，提供更多功能。
 
 
 #### 示例：
 
 
-**展示图片：**
+* **展示图片：**
 
 ![jupyter_image](assets/jupyter_image.png)
 
-**展示dataframe（与pandas配合）：**
+
+* **展示dataframe（与pandas配合）：**
 
 ![jupyter_dataframe](assets/jupyter_dataframe.png)
 
-**方便的可视化（与matplotlib，seaborn等配合）：**
+
+* **方便的可视化（与matplotlib，seaborn等配合）：**
 
 ![jupyter_matplotlib](assets/jupyter_matplotlib.png)
 
-**支持markdown：**
+* **支持markdown：**
 
 ![jupyter_markdown](assets/jupyter_markdown.png)
 
