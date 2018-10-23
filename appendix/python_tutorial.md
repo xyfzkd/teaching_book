@@ -1,98 +1,10 @@
-# Python Tutorial {#python_tutorial}
-
+# Python Basics
 
 ![life_is_short](assets/life_is_short.png)
 
 - 本教程默认使用**python3**
-- **建议** 安装好Anaconda，使用`jupyter notebook`运行代码。
-- 读者可以下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，并运行其中的`python_tutorial.ipynb`文件，但是推荐初学者自己输入代码，体会python的代码风格和规范。
 
-## software installation
-
-### Anaconda
-
-* 可以轻松的使用Anaconda管理和安装python的包（with `conda`），且包含一些非常有用的工具如jupyter notebook
-* [官网下载地址](https://www.anaconda.com/download/)，也可以在TUNA镜像站[免流量下载Anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
-
-Operating System | Download Link | Notes
---- | --- | ---
-Mac | [Anaconda3-5.2.0-MacOSX-x86_64.pkg](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-MacOSX-x86_64.pkg) | 
-Linux | [Anaconda3-5.2.0-Linux-x86_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh) | 注意需要添加环境变量
-Windows | [Anaconda3-5.2.0-Windows-x86_64.exe](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Windows-x86_64.exe) | 
-
-![anaconda_packages](assets/anaconda_packages.png)
-
-用`conda`安装python package，以`h5py`为例:
-```bash
-conda install h5py
-```
-
-用`conda`更新`h5py`至最新版本:
-```bash
-conda update h5py
-```
-
-安装conda时也自动安装了pip，pip也是一个用来安装和管理python包的工具，用`pip`安装python package，以`h5py`为例:
-```bash
-pip install h5py
-```
-
-用`pip`更新`h5py`至最新版本:
-```bash
-pip install --upgrade h5py
-```
-
-### jupyter notebook
-URL: (http://jupyter.org/)
-
-是一款基于浏览器的交互性极强的python开发环境，在科研和工业界都广泛使用，可以帮助使用者方便的可视化结果，快速书写和调整代码，**非常推荐使用**
-
-**打开 jupyter notebook**
-
-```bash
-jupyter notebook --no-browser
-```
-
-或者使用软件版的Anaconda中集成的jupyter软件打开。
-
-**Jupyter notebooks manager**
-
-![jupyter_main](assets/jupyter_main.png)
-
-
-**Jupyter notebook**
-
-![jupyter_notebook](assets/jupyter_notebook.png)
-
-**方便的可视化（与matplotlib，seaborn等配合）**
-
-![jupyter_matplotlib](assets/jupyter_matplotlib.png)
-
-
-**展示图片**
-
-![jupyter_image](assets/jupyter_image.png)
-
-**展示dataframe（与pandas配合）**
-
-![jupyter_dataframe](assets/jupyter_dataframe.png)
-
-
-**支持markdown**
-
-![jupyter_markdown](assets/jupyter_markdown.png)
-
-#### jupyter基本用法：
-- 保存，增加，删除，复制，粘贴代码框，上下移动代码框，运行，终止代码框，重启kernel（将会**清空内存**），切换代码框版式
-- 使用shift+enter运行代码框，使用enter换行
-- 可以搭配插件nbextenstion使用，提供更多功能，用法：
-
-```
-pip install jupyter_contrib_nbextensions
-jupyter contrib nbextension install --user
-```
-
-## Basic Practice Guide
+## 1. Basic Practice Guide
 
 ### python语法规范
 python非常注意规范的书写语法，以缩进为例，python强制要求使用tabs/spaces来缩进。推荐使用tab或四个空格来缩进。
@@ -404,18 +316,112 @@ a = {i:chr(ord('A') + i) for i in range(10)}
 print(a)
 ```
 
-## Advanced Tutorial
-- [Recommendation: Python tutorial by Shibinbin](https://lulab.gitbook.io/training/part-i-basic-skills/5.python_basics)
 
-## 课外阅读
-- [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
-- [Scipy Lectures](http://www.scipy-lectures.org/)
-- [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
-## Homework
+
+## 2. Homework
 - 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出.
 
 
 <link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
+
+## 3. More Reading 
+
+- [Advanced Tutorial - Python](https://lulab.gitbook.io/training/part-i-basic-skills/5.python_basics) - by Binbin Shi
+- [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
+- [Scipy Lectures](http://www.scipy-lectures.org/)
+- [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
+
+
+
+
+---
+
+
+## 附录：安装Anaconda和Jupyter Notebook
+
+我们**建议**安装Anaconda，并使用Jupyter Notebook运行代码。读者可以下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，并运行其中的`python_tutorial.ipynb`文件，但是推荐初学者自己输入代码，体会python的代码风格和规范。
+
+
+### Anaconda
+
+* Anaconda是一个管理和安装python包的管理软件，它也包含一些非常有用的工具如jupyter notebook
+> * [官网下载地址](https://www.anaconda.com/download/)，也可以在TUNA镜像站[免流量下载Anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
+
+Operating System | Download Link | Notes
+--- | --- | ---
+Mac | [Anaconda3-5.2.0-MacOSX-x86_64.pkg](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-MacOSX-x86_64.pkg) | | 
+Linux | [Anaconda3-5.2.0-Linux-x86_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh) | 注意需要添加环境变量 
+Windows | [Anaconda3-5.2.0-Windows-x86_64.exe](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Windows-x86_64.exe) | |
+
+
+用`conda`安装python package，以`h5py`为例:
+```bash
+conda install h5py
+```
+
+用`conda`更新`h5py`至最新版本:
+```bash
+conda update h5py
+```
+
+安装conda时也自动安装了pip，pip也是一个用来安装和管理python包的工具，用`pip`安装python package，以`h5py`为例:
+```bash
+pip install h5py
+```
+
+用`pip`更新`h5py`至最新版本:
+```bash
+pip install --upgrade h5py
+```
+
+### jupyter notebook
+
+
+[jupyter notebook](http://jupyter.org/) 是一款基于浏览器的交互性极强的python开发环境，在科研和工业界都广泛使用，可以帮助使用者方便的可视化结果，快速书写和调整代码，**非常推荐使用。**
+
+**安装 jupyter notebook**
+
+```
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+```
+
+**打开 jupyter notebook**
+
+```bash
+jupyter notebook --no-browser
+```
+
+或者使用软件版的Anaconda中集成的jupyter软件打开。
+
+
+**使用 jupyter notebook**
+
+- 保存，增加，删除，复制，粘贴代码框，上下移动代码框，运行，终止代码框，重启kernel（将会**清空内存**），切换代码框版式；
+- 使用shift+enter运行代码框，使用enter换行；
+- 可以搭配插件nbextenstion使用，提供更多功能。
+
+
+#### 示例：
+
+
+**展示图片：**
+
+![jupyter_image](assets/jupyter_image.png)
+
+**展示dataframe（与pandas配合）：**
+
+![jupyter_dataframe](assets/jupyter_dataframe.png)
+
+**方便的可视化（与matplotlib，seaborn等配合）：**
+
+![jupyter_matplotlib](assets/jupyter_matplotlib.png)
+
+**支持markdown：**
+
+![jupyter_markdown](assets/jupyter_markdown.png)
+
 
 
