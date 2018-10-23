@@ -1,3 +1,4 @@
+
 # 从exRNA测序数据中鉴定癌症的生物标志物
 
 ## 背景介绍
@@ -549,8 +550,7 @@ scireprnastats.iloc[:,:5].head()
 
 ### 数据分析和质量控制
 具体内容请参考[*数据分析和质量控制指南*](#statshelp)
-- 统计一套数据中不同RNA type在不同样本的counts分布。
-- 统计某套数据中某种类型的RNA在不同样本中的counts数量，可以分析一些希望重点关注的RNA类型，如lncRNA等，绘制barplot。
+- 统计一套数据中不同RNA type在不同样本的counts分布，可绘制pie plot, barplot, boxplot和lineplot等。参考[*基本信息统计*](#statsbasic)部分。
 - 对数据做基本的quality control，通过经验性的阈值或者PCA中明显离群点去除部分样本。参考[*sample QC*](#sampleqc)部分
 - 统计expression matrix中counts数量排在top 20的feature的占比，分析过高的占比可能对scaling造成的影响。参考[*top k feature*](#topk)部分。
 
@@ -891,15 +891,16 @@ pearsonr(X,Y)
 
 ### 数据分析和质量控制指南{#statshelp}
 **注意，自己map的五个样本也需要加入到统计中，不能只统计已经提供的样本的信息**
-####  统计不同RNA类型reads的比例并以饼图展示
+#### 基本信息统计{#statsbasic}
+#####  统计不同RNA类型reads的比例并以饼图展示
 ![pngs](plots/pie.png)
-#### 统计不同RNA类型mapped reads的长度分布
+##### 统计不同RNA类型mapped reads的长度分布
 ![pngs](plots/length.png)
-#### 统计一套数据中不同RNA type在不同样本的counts
+##### 统计一套数据中不同RNA type在不同样本的counts
 ![pngs](plots/boxplot_rnatype.png)
-#### 统计某套数据中某种类型的RNA在不同样本中的counts数量。
+##### 统计某套数据中某种类型的RNA在不同样本中的counts数量。
 ![pngs](plots/countsoflnc.png)
-#### 分析每个样本不同RNA所占的比例
+##### 分析每个样本不同RNA所占的比例
 ![pngs](plots/stackbarhccorigin.png)
 ![pngs](plots/stackbarhcc.png)
 
