@@ -1,5 +1,4 @@
-
- 从exRNA测序数据中鉴定癌症的生物标志物
+# 从exRNA测序数据中鉴定癌症的生物标志物
 
 ## 背景介绍
 （adapt from Young Lee）
@@ -1181,3 +1180,7 @@ for i in range(4):
 这里利用Venn图分析了HCC三种类型的数据（full length, peak, peak_iterative）的重合情况，每一个子图是一个模型。
 
 ![pngs](plots/selected_features_overlap.png)
+
+
+<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+
