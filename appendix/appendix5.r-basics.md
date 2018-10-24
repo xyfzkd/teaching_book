@@ -1,6 +1,4 @@
-# R Basics
-
----
+# Appendix V. R Basics
 
 How to make professional and beautiful plots
 
@@ -14,18 +12,18 @@ How to make professional and beautiful plots
 
 **a. Install R**
 
-See the official site of R: https://www.r-project.org/ （Docker中已经安装好）
+See the official site of R: [https://www.r-project.org/](https://www.r-project.org/) （Docker中已经安装好）
 
 Here is an example of installation in Linux:
 
-- For CentOS
+* For CentOS
 
   ```bash
   yum -y install epel-release
   yum -y install R
   ```
-  
-- For Ubuntu
+
+* For Ubuntu
 
   ```bash
   apt -y install r-base
@@ -35,18 +33,18 @@ Here is an example of installation in Linux:
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
-We have some instruction of Rstudio in [Appendix. Plot with R](/appendix/appendix.plots.md)
+We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots/)
 
 **c. Use R**
 
 * how to enter?
+  * On Mac or Linux, you can open a Terminal and type 
 
-  - On Mac or Linux, you can open a Terminal and type 
-  ```
-  R
-  ``` 
-  - On Windows or Mac, you can find a program with this   logo: ![](../.gitbook/assets/R-logo.png)
+    ```text
+    R
+    ```
 
+  * On Windows or Mac, you can find a program with this   logo: ![](../.gitbook/assets/r-logo.png)
 * How to quit?
 
   `q()`
@@ -54,8 +52,6 @@ We have some instruction of Rstudio in [Appendix. Plot with R](/appendix/appendi
 * How to get help?
 
   `?t.test`
-
-
 
 ## 2. Basic Data Types
 
@@ -146,11 +142,10 @@ n s b
 3 5 cc TRUE
 ```
 
-
-
 ## 3. Examples
 
-**A simple example of t test: **
+**A simple example of t test:** 
+
 * start R and type:
 
 ```r
@@ -167,32 +162,30 @@ t.test(a,b,altrenative=c("less"),paired=TRUE) # paired t test
 ```
 
 * You can also write these into a file, script.R, then run  
-`R CMD BATCH script.R`
 
+  `R CMD BATCH script.R`
 
 **More R Examples:**
 
-* [Appendix. Plot with R](/appendix/appendix.plots.md)
+* [Appendix. Plot with R](appendix.plots/)
 * [John's Github](https://github.com/urluzhi/scripts/tree/master/Rscript) 
-
-
 
 ## 4. More Readings and Practices
 
 **Basic:**
 
-* << Bioinformatics Data Skills >>
+* &lt;&lt; Bioinformatics Data Skills &gt;&gt;
   * A Rapid Introduction to the R Language
 * [Quick R](https://www.statmethods.net/) 可以从如下章节开始 :
- * Learning R  
- * R Interface  
- * Data Input  
- * Statistics
-
+  * Learning R  
+  * R Interface  
+  * Data Input  
+  * Statistics
 
 **Advanced:**
 
 * [Advanced R Tutorial](https://lulab.gitbook.io/training/part-i-basic-skills/4.r)
-* << Bioinformatics Data Skills >>
+* &lt;&lt; Bioinformatics Data Skills &gt;&gt;
   * Working with Range Data
 * [Quick R](https://www.statmethods.net/) 
+

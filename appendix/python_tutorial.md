@@ -1,16 +1,13 @@
-# Python Basics
-
----
+# Appendix IV. Python Basics
 
 本教程默认使用**python3**
 
-> **Life is Short**
-> **(You Need Python)**
->     -- Bruce Ecke (Thinking in C++)
-
+> **Life is Short** **\(You Need Python\)** -- Bruce Ecke \(Thinking in C++\)
 
 ## 0. python语法规范
+
 python非常注意规范的书写语法，以缩进为例，python强制要求使用tabs/spaces来缩进。推荐使用tab或四个空格来缩进。
+
 ```python
 # use a tab
 for i in range(3):
@@ -22,7 +19,6 @@ for i in range(3):
 for i in range(3):
     print(i)
 ```
-
 
 ## 1. Basic Practice Guide
 
@@ -40,14 +36,13 @@ print('welcome to python!')
 python welcome.py    #use python to run welcome.py
 ```
 
-> 你也可以将python的脚本文件做成一个可执行文件，直接执行，
-> 即在python脚本的第一行添加 python的路径：
-> 
+> 你也可以将python的脚本文件做成一个可执行文件，直接执行， 即在python脚本的第一行添加 python的路径：
+>
 > ```python
 > #! /usr/bin/env python
 > print('welcome to python!')
 > ```
-> 
+>
 > 现在就可以不需要指明python解释器，直接运行python脚本了:
 
 ```bash
@@ -55,16 +50,13 @@ chmod +x welcome.py  #set the python script as executable
 ./welcome.py
 ```
 
-
 ### 1.1 Basic print
-
 
 ```python
 print("The \n makes a new line")
 print("The \t is a tab")
 print('I\'m going to the movies')
 ```
-
 
 ```python
 firstVariable = 'Hello World!'
@@ -74,11 +66,7 @@ print(firstVariable.upper())
 print(firstVariable.title())
 ```
 
-    
-
-
 ### 1.2 Simple Math
-
 
 ```python
 print (1+1)
@@ -89,17 +77,16 @@ print (2**3)
 print (10%3)
 ```
 
-
 ### 1.3 if statement
-Comparison Operator | Function
---- | --- 
-< | less than
-<= | less than or equal to
-> | greater than
->= | greater than or equal to
-== | equal
-!= | not equal
 
+| Comparison Operator | Function |
+| :--- | :--- |
+| &lt; | less than |
+| &lt;= | less than or equal to |
+| &gt; | greater than |
+| &gt;= | greater than or equal to |
+| == | equal |
+| != | not equal |
 
 ```python
 num = 3
@@ -107,14 +94,11 @@ if num % 3 == 0:
     print("if statement satisfied")
 ```
 
-
-
-Logical Operator | Description
---- | ---
-and | If both the operands are True then condition becomes True.
-or | If any of the two operands are True then condition becomes True. 
-not | Used to reverse the logical (not False becomes True, not True becomes False)
-
+| Logical Operator | Description |
+| :--- | :--- |
+| and | If both the operands are True then condition becomes True. |
+| or | If any of the two operands are True then condition becomes True. |
+| not | Used to reverse the logical \(not False becomes True, not True becomes False\) |
 
 ```python
 # both the conditions are true, so the num will be printed out
@@ -123,9 +107,7 @@ if num > 0 and num  < 15:
     print(num)
 ```
 
-   
 ### 1.4 else and elif
-
 
 ```python
 my_num = 5
@@ -137,10 +119,7 @@ else:
     print("Are you sure your number is an integer?")
 ```
 
-
-
 ### 1.5 Swap values
-
 
 ```python
 a = 1
@@ -149,40 +128,32 @@ b, a = a, b
 print(a, b)
 ```
 
-
-
 ### 1.6 List
+
 请务必注意，python的索引都是**从0开始的**，而不是1！
 
-z =| [3, | 7, | 4, | 2]
---- | --- | --- | --- | ---
-index | 0 | 1 | 2 | 3
-
+| z = | \[3, | 7, | 4, | 2\] |
+| :--- | :--- | :--- | :--- | :--- |
+| index | 0 | 1 | 2 | 3 |
 
 * **Accessing Values in List:**
-
 
 ```python
 # Defining a list
 z = [3, 7, 4, 2]
 ```
 
-
 ```python
 # The first element of a list is at index 0
 z[0]
 ```
-
 
 ```python
 # Access Last Element of List 
 z[-1]
 ```
 
-
-
 * **Slicing Lists:**
-
 
 ```python
 # first index is inclusive (before the :) and last (after the :) is not. 
@@ -190,31 +161,23 @@ z[-1]
 z[0:2]
 ```
 
-
-
 ```python
 # everything up to index 3
 z[:3]
 ```
-
-
-
 
 ```python
 # index 1 to end of list
 z[1:]
 ```
 
-
 * **Minimum, Maximum, Length, and Sum of a list:**
-
 
 ```python
 print(min(z), max(z), len(z), sum(z))
 ```
 
 * **Add to the End of List:**
-
 
 ```python
 x = [3, 7, 2, 11, 8, 10, 4]
@@ -225,10 +188,7 @@ print(x)
 print(y)
 ```
 
- 
-
 * **list comprehension:**
-
 
 ```python
 #Use for loops
@@ -238,14 +198,11 @@ for i in range(10):
 print(a)
 ```
 
-
-
 ```python
 #Use list comprehension
 a = [i + 10 for i in range(10)]
 print(a)
 ```
-
 
 ### 1.7 Dictionary
 
@@ -255,9 +212,7 @@ print(a)
 
 键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。
 
-
 * **定义和获取字典中的值:**
-
 
 ```python
 dict = {'a': 1, 'b': 2, 'b': '3'};
@@ -266,22 +221,18 @@ dict['b']
 
 * **修改字典：**
 
-
 ```python
 dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'};
- 
+
 dict['Age'] = 8; # update existing entry
 dict['School'] = "DPS School"; # Add new entry
- 
- 
+
+
 print ("dict['Age']: ", dict['Age'])
 print ("dict['School']: ", dict['School'])
 ```
 
-
-
 * **Dict comprehension：**
-
 
 ```python
 #Use for-loops:
@@ -291,82 +242,70 @@ for i in range(10):
 print(a)
 ```
 
-  
-
 ```python
 #Use dict comprehension:
 a = {i:chr(ord('A') + i) for i in range(10)}
 print(a)
 ```
 
-
-
-
 ## 2. Homework
-- 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出.
 
+* 在电脑上安装Anaconda，在jupyter notebook中运行本教程中的相关代码，观察输出.
 
-<link rel="stylesheet" type="text/css" href="auto-number-title.css" />
+## 3. More Reading
 
-
-## 3. More Reading 
-
-- [Advanced Tutorial - Python](https://lulab.gitbook.io/training/part-i-basic-skills/5.python_basics) - by Binbin Shi
-- [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
-- [Scipy Lectures](http://www.scipy-lectures.org/)
-- [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
-
-
-
-
----
-
+* [Advanced Tutorial - Python](https://lulab.gitbook.io/training/part-i-basic-skills/5.python_basics) - by Binbin Shi
+* [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
+* [Scipy Lectures](http://www.scipy-lectures.org/)
+* [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
 ## 附录：安装Anaconda和Jupyter Notebook
 
 我们**建议**安装Anaconda，并使用Jupyter Notebook运行代码。读者可以下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，并运行其中的`python_tutorial.ipynb`文件，但是推荐初学者自己输入代码，体会python的代码风格和规范。
 
-
 ### Anaconda
 
 * Anaconda是一个管理和安装python包的管理软件，它也包含一些非常有用的工具如jupyter notebook
-> * [官网下载地址](https://www.anaconda.com/download/)，也可以在TUNA镜像站[免流量下载Anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
-Operating System | Download Link | Notes
---- | --- | ---
-Mac | [Anaconda3-5.2.0-MacOSX-x86_64.pkg](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-MacOSX-x86_64.pkg) | | 
-Linux | [Anaconda3-5.2.0-Linux-x86_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh) | 注意需要添加环境变量 
-Windows | [Anaconda3-5.2.0-Windows-x86_64.exe](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Windows-x86_64.exe) | |
+  > * [官网下载地址](https://www.anaconda.com/download/)，也可以在TUNA镜像站[免流量下载Anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/)
 
+| Operating System | Download Link | Notes |
+| :--- | :--- | :--- |
+| Mac | [Anaconda3-5.2.0-MacOSX-x86\_64.pkg](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-MacOSX-x86_64.pkg) |  |
+| Linux | [Anaconda3-5.2.0-Linux-x86\_64.sh](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Linux-x86_64.sh) | 注意需要添加环境变量 |
+| Windows | [Anaconda3-5.2.0-Windows-x86\_64.exe](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.2.0-Windows-x86_64.exe) |  |
 
 用`conda`安装python package，以`h5py`为例:
+
 ```bash
 conda install h5py
 ```
 
 用`conda`更新`h5py`至最新版本:
+
 ```bash
 conda update h5py
 ```
 
 安装conda时也自动安装了pip，pip也是一个用来安装和管理python包的工具，用`pip`安装python package，以`h5py`为例:
+
 ```bash
 pip install h5py
 ```
 
 用`pip`更新`h5py`至最新版本:
+
 ```bash
 pip install --upgrade h5py
 ```
 
 ### jupyter notebook
 
-
 [jupyter notebook](http://jupyter.org/) 是一款基于浏览器的交互性极强的python开发环境，在科研和工业界都广泛使用，可以帮助使用者方便的可视化结果，快速书写和调整代码，**非常推荐使用。**
 
 * **安装 jupyter notebook**
 
-```
+```text
 pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 ```
@@ -379,34 +318,26 @@ jupyter notebook --no-browser
 
 或者使用软件版的Anaconda中集成的jupyter软件打开。
 
-
 * **使用 jupyter notebook**
-
-  - 保存，增加，删除，复制，粘贴代码框，上下移动代码框，运行，终止代码框，重启kernel（将会**清空内存**），切换代码框版式；
-  - 使用shift+enter运行代码框，使用enter换行；
-  - 可以搭配插件nbextenstion使用，提供更多功能。
-
+  * 保存，增加，删除，复制，粘贴代码框，上下移动代码框，运行，终止代码框，重启kernel（将会**清空内存**），切换代码框版式；
+  * 使用shift+enter运行代码框，使用enter换行；
+  * 可以搭配插件nbextenstion使用，提供更多功能。
 
 #### 示例：
 
-
 * **展示图片：**
 
-![jupyter_image](assets/jupyter_image.png)
-
+![jupyter\_image](../.gitbook/assets/jupyter_image.png)
 
 * **展示dataframe（与pandas配合）：**
 
-![jupyter_dataframe](assets/jupyter_dataframe.png)
-
+![jupyter\_dataframe](../.gitbook/assets/jupyter_dataframe.png)
 
 * **方便的可视化（与matplotlib，seaborn等配合）：**
 
-![jupyter_matplotlib](assets/jupyter_matplotlib.png)
+![jupyter\_matplotlib](../.gitbook/assets/jupyter_matplotlib.png)
 
 * **支持markdown：**
 
-![jupyter_markdown](assets/jupyter_markdown.png)
-
-
+![jupyter\_markdown](../.gitbook/assets/jupyter_markdown.png)
 
