@@ -285,11 +285,9 @@ conda install h5py
 conda update h5py
 ```
 
-
 ### jupyter notebook
 
 [jupyter notebook](http://jupyter.org/) 是一款基于浏览器的交互性极强的python开发环境，在科研和工业界都广泛使用，可以帮助使用者方便的可视化结果，快速书写和调整代码，**非常推荐使用。**
-
 
 * **打开 jupyter notebook**
 
