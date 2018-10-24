@@ -255,8 +255,6 @@ print(a)
 ## 3. More Reading
 
 * [Advanced Tutorial - Python](https://lulab.gitbook.io/training/part-i-basic-skills/5.python_basics) - by Binbin Shi
-* [Python Tutorials](https://github.com/mGalarnyk/Python_Tutorials)
-* [Scipy Lectures](http://www.scipy-lectures.org/)
 * [廖雪峰python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
 
 ## 附录：安装Anaconda和Jupyter Notebook
@@ -287,17 +285,6 @@ conda install h5py
 conda update h5py
 ```
 
-安装conda时也自动安装了pip，pip也是一个用来安装和管理python包的工具，用`pip`安装python package，以`h5py`为例:
-
-```bash
-pip install h5py
-```
-
-用`pip`更新`h5py`至最新版本:
-
-```bash
-pip install --upgrade h5py
-```
 
 ### jupyter notebook
 
@@ -305,15 +292,11 @@ pip install --upgrade h5py
 
 * **安装 jupyter notebook**
 
-```text
-pip install jupyter_contrib_nbextensions
-jupyter contrib nbextension install --user
-```
 
 * **打开 jupyter notebook**
 
 ```bash
-jupyter notebook --no-browser
+jupyter notebook
 ```
 
 或者使用软件版的Anaconda中集成的jupyter软件打开。
