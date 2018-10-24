@@ -259,7 +259,7 @@ print(a)
 
 ## 附录：安装Anaconda和Jupyter Notebook
 
-我们**建议**安装Anaconda，并使用Jupyter Notebook运行代码。读者可以下载本教程的[相关文件](https://cloud.tsinghua.edu.cn/f/37763eead90c4504bf07/)，并运行其中的`python_tutorial.ipynb`文件，但是推荐初学者自己输入代码，体会python的代码风格和规范。
+我们**建议**安装Anaconda，并使用Jupyter Notebook运行代码。读者可以下载本教程的[相关文件](https://github.com/lulab/teaching_book/blob/master/appendix/part-iii.-machine-learning-basics.zip)，并运行其中的`python_tutorial.ipynb`文件，但是推荐初学者自己输入代码，体会python的代码风格和规范。
 
 ### Anaconda
 
