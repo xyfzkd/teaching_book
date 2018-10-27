@@ -6,10 +6,11 @@
 
 ## Teaching Philosophy
 
-**Study and Practice**  
-**格物致知 \| 知行合一**
+{% hint style="info" %}
+**Study and Practice 格物致知 知行合一**
 
 We teach professional skills in bioinformatics. These skills are not just running software. They will give you freedom of exploring various real data.
+{% endhint %}
 
 鲁志 2018年8月于清华园
 
