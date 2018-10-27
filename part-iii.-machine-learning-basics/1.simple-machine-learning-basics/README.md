@@ -60,9 +60,9 @@ feature的规模过大或者过小都会增加数值不稳定的风险并且还�
 
 Confusion matrix会总结模型正确和错误分类的样本数量，并将预测的样本分成如下四类：
 
-|  | Predicted |Positive | Negative  |  |
+|  | True |Positive | Negative  |  |
 | :--- | :--- | :--- | :--- | :--- |
-| **True** |  |  |  |  |
+| **Predicted** |  |  |  |  |
 | **Positive** |  | True Positive \(TP\) | False Positive \(FP\) | $$\textbf{PPV} =\frac{TP}{TP+FP}$$  |
 | **Negative** |  | False Negative \(FN\) | True Negative \(TN\) | $$\textbf{NPV} =\frac{TN}{TN+FN}$$|
 |  |  |$$\textbf{Sensiticity} = \frac{TP}{TP+FN}$$  | $$\textbf{Specificity} = \frac{TN}{TN+FP}$$ |  |
