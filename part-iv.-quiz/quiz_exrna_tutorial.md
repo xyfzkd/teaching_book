@@ -358,7 +358,7 @@ eg: |-- QC1        #对应4.2.2.2 b. step one
 
 #### 4.2.2 Running Steps
 
-**a. 获取数据**
+**4.2.2.1 a. 获取数据**
 
 从`/BioII/chenxupeng/student/`上获取基因组数据`hg38`，基因组注释数据`/gtf`，索引文件`/transcriptome_rsem_bowtie2`以及原始数据`(fastq files)`到自己的账号下
 
@@ -371,7 +371,7 @@ eg: |-- QC1        #对应4.2.2.2 b. step one
 
 推荐使用`ln`命令
 
-**b. QC- Trim - QC**
+**4.2.2.2 b. QC- Trim - QC**
 
 这步操作目的主要有两个，一个是检查数据的质量，另一个是减掉接头序列
 
@@ -427,7 +427,7 @@ Usage: `cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq`
 
 除了输入文件是trim后的数据以外，过程与step one相同
 
-**c. Clean rRNA reads**
+**4.2.2.3 c. Clean rRNA reads**
 
 bowtie2可以将`.fastq`文件比对到rRNA index上从而得到**不含rRNA reads的**`.fastq`**文件以及map到rRNA index上的**`.sam`**文件**
 
@@ -460,7 +460,7 @@ bowtie2 -p 4 [options] -x <bt2-idx> --un <address of unmapped reads> $input_file
 
 map到rRNA index上的`*.<rRNA>.sam`文件
 
-**d. Mapping**
+**4.2.2.4 d. Mapping**
 
 这步的目的就是得到比对到各种RNA类型（例如miRNA, piRNA, Y RNA和srp RNA等等）的index后得到的`.sam`文件，mapping的过程就类似于clean rRNA reads的过程。
 
@@ -521,11 +521,11 @@ index文件夹下，有各种类型RNA的index，我们所要做的，就是把r
 
 #### 4.3.2 Running Scripts
 
-**Software/Tools**
+**4.3.2.1 Software/Tools**
 
 * FeatureCounts
 
-**FeatureCounts**
+**4.3.2.2 FeatureCounts**
 
 **Input:**
 
