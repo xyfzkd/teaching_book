@@ -181,3 +181,6 @@ ROCR::performance(prediction2, 'auc')@y.values[[1]]
 ```
 
 
+## 8. reference
+
+https://www.blopig.com/blog/2017/04/a-very-basic-introduction-to-random-forests-using-r/
