@@ -1,6 +1,6 @@
 # B. exRNA
 
-## 背景介绍
+## 1.背景介绍
 
 （adapt from Young Lee）
 
@@ -10,24 +10,24 @@
 
 ![Goal: Develop a  RNA panel, paired with a machine learning model \(exSeek\) to classify cancer from control \(healthy person\) ](../.gitbook/assets/exseek_task.png)
 
-### 总体流程图
+### 1.1 总体流程图
 
 ![](../.gitbook/assets/wholepipe.png)
 
-### 主要目标
+### 1.2 主要目标
 
 利用构建出的expression matrix，分别对Colorectal Cancer vs Healthy Control和Prostate Cancer vs Healthy Control建立分类模型，找出稳健的可以区分癌症和正常样本的Feature，并进行相关分析。
 
 ![](../.gitbook/assets/expression_matrix_demo.png)
 
-## 数据介绍
+## 2.数据介绍
 
 我们使用的[数据](https://www.nature.com/articles/srep19413)主要包括两种癌症和正常人样本，其中Colorectal Cancer, Prostate Cancer和Healthy Control的样本数量分别为99，36和50。数据存放公共目录为cnode服务器的`/BioII/chenxupeng/student/`目录。
 
 * `data`目录下为已经建好的expression matrix，相应的label和annotation
 * 另外的文件夹中存放的文件是读者用于自己完成对五个正常人样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`进行mapping和创建expression matrix等操作的。
 
-### mapping相关文件
+### 2.1 mapping相关文件
 
 路径：包括`/BioII/chenxupeng/student/`目录下的`hg38_index`, `raw_data`, `RNA_index`文件夹。
 
@@ -40,7 +40,7 @@
 
 具体内容参考[**mapping指南**](quiz_exrna_tutorial.md#mappinghelp)
 
-### expression matrix
+### 2.2 expression matrix
 
 路径：`/BioII/chenxupeng/student/data/expression_matrix/`
 
@@ -73,7 +73,7 @@ scirepount.shape
 (89619, 188)
 ```
 
-### sample labels
+### 2.3 sample labels
 
 路径：`/BioII/chenxupeng/student/data/labels`
 
@@ -108,11 +108,11 @@ np.unique(scirep_samplenames['label'],return_counts=True)
         'Prostate Cancer'], dtype=object), array([99, 50,  6, 36]))
 ```
 
-### other annotations
+### 2.4 other annotations
 
 路径：`/BioII/chenxupeng/student/data/other_annotations`
 
-#### gene annotation
+#### 2.4.1 gene annotation
 
 可以通过feature的transcript id找到feature的transcript\_nama, gene\_type等信息
 
@@ -132,7 +132,7 @@ geneannotation.iloc[:,:5].head()
 | 3 | chr1 | 26805 | 26836 | piR-hsa-23387 | 0 |
 | 4 | chr1 | 29553 | 31097 | ENSG00000243485.5 | 0 |
 
-#### batch信息
+#### 2.4.2 batch信息
 
 batch信息记录了对不同样本采取的不同实验条件，包括处理时间，处理材料的规格差异等，可能会造成同类样本的较大差异，称为batch effect。
 
@@ -154,7 +154,7 @@ scirepbatch.head()
 | Sample\_2S1 | 2 | 22 | 2 |
 | Sample\_2S2 | 2 | 22 | 3 |
 
-### RNA type 统计信息
+### 2.5 RNA type 统计信息
 
 ```python
 scireprnastats = pd.read_csv('data/other_annotations/scirep_rna_stats.txt',index_col=0)
@@ -172,7 +172,7 @@ scireprnastats.iloc[:,:5].head()
 | libSizeN | 11362190 | 13437632 | 13905951 | 12271219 | 13619701 |
 | lncRNA | 26733 | 38346 | 35639 | 25523 | 31489 |
 
-## Quiz具体要求
+## 3.Quiz具体要求
 
 请读者使用我们提供的数据，完成以下工作：
 
@@ -190,7 +190,7 @@ scireprnastats.iloc[:,:5].head()
 >
 > [LncRNA proﬁle study reveals a three-lncRNA signature associated with the survival of patients with oesophageal squamous cell carcinoma.pdf](https://www.ncbi.nlm.nih.gov/pubmed/24522499)
 
-### Mapping
+### 3.1 Mapping
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作。
 
@@ -209,7 +209,7 @@ scireprnastats.iloc[:,:5].head()
 | sam/bam | mapped reads to different kinds of indexes |
 | tsv format | stats of RNA ratio and length |
 
-### Expression Matrix <a id="expressmatrix"></a>
+### 3.2 Expression Matrix <a id="expressmatrix"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix的构建，用`Sample_N1, Sample_N7`的expression matrix数据和`/BioII/chenxupeng/student/data/expression_matrix/GSE71008.txt`中相应的两个样本的参考数据计算相关系数以检查结果。
 
@@ -227,30 +227,31 @@ scireprnastats.iloc[:,:5].head()
 | :--- | :--- | :--- | :--- |
 | tsv | **gene \(ncRNA\) quantifications** | Non-normalized counts. |  |
 
-### 数据分析和质量控制
+### 3.3 数据分析和质量控制
 
 具体内容请参考[_数据分析和质量控制指南_](quiz_exrna_tutorial.md#statshelp)
 
 * 统计一套数据中不同RNA type在不同样本的counts分布，可绘制pie plot, barplot, boxplot和lineplot等。参考[_基本信息统计_](quiz_exrna_tutorial.md#statsbasic)部分。
 * 对数据做基本的quality control，通过经验性的阈值或者PCA中明显离群点去除部分样本。参考[_sample QC_](quiz_exrna_tutorial.md#sampleqc)部分
-* 统计expression matrix中counts数量排在top 20的feature的占比，分析过高的占比可能对scaling造成的影响。参考[_top k feature_](quiz_exrna_tutorial.md#topk)部分。
 
-### 预处理
 
-对expression matrix做相应的**normalization**并**去除batch effect**。要求读者**分析进行相应预处理后的效果**，选定自己认为比较合适的预处理方法，可以参考[_预处理指南_](quiz_exrna_tutorial.md#preprocessinghelp)。
+### 3.4 预处理
+
+对expression matrix做相应的**imputation**,**normalization**并**去除batch effect**。要求读者**分析进行相应预处理后的效果**，选定自己认为比较合适的预处理方法，可以参考[_预处理指南_](quiz_exrna_tutorial.md#preprocessinghelp)。
 
 > tips: 对feature的normalization在下一步特征选择进行
 
-### 特征选择
+### 3.5 特征选择
 
-我们希望读者设计一个稳健的特征选择方法，完成以下几种情况下的feature selection，给出针对每套数据，每种分类条件所挑选的feature。
+我们希望读者设计一个稳健的特征选择方法，完成以下几种情况下的feature selection，给出针对每种分类条件所挑选的feature。
 
 * Colorectal vs Healthy Control
 * Prostate Cancer vs Healthy Control
+* Colorectal vs Prostate Cancer vs Healthy Control（三分类）
 * 基础要求：读者可以从简单的feature selection方法开始尝试，基于分类模型的feature权重挑选feature。
 * 高级要求：为了帮助读者打开思路，我们给出一个如下的**示例性流程**。
-  * 分别对top20feature和其他feature做normalization再合并，\(using z-scores, min-max, robust normalization\)。
-  * 使用机器学习二分类模型 \(random forest, logistic regression, linear SVM\) 通过feature权重选择feature，使用三折交叉验证选择超参数。
+  * 对feature做scale，\(using z-scores, min-max, robust normalization\)。
+  * 使用机器学习二分类/三分类模型 \(random forest, logistic regression, linear SVM\) 通过feature权重选择feature，使用三折交叉验证选择超参数。
   * Optionally, 使用 recursive feature elimination\(RFE\)减少feature数量.
   * Resampling 来选择 robust features:
   * shuffle and split dataset 并且重复特征选择100次\(shuffle split\)
@@ -258,11 +259,11 @@ scireprnastats.iloc[:,:5].head()
   * 选择那些在resampling runs中重复多次出现的feature\(出现频率&gt;50%\)
   * 用选择出的feature重新拟合模型
 
-以上步骤会挑出在**resampling runs**中出现频数超过总轮数一半的特征。其中第一步分别对top20 feature和其他feature做normalization，可以避免top20 feature对整体分布的影响，第二步读者可以尝试不同的对**feature**进行normalization的策略。第三步读者可以尝试不同的机器学习模型，并且在第四步选择是否使用**RFE**来逐步筛除feature。第五步是挑选稳健feature的关键，可以采取random split和leave one out两种方法，选择重复出现的稳健的feature。
+以上步骤会挑出在**resampling runs**中出现频数超过总轮数一半的特征。其中第一步对feature做scale，第二步读者可以尝试不同的对**feature**进行normalization的策略。第三步读者可以尝试不同的机器学习模型，并且在第四步选择是否使用**RFE**来逐步筛除feature。第五步是挑选稳健feature的关键，可以采取random split和leave one out两种方法，选择重复出现的稳健的feature。
 
 读者可以设计自己的稳健的特征选择方法，请注意**必须要体现出自己的方法的稳健性**。
 
-### 模型评估与feature解释
+### 3.6 模型评估与feature解释
 
 * 绘制挑选出的feature counts（经过适当的scale）的clustermap，用颜色块表示class。请参考[_特征选择结果可视化_](quiz_exrna_tutorial.md#clustermap)。
 * 绘制二分类的ROC曲线，请参考[_用选出的feature进行分类并绘制ROC曲线_](quiz_exrna_tutorial.md#rocplot)。
@@ -270,9 +271,9 @@ scireprnastats.iloc[:,:5].head()
 * 分析挑选出的feature的生物学意义。
 * 尝试更多分析模型结果的方法，参考[_模型评估与feature解释指南_](quiz_exrna_tutorial.md#evaluatehelp)
 
-## 补充知识（选读）
+## 4.补充知识（选读）
 
-### 编程工具介绍
+### 4.1 编程工具介绍
 
 由于完成本次作业需要一定的计算资源支持，我们为各个小组提供了集群账户，每个小组可以最多使用四个核，32G内存。大作业需要使用python完成，推荐读者使用python3。我们需要一些python的工具包来实现部分功能。建议使用jupyter notebook进行代码编辑、运行和调试。本次作业也有可能需要读者使用R，读者同样可以使用jupyter notebook （其中预装了R kernel）来编写、运行R代码。
 
@@ -313,13 +314,13 @@ tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187
 Populating the interactive namespace from numpy and matplotlib
 ```
 
-### Mapping 指南 <a id="mappinghelp"></a>
+### 4.2 Mapping 指南 <a id="mappinghelp"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作，其中产生的bam文件供下一步构建expression matrix使用。
 
 **总体流程图** ![](../.gitbook/assets/mappingpipe.png)
 
-#### Data Structure
+#### 4.2.1 Data Structure
 
 ```text
 ~/proj_exRNA/
@@ -351,7 +352,7 @@ eg: |-- QC1        #对应4.2.2.2 b. step one
 | sam/bam | mapped reads to different kinds of indexes |
 | tsv format | stats of RNA ratio and length |
 
-#### Running Steps
+#### 4.2.2 Running Steps
 
 **a. 获取数据**
 
@@ -494,13 +495,13 @@ index文件夹下，有各种类型RNA的index，我们所要做的，就是把r
 
 [**参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/1.mapping-annotation-and-qc)，请注意不要照搬教程。
 
-### Construct Expression Matrix 指南 <a id="expmatrixhelp"></a>
+### 4.3 Construct Expression Matrix 指南 <a id="expmatrixhelp"></a>
 
 ![](../.gitbook/assets/countpipe.png)
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix构建工作，使用mapping产生的bam文件，使用`Sample_N1, Sample_N7`的counts检查mapping和construct expression matrix是否有误。
 
-#### Data Structure
+#### 4.3.1 Data Structure
 
 **inputs**
 
@@ -514,7 +515,7 @@ index文件夹下，有各种类型RNA的index，我们所要做的，就是把r
 | :--- | :--- | :--- | :--- |
 | tsv | **gene \(ncRNA\) quantifications** | Non-normalized counts. |  |
 
-#### Running Scripts
+#### 4.3.2 Running Scripts
 
 **Software/Tools**
 
@@ -551,7 +552,7 @@ featureCounts -a /BioII/lulab_b/shared/genomes/human_hg38/gtf/gencode.v27.annota
 
 `*.featureCounts.counts`
 
-#### 检查结果正确性
+#### 4.3.3 检查结果正确性
 
 用`Sample_N1, Sample_N7`的expression matrix数据和`/BioII/chenxupeng/student/data/expression_matrix/GSE71008.txt`中相应的两个样本的参考数据计算相关系数以检查结果。可以使用pearsonr correlation coefficient衡量相关性。
 
@@ -564,11 +565,11 @@ pearsonr(X,Y)
 
 [**参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/2.expression-matrix)，请注意不要照搬教程。
 
-### 数据分析和质量控制指南 <a id="statshelp"></a>
+### 4.4 数据分析和质量控制指南 <a id="statshelp"></a>
 
 **注意，自己map的五个样本也需要加入到统计中，不能只统计已经提供的样本的信息**
 
-#### 基本信息统计 <a id="statsbasic"></a>
+#### 4.4.1 基本信息统计 <a id="statsbasic"></a>
 
 **统计不同RNA类型reads的比例并以饼图展示**
 
@@ -590,7 +591,7 @@ pearsonr(X,Y)
 
 ![](../.gitbook/assets/stackbarhccorigin.png) ![](../.gitbook/assets/stackbarhcc.png)
 
-#### 代码示例
+#### 4.4.2 代码示例
 
 **pie plot of ratio**
 
@@ -644,7 +645,7 @@ ax.set_yticks(np.arange(0,1,0.1))
 ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 ```
 
-#### sample QC <a id="sampleqc"></a>
+#### 4.4.3 sample QC <a id="sampleqc"></a>
 
 为了让比对结果更让人信服，我们基于不同RNA类型reads的比例制定了一套标准用于对样本进行质量控制：
 
@@ -660,14 +661,14 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 
 请读者依据以上标准，对样本进行质量控制，并且可以可视化质量控制的条件
 
-### 预处理指南 <a id="preprocessinghelp"></a>
+### 4.4 预处理指南 <a id="preprocessinghelp"></a>
 
-#### 相关教程
+#### 4.4.1 相关教程
 
 * [normalization](https://youngleebbs.gitbook.io/bioinfo-training/part-ii/4.-qc-and-normalization)
 * [deal with confounders](https://youngleebbs.gitbook.io/bioinfo-training/part-ii/5.-imputation-and-confounders)
 
-#### Normalization
+#### 4.4.2 Normalization
 
 注意此处的normalization是对每个样本进行的，对feature进行normalization请在下一步feature selection中完成。
 
@@ -691,7 +692,7 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 
 ![](../.gitbook/assets/hccrefdensity.png) ![](../.gitbook/assets/hccrefcvbox.png)
 
-#### remove batch effect
+#### 4.4.3 remove batch effect
 
 **visualize batch effect**
 
@@ -702,7 +703,7 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 * RUVs，可以设置factor的数量
 * Combat，需要给定batch信息
 
-#### 通过alignment score量化PCA和t-SNE可视化结果
+#### 4.4.4 通过alignment score量化PCA和t-SNE可视化结果
 
 PCA和t-SNE可以直观的看到样本目前的聚集程度，但是无法量化，尤其是不容易做比较，我们提供以下的两个函数_alignment\_socre_ & _knn\_score_分别量化二分类和多分类样本的聚集程度。数值越接近1说明同类样本越聚集。**利用这种方法读者可以量化自己使用的normalization和remove batch effect方法的效果**。
 
@@ -743,11 +744,8 @@ def knn_score(X, y, K=10):
 
 ![](../.gitbook/assets/alignment_score.png)
 
-#### 通过挑选出的feature的分类效果（AUC）比较
 
-![](../.gitbook/assets/auroc_eval_method.png)
-
-#### 预处理部分代码示例
+#### 4.4.5 预处理部分代码示例
 
 **注意，本部分代码均由R语言书写**
 
@@ -820,15 +818,15 @@ combat <- ComBat(
 )
 ```
 
-### 特征选择指南 <a id="featurehelp"></a>
+### 4.5 特征选择指南 <a id="featurehelp"></a>
 
 [**参考教程**](https://lulab.gitbook.io/training/part-iii.-advanced-bioinfo-analyses/2.feature-selection)
 
-#### top k feature <a id="topk"></a>
 
-由于top20 feature占据了counts中的较大比例，请分别对top20feature和其他feature进行normalization。对feature进行的normalization比较简单，可以使用`sklearn.preprocessing`中`MaxAbsScaler/MinMaxScaler/RobustScaler/StandardScaler`的任意一个。 ![](../.gitbook/assets/top30.png)
 
-#### scalar使用方法
+#### 4.5.1 对feature做scale
+
+对feature做scale比较简单，可以使用`sklearn.preprocessing`中`MaxAbsScaler/MinMaxScaler/RobustScaler/StandardScaler`的任意一个。
 
 ```python
 random_state = np.random.RandomState(1289237)
@@ -850,13 +848,13 @@ for i in range(4):
 
 ![png](../.gitbook/assets/quiz_exrna_tutorial_49_0.png)
 
-### 模型评估与feature解释指南 <a id="evaluatehelp"></a>
+### 4.6 模型评估与feature解释指南 <a id="evaluatehelp"></a>
 
-#### 特征选择结果可视化 <a id="clustermap"></a>
+#### 4.6.1 特征选择结果可视化 <a id="clustermap"></a>
 
 使用seaborn的clustermap功能，将挑选出的feature的counts（做过合适的scale）绘制heatmap图并聚类，上方的颜色表示类别，可见同一类被很好的聚在了一起。 ![](../.gitbook/assets/clustermap.png)
 
-#### 用选出的feature进行分类并绘制ROC曲线 <a id="rocplot"></a>
+#### 4.6.2 用选出的feature进行分类并绘制ROC曲线 <a id="rocplot"></a>
 
 请特别注意，这里的ROC曲线有其特殊之处。针对我们样本很少的问题，我们不能专门划分出一部分测试集供测试和绘制曲线。我们使用两种方式划分数据集：
 
@@ -867,19 +865,19 @@ for i in range(4):
 
 ![](../.gitbook/assets/roc.png) ![](../.gitbook/assets/roc_cv.png)
 
-#### 用AUC评估挑选不同数量feature的效果 <a id="aucline"></a>
+#### 4.6.3 用AUC评估挑选不同数量feature的效果 <a id="aucline"></a>
 
 读者可以分析挑选不同数量的feature时模型的拟合效果，评估指标为AUC ![](../.gitbook/assets/auc_line.png)
 
-#### 比较不同的模型和参数挑出的feature的差异
+#### 4.6.4 比较不同的模型和参数挑出的feature的差异
 
 图中有颜色的色块儿表示在该参数条件下被选中的feature，可以发现线性模型挑出的feature更相似，而random forest在不同参数设置下挑出的feature比较稳定。 ![](../.gitbook/assets/compare_models.png)
 
-#### 查看feature的鲁棒性
+#### 4.6.5 查看feature的鲁棒性
 
 每一列是一轮测试，可以发现大多数feature在每轮测试中都被挑中，证明这些feature具有很强的鲁棒性，我们可以设置一个阈值，选取在超过50%的轮数中都出现的feature作为最终选择的feature。 ![](../.gitbook/assets/feature_robustness.png)
 
-#### 利用Venn图分析feature的重合
+#### 4.6.6 利用Venn图分析feature的重合
 
 这里利用Venn图分析了HCC三种类型的数据（full length, peak, peak\_iterative）的重合情况，每一个子图是一个模型。
 
