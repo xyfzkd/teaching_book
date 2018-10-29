@@ -67,7 +67,7 @@ df %>% pander::pander()
 
 Let's explore the correlation between features:
 
-```{r}
+```{r message=FALSE}
 GGally::ggpairs(df, columns = 1:4, ggplot2::aes(color = Species))
 ```
 
