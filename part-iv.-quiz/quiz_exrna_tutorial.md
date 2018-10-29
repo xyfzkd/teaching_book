@@ -8,6 +8,8 @@
 
 本Quiz依托于Lulab现有的一些研究结果，希望读者通过生物信息学方法，尝试使用一些机器学习方法，发现和研究与癌症发生发展相关的新型体液胞外RNA \(extracellular RNA，exRNA\)生物标志物，并应用于几种国内高致死癌症的早期诊断和预后辅助治疗。我们将在癌症病人体液 \(如血液\)中的游离、微囊泡、外泌体、RNP 等不同组分中发现和鉴定标志癌症发生发展的新型 exRNA，构建模型，最终建立一个具有更高精准度和重复性的无创检验癌症（尤其是早期癌症）的方法。
 
+![Goal: Develop a  RNA panel, paired with a machine learning model \(exSeek\) to classify cancer from control \(healthy person\) ](../.gitbook/assets/exseek_task.png)
+
 ### 总体流程图
 
 ![](../.gitbook/assets/wholepipe.png)

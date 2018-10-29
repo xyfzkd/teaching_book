@@ -16,7 +16,7 @@
 
 目标变量是未指定的。模型的目的是确定内部数据的结构（cluster）。在模型拟合之后，我们可以将新来的样本分给cluster或生成与原始数据具有相似分布的样本。无监督学习也可以用于监督学习之前的数据预处理步骤。
 
-### 2\) Data Scaling  
+### 2\) Data Scaling
 
 对于大多数机器学习算法，建议将feature scale到一个比较小的范围，以减少极端值的影响。
 
@@ -60,12 +60,12 @@ feature的规模过大或者过小都会增加数值不稳定的风险并且还�
 
 Confusion matrix会总结模型正确和错误分类的样本数量，并将预测的样本分成如下四类：
 
-|  | True |Positive | Negative  |  |
+|  | True | Positive | Negative |  |
 | :--- | :--- | :--- | :--- | :--- |
 | **Predicted** |  |  |  |  |
-| **Positive** |  | True Positive \(TP\) | False Positive \(FP\) | $$\textbf{PPV} =\frac{TP}{TP+FP}$$  |
-| **Negative** |  | False Negative \(FN\) | True Negative \(TN\) | $$\textbf{NPV} =\frac{TN}{TN+FN}$$|
-|  |  |$$\textbf{Sensiticity} = \frac{TP}{TP+FN}$$  | $$\textbf{Specificity} = \frac{TN}{TN+FP}$$ |  |
+| **Positive** |  | True Positive \(TP\) | False Positive \(FP\) | $$\textbf{PPV} =\frac{TP}{TP+FP}$$ |
+| **Negative** |  | False Negative \(FN\) | True Negative \(TN\) | $$\textbf{NPV} =\frac{TN}{TN+FN}$$ |
+|  |  | $$\textbf{Sensiticity} = \frac{TP}{TP+FN}$$ | $$\textbf{Specificity} = \frac{TN}{TN+FP}$$ |  |
 
 * **Accuracy \(0 ~ 1\)** 
 
@@ -118,8 +118,6 @@ ROC曲线下面积（AUROC）或average precision \(AP\)是一个单值，它总
 在**K折交叉验证**中，数据集被均匀地划分为$k$个部分（folds）。在每轮验证中，模型在一个fold上进行测试，并在剩余的$\frac{k-1}{k}$部分上进行训练。
 
 K折交叉验证确保训练样本和测试样本之间没有重叠，K轮结束后，每个样本会被设置为测试样品一次。最后，模型平均表现是在 $k$轮次中计算的。
-
-
 
 ## 2. More Reading
 
