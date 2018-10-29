@@ -79,7 +79,7 @@ summarizes how well the model finds out positive samples:
 
 $$\text{Recall/Sensitivity} = \frac{TP}{TP + FN}$$
 
-* **Precision/positive predictive value \(0 ~ 1\)** 
+* **Precision/positive predictive value \(PPV\)  \(0 ~ 1\)** 
 
 summarizes how well the model finds out negative samples:
 
