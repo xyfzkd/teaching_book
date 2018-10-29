@@ -1,6 +1,7 @@
 .Rproj.user
 teaching_book.Rproj
 
+!/part-iii.-machine-learning-basics/1.simple-machine-learning-basics/8.1-machine-learning-with-r2_files/figure-markdown_strict/*png
 *_files/
 *_cache/
 .Rhistory
