@@ -1,2 +1,7 @@
 .Rproj.user
 teaching_book.Rproj
+
+*_files/
+*_cache/
+.Rhistory
+*.html
