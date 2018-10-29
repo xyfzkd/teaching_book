@@ -154,13 +154,19 @@ ROCR::performance(prediction, 'auc')@y.values[[1]]
   > **作业要求** ：上交一个文档汇报prediction performance，并解释如上指标所代表的意义，附ROC曲线并解释其意义。
 
 
-```{r eval=F, include=FALSE}
+```{r}
 df2 <- mtcars %>% tibble::as_tibble() %>%
     dplyr::mutate(Transmission = ifelse(am, 'manual', 'automatic') %>% factor) %>%
-    dplyr::select(5, 'Transmission') %T>% print
-# df2 <- iris %>% tibble::as_tibble() %>% dplyr::filter(Species != 'setosa') %>%
-#     dplyr::mutate(Species = factor(Species))
+    dplyr::select(5, 'Transmission') 
+```
 
+
+```{r, echo=FALSE}
+df2 %>% pander::pander()
+```
+
+
+```{r eval=F, include=FALSE}
 set.seed(0)  
 nrow_training2 <- floor(nrow(df2)/3) * 2
 indexes2 <- sample(1:nrow(df2), nrow_training2) 
