@@ -155,6 +155,8 @@ ROCR::performance(prediction, 'auc')@y.values[[1]]
 
 
 ```{r}
+library(magrittr)
+
 df2 <- mtcars %>% tibble::as_tibble() %>%
     dplyr::mutate(Transmission = ifelse(am, 'manual', 'automatic') %>% factor) %>%
     dplyr::select(5, 'Transmission') 
