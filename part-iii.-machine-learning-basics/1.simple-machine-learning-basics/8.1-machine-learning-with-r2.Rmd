@@ -101,7 +101,7 @@ testing <- df[-indexes, ]
 
 Then we can build a random forest model.
 
-```{r}
+```{r build-model}
 rf_classifier = randomForest::randomForest(Species ~ ., training)
 ```
 
@@ -160,15 +160,20 @@ probability <- predict(rf_classifier, testing[, -ncol(testing)], type = 'prob')
 label <- testing[[5]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
 
 prediction <- ROCR::prediction(probability[, 1], label)
-
-
-prediction %>% ROCR::performance('tpr', 'fpr') %>% ROCR::plot(main = 'ROC Curve') 
 ```
 
 - `probability`: for each row, we use the model to predict the probability of it belongs to each species
 - `levels`: we flag `` `r levels(testing[[5]])[1]` `` as `1`, `` `r levels(testing[[5]])[2]` `` as `0`
 - `prediction`: we calculate the ROC
-- the last line plot the ROC using false positive rate (`'fpr'`) as x axis, true positive rate (`'tpr'`) as y axis
+
+```{r plot-roc, eval=FALSE}
+prediction %>% ROCR::performance('tpr', 'fpr') %>% ROCR::plot(main = 'ROC Curve') 
+```
+
+- Plot the ROC using false positive rate (`'fpr'`) as x axis, true positive rate (`'tpr'`) as y axis.
+
+```{r plot-roc, echo=FALSE}
+```
 
 Cauculate the AUC
 
