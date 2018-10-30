@@ -220,11 +220,9 @@ Last but not the least, you can also read _[The `caret` package](http://topepo.g
 We use another R's built-in dataset, `mtcars`, you need to run the following code to contruct the data:
 
 ```{r}
-library(magrittr)
-
-df2 <- mtcars %>% tibble::as_tibble() %>%
-    dplyr::mutate(Transmission = ifelse(am, 'manual', 'automatic') %>% factor) %>%
-    dplyr::select(3:7, 'Transmission')
+df2 <- mtcars
+df2$Transmission <- factor(ifelse(df2$am, 'manual', 'automatic'))
+df2 <- df2[ , c('disp', 'hp', 'drat', 'wt', 'qsec', 'Transmission')]
 ```
 
 As you can see, `Transmission` is the reponse variable, all other variables are features.
