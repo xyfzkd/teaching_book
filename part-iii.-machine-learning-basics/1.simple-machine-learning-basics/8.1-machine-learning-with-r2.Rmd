@@ -14,7 +14,13 @@ Here we use random forest as an example.
 
 ### 1) preparation
 
-install needed packages
+install needed packages:
+
+   - `magrittr` enable one style of writing R code, refer to [here](https://r4ds.had.co.nz/pipes.html#piping-alternatives) for why I use that style.
+   - `randomForest`: build random forest model
+   - `dplyr`: manipulate data frame
+   - `ROCR`: ROC analysis
+   - `GGally`: plot correlation between features
 
 ```{r install-package, eval=FALSE}
 cran_pkg <- c('magrittr', 'dplyr', 'randomForest', 'ROCR', 'GGally')
@@ -22,11 +28,6 @@ lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
 ```
 
 1. The first line specify needed packages
-   - `magrittr` enable one style of writing R code, refer to [here](https://r4ds.had.co.nz/pipes.html#piping-alternatives) for why I use that style.
-   - `randomForest`: build random forest model
-   - `dplyr`: manipulate data frame
-   - `ROCR`: ROC analysis
-   - `GGally`: plot correlation between features
 1. the second line install packages which _doesn't exist_ in your system (`.packages(T)` will list existing packages in the system.)
 
  
