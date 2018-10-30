@@ -204,9 +204,9 @@ The code refer [this post](https://www.blopig.com/blog/2017/04/a-very-basic-intr
 
 For more  machine learning models, you can refer to [these scripts](https://github.com/urluzhi/scripts/tree/master/Rscript/machine_learning):  
 
-> - `logistic_regression.R`: Logistic Regression
-> - `svm.R`: SVM
-> - `plot_result.R`: Plot your training and testing performance
+- `logistic_regression.R`: Logistic Regression
+- `svm.R`: SVM
+- `plot_result.R`: Plot your training and testing performance
   
 Last but not the least, you can also read _[The `caret` package](http://topepo.github.io/caret)_, a tutorial written in GitBook
 
