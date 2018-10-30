@@ -39,16 +39,3 @@ Gang Xu, Zhuoer Dong, Xupeng Chen, Xi Hu, Jingyi Cao, Xiaocheng Xi, Siqi Wang, Y
 [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 > [Markdown Syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) \| [Excel Table to Markdown](https://www.tablesgenerator.com/markdown_tables) \| [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)
-
-
-安装包，，包是干什么的？ 安装的代码注释
-
-https://r4ds.had.co.nz/pipes.html#piping-alternatives
-
-数据是自带的，只需要运行代码就可以得到
-
-
-10-fold cross -valida tion
-
-
-10:00 前完成
