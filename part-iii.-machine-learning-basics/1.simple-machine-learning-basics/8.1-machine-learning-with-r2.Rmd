@@ -68,8 +68,10 @@ df$Species <- factor(df$Species)
 
 Let's have a look at our data (only part of it is shown, the whole data contains 100 rows):
 
-```{r, echo=FALSE}
-df %>% {dplyr::bind_rows(head(., 3), tail(., 3))} %>% pander::pander()
+
+```{r}
+head(df, 3)
+tail(df, 3)
 ```
 
 
@@ -114,7 +116,7 @@ The code is fairly easy and straightforward:
 
 Let's have a look at our model
 
-```{r echo=FALSE}
+```{r}
 rf_classifier
 ```
 
@@ -127,7 +129,14 @@ predicted_value <- predict(rf_classifier, testing[, -ncol(testing)])
 real_value <- testing[[ncol(testing)]]
 ```
 
-The result is as follows:
+> `predicted_value` and `real_value` both contains 20 values, correspond to 20 rows of testing data. Each value tells a row belongs which species, the former is the model' precdiction, the latter is the real case.
+
+```{r}
+predicted_value
+real_value
+```
+
+I manually reformat the result to make it more clear:
 
 ```{r echo=FALSE}
 tibble::tibble(predicted_value, real_value) %>% 
