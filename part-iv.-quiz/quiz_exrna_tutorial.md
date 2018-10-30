@@ -213,7 +213,7 @@ scireprnastats.iloc[:,:5].head()
 | sam/bam | mapped reads to different kinds of indexes |
 | tsv format | stats of RNA ratio and length |
 
-### 3.2 Expression Matrix  <a id="expressmatrix"></a>
+### 3.2 Expression Matrix   <a id="expressmatrix"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix的构建，用`Sample_N1, Sample_N7`的expression matrix数据和`/BioII/chenxupeng/student/data/expression_matrix/GSE71008.txt`中相应的两个样本的参考数据计算相关系数以检查结果。
 
@@ -317,7 +317,7 @@ tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187
 Populating the interactive namespace from numpy and matplotlib
 ```
 
-### 4.2 Mapping 指南  <a id="mappinghelp"></a>
+### 4.2 Mapping 指南   <a id="mappinghelp"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作，其中产生的bam文件供下一步构建expression matrix使用。
 
@@ -498,7 +498,7 @@ index文件夹下，有各种类型RNA的index，我们所要做的，就是把r
 
 [**参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/1.mapping-annotation-and-qc)，请注意不要照搬教程。
 
-### 4.3 Construct Expression Matrix 指南  <a id="expmatrixhelp"></a>
+### 4.3 Construct Expression Matrix 指南   <a id="expmatrixhelp"></a>
 
 ![](../.gitbook/assets/countpipe.png)
 
@@ -568,11 +568,11 @@ pearsonr(X,Y)
 
 [**参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/2.expression-matrix)，请注意不要照搬教程。
 
-### 4.4 数据分析和质量控制指南  <a id="statshelp"></a>
+### 4.4 数据分析和质量控制指南   <a id="statshelp"></a>
 
 **注意，自己map的五个样本也需要加入到统计中，不能只统计已经提供的样本的信息**
 
-#### 4.4.1 基本信息统计  <a id="statsbasic"></a>
+#### 4.4.1 基本信息统计   <a id="statsbasic"></a>
 
 **统计不同RNA类型reads的比例并以饼图展示**
 
@@ -648,7 +648,7 @@ ax.set_yticks(np.arange(0,1,0.1))
 ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 ```
 
-#### 4.4.3 sample QC  <a id="sampleqc"></a>
+#### 4.4.3 sample QC   <a id="sampleqc"></a>
 
 为了让比对结果更让人信服，我们基于不同RNA类型reads的比例制定了一套标准用于对样本进行质量控制：
 
@@ -664,7 +664,7 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 
 请读者依据以上标准，对样本进行质量控制，并且可以可视化质量控制的条件
 
-### 4.4 预处理指南  <a id="preprocessinghelp"></a>
+### 4.4 预处理指南   <a id="preprocessinghelp"></a>
 
 #### 4.4.1 相关教程
 
@@ -820,7 +820,7 @@ combat <- ComBat(
 )
 ```
 
-### 4.5 特征选择指南  <a id="featurehelp"></a>
+### 4.5 特征选择指南   <a id="featurehelp"></a>
 
 [**参考教程**](https://lulab.gitbook.io/training/part-iii.-advanced-bioinfo-analyses/2.feature-selection)
 
@@ -848,13 +848,13 @@ for i in range(4):
 
 ![png](../.gitbook/assets/quiz_exrna_tutorial_49_0.png)
 
-### 4.6 模型评估与feature解释指南  <a id="evaluatehelp"></a>
+### 4.6 模型评估与feature解释指南   <a id="evaluatehelp"></a>
 
-#### 4.6.1 特征选择结果可视化  <a id="clustermap"></a>
+#### 4.6.1 特征选择结果可视化   <a id="clustermap"></a>
 
 使用seaborn的clustermap功能，将挑选出的feature的counts（做过合适的scale）绘制heatmap图并聚类，上方的颜色表示类别，可见同一类被很好的聚在了一起。 ![](../.gitbook/assets/clustermap.png)
 
-#### 4.6.2 用选出的feature进行分类并绘制ROC曲线  <a id="rocplot"></a>
+#### 4.6.2 用选出的feature进行分类并绘制ROC曲线   <a id="rocplot"></a>
 
 请特别注意，这里的ROC曲线有其特殊之处。针对我们样本很少的问题，我们不能专门划分出一部分测试集供测试和绘制曲线。我们使用两种方式划分数据集：
 
@@ -865,7 +865,7 @@ for i in range(4):
 
 ![](../.gitbook/assets/roc.png) ![](../.gitbook/assets/roc_cv.png)
 
-#### 4.6.3 用AUC评估挑选不同数量feature的效果  <a id="aucline"></a>
+#### 4.6.3 用AUC评估挑选不同数量feature的效果   <a id="aucline"></a>
 
 读者可以分析挑选不同数量的feature时模型的拟合效果，评估指标为AUC ![](../.gitbook/assets/auc_line.png)
 
