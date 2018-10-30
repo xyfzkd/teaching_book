@@ -17,19 +17,19 @@ Here we use random forest as an example.
 
 install needed packages:
 
-   - `magrittr` enable one style of writing R code, refer to [here](https://r4ds.had.co.nz/pipes.html#piping-alternatives) for why I use that style.
-   - `randomForest`: build random forest model
-   - `dplyr`: manipulate data frame
-   - `ROCR`: ROC analysis
-   - `GGally`: plot correlation between features
+  1. `magrittr` enable one style of writing R code, refer to [here](https://r4ds.had.co.nz/pipes.html#piping-alternatives) for why I use that style.
+  1. `dplyr`: manipulate data frame
+  1. `randomForest`: build random forest model
+  1. `ROCR`: ROC analysis
+  1. `GGally`: plot correlation between features
 
 ```{r install-package, eval=FALSE}
 cran_pkg <- c('magrittr', 'dplyr', 'randomForest', 'ROCR', 'GGally')
 lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
 ```
 
-1. The first line specify needed packages
-1. the second line install packages which _doesn't exist_ in your system (`.packages(T)` will list existing packages in the system.)
+- The first line specify needed packages
+- the second line install packages which _doesn't exist_ in your system (`.packages(T)` will list all existing packages in the system.)
 
  
 
@@ -69,11 +69,11 @@ df <- iris %>% tibble::as_tibble() %>%
     dplyr::mutate(Species = factor(Species))
 ```
 
-- The frist line turn `iris` into a [`tibble`](https://tibble.tidyverse.org/), a modern reimagining of the `data.frame`.
-- The second line select rows whose species is not `setosa`, so only `versicolor` and `virginica` are left.
-- The third line drops factor level of `Species` variable, `randomForest::randomForest()` would complain if you don't do this. (This is a little technical, the orignial `Species` contains three levels, `setosa`, `versicolor` and `virginica`. Although we remove all `setosa` values, the `setosa` level still exists, and now this level contains no values, that would cause `randomForest::randomForest()` to fail . After we call `factor()`, `Species` contains only two levels, both do have values.)
+  - The frist line turn `iris` into a [`tibble`](https://tibble.tidyverse.org/), a modern reimagining of the `data.frame`.
+  - The second line select rows whose species is not `setosa`, so only `versicolor` and `virginica` are left.
+  - The third line drops factor level of `Species` variable, `randomForest::randomForest()` would complain if you don't do this. (This is a little technical, the orignial `Species` contains three levels, `setosa`, `versicolor` and `virginica`. Although we remove all `setosa` values, the `setosa` level still exists, and now this level contains no values, that would cause `randomForest::randomForest()` to fail . After we call `factor()`, `Species` contains only two levels, both do have values.)
 
-Let's have a look at our data (only part of it is shown, the whole data contains 100 rows)
+Let's have a look at our data (only part of it is shown, the whole data contains 100 rows):
 
 ```{r, echo=FALSE}
 df %>% {dplyr::bind_rows(head(., 3), tail(., 3))} %>% pander::pander()
@@ -100,10 +100,10 @@ The code seems a little complicated, and it require you to be familiar with the 
 
 Anyway, I will try to use a simple example to explain the core idea:
 
-- Image your data contains only 5 rows, the 80 percent is 5 * 0.8 = 4 (here `nrow_training` is `4`). 
-- Image you decide to choose the 1st, 2nd, 3rd and 5th rows for training  (here `indexes` is `c(1, 2, 3, 5)`)
-- Now `training` contains the 1st, 2nd, 3rd and 5th rows of `df` (`[indexes, ]` means to choose these rows)
-- And `testing` contains the 4th row of `df`  (`[-indexes, ]` means not to choose these rows, so only the 4th row is left)
+  - Image your data contains only 5 rows, the 80 percent is 5 * 0.8 = 4 (here `nrow_training` is `4`). 
+  - Image you decide to choose the 1st, 2nd, 3rd and 5th rows for training  (here `indexes` is `c(1, 2, 3, 5)`)
+  - Now `training` contains the 1st, 2nd, 3rd and 5th rows of `df` (`[indexes, ]` means to choose these rows)
+  - And `testing` contains the 4th row of `df`  (`[-indexes, ]` means not to choose these rows, so only the 4th row is left)
 
 ### 4) Build the model
 
@@ -170,15 +170,15 @@ label <- testing[[5]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
 prediction <- ROCR::prediction(probability[, 1], label)
 ```
 
-- `probability`: for each row, we use the model to predict the probability of it belongs to each species
-- `levels`: we flag `` `r levels(testing[[5]])[1]` `` as `1`, `` `r levels(testing[[5]])[2]` `` as `0`
-- `prediction`: we calculate the ROC
+  - `probability`: for each row, we use the model to predict the probability of it belongs to each species
+  - `levels`: we flag `` `r levels(testing[[5]])[1]` `` as `1`, `` `r levels(testing[[5]])[2]` `` as `0`
+  - `prediction`: we calculate the ROC
 
 ```{r plot-roc, eval=FALSE}
 prediction %>% ROCR::performance('tpr', 'fpr') %>% ROCR::plot(main = 'ROC Curve') 
 ```
 
-- Plot the ROC using false positive rate (`'fpr'`) as x axis, true positive rate (`'tpr'`) as y axis.
+  - Plot the ROC using false positive rate (`'fpr'`) as x axis, true positive rate (`'tpr'`) as y axis.
 
 ```{r plot-roc, echo=FALSE}
 ```
