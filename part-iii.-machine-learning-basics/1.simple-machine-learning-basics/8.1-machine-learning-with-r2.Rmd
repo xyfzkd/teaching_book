@@ -225,7 +225,18 @@ df2$Transmission <- factor(ifelse(df2$am, 'manual', 'automatic'))
 df2 <- df2[ , c('disp', 'hp', 'drat', 'wt', 'qsec', 'Transmission')]
 ```
 
-As you can see, `Transmission` is the reponse variable, all other variables are features.
+> - `am` variable stores information of transmission of the car as integer, `1` means "manual", `0` means "automatic". we transform it into a factor and stores it into a new variable, `Transmission`
+> - then we select six columns: `disp`, `hp`, `drat`, `wt`, `qsec`, `Transmission`
+
+In this data, we have five features:
+
+1. `disp`: Displacement (cu.in.)
+1. `hp`: Gross horsepowe
+1. `drat`: Rear axle ratio
+1. `wt`: Weight (1000 lbs)
+1. `qsec`: 1/4 mile time
+
+And the reponse variable is `Transmission`.
 
 ```{r, echo=FALSE}
 df2 %>% pander::pander()
