@@ -27,7 +27,7 @@ install.packages(c('dplyr', 'randomForest', 'ROCR', 'GGally'))
 ```
 
 > - The first line specify needed packages
->   - the second line install packages which _doesn't exist_ in your system (`.packages(T)` will list all existing packages in the system.)
+> - the second line install packages which _doesn't exist_ in your system (`.packages(T)` will list all existing packages in the system.)
 
  
 
