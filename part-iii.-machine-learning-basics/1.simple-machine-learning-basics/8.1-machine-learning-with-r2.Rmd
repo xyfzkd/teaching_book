@@ -4,13 +4,9 @@ output:
   - md_document
 ---
 
-# 8.1 Machine Learning with R
 
-<!--
-to do: 
-1. package documentation link
-2. detail explain divide data set
--->
+
+# 8.1 Machine Learning with R
 
 ## 1. Practice Guide
 
