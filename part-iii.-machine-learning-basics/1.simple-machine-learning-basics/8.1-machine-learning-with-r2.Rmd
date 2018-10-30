@@ -92,10 +92,18 @@ set.seed(0)   # Set random seed to make results reproducible:
 nrow_training <- floor(nrow(df) * 0.8)  # Calculate the size of training sets
 indexes <- sample(1:nrow(df), nrow_training)  # these rows will be select for training
 
-# Assign the data to the correct sets
 training <- df[indexes, ] 
 testing <- df[-indexes, ]
 ```
+
+The code seems a little complicated, and it require you to be familiar with the R language. 
+
+Anyway, I will try to use a simple example to explain the core idea:
+
+- Image your data contains only 5 row, the 80 percent is 5 * 0.8 = 4 (here `nrow_training` is `4`). 
+- Image you decide to choose the 1st, 2nd, 3rd and 5th rows for training  (here `indexes` is `c(1, 2, 3, 5)`)
+- Now `training` contains the 1st, 2nd, 3rd and 5th rows of `df` (`[indexes, ]` means to choose these rows)
+- And `testing` contains the 4th row of `df`  (`[-indexes, ]` means not to choose these rows, so only 4th is left)
 
 ### 4) Build the model
 
