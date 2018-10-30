@@ -26,7 +26,7 @@
 ## Part III. Machine Learning Basics
 
 * [8.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/README.md)
-  * [8.1 Machine Learning with R](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/8.1-machine-learning-with-r.md)
+  * [8.1 Machine Learning with R](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/8.1-machine-learning-with-r2.md)
   * [8.2 Machine Learning with Python](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/8.2-machine-learning-with-python.md)
 
 ## Part IV. Quiz
