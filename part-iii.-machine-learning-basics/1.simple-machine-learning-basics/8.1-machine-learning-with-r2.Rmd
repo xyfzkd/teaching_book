@@ -17,15 +17,13 @@ Here we use random forest as an example.
 
 install needed packages:
 
-  1. `magrittr` enable one style of writing R code, refer to [here](https://r4ds.had.co.nz/pipes.html#piping-alternatives) for why I use that style.
   1. `dplyr`: manipulate data frame
   1. `randomForest`: build random forest model
   1. `ROCR`: ROC analysis
   1. `GGally`: plot correlation between features
 
 ```{r install-package, eval=FALSE}
-cran_pkg <- c('magrittr', 'dplyr', 'randomForest', 'ROCR', 'GGally')
-lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
+install.packages(c('dplyr', 'randomForest', 'ROCR', 'GGally'))
 ```
 
 - The first line specify needed packages
@@ -33,9 +31,9 @@ lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
 
  
 
-```{r install-internal-package, include=FALSE}
+```{r install-internal, include=FALSE}
 # install internal packages
-cran_pkg <- c('pander')
+cran_pkg <- c('pander', 'dplyr', 'randomForest', 'ROCR', 'GGally')
 lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
 ```
 
@@ -48,11 +46,7 @@ knitr::opts_chunk$set(cache = T)
 ```
 
 
-To avoid conflict of function name, in the following code, I will try me best to use `pkg::fun()` instead of `library(pkg)`. However `magrittr` is an exception, I have to `library()` it:
-
-```{r library-package}
-library(magrittr)
-```
+To avoid conflict of function name, in the following code, I will try me best to use `pkg::fun()` instead of `library(pkg)`. 
 
 
 ### 2) generate data set
@@ -64,9 +58,8 @@ The original data set contains observations for four features (sepal length and 
 To make things simple, here we only choose two species, `versicolor` and `virginica`.
 
 ```{r}
-df <- iris %>% tibble::as_tibble() %>% 
-    dplyr::filter(Species != 'setosa') %>%
-    dplyr::mutate(Species = factor(Species))
+df <- iris[iris$Species != 'setosa', ]
+df$Species <- factor(df$Species)
 ```
 
   - The frist line turn `iris` into a [`tibble`](https://tibble.tidyverse.org/), a modern reimagining of the `data.frame`.
@@ -165,7 +158,7 @@ Finally, let's draw a ROC curve.
 
 ```{r}
 probability <- predict(rf_classifier, testing[, -ncol(testing)], type = 'prob')
-label <- testing[[5]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
+label <- ifelse(testing[[5]] ==  levels(testing[[5]])[1], 1, 0)
 
 prediction <- ROCR::prediction(probability[, 1], label)
 ```
@@ -175,7 +168,8 @@ prediction <- ROCR::prediction(probability[, 1], label)
   - `prediction`: we calculate the ROC
 
 ```{r plot-roc, eval=FALSE}
-prediction %>% ROCR::performance('tpr', 'fpr') %>% ROCR::plot(main = 'ROC Curve') 
+roc <- ROCR::performance(prediction, 'tpr', 'fpr') 
+ROCR::plot(roc, main = 'ROC Curve') 
 ```
 
   - Plot the ROC using false positive rate (`'fpr'`) as x axis, true positive rate (`'tpr'`) as y axis.
