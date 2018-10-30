@@ -6,79 +6,89 @@ output:
 
 # 8.1 Machine Learning with R
 
+<!--
+to do: 
+1. package documentation link
+2. detail explain divide data set
+-->
+
 ## 1. Practice Guide
 
-* Some [simple scripts](https://github.com/urluzhi/scripts/tree/master/Rscript/machine_learning) for machine learning:
-  * logistic\_regression.R: Logistic Regression
-  * RadomForest.R: Random Forest
-  * svm.R: SVM
-  * plot\_result.R: Plot your training and testing performance
-* The [_caret_ package](http://topepo.github.io/caret): a tutorial written in GitBook
+Here we use random forest as an example.
 
-
-
-
-
-
-We will use Random forest as an example.
-
-## 1. preparation
-
+### 1) preparation
 
 install needed packages
 
-```{r eval=FALSE}
-cran_pkg <- c('magrittr', 'randomForest', 'dplyr', 'ROCR')
+```{r install-package, eval=FALSE}
+cran_pkg <- c('magrittr', 'dplyr', 'randomForest', 'ROCR', 'GGally')
 lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
 ```
 
-```{r include=FALSE}
+1. The first line specify needed packages
+   - `magrittr` enable one style of writing R code, refer to [here](https://r4ds.had.co.nz/pipes.html#piping-alternatives) for why I use that style.
+   - `randomForest`: build random forest model
+   - `dplyr`: manipulate data frame
+   - `ROCR`: ROC analysis
+   - `GGally`: plot correlation between features
+1. the second line install packages which _doesn't exist_ in your system (`.packages(T)` will list existing packages in the system.)
+
+ 
+
+```{r install-internal-package, include=FALSE}
 # install internal packages
-
-cran_pkg <- c('pander', 'randomForest', 'gplots', 'pheatmap', 'scales', 'reshape2', 'RColorBrewer', 'plotrix')
+cran_pkg <- c('pander')
 lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
 ```
 
 
-```{r include=FALSE}
+```{r knitr-setup, include=FALSE}
+# I don't know why, but when you run the code in R terminal, you don't need this
 loadNamespace('randomForest')
 
 knitr::opts_chunk$set(cache = T)
 ```
 
 
-```{r}
+To avoid conflict of function name, in the following code, I will try me best to use `pkg::fun()` instead of `library(pkg)`. However `magrittr` is an exception, I have to `library()` it:
+
+```{r library-package}
 library(magrittr)
 ```
 
 
-## 2. generate data set
+### 2) generate data set
 
-We use Edgar Anderson’s Iris Data set. The original data set contains observations for four features (sepal length and width, and petal length and width – all in cm) of 150 flowers of three species (each 50). To make things simple, here we only choose two species, `versicolor` and `virginica`.
+We use one of R's built-in data set, `iris`, Edgar Anderson’s Iris Data set. 
+
+The original data set contains observations for four features (sepal length and width, and petal length and width --- all in cm) of 150 flowers of three species (each 50). 
+
+To make things simple, here we only choose two species, `versicolor` and `virginica`.
 
 ```{r}
-df <- iris %>% tibble::as_tibble() %>% dplyr::filter(Species != 'setosa') %>%
+df <- iris %>% tibble::as_tibble() %>% 
+    dplyr::filter(Species != 'setosa') %>%
     dplyr::mutate(Species = factor(Species))
 ```
 
+- The frist line turn `iris` into a [`tibble`](https://tibble.tidyverse.org/), a modern reimagining of the `data.frame`.
+- The second line select rows whose species is not `setosa`, so only `versicolor` and `virginica` are left.
+- The third line drops factor level of `Species` variable, `randomForest::randomForest()` would complain if you don't do this. (This is a little technical, the orignial `Species` contains three levels, `setosa`, `versicolor` and `virginica`. Although we remove all `setosa` values, the `setosa` level still exists, and now this level contains no values, that would cause `randomForest::randomForest()` to fail . After we call `factor()`, `Species` contains only two levels, both do have values.)
+
+Let's have a look at our data (only part of it is shown, the whole data contains 100 rows)
+
 ```{r, echo=FALSE}
-df %>% pander::pander()
-```
-
-Let's explore the correlation between features:
-
-```{r message=FALSE}
-GGally::ggpairs(df, columns = 1:4, ggplot2::aes(color = Species))
+df %>% {dplyr::bind_rows(head(., 3), tail(., 3))} %>% pander::pander()
 ```
 
 
-## 3. divide data set
+### 3) divide data set
 
-Before we build the model, we need to divide the data set into training set and validation set. So we can train our model using data in training set, and evalute the model using data in validation set.
+Before we build the model, we need to divide the data set into training set and testing set. So we can train our model using data in training set, and evalute the model using data in testing set.
 
-Here we randomly assigns 80 percent samples to the traing set, and the left 20 percent to the validation set.
+Here we randomly assigns 80 percent samples to the traing set, and the left 20 percent to the testing set.
 
-```{r}
+```{r divide-data}
 set.seed(0)   # Set random seed to make results reproducible:
 
 nrow_training <- floor(nrow(df) * 0.8)  # Calculate the size of training sets
@@ -86,28 +96,39 @@ indexes <- sample(1:nrow(df), nrow_training)  # these rows will be select for tr
 
 # Assign the data to the correct sets
 training <- df[indexes, ] 
-validation <- df[-indexes, ]
+testing <- df[-indexes, ]
 ```
 
-## 4. Build & use the model
+### 4) Build the model
 
-Then we can perform random forest prediction.
+Then we can build a random forest model.
 
 ```{r}
 rf_classifier = randomForest::randomForest(Species ~ ., training)
 ```
 
+The code is fairly easy and straightforward: 
+
+  - `Species` is the reponse variable
+  - `.` tells that all other variables are features
+  - `training` is the data to train the model
+
+Let's have a look at our model
+
 ```{r echo=FALSE}
 rf_classifier
 ```
 
+### 5) Evaluate the model
 
-After we build the model, we can make prediction on the validation set
+After we build the model, we can make prediction on the testing set:
 
 ```{r}
-predicted_value <- predict(rf_classifier, validation[, -ncol(validation)])
-real_value <- validation[[ncol(validation)]]
+predicted_value <- predict(rf_classifier, testing[, -ncol(testing)])
+real_value <- testing[[ncol(testing)]]
 ```
+
+The result is as follows:
 
 ```{r echo=FALSE}
 tibble::tibble(predicted_value, real_value) %>% 
@@ -115,27 +136,41 @@ tibble::tibble(predicted_value, real_value) %>%
     pander::pander()
 ```
 
-## 5. Evaluate the model
+We can summarise the result into a confusion matrix:
 
-To do: accuracy, sensitivity, specificity, ppv, mcc等指标
+| &nbsp;               | True versicolor | True virginica |
+|----------------------|-----------------|----------------|
+| Predicted versicolor | 9               | 2              |
+| Predicted virginica  | 0               | 9              |
 
-```{r eval=FALSE, include=FALSE}
-# if you want to see Importance of each feature
-randomForest::randomForest(Species ~ ., training, importance = TRUE) %>% randomForest::varImpPlot()
-```
+Now we can calculate some statistics:
 
-## 6. ROC
+- sensitivity: 9 / (9+0) = 100%
+- specificity: 9 / (9+2) = 82%
+- accuracy: (9 + 9)/20 = 90%
+<!--   - mcc (Matthews correlation coefficient): (9\*9 - 0\*2) / (9\*11\*11\*9) = 0.008   -->
+
+
+
+
+### 6) ROC
 
 Finally, let's draw a ROC curve.
 
 ```{r}
-probability <- predict(rf_classifier, validation[, -ncol(validation)], type = "prob")
-label <- validation[[5]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
+probability <- predict(rf_classifier, testing[, -ncol(testing)], type = 'prob')
+label <- testing[[5]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
 
 prediction <- ROCR::prediction(probability[, 1], label)
 
-prediction %>% ROCR::performance("tpr", "fpr") %>% ROCR::plot(main = "ROC Curve") 
+
+prediction %>% ROCR::performance('tpr', 'fpr') %>% ROCR::plot(main = 'ROC Curve') 
 ```
+
+- `probability`: for each row, we use the model to predict the probability of it belongs to each species
+- `levels`: we flag `` `r levels(testing[[5]])[1]` `` as `1`, `` `r levels(testing[[5]])[2]` `` as `0`
+- `prediction`: we calculate the ROC
+- the last line plot the ROC using false positive rate (`'fpr'`) as x axis, true positive rate (`'tpr'`) as y axis
 
 Cauculate the AUC
 
@@ -143,25 +178,51 @@ Cauculate the AUC
 ROCR::performance(prediction, 'auc')@y.values[[1]]
 ```
 
+### 7) Tips and more
+
+#### 7a) feature correlation
+
+Before we build the model, we usually need to examine our data first. A good start is to explore the correlation between features:
+
+```{r message=FALSE}
+GGally::ggpairs(df, columns = 1:4, ggplot2::aes(color = Species))
+```
+
+```{r feature-importance, eval=FALSE, include=FALSE}
+# if you want to see Importance of each feature
+randomForest::randomForest(Species ~ ., training, importance = TRUE) %>% randomForest::varImpPlot()
+```
+
+### 8) More reading
+
+The code refer [this post](https://www.blopig.com/blog/2017/04/a-very-basic-introduction-to-random-forests-using-r/)
+
+For more  machine learning models, you can refer to [these scripts](https://github.com/urluzhi/scripts/tree/master/Rscript/machine_learning):  
+
+  - `logistic_regression.R`: Logistic Regression
+  - `svm.R`: SVM
+  - `plot_result.R`: Plot your training and testing performance
+  
+Last but not the least, you can also read _[The `caret` package](http://topepo.github.io/caret)_, a tutorial written in GitBook
 
 
+## 2. Homework
 
-
-## 7. Homework
-
-* 学习和使用教程中的代码，练习Random Forest，在training set上训练，在test set上预测，汇报不同模型的prediction performance: 包括 accuracy, sensitivity, specificity, ppv, mcc, roc\_auc等指标，绘制ROC曲线。
+* 学习和使用教程中的代码，使用下面的数据，练习Random Forest，在training set上训练，在test set上预测，汇报模型的prediction performance: 包括 accuracy, sensitivity, specificity, roc\_auc等指标，绘制ROC曲线。
 
   > **作业要求** ：上交一个文档汇报prediction performance，并解释如上指标所代表的意义，附ROC曲线并解释其意义。
 
+We use another R's built-in dataset, `mtcars`, you need to run the following code to contruct the data:
 
 ```{r}
 library(magrittr)
 
 df2 <- mtcars %>% tibble::as_tibble() %>%
     dplyr::mutate(Transmission = ifelse(am, 'manual', 'automatic') %>% factor) %>%
-    dplyr::select(5, 'Transmission') 
+    dplyr::select(3:7, 'Transmission')
 ```
 
+As you can see, `Transmission` is the reponse variable, all other variables are features.
 
 ```{r, echo=FALSE}
 df2 %>% pander::pander()
@@ -175,11 +236,11 @@ indexes2 <- sample(1:nrow(df2), nrow_training2)
 
 # Assign the data to the correct sets
 training2 <- df2[indexes2, ] 
-validation2 <- df2[-indexes2, ]
+testing2 <- df2[-indexes2, ]
 rf_classifier2 = randomForest::randomForest(Transmission ~ ., training2) %T>% print
 
-probability2 <- predict(rf_classifier2, validation2[, -ncol(validation2)], type = "prob")
-label2 <- validation2[[ncol(validation2)]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
+probability2 <- predict(rf_classifier2, testing2[, -ncol(testing2)], type = "prob")
+label2 <- testing2[[ncol(testing2)]] %>% {ifelse(. ==  levels(.)[1], 1, 0)}
 
 prediction2 <- ROCR::prediction(probability2[, 1], label2)
 
@@ -189,6 +250,3 @@ ROCR::performance(prediction2, 'auc')@y.values[[1]]
 ```
 
 
-## 8. reference
-
-https://www.blopig.com/blog/2017/04/a-very-basic-introduction-to-random-forests-using-r/
