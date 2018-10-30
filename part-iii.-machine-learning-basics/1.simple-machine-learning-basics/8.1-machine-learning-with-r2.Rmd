@@ -2,7 +2,7 @@
 output:
   html_document: default
   md_document:
-      variant: markdown
+      variant: markdown_strict
 ---
 
 
