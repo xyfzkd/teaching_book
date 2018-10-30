@@ -9,7 +9,7 @@ output:
 
 # 8.1 Machine Learning with R
 
-## 1. Practice Guide
+## 1\. Practice Guide
 
 Here we use random forest as an example.
 
@@ -217,7 +217,7 @@ For more  machine learning models, you can refer to [these scripts](https://gith
 Last but not the least, you can also read _[The `caret` package](http://topepo.github.io/caret)_, a tutorial written in GitBook
 
 
-## 2. Homework
+## 2\. Homework
 
 * 学习和使用教程中的代码，使用下面的数据，练习Random Forest，在training set上训练，在test set上预测，汇报模型的prediction performance: 包括 accuracy, sensitivity, specificity, roc\_auc等指标，绘制ROC曲线。
 
