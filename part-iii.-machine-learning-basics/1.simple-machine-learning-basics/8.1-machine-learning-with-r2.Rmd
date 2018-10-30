@@ -1,7 +1,8 @@
 ---
 output:
-  - html_document
-  - md_document
+  html_document: default
+  md_document:
+      variant: markdown
 ---
 
 
@@ -83,7 +84,7 @@ df %>% {dplyr::bind_rows(head(., 3), tail(., 3))} %>% pander::pander()
 
 Before we build the model, we need to divide the data set into training set and testing set. So we can train our model using data in training set, and evalute the model using data in testing set.
 
-Here we randomly assigns 80 percent samples to the traing set, and the left 20 percent to the testing set.
+Here we randomly assigns 80 percent samples to the training set, and the left 20 percent to the testing set.
 
 ```{r divide-data}
 set.seed(0)   # Set random seed to make results reproducible:
