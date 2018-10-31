@@ -168,6 +168,12 @@ Finally, let's draw a ROC curve.
 probability <- predict(rf_classifier, testing[, -ncol(testing)], type = 'prob')
 label <- ifelse(testing[[5]] ==  levels(testing[[5]])[1], 1, 0)
 
+ROCR::prediction(probability[, 1], label) %>% {ROCR::performance(., 'auc')@y.values[[1]]}
+
+
+label <- testing[[5]] == colnames(probability)[1]
+label <- as.integer(label)
+
 prediction <- ROCR::prediction(probability[, 1], label)
 ```
 
