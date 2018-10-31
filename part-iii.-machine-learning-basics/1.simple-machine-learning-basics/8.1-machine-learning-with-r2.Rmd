@@ -21,18 +21,15 @@ we need to install the following packages:
   1. `randomForest`: build random forest model
   1. `ROCR`: ROC analysis
   1. `GGally`: plot correlation between features
-
-```{r install-package, eval=FALSE}
-install.packages(c('dplyr', 'randomForest', 'ROCR', 'GGally'))
-```
-
-
- 
+  1. `mlbench`: machine learning datasets
 
 ```{r install-internal, include=FALSE}
-# install internal packages
-cran_pkg <- c('pander', 'dplyr', 'randomForest', 'ROCR', 'GGally')
-lapply(cran_pkg, function(x) {if (!(x %in% .packages(T))) install.packages(x)})
+for(pkg in c('dplyr', 'randomForest', 'ROCR', 'GGally', 'mlbench')){
+  if(!require(pkg, character.only=TRUE)){
+    install.packages(pkg)
+  }
+}
+
 ```
 
 
@@ -64,6 +61,8 @@ To make things simple, here we only choose two species, `versicolor` and `virgin
 df <- iris[iris$Species != 'setosa', ]
 rownames(df) <- NULL;
 df$Species <- factor(df$Species)
+m <- as.matrix(df[,colnames(df) != "Species"])
+classes <- factor(df$Species)
 ```
 
 > - The first line selects rows in `iris` whose species is not `setosa`, so only `versicolor` and `virginica` are left.
@@ -87,21 +86,15 @@ Before we build the model, we need to divide the data set into training set and 
 Here we randomly assigns 80 percent samples to the training set, and the left 20 percent to the testing set.
 
 ```{r divide-data}
+# calculate the number of training samples (80%)
 nrow_training <- floor(nrow(df) * 0.8)  # Calculate the size of training sets
-indexes <- sample(1:nrow(df), nrow_training)  # these rows will be select for training
-
-training <- df[indexes, ] 
-testing <- df[-indexes, ]
+# generate a random permutation from 1 to number of samples
+indices = sample(1:nrow(df))
+# select the first 80% samples as training set
+training <- df[indices[1:nrow_traing,]
+# select the remaining 20% samples as test set
+testing <- df[indices[(n_train + 1):nrow(df)]]
 ```
-
-The code seems a little complicated, and it require you to be familiar with the R language. 
-
-Anyway, I will try to use a simple example to explain the core idea:
-
-> - Image your data contains only 5 rows, the 80 percent is 5 * 0.8 = 4 (in that case `nrow_training` is `4`). 
-> - Image you decide to choose the 1st, 2nd, 3rd and 5th rows for training  (in that case `indexes` is `c(1, 2, 3, 5)`)
-> - Now `training` contains the 1st, 2nd, 3rd and 5th rows of `df` (`[indexes, ]` means to choose these rows)
-> - And `testing` contains the 4th row of `df`  (`[-indexes, ]` means not to choose these rows, so only the 4th row is left)
 
 ### 4) Build the model
 
