@@ -44,4 +44,19 @@
 * [Appendix IV. Python Basics](appendix/python_tutorial.md)
 * [Appendix V. R Basics](appendix/appendix5.r-basics.md)
 * [Appendix. Plot with R](appendix/appendix.plots/README.md)
+<!--
+  * [0.Prepare](appendix/appendix.plots/0.prepare.md)
+  * [1.Box plots](appendix/appendix.plots/1.box-plots.md)
+  * [2.Violin plots](appendix/appendix.plots/2.violin-plots.md)
+  * [3.Histogram plots](appendix/appendix.plots/3.histogram-plots.md)
+  * [4.Density plots](appendix/appendix.plots/4.density-plots.md)
+  * [5.Dot plots](appendix/appendix.plots/5.dot-plots.md)
+  * [6.Scatter plots](appendix/appendix.plots/6.scatter-plots.md)
+  * [7.Volcano plots](appendix/appendix.plots/7.volcano-plots.md)
+  * [8.Manhattan plots](appendix/appendix.plots/8.manhattan-plots.md)
+  * [9.Heatmaps](appendix/appendix.plots/9.heatmaps.md)
+  * [10.Ballon plots](appendix/appendix.plots/10.ballon-plots.md)
+  * [11.Vennpie plots](appendix/appendix.plots/11.vennpie-plots.md)
+  * [Learn more](appendix/appendix.plots/learn-more.md)
+-->
 
