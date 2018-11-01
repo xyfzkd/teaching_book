@@ -36,14 +36,17 @@
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more/README.md)
+<!--
   * [Self Learning](appendix/appendix1.more/self-learning.md)
   * [Advanced Tutorial](appendix/appendix1.more/advanced-tutorial.md)
   * [Shared Scripts](appendix/appendix1.more/shared-scripts.md)
+-->
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Docker](appendix/appendix3.docker.md)
 * [Appendix IV. Python Basics](appendix/python_tutorial.md)
 * [Appendix V. R Basics](appendix/appendix5.r-basics.md)
 * [Appendix. Plot with R](appendix/appendix.plots/README.md)
+<!--
   * [0.Prepare](appendix/appendix.plots/0.prepare.md)
   * [1.Box plots](appendix/appendix.plots/1.box-plots.md)
   * [2.Violin plots](appendix/appendix.plots/2.violin-plots.md)
@@ -57,4 +60,5 @@
   * [10.Ballon plots](appendix/appendix.plots/10.ballon-plots.md)
   * [11.Vennpie plots](appendix/appendix.plots/11.vennpie-plots.md)
   * [Learn more](appendix/appendix.plots/learn-more.md)
+-->
 
