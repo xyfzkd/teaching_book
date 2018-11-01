@@ -321,7 +321,7 @@ Populating the interactive namespace from numpy and matplotlib
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作，其中产生的bam文件供下一步构建expression matrix使用。
 
-**总体流程图** ![](../.gitbook/assets/mappingpipe.png)
+**Mapping流程图** ![](../.gitbook/assets/mapping_pipe.png)
 
 #### 4.2.1 Data Structure
 
