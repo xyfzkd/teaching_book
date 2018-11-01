@@ -578,7 +578,6 @@ get_counts('Sample_N14')
 
 
 ### 4.3 Construct Expression Matrix 指南   <a id="expmatrixhelp"></a>
-![](plots/countpipe.png)
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix构建工作，使用mapping产生的bam文件，使用`Sample_N1, Sample_N7`的counts检查mapping和construct expression matrix是否有误。
 
