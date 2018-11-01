@@ -36,9 +36,11 @@
 ## Appendix
 
 * [Appendix I. Keep Learning](appendix/appendix1.more/README.md)
+<!--
   * [Self Learning](appendix/appendix1.more/self-learning.md)
   * [Advanced Tutorial](appendix/appendix1.more/advanced-tutorial.md)
   * [Shared Scripts](appendix/appendix1.more/shared-scripts.md)
+-->
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Docker](appendix/appendix3.docker.md)
 * [Appendix IV. Python Basics](appendix/python_tutorial.md)
