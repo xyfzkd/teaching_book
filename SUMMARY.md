@@ -25,40 +25,20 @@
 
 ## Part III. Machine Learning Basics
 
-* [8.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/README.md)
-  * [8.1 Machine Learning with R](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/8.1-machine-learning-with-r.md)
-  * [8.2 Machine Learning with Python](part-iii.-machine-learning-basics/1.simple-machine-learning-basics/8.2-machine-learning-with-python.md)
+* [8.Machine Learning Basics](part-iii.-machine-learning-basics/1.simple-machine-learning-basics.md)
+* [9. Machine Learning with R](part-iii.-machine-learning-basics/8.1-machine-learning-with-r.md)
+* [10. Machine Learning with Python](part-iii.-machine-learning-basics/8.2-machine-learning-with-python.md)
 
 ## Part IV. Quiz
 
-* [exRNA](part-iv.-quiz/quiz_exrna_tutorial.md)
+* [11. exRNA Panel](part-iv.-quiz/quiz_exrna_tutorial.md)
 
 ## Appendix
 
-* [Appendix I. Keep Learning](appendix/appendix1.more/README.md)
-<!--
-  * [Self Learning](appendix/appendix1.more/self-learning.md)
-  * [Advanced Tutorial](appendix/appendix1.more/advanced-tutorial.md)
-  * [Shared Scripts](appendix/appendix1.more/shared-scripts.md)
--->
+* [Appendix I. Keep Learning](appendix/appendix1.more.md)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Docker](appendix/appendix3.docker.md)
 * [Appendix IV. Python Basics](appendix/python_tutorial.md)
 * [Appendix V. R Basics](appendix/appendix5.r-basics.md)
-* [Appendix. Plot with R](appendix/appendix.plots/README.md)
-<!--
-  * [0.Prepare](appendix/appendix.plots/0.prepare.md)
-  * [1.Box plots](appendix/appendix.plots/1.box-plots.md)
-  * [2.Violin plots](appendix/appendix.plots/2.violin-plots.md)
-  * [3.Histogram plots](appendix/appendix.plots/3.histogram-plots.md)
-  * [4.Density plots](appendix/appendix.plots/4.density-plots.md)
-  * [5.Dot plots](appendix/appendix.plots/5.dot-plots.md)
-  * [6.Scatter plots](appendix/appendix.plots/6.scatter-plots.md)
-  * [7.Volcano plots](appendix/appendix.plots/7.volcano-plots.md)
-  * [8.Manhattan plots](appendix/appendix.plots/8.manhattan-plots.md)
-  * [9.Heatmaps](appendix/appendix.plots/9.heatmaps.md)
-  * [10.Ballon plots](appendix/appendix.plots/10.ballon-plots.md)
-  * [11.Vennpie plots](appendix/appendix.plots/11.vennpie-plots.md)
-  * [Learn more](appendix/appendix.plots/learn-more.md)
--->
+* [Appendix VI. Plot with R](appendix/appendix.plots.md)
 

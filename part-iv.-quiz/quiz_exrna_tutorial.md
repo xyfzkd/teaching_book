@@ -1,8 +1,12 @@
-# B. exRNA
+---
+description: Edited by Xupeng Chen (adapted from Yang Li)
+---
+
+# 11. exRNA Panel
 
 ## 1.背景介绍
 
-（adapt from Young Lee）
+
 
 在多种体液中，如血清、唾液以及尿液等，可以检测到一类非侵入性细胞外 RNA \(extracellular RNA, exRNA\)。诸如环状RNA \(circular RNA\)等这类具有空间结构的 RNA 分子，能够在血浆中稳定存在。这些从细胞分泌出的 exRNA 通常由微囊泡 \(microvesicles\)、外泌体\(exosome\) 包裹，或者与 RBP 密切结合形成 RNP 复合体。因为这些分子由于具备类细胞膜结构和蛋白质的保护，加上某些 RNA 具有特定的结构，exRNA 在多种体液 \(血清、唾液、尿液等\) 中可以抵抗体液中 RNase 的降解，从而稳定存在。exRNA 包括的类型很多，例如 miRNA，Y RNA, circRNA，lncRNA 等，每种又有不同的加工、剪切和修饰产物，这种多样性为更 好的临床检验带来了新的期望。这些 exRNA 可以成为一类有效的生物标志物，服务于人体健康状况检测和疾病的诊断，如癌症的早期诊断、肿瘤生长状况监测、以及预后辅助诊断。
 
@@ -213,7 +217,7 @@ scireprnastats.iloc[:,:5].head()
 | sam/bam | mapped reads to different kinds of indexes |
 | tsv format | stats of RNA ratio and length |
 
-### 3.2 Expression Matrix   <a id="expressmatrix"></a>
+### 3.2 Expression Matrix    <a id="expressmatrix"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix的构建，用`Sample_N1, Sample_N7`的expression matrix数据和`/BioII/chenxupeng/student/data/expression_matrix/GSE71008.txt`中相应的两个样本的参考数据计算相关系数以检查结果。
 
@@ -317,15 +321,13 @@ tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187
 Populating the interactive namespace from numpy and matplotlib
 ```
 
-
-### 4.2 Mapping 指南   <a id="mappinghelp"></a>
+### 4.2 Mapping 指南    <a id="mappinghelp"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作，其中产生的bam文件供下一步构建expression matrix使用。
 
 **总体流程图**
 
-![](plots/mapping_pipe.png)
-
+![](../.gitbook/assets/mapping_pipe%20%281%29.png)
 
 #### 4.2.1 Data Structure
 
@@ -361,7 +363,6 @@ eg:
     |-- 04.counts      #构建表达矩阵
     |-- 05.matrix      #构建表达矩阵
     |-- tmp            #存放中间文件
-
 ```
 
 **Inputs**
@@ -379,8 +380,7 @@ eg:
 
 #### 4.2.2 Running Steps
 
-
-##### 4.2.2.1 a. 获取数据
+**4.2.2.1 a. 获取数据**
 
 从`/BioII/chenxupeng/student/`上获取基因组数据`hg38`，基因组注释数据`/gtf`，索引文件`/RNA_index`以及原始数据`(fastq files)`到自己的账号下
 
@@ -393,7 +393,7 @@ eg:
 
 推荐使用`ln`或`cp`命令
 
-##### 4.2.2.2 b. QC- Trim - QC
+**4.2.2.2 b. QC- Trim - QC**
 
 这步操作目的主要有两个，一个是检查数据的质量，另一个是减掉接头序列
 
@@ -418,7 +418,6 @@ eg:
 **Output:**
 
 QC files
-
 
 * **step two - cut adaptor & trim long read**
 
@@ -446,17 +445,13 @@ Usage: `cutadapt -a ADAPTER [options] [-o output.fastq] input.fastq`
 
 `*.cutadapt.fastq`
 
-
-
 * **step three - QC after Trim**
 
 输入文件是trim后的数据，过程与step one相同
 
+**4.2.2.3 c. Clean rRNA reads**
 
-
-##### 4.2.2.3 c. Clean rRNA reads
-
-bowtie2可以将`.fastq`文件比对到rRNA index上从而得到**不含rRNA reads的`.fastq`文件以及map到rRNA index上的`.sam`文件**
+bowtie2可以将`.fastq`文件比对到rRNA index上从而得到**不含rRNA reads的**`.fastq`**文件以及map到rRNA index上的**`.sam`**文件**
 
 **Input:**
 
@@ -475,9 +470,9 @@ bowtie2 -p 4 [options] -x <bt2-idx> --un <address of unmapped reads> $input_file
 | `--sensitive-local(default)` | allow no mismatch, etc |
 | `--norc` | do not align reverse-complement version of read |
 | `--no-unal` | suppress SAM records for unaligned reads |
-| `--un` _`<path to unmapped reads>`_ | store unmapped reads |
-| **`-x`** _**`<path to index>/rRNA`**_ | indexed genome/transcriptome |
-| `-S` _`<path to output file>`_ | output file foramt as sam |
+| `--un` `<path to unmapped reads>` | store unmapped reads |
+| `-x` `<path to index>/rRNA` | indexed genome/transcriptome |
+| `-S` `<path to output file>` | output file foramt as sam |
 
 对于那些map到rRNA index上的`.sam`文件，可以用`rsem-tbam2gbam`命令转化为`.bam`文件。
 
@@ -491,14 +486,13 @@ rsem-tbam2gbam <bt2-idx> <sam> genome_bam_output
 
 map到rRNA index上的`*.<rRNA>.sam`文件，位于sam文件夹下
 
-以及`*.<rRNA>.rsem.clean.bam`文件，位于rsem_bam文件夹下
+以及`*.<rRNA>.rsem.clean.bam`文件，位于rsem\_bam文件夹下
 
-##### 4.2.2.4 d. Sequential Mapping
+**4.2.2.4 d. Sequential Mapping**
 
 这步的目的就是得到比对到各种RNA类型（例如miRNA, piRNA, Y RNA和srp RNA等等）的index后得到的`.sam`文件，mapping的过程就类似于clean rRNA reads的过程。
 
-只不过，4.2.2.3 c. 比对的index是rRNA，这里只需要 1）**把index替换成其他类型的index**，2）**将上一步比对得到的`*.no_<some type of RNA>.fq`作为input**，重复1）2），直至比对完所有类型至这样就可以得到各种RNA类型的比对结果。
-
+只不过，4.2.2.3 c. 比对的index是rRNA，这里只需要 1）**把index替换成其他类型的index**，2）**将上一步比对得到的**`*.no_<some type of RNA>.fq`**作为input**，重复1）2），直至比对完所有类型至这样就可以得到各种RNA类型的比对结果。
 
 **Input:**
 
@@ -514,18 +508,18 @@ bowtie2 -p 4 [options] -x <bt2-idx> --un <address of unmapped reads> $input_file
 
 | `Parameter Setting` |
 | :--- |
-| **`-x`** _**`<path to index>/`**_**`<some type of RNA>`** |
-| **`*.<RNA --un by the previous step>.fq`**   as `$input_file` |
-| **`-un`**_**`<path to output>/`**_**`*.no_<some type of RNA>.fq`** |
-| `-S` _**`<path to .sam file>/`**_**`<some type of RNA>.sam`** |
+| `-x` `<path to index>/<some type of RNA>` |
+| `*.<RNA --un by the previous step>.fq`   as `$input_file` |
+| `-un<path to output>/*.no_<some type of RNA>.fq` |
+| `-S` `<path to .sam file>/<some type of RNA>.sam` |
 
-对于那些map到<some type of RNA> index上的`.sam`文件，可以用`rsem-tbam2gbam`命令转化为`.bam`文件。
+对于那些map到 index上的`.sam`文件，可以用`rsem-tbam2gbam`命令转化为`.bam`文件。
 
 对于map到hg38上的`.sam`文件，可以用samtools的view功能转化为`.bam`文件，具体可以敲入`samtools view -h`查看怎么转化
 
 **Output:**
 
-不含某类型RNA reads的`.fastq`文件**`*.<some type of RNA>.unAligned.fastq`** (命名方式区别于去rRNA过程，读者可根据自己习惯命名)
+不含某类型RNA reads的`.fastq`文件`*.<some type of RNA>.unAligned.fastq` \(命名方式区别于去rRNA过程，读者可根据自己习惯命名\)
 
 map到某类型RNA index上的`*.<some type of RNA>.sam`文件
 
@@ -534,10 +528,10 @@ map到某类型RNA index上的`*.<some type of RNA>.sam`文件
 **提醒:**
 
 * reads依次map到各种类型的RNA index上，推荐次序为，`miRNA、piRNA、Y_RNA、srpRNA、tRNA、snRNA、snoRNA、lncRNA、mRNA、tucp`，最后是`hg38other`
-* map的最后一步非常特殊，1）index不再是RNA_index，是hg38,不在RNA_index文件夹下，需要注意 2）sam转bam工具也有所不同，输出文件理论上不再应该是`*.hg38other.rsem.clean.bam`而是`*.hg38other.bam`，但是文件名的设置会影响后续代码简洁性，需要注意
+* map的最后一步非常特殊，1）index不再是RNA\_index，是hg38,不在RNA\_index文件夹下，需要注意 2）sam转bam工具也有所不同，输出文件理论上不再应该是`*.hg38other.rsem.clean.bam`而是`*.hg38other.bam`，但是文件名的设置会影响后续代码简洁性，需要注意
 
+**4.2.2.5 e. length & ratio**
 
-##### 4.2.2.5 e. length & ratio
 对mapping到不同RNA类型的index的reads，我们可以统计其长度，观察其不同RNA类型的长度分布；我们还可以统计不同RNA类型的reads所占比例，作为sample QC的参考。
 
 **length**
@@ -545,6 +539,7 @@ map到某类型RNA index上的`*.<some type of RNA>.sam`文件
 这里提供统计长度的.sh，脚本位置在`/BioII/chenxupeng/student/bin/length.sh`
 
 该脚本得到的包含长度信息的文件可以用python作格式精简处理，
+
 ```text
 import pandas as pd
 def get_length_table(samplename):
@@ -558,6 +553,7 @@ def get_length_table(samplename):
     return df
 get_length_table('Sample_N14')
 ```
+
 **ratio**
 
 这里提供统计比例的.sh脚本，位置在`/BioII/chenxupeng/student/bin/ratio.sh`
@@ -574,15 +570,15 @@ def get_counts(samplename):
     return df
 get_counts('Sample_N14')
 ```
+
 [**其他参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/1.mapping-annotation-and-qc)
 
-
-### 4.3 Construct Expression Matrix 指南   <a id="expmatrixhelp"></a>
+### 4.3 Construct Expression Matrix 指南    <a id="expmatrixhelp"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的expression matrix构建工作，使用mapping产生的bam文件，使用`Sample_N1, Sample_N7`的counts检查mapping和construct expression matrix是否有误。
 
-
 #### 4.3.1 Data Structure
+
 **inputs**
 
 | **File format** | **Information contained in file** | **File description** | **Notes** |
@@ -597,11 +593,12 @@ get_counts('Sample_N14')
 
 #### 4.3.2 Running Scripts
 
-##### 4.3.2.1 Software/Tools
+**4.3.2.1 Software/Tools**
 
 * FeatureCounts
 
 #### 4.3.2.2 FeatureCounts
+
 对Mapping步骤得到的不同样本不同RNA类型的`<sample>.<some type of RNA>.rsem.clean.bam`文件，进行Raw Counts的统计（无需统计hg38other），结果可输出到`.../04.counts/<sample>/<sample>.<some type of RNA>.featureCounts.counts`
 
 **Input1:**
@@ -621,6 +618,7 @@ featureCounts  -t exon -g transcript_id -s 1 -a <annotation_file> -o <output_fil
 `<sample>.<some type of RNA>.featureCounts.counts`
 
 #### 4.3.3 Merge不同RNA类型的Raw Counts
+
 上步操作我们得到不同样本不同RNA类型的Raw Counts，现在要将这些文件合并为一个文件，代码位置在`/BioII/chenxupeng/student/bin/merge.sh`。
 
 `proj_exRNA.featureCounts.counts.merged.mx`就是我们需要的文件
@@ -635,19 +633,16 @@ $$PCC = \frac{cov(X,Y)}{\sigma X \sigma Y}$$
 from scipy.stats import pearsonr
 pearsonr(X,Y)
 ```
-python参考代码位于`/BioII/chenxupeng/student/bin/corr.py`
 
+python参考代码位于`/BioII/chenxupeng/student/bin/corr.py`
 
 [**其他参考教程**](https://lulab.gitbook.io/training/part-ii.-basic-bioinfo-analyses/2.expression-matrix)
 
-
-
-
-### 4.4 数据分析和质量控制指南   <a id="statshelp"></a>
+### 4.4 数据分析和质量控制指南    <a id="statshelp"></a>
 
 **注意，上一步获得的自己map的五个样本也需要加入到统计中，不能只统计已经提供的样本的信息**
 
-#### 4.4.1 基本信息统计   <a id="statsbasic"></a>
+#### 4.4.1 基本信息统计    <a id="statsbasic"></a>
 
 **统计不同RNA类型reads的比例并以饼图展示**
 
@@ -723,7 +718,7 @@ ax.set_yticks(np.arange(0,1,0.1))
 ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 ```
 
-#### 4.4.3 sample QC   <a id="sampleqc"></a>
+#### 4.4.3 sample QC    <a id="sampleqc"></a>
 
 为了让比对结果更让人信服，我们基于不同RNA类型reads的比例制定了一套标准用于对样本进行质量控制：
 
@@ -739,7 +734,7 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 
 请读者依据以上标准，对样本进行质量控制，并且可以可视化质量控制的条件
 
-### 4.4 预处理指南   <a id="preprocessinghelp"></a>
+### 4.4 预处理指南    <a id="preprocessinghelp"></a>
 
 #### 4.4.1 相关教程
 
@@ -895,7 +890,7 @@ combat <- ComBat(
 )
 ```
 
-### 4.5 特征选择指南   <a id="featurehelp"></a>
+### 4.5 特征选择指南    <a id="featurehelp"></a>
 
 [**参考教程**](https://lulab.gitbook.io/training/part-iii.-advanced-bioinfo-analyses/2.feature-selection)
 
@@ -923,13 +918,13 @@ for i in range(4):
 
 ![png](../.gitbook/assets/quiz_exrna_tutorial_49_0.png)
 
-### 4.6 模型评估与feature解释指南   <a id="evaluatehelp"></a>
+### 4.6 模型评估与feature解释指南    <a id="evaluatehelp"></a>
 
-#### 4.6.1 特征选择结果可视化   <a id="clustermap"></a>
+#### 4.6.1 特征选择结果可视化    <a id="clustermap"></a>
 
 使用seaborn的clustermap功能，将挑选出的feature的counts（做过合适的scale）绘制heatmap图并聚类，上方的颜色表示类别，可见同一类被很好的聚在了一起。 ![](../.gitbook/assets/clustermap.png)
 
-#### 4.6.2 用选出的feature进行分类并绘制ROC曲线   <a id="rocplot"></a>
+#### 4.6.2 用选出的feature进行分类并绘制ROC曲线    <a id="rocplot"></a>
 
 请特别注意，这里的ROC曲线有其特殊之处。针对我们样本很少的问题，我们不能专门划分出一部分测试集供测试和绘制曲线。我们使用两种方式划分数据集：
 
@@ -940,7 +935,7 @@ for i in range(4):
 
 ![](../.gitbook/assets/roc.png) ![](../.gitbook/assets/roc_cv.png)
 
-#### 4.6.3 用AUC评估挑选不同数量feature的效果   <a id="aucline"></a>
+#### 4.6.3 用AUC评估挑选不同数量feature的效果    <a id="aucline"></a>
 
 读者可以分析挑选不同数量的feature时模型的拟合效果，评估指标为AUC ![](../.gitbook/assets/auc_line.png)
 

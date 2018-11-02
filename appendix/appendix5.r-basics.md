@@ -33,7 +33,7 @@ Here is an example of installation in Linux:
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
-We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots/)
+We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md)
 
 **c. Use R**
 
@@ -167,7 +167,7 @@ t.test(a,b,altrenative=c("less"),paired=TRUE) # paired t test
 
 **More R Examples:**
 
-* [Appendix. Plot with R](appendix.plots/)
+* [Appendix. Plot with R](appendix.plots.md)
 * [John's Github](https://github.com/urluzhi/scripts/tree/master/Rscript) 
 
 ## 4. More Readings and Practices
