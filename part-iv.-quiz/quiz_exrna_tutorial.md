@@ -180,27 +180,32 @@ scireprnastats.iloc[:,:5].head()
 
 ## 3.Quiz具体要求
 
-请读者使用我们提供的数据，完成以下工作：
+请读者使用我们提供的数据，完成以下工作，包括六个主要步骤：
 
-* 六个主要步骤：
+* **Part I. Data Matrix**
   * 1.完成五个样本的**mapping**工作，并**统计相关的比例和长度信息**
   * 2.完成五个样本的**expression matrix构建**
   * 3.完成**数据分析和质量控制**工作
-  * 4.完成**预处理**工作
+* **Part II. Matrix Process**
+  * 4.完成**矩阵处理**工作: imputation, normalization, remove batch effect, etc
+* **Part III. Machine Learning** 
   * 5.完成**特征选择和特征筛除工作**并汇报挑选出的feature。
   * 6.完成**模型评估与feature解释**。
-* 中期报告要求（13周结束时提交）：完成1.mapping, 2.expression matrix, 3.数据分析和质量控制, 4.预处理和5.基础要求部分，参照教程示例绘制相应的图，提交一份工作概述，需要包括：
+
+
+
+* **中期报告要求**：完成1.mapping, 2.expression matrix, 3.数据分析和质量控制, 4.预处理和5.基础要求部分，参照教程示例绘制相应的图，提交一份工作概述，需要包括：
   * 1.汇报构建的expression matrix与参考样本的相关系数。
   * 2.数据分析和质量控制相关绘图。
   * 3.预处理部分使用的方法，数据处理前后的PCA图和alignment score。
   * 4.使用的机器学习模型介绍，初步挑选出的feature。
-* 期末报告要求：提交一份**工作报告**，中英文不限，同时提交**源代码**。
+* **期末报告要求**：提交一份**工作报告**，中英文不限，同时提交**源代码**。
 
 > 参考文献：
 >
 > [LncRNA proﬁle study reveals a three-lncRNA signature associated with the survival of patients with oesophageal squamous cell carcinoma.pdf](https://www.ncbi.nlm.nih.gov/pubmed/24522499)
 
-### 3.1 Mapping
+### 3.1 Reads Processing and Mapping
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作。
 
@@ -244,9 +249,15 @@ scireprnastats.iloc[:,:5].head()
 * 统计一套数据中不同RNA type在不同样本的counts分布，可绘制pie plot, barplot, boxplot和lineplot等。参考[_基本信息统计_](quiz_exrna_tutorial.md#statsbasic)部分。
 * 对数据做基本的quality control，通过经验性的阈值或者PCA中明显离群点去除部分样本。参考[_sample QC_](quiz_exrna_tutorial.md#sampleqc)部分
 
-### 3.4 预处理
+### 3.4 矩阵处理
 
-对expression matrix做相应的**imputation**,**normalization**并**去除batch effect**。要求读者**分析进行相应预处理后的效果**，选定自己认为比较合适的预处理方法，可以参考[_预处理指南_](quiz_exrna_tutorial.md#preprocessinghelp)。
+对expression matrix做相应的
+
+* imputation
+* normalization
+* remove batch effect
+
+要求读者**分析进行相应处理后的效果**，选定自己认为比较合适的处理方法，可以参考[_矩阵处理指南_](quiz_exrna_tutorial.md#preprocessinghelp)。
 
 > tips: 对feature的normalization在下一步特征选择进行
 
@@ -323,7 +334,7 @@ tableau20 = np.array([(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187
 Populating the interactive namespace from numpy and matplotlib
 ```
 
-### 4.2 Mapping 指南    <a id="mappinghelp"></a>
+### 4.2 Reads Processing and Mapping 指南    <a id="mappinghelp"></a>
 
 完成五个样本`Sample_N1, Sample_N7, Sample_N13, Sample_N19, Sample_N25`的mapping和RNA ratio与length的统计工作，其中产生的bam文件供下一步构建expression matrix使用。
 
@@ -736,7 +747,7 @@ ax.set_yticklabels(['{:.1f}%'.format(i*10) for i in range(10)],fontsize=40)
 
 请读者依据以上标准，对样本进行质量控制，并且可以可视化质量控制的条件
 
-### 4.4 预处理指南    <a id="preprocessinghelp"></a>
+### 4.4 矩阵处理指南    <a id="preprocessinghelp"></a>
 
 #### 4.4.1 相关教程
 
@@ -819,7 +830,7 @@ def knn_score(X, y, K=10):
 
 ![](../.gitbook/assets/alignment_score.png)
 
-#### 4.4.5 预处理部分代码示例
+#### 4.4.5 矩阵处理部分代码示例
 
 **注意，本部分代码均由R语言书写**
 
