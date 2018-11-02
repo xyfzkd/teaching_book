@@ -31,7 +31,7 @@
 
 ## Part IV. Quiz
 
-* [11. exRNA Panel](part-iv.-quiz/quiz_exrna_tutorial.md)
+* [11. exRNA Biomarker](part-iv.-quiz/quiz_exrna_tutorial.md)
 
 ## Appendix
 
