@@ -107,8 +107,8 @@ motif based sequence analysis tools [http://meme-suite.org/](http://meme-suite.o
 2. HOMER  
 Software for motif discovery and next-gen sequencing analysis [http://homer.ucsd.edu/homer/motif/](http://homer.ucsd.edu/homer/motif/)
 
-**structure**
-3. RNApromo   
-Computational prediction of RNA structural motifs involved in post transcriptional regulatory processes [https://genie.weizmann.ac.il/pubs/rnamotifs08/](https://genie.weizmann.ac.il/pubs/rnamotifs08/)
-4. GraphProt  
-modeling binding preferences of RNA-binding proteins [http://www.bioinf.uni-freiburg.de/Software/GraphProt/](http://www.bioinf.uni-freiburg.de/Software/GraphProt/)
+**structure**  
+3. RNApromo    
+Computational prediction of RNA structural motifs involved in post transcriptional regulatory processes [https://genie.weizmann.ac.il/pubs/rnamotifs08/](https://genie.weizmann.ac.il/pubs/rnamotifs08/)  
+4. GraphProt   
+modeling binding preferences of RNA-binding proteins [http://www.bioinf.uni-freiburg.de/Software/GraphProt/](http://www.bioinf.uni-freiburg.de/Software/GraphProt/)  
