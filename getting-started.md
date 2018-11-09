@@ -36,7 +36,7 @@
 * github page （例如：[https://lulab.github.io](https://lulab.github.io) 的 [source code](https://github.com/lulab/lulab.github.io/blob/master/README.md)）
 * gitbook \(例如：本文档） 
 
-> 我们鼓励利用github，github自带的wiki，gitbook,清华云等云服务；对习惯离线编辑同学有如下软件推荐： Mac: [Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows: [typora](https://typora.io/), [Madoko](https://www.madoko.net/)
+> 我们鼓励利用github，github自带的wiki，gitbook，清华云等云服务；对习惯离线编辑同学有如下软件推荐： Mac: [Bear](https://bear.app/), [MWeb](https://zh.mweb.im/); Windows: [typora](https://typora.io/), [Madoko](https://www.madoko.net/)
 
 ## 4\) 本教程使用说明
 
