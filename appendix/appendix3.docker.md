@@ -2,7 +2,7 @@
 
 ## 1\) MAC 用户使用 Docker 指南
 
-MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-started.md#use-docker，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
+MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-started.md#use-docker)，如果遇到使用问题，可以参考官网的 [这篇文章](https://docs.docker.com/docker-for-mac/)，启动并设置Docker Desktop。
 
 ## 2\) Windows 用户使用 Docker 指南
 
@@ -29,7 +29,8 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 > **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。 
 > ![](../.gitbook/assets/vm-3.png)
 
-导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。 ![](../.gitbook/assets/vm-4.png)
+导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。
+![](../.gitbook/assets/vm-4.png)
 
 #### 2a.4\) 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
 
