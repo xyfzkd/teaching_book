@@ -111,7 +111,7 @@ docker exec -u root bioinfo_tsinghua chown test:test /home/test/share
 
 执行这一步时，系统会弹出以下提示，我们选择 `Share it`
 
-![](../.gitbook/assets/win_docker10.png) 选择
+![](../.gitbook/assets/win_docker10.png)
 
 ### 3g)使用容器
 
