@@ -32,7 +32,9 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。  
 ![](../.gitbook/assets/vm-4.png)
 
-### 2d) 导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
+### 2d) 启动虚拟机
+
+导入完成后，启动 `bioinfo_tinghua`, 等待2至5分钟，虚拟机即可使用。
 
 ![](../.gitbook/assets/vm-5.png)
 
