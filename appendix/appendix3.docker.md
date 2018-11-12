@@ -91,11 +91,11 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 mkdir ~/Desktop/bioinfo_tsinghua_share
 ```
 
+然后，新建一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行）。
+
 ```bash
 docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
 ```
-
-然后，新建一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行）。
 
 > 参数说明：
 >
