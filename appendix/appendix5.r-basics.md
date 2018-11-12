@@ -50,8 +50,8 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
   `q()`
 
 * How to get help?
-
-  `?t.test`
+  For example, we use use `?t.test` to we get help for `t.test()` function
+  
 
 ## 2. Basic Data Types
 
@@ -113,10 +113,10 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 + ncol=2)
 
 > B # B has 3 rows and 2 columns
-[,1] [,2]
-[1,] 2 1
-[2,] 4 5
-[3,] 3 7
+     [,1] [,2]
+[1,]    2    1
+[2,]    4    5
+[3,]    3    7
 ```
 
 * **list**
@@ -126,6 +126,19 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 > s = c("aa", "bb", "cc", "dd", "ee")
 > b = c(TRUE, FALSE, TRUE, FALSE, FALSE)
 > x = list(n, s, b, 3) # x contains copies of n, s, b
+
+> x
+[[1]]
+[1] 2 3 5
+
+[[2]]
+[1] "aa" "bb" "cc" "dd" "ee"
+
+[[3]]
+[1]  TRUE FALSE  TRUE FALSE FALSE
+
+[[4]]
+[1] 3
 ```
 
 * **data frame**
@@ -136,10 +149,10 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 > b = c(TRUE, FALSE, TRUE)
 > df = data.frame(n, s, b) # df is a data frame
 > df
-n s b
-1 2 aa TRUE
+  n  s     b
+1 2 aa  TRUE
 2 3 bb FALSE
-3 5 cc TRUE
+3 5 cc  TRUE
 ```
 
 ## 3. Examples
@@ -157,8 +170,8 @@ write.table(y, file = "foo2")
 a<-read.table("foo1") # read the file
 b<-read.table("foo2") # read the file
 
-t.test(a,b,alternative=c("less") )
-t.test(a,b,altrenative=c("less"),paired=TRUE) # paired t test
+t.test(a,b,alternative=c("less"))
+t.test(a[[1]],b[[1]],altrenative=c("less"),paired=TRUE) # paired t test
 ```
 
 * You can also write these into a file, script.R, then run  
