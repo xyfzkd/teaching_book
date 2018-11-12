@@ -29,8 +29,8 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 ![](../.gitbook/assets/vm-2.png)   
 
 > **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。  
-> 
-> ![](../.gitbook/assets/vm-3.png)
+
+![](../.gitbook/assets/vm-3.png)
 
 导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。  
 
@@ -52,11 +52,11 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 ### 3a) 安装 Docker
 
-从 [官网](https://store.docker.com/editions/community/docker-ce-desktop-windows) 或者 [清华云盘](https://cloud.tsinghua.edu.cn/f/a28251b47d0e471a8d8f/) 下载Docker，并进行安装。
+从 [官网](https://store.docker.com/editions/community/docker-ce-desktop-windows) 下载 Docker，并进行安装。
 
-**打开 Hyper-V**
+### 3b) 启用Hyper-V
 
-选择`Enable & Restart`以打开Hyper-V
+安装完成后，选择`Enable & Restart`以启用Hyper-V
 
 ![](../.gitbook/assets/win_docker5.png)
 
