@@ -10,7 +10,7 @@ How to make professional and beautiful plots
 
 ## 1. Install and Use R
 
-**a. Install R**
+### 1a) Install R
 
 See the official site of R: [https://www.r-project.org/](https://www.r-project.org/) （Docker中已经安装好）
 
@@ -29,13 +29,13 @@ Here is an example of installation in Linux:
   apt -y install r-base
   ```
 
-**b. Install RStudio**
+## 1b) Install RStudio
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
 We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md)
 
-**c. Use R**
+## 1c) Use R
 
 * how to enter?
   * On Mac or Linux, you can open a Terminal and type 
@@ -45,6 +45,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
     ```
 
   * On Windows or Mac, you can find a program with this   logo: ![](../.gitbook/assets/r-logo.png)
+
 * How to quit?
 
   `q()`
@@ -55,6 +56,8 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
   
 
 ## 2. Basic Data Types
+
+### 2a) basic type
 
 ```r
 > x = 10.5 # assign a decimal value
@@ -89,7 +92,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [1] "character"
 ```
 
-* **vector**
+### 2b) vector
 
 ```r
 > c(2, 3, 5)
@@ -105,7 +108,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [1] "cc"
 ```
 
-* **matrix**
+### 2c) matrix
 
 ```r
 > B = matrix(
@@ -120,7 +123,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [3,]    3    7
 ```
 
-* **list**
+### 2d) list
 
 ```r
 > n = c(2, 3, 5)
@@ -142,7 +145,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 [1] 3
 ```
 
-* **data frame**
+### 2e) data frame
 
 ```r
 > n = c(2, 3, 5)
@@ -158,7 +161,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
 
 ## 3. Examples
 
-**A simple example of t test:** 
+### 3a) A simple example of t test
 
 * start R and type:
 
@@ -179,14 +182,14 @@ t.test(a[[1]],b[[1]],altrenative=c("less"),paired=TRUE) # paired t test
 
   `R CMD BATCH script.R`
 
-**More R Examples:**
+### 3b) More R Examples
 
 * [Appendix. Plot with R](appendix.plots.md)
 * [John's Github](https://github.com/urluzhi/scripts/tree/master/Rscript) 
 
 ## 4. More Readings and Practices
 
-**Basic:**
+### 4a) Basic
 
 * &lt;&lt; Bioinformatics Data Skills &gt;&gt;
   * A Rapid Introduction to the R Language
@@ -196,7 +199,7 @@ t.test(a[[1]],b[[1]],altrenative=c("less"),paired=TRUE) # paired t test
   * Data Input  
   * Statistics
 
-**Advanced:**
+### 4b) Advanced
 
 * [Advanced R Tutorial](https://lulab.gitbook.io/training/part-i-basic-skills/4.r)
 * &lt;&lt; Bioinformatics Data Skills &gt;&gt;
