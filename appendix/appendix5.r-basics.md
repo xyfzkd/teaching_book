@@ -50,6 +50,7 @@ We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md
   `q()`
 
 * How to get help?
+
   For example, we use use `?t.test` to we get help for `t.test()` function
   
 
