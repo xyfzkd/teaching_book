@@ -6,22 +6,25 @@
 
 本方案需要在自己电脑上安装软件和配置。
 
-1. 安装 R: <https://www.r-project.org/>
-2. 安装 RStudio：<https://www.rstudio.com/>
-3. 下载并解压 [`lulab-plot-master.zip`](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/files/?p=/lulab-plot-master.zip), 双击其中的 `lulab-plot.Rproj`。
-4. 安装需要的package:
+1\. 安装 R: <https://www.r-project.org/>
 
-      ![](../.gitbook/assets/install-lulab-plot.gif)
+2\. 安装 RStudio：<https://www.rstudio.com/>
 
-5. 打开 `.Rmd` 文件
+3\. 下载并解压 [`lulab-plot-master.zip`](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/files/?p=/lulab-plot-master.zip), 双击其中的 `lulab-plot.Rproj`。
 
-   用Rstudio打开`all.Rmd`文件, 即可阅读教程，并执行相关代码。
+4\. 安装需要的package:
 
-   ![](../.gitbook/assets/all-rmd.gif)
+![](../.gitbook/assets/install-lulab-plot.gif)
 
-   > tips: 如果你更喜欢每个文件仅包含一节的内容（一种 plot 类型），可以先打开 `index.Rmd`，安装需要的 packages，然后依次打开每一节对应的 `.Rmd` 文件（动画展示了第1、2小节对应的 `1.box-plots.Rmd` 和 `2.violin-plots.Rmd`）
-   >
-   > ![](../.gitbook/assets/index-1-2-rmd.gif)
+5\. 打开 `.Rmd` 文件
+
+用Rstudio打开`all.Rmd`文件, 即可阅读教程，并执行相关代码。
+
+![](../.gitbook/assets/all-rmd.gif)
+
+> tips: 如果你更喜欢每个文件仅包含一节的内容（一种 plot 类型），可以先打开`index.Rmd`，安装需要的 packages，然后依次打开每一节对应的 `.Rmd` 文件（动画展了第1、2小节对应的 `1.box-plots.Rmd` 和 `2.violin-plots.Rmd`）
+>
+> ![](../.gitbook/assets/index-1-2-rmd.gif)
 
 ## 0b) 方案二: 在 Docker 中使用 R 来画图
 
