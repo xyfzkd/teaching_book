@@ -29,13 +29,13 @@ Here is an example of installation in Linux:
   apt -y install r-base
   ```
 
-## 1b) Install RStudio
+### 1b) Install RStudio
 
 If you like a nice interface to use R instead of Linux command line, you can try **RStudio:** [https://www.rstudio.com/](https://www.rstudio.com/)
 
 We have some instruction of Rstudio in [Appendix. Plot with R](appendix.plots.md)
 
-## 1c) Use R
+### 1c) Use R
 
 * how to enter?
   * On Mac or Linux, you can open a Terminal and type 
