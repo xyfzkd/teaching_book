@@ -4,13 +4,11 @@
 
 ## 0a) 方案一: 在自己电脑上用 Rstudio 画图 {#plot-in-Rstudio}
 
-### 0a.1) 在自己电脑安装软件和配置
+本方案需要在自己电脑上安装软件和配置。
 
-下载 [相关资源](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/)中的 R, Rstudio 软件及`lulab-plot-master.zip`。
-
-1. 安装 R。
-2. 安装 RStudio。
-3. 下载并解压 `lulab-plot-master.zip`, 双击其中的 `lulab-plot.Rproj`。
+1. 安装 R: <https://www.r-project.org/>
+2. 安装 RStudio：<https://www.rstudio.com/>
+3. 下载并解压 [`lulab-plot-master.zip`](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/files/?p=/lulab-plot-master.zip), 双击其中的 `lulab-plot.Rproj`。
 4. 安装需要的package:
 
       ![](../.gitbook/assets/install-lulab-plot.gif)
