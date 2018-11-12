@@ -14,22 +14,26 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 至 [官网](https://www.virtualbox.org/wiki/Downloads) 下载安装程序，运行，按照提示完成安装。
 
-### 2b) 下载我们提供的 Ubuntu 虚拟机
+### 2b) 下载虚拟机
 
-[bioinfo\_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
+下载我们提供的 Ubuntu 虚拟机：[bioinfo\_tsinghua.virtualbox.ova](https://cloud.tsinghua.edu.cn/f/c91ec26fc5774303a5df/) （用户名和密码均为 `test`）。
 
 ### 2c) 导入虚拟机
 
 `管理` -> `导入虚拟电脑`   
+
 ![](../.gitbook/assets/vm-1.png)
 
 选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova`   
+
 ![](../.gitbook/assets/vm-2.png)   
 
 > **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。  
+> 
 > ![](../.gitbook/assets/vm-3.png)
 
 导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。  
+
 ![](../.gitbook/assets/vm-4.png)
 
 ### 2d) 启动虚拟机
@@ -62,9 +66,9 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 ![](../.gitbook/assets/win_docker6.png)
 
-### 3c) 在PowerShell中输入命令导入docker镜像
+### 3c) 导入 Docker 镜像
 
-将Docker image: [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)下载到桌面，并且通过在PowerShell中输入以下命令导入将镜像导入到 Docker 中。
+将 Docker image: [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)下载到桌面，并且通过在PowerShell中输入以下命令导入将镜像导入到 Docker 中。
 
 ```bash
 docker info
