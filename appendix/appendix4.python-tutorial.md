@@ -113,7 +113,7 @@ if num > 0 and num  < 15:
 my_num = 5
 if my_num % 2 == 0:
     print("Your number is even")
-elif my_num % 2 == 0:
+elif my_num % 2 == 1:
     print("Your number is odd")
 else: 
     print("Are you sure your number is an integer?")
