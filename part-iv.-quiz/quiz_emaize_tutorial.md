@@ -14,7 +14,7 @@ eMaize挑战赛是[一个通过机器学习方法预测玉米性状的比赛](ht
 
 ## 编程工具介绍
 
-大作业需要使用python完成，推荐读者使用python3。我们需要一些python的工具包来实现部分功能。推荐使用包管理软件Anaconda来预装一些必需的包以及安装其他需要的包。另外强烈建议使用jupyter notebook进行代码编辑、运行和调试。具体使用方法请参考教程[Anaconda 和 jupyter](https://lulab.gitbooks.io/teaching/content/part-iii.-machine-learning-basics/python_tutorial.html)相关指南。 如果本地缺少下列可能需要的包，请使用`pip`或者`conda`进行安装。如:
+大作业需要使用python完成，推荐读者使用python3。我们需要一些python的工具包来实现部分功能。推荐使用包管理软件Anaconda来预装一些必需的包以及安装其他需要的包。另外强烈建议使用jupyter notebook进行代码编辑、运行和调试。具体使用方法请参考教程[Anaconda 和 jupyter](/appendix/appendix4.python-tutorial.md)相关指南。 如果本地缺少下列可能需要的包，请使用`pip`或者`conda`进行安装。如:
 
 ```text
 pip install tqdm

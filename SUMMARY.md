@@ -41,7 +41,7 @@
 * [Appendix I. Keep Learning](appendix/appendix1.more.md)
 * [Appendix II. Databases & Servers](appendix/appendix2.databases.md)
 * [Appendix III. Docker](appendix/appendix3.docker.md)
-* [Appendix IV. Python Basics](appendix/python_tutorial.md)
+* [Appendix IV. Python Basics](appendix/appendix4.python-tutorial.md)
 * [Appendix V. R Basics](appendix/appendix5.r-basics.md)
 * [Appendix VI. Plot with R](appendix/appendix.plots.md)
 
