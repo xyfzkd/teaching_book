@@ -60,21 +60,21 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 ![](../.gitbook/assets/win_docker5.png)
 
-### 3b) 启动PowerShell
+### 3c) 启动 Power shell 
 
 在开始菜单搜索 PowerShall, 并启动。
 
 ![](../.gitbook/assets/win_docker6.png)
 
-### 3c) 检查安装
+### 3d) 检查安装
 
 输入以下命令，检查 Docker 是否成功安装。
 
 ![](../.gitbook/assets/win_docker7.png)
 
-### 3d) 导入 Docker 镜像
+### 3e) 导入 Docker 镜像
 
-将 Docker image: [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)下载到桌面，并且通过在PowerShell中输入以下命令导入将镜像导入到 Docker 中。
+将 Docker image: [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)下载到桌面，并且通过在 Power shell 中输入以下命令导入将镜像导入到 Docker 中。
 
 ```bash
 docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
@@ -82,28 +82,48 @@ docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 
 ![](../.gitbook/assets/win_docker8.png)
 
-### 3d) 首次创建容器
+### 3f) 首次创建容器
+
+
+首先，在桌面新建 `bioinfo_tsinghua_share` 文件夹用于共享文件
 
 ```bash
 mkdir ~/Desktop/bioinfo_tsinghua_share
-
-docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
-
-docker exec -u root bioinfo_tsinghua chown test:test /home/test/share  # Windows 10 pro set dir use root as default user, we need to set it be owned by test
 ```
 
-![](../.gitbook/assets/win_docker9.png)
+```bash
+docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bioinfo_tsinghua_share:/home/test/share bioinfo_tsinghua
+```
 
+然后，新建一个名为 `bioinfo_tsinghua` 的容器（除非有特殊说明，接下来的章节中所有操作均在该容器中进行）。
 
-![](../.gitbook/assets/win_docker10.png) 选择`Share it`
+> 参数说明：
+>
+> * 设置该容器能一直在后台保持运行状态（`-dt --restart unless-stopped`）
+> * 主机 (Windows）和docker容器（例如Linux）设置了一个文件夹同步，可以互传文件：
+>   * Windows: `~/Desktop/bioinfo_tsinghua_share` == LINUX: `/home/test/share`
 
-### 3c)使用容器
+在 Windows 10 Pro 上，我们在 Docker 中创建的 `/home/test/share` 归 root 所有，所以要将其改为归 test 用户所有。
 
-如果容器创建成功，之后每次只需要启动Docker程序，然后在Powershell中输入以下命令即可进入容器：
+```bash
+docker exec -u root bioinfo_tsinghua chown test:test /home/test/share 
+```
+
+执行这一步时，系统会弹出以下提示，我们选择 `Share it`
+
+![](../.gitbook/assets/win_docker10.png) 选择
+
+### 3g)使用容器
+
+如果容器创建成功，之后每次只需要启动Docker程序，然后在 Power shell 中输入以下命令即可进入容器：
 
 ```bash
 docker exec -it bioinfo_tsinghua bash
 ```
+
+之后即可运行本教程中提供的 Linux 命令来执行任务，比如 1.Linux 这一章的 `ls`
+
+任务完成后，输入 `exit` 即可回到 Power shell。
 
 ![](../.gitbook/assets/win_docker11.png)
 
