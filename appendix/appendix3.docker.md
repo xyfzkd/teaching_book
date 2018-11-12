@@ -66,16 +66,21 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 ![](../.gitbook/assets/win_docker6.png)
 
-### 3c) 导入 Docker 镜像
+### 3c) 检查安装
+
+输入以下命令，检查 Docker 是否成功安装。
+
+![](../.gitbook/assets/win_docker7.png)
+
+### 3d) 导入 Docker 镜像
 
 将 Docker image: [bioinfo\_tsinghua.docker.tar.gz](https://cloud.tsinghua.edu.cn/f/b8dcdfa425ba4880b4f3/)下载到桌面，并且通过在PowerShell中输入以下命令导入将镜像导入到 Docker 中。
 
 ```bash
-docker info
 docker load -i Desktop\bioinfo_tsinghua.docker.tar.gz
 ```
 
-![](../.gitbook/assets/win_docker7.png) ![](../.gitbook/assets/win_docker8.png)
+![](../.gitbook/assets/win_docker8.png)
 
 ### 3d) 首次创建容器
 
@@ -87,7 +92,10 @@ docker run --name=bioinfo_tsinghua -dt --restart unless-stopped -v ~/Desktop/bio
 docker exec -u root bioinfo_tsinghua chown test:test /home/test/share  # Windows 10 pro set dir use root as default user, we need to set it be owned by test
 ```
 
-![](../.gitbook/assets/win_docker9.png) ![](../.gitbook/assets/win_docker10.png) 选择`Share it`
+![](../.gitbook/assets/win_docker9.png)
+
+
+ ![](../.gitbook/assets/win_docker10.png) 选择`Share it`
 
 ### 3c)使用容器
 
