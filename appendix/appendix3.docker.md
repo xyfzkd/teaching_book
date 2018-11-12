@@ -6,7 +6,7 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 下面我们讲解 Windows 用户应该如何使用 Docker
 
-## 2) windows 10 非 pro 用户使用 Docker 指南——通过Virtual Box 运行docker <a id="win-vb-use-docker"></a>
+## 2) windows 10 非 pro 用户使用 Docker 指南——通过Virtual Box 运行docker {#win-vb-use-docker}
 
 此部分教程将介绍如何在windows 10 非pro机器上使用virtual box，安装并配置好virtual box后即可在其内部运行docker。
 
@@ -42,7 +42,7 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 顺利完成以上步骤后，请到 [Getting Started 5d\)](../getting-started.md#load-image) 完成后续操作。
 
-## 3) windows 10 pro 64 使用 Docker 指南 <a id="win-pro-use-docker"></a>
+## 3) windows 10 pro 64 使用 Docker 指南 {#win-pro-use-docker}
 
 ### 3a) 安装 Docker
 
