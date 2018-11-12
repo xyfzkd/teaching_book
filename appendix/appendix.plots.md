@@ -23,8 +23,8 @@
 ![](../.gitbook/assets/all-rmd.gif)
 
 > tips: 如果你更喜欢每个文件仅包含一节的内容（一种 plot 类型），可以先打开`index.Rmd`，安装需要的 packages，然后依次打开每一节对应的 `.Rmd` 文件（动画展了第1、2小节对应的 `1.box-plots.Rmd` 和 `2.violin-plots.Rmd`）
->
-> ![](../.gitbook/assets/index-1-2-rmd.gif)
+
+![](../.gitbook/assets/index-1-2-rmd.gif)
 
 ## 0b) 方案二: 在 Docker 中使用 R 来画图
 
@@ -185,22 +185,22 @@ For the following sections, you can find all code in `/home/test/plot/Rscripts/`
 
 ## 1\) Box plots <a id="box-plot"></a>
 
-1. Basic box plot
+1\. Basic box plot
 
-   ```r
-   df$cyl <- as.factor(df$cyl)
-   head(df)
-   ```
+```r
+df$cyl <- as.factor(df$cyl)
+head(df)
+```
 
-   ```text
-   ###                    mpg cyl    wt
-   ### Mazda RX4         21.0   6 2.620
-   ### Mazda RX4 Wag     21.0   6 2.875
-   ### Datsun 710        22.8   4 2.320
-   ### Hornet 4 Drive    21.4   6 3.215
-   ### Hornet Sportabout 18.7   8 3.440
-   ### Valiant           18.1   6 3.460
-   ```
+```text
+###                    mpg cyl    wt
+### Mazda RX4         21.0   6 2.620
+### Mazda RX4 Wag     21.0   6 2.875
+### Datsun 710        22.8   4 2.320
+### Hornet 4 Drive    21.4   6 3.215
+### Hornet Sportabout 18.7   8 3.440
+### Valiant           18.1   6 3.460
+```
 
    ```r
    ggplot(df, aes(x=cyl, y=mpg)) + 
