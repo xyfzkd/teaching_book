@@ -487,46 +487,46 @@ head(mu)
 
 draw the plot
 
-* Change fill colors
+(1) Change fill colors
 
-  ```r
-  ggplot(df2, aes(x=weight, fill=sex)) +
-    geom_density(alpha=0.7)+
-    geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
-    labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
-    scale_color_brewer(palette="Paired") +
-    scale_fill_brewer(palette="Blues") +
-    theme_classic()
-  ```
+```r
+ggplot(df2, aes(x=weight, fill=sex)) +
+  geom_density(alpha=0.7)+
+  geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
+  labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
+  scale_color_brewer(palette="Paired") +
+  scale_fill_brewer(palette="Blues") +
+  theme_classic()
+```
 
-  ![](../.gitbook/assets/4.3.1.customized_histogramplot1.png)
+![](../.gitbook/assets/4.3.1.customized_histogramplot1.png)
 
-* Change line colors
+(2) Change line colors
 
-  ```r
-  ggplot(df2, aes(x=weight, color=sex)) +
-    geom_density()+
-    geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
-    labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
-    scale_color_brewer(palette="Paired") +
-    theme_classic()
-  ```
+```r
+ggplot(df2, aes(x=weight, color=sex)) +
+  geom_density()+
+  geom_vline(data=mu, aes(xintercept=grp.mean, color=sex), linetype="dashed")+
+  labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
+  scale_color_brewer(palette="Paired") +
+  theme_classic()
+```
 
-  ![](../.gitbook/assets/4.3.2.customized_histogramplot2.png)
+![](../.gitbook/assets/4.3.2.customized_histogramplot2.png)
 
-* Combine histogram and density plots
+(3) Combine histogram and density plots
 
-  ```r
-  ggplot(df2, aes(x=weight, color=sex, fill=sex)) + 
-    geom_histogram(binwidth=1, aes(y=..density..), alpha=0.5, position="identity") +
-    geom_density(alpha=.2) +
-    labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
-    scale_color_brewer(palette="Paired") +
-    scale_fill_brewer(palette="Blues") +
-    theme_classic()
-  ```
+```r
+ggplot(df2, aes(x=weight, color=sex, fill=sex)) + 
+  geom_histogram(binwidth=1, aes(y=..density..), alpha=0.5, position="identity") +
+  geom_density(alpha=.2) +
+  labs(title="Weight density curve",x="Weight(kg)", y = "Density") + 
+  scale_color_brewer(palette="Paired") +
+  scale_fill_brewer(palette="Blues") +
+  theme_classic()
+```
 
-  ![](../.gitbook/assets/4.3.3.customized_histogramplot3.png)
+![](../.gitbook/assets/4.3.3.customized_histogramplot3.png)
 
 Reference: [http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization)
 
