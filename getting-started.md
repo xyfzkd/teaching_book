@@ -54,13 +54,15 @@
 
 Docker 因为其灵活性和资源占用少等优势开始取代过去传统的虚拟机（如VMWARE, Virtual Box等）。Docker在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker技术比传统虚拟机技术更为轻便、快捷（[为什么使用Docker](https://yeasy.gitbooks.io/docker_practice/introduction/why.html)）。
 
-### 5a.1\) Docker程序\(software）下载
+### 5a) Docker下载
+
+#### 5a.1\) Docker程序\(software）下载
 
 读者可以去 [官方下载页面](https://www.docker.com/get-docker) 获取对应不同操作系统的docker软件的安装程序。（需要注册账号）
 
 > windows 10 非pro版本的读者请注意：只有pro版本才能安装docker程序，所以如果不是pro版本，请下载并安装虚拟机 [VirtualBox](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 。
 
-### 5a.2\) Docker镜像\(image）下载
+#### 5a.2\) Docker镜像\(image）下载
 
 我们为读者提供了我们为本课程制作的用于Docker的一个**image（镜像）**，如下表所示。
 
