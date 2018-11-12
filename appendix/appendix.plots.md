@@ -220,7 +220,7 @@ For the following sections, you can find all code in `/home/test/plot/Rscripts/`
 
 ![](../.gitbook/assets/1.2.customized_boxplot.png)
 
-3. Box plot for GO results
+3\. Box plot for GO results
 
    ```r
    df7$Term <- sapply(strsplit(as.vector(df7$Term),'~'),'[',2)
