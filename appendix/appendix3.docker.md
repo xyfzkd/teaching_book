@@ -20,10 +20,10 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 ### 2c) 导入虚拟机
 
-`管理` -> `导入虚拟电脑` 
+`管理` -> `导入虚拟电脑`   
 ![](../.gitbook/assets/vm-1.png)
 
-选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova` 
+选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova`   
 ![](../.gitbook/assets/vm-2.png)   
 
 > **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。 
@@ -103,21 +103,20 @@ docker ps -a #查看所有容器
 docker images #查看所有镜像
 ```
 
-感兴趣的读者可自行学习相关教程，参见5\) 参考阅读部分。
+感兴趣的读者可自行学习相关教程，参见6) 参考阅读部分。
 
 ## 5) 清理环境
 
 可以使用如下命令清理不再需要的文件：
 
 ```bash
-docker rmi bioinfo_tsinghua # 删除镜像
 rm ~/Desktop/bioinfo_tsinghua.docker.tar.gz # 删除下载的文件
 ```
 
-如果需要删除容器，可以使用以下命令，请**慎重**使用该命令。
+如果需要删除镜像，可以使用以下命令，请**慎重**使用该命令。
 
 ```text
-docker rm -f bioinfo_tsinghua # 强行删除容器
+docker rmi bioinfo_tsinghua # 删除镜像
 ```
 
 ## 6) 参考阅读
