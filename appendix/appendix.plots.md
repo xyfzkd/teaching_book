@@ -23,7 +23,7 @@
    >
    > ![](../.gitbook/assets/index-1-2-rmd.gif)
 
-## 0b\) 方案二: 在 Docker 中使用 R 来画图
+## 0b) 方案二: 在 Docker 中使用 R 来画图
 
 如果你在使用方案一时遇到了问题，也可以用我们提供的 Docker（里面已经预装好了 R 语言和需要的 packages）。
 
