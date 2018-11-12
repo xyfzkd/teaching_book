@@ -8,11 +8,11 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 ### 2a\) windows 10 非 pro 用户 通过Virtual Box 运行docker <a id="win-vb-use-docker"></a>
 
-此部分教程将介绍如何在windows 10 非pro机器上使用virtual box，安装并配置好virtual box后即可在内部运行docker。
+此部分教程将介绍如何在windows 10 非pro机器上使用virtual box，安装并配置好virtual box后即可在其内部运行docker。
 
 #### 2a.1\) 安装 Virtual Box
 
-至 [官网](https://www.virtualbox.org/wiki/Downloads) 或 [清华云](https://cloud.tsinghua.edu.cn/f/89c75b51b5bd423aa92b/) 下载安装程序，运行，按照提示完成安装。
+至 [官网](https://www.virtualbox.org/wiki/Downloads) 下载安装程序，运行，按照提示完成安装。
 
 #### 2a.2\) 下载我们提供的 Ubuntu 虚拟机
 
@@ -20,10 +20,14 @@ MAC 用户在安装和使用Docker 参见[Getting Started 5\)](../getting-starte
 
 #### 2a.3\) 导入虚拟机
 
-`管理` -&gt; `导入虚拟电脑` ![](../.gitbook/assets/vm-1.png)
+`管理` -&gt; `导入虚拟电脑` 
+![](../.gitbook/assets/vm-1.png)
 
-选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova` ![](../.gitbook/assets/vm-2.png)   
- **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。 ![](../.gitbook/assets/vm-3.png)
+选中上一步下载完成的 `bioinfo_tsinghua.virtualbox.ova` 
+![](../.gitbook/assets/vm-2.png)   
+
+> **注意：** 路径名不能有空格、中文等，可以直接放在某一磁盘下，比如这里我们放在了 D 盘。 
+> ![](../.gitbook/assets/vm-3.png)
 
 导入时一般使用默认选项即可。如果 C 盘空间不足，可以修改以下最后一个选项——`虚拟硬盘`，需要手动输入路径，与上文一样，不能有空格、中文等。 ![](../.gitbook/assets/vm-4.png)
 
