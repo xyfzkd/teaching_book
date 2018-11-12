@@ -1,23 +1,21 @@
 # Appendix VI. Plot with R
 
-## 0\) Prepare <a id="plot-setup"></a>
-
 本章我们介绍如何使用 R 进行数据可视化，我们将提供两种方案：一是在自己电脑使用 Rstudio 来画图（基于 `.Rmd` 文件\)，优点是使用方便，交互性强；一是在 Docker 容器中用命令行的方式来画图，优点是无需额外的安装和配置。
 
-### 0a\) 方案一: 在自己电脑上用 Rstudio 画图 <a id="plot-in-Rstudio"></a>
+## 0a) 方案一: 在自己电脑上用 Rstudio 画图 {#plot-in-Rstudio}
 
-1. 在自己电脑安装软件和配置
+### 0a.1) 在自己电脑安装软件和配置
 
-   下载 [相关资源](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/)中的 R, Rstudio 软件及 `lulab-plot-master.zip`。
+下载 [相关资源](https://cloud.tsinghua.edu.cn/d/11af8115fa4946089257/)中的 R, Rstudio 软件及`lulab-plot-master.zip`。
 
-   1. 安装 R。
-   2. 安装 RStudio。
-   3. 下载并解压 `lulab-plot-master.zip`, 双击其中的 `lulab-plot.Rproj`。
-   4. 安装需要的package:
+1. 安装 R。
+2. 安装 RStudio。
+3. 下载并解压 `lulab-plot-master.zip`, 双击其中的 `lulab-plot.Rproj`。
+4. 安装需要的package:
 
       ![](../.gitbook/assets/install-lulab-plot.gif)
 
-2. 打开 `.Rmd` 文件
+5. 打开 `.Rmd` 文件
 
    用Rstudio打开`all.Rmd`文件, 即可阅读教程，并执行相关代码。
 
@@ -27,11 +25,11 @@
    >
    > ![](../.gitbook/assets/index-1-2-rmd.gif)
 
-### 0b\) 方案二: 在 Docker 中使用 R 来画图
+## 0b\) 方案二: 在 Docker 中使用 R 来画图
 
 如果你在使用方案一时遇到了问题，也可以用我们提供的 Docker（里面已经预装好了 R 语言和需要的 packages）。
 
-#### 0b.1\) 在容器中使用R <a id="R-in-container"></a>
+### 0b.1) 在容器中使用R {#R-in-container}
 
 ![](../.gitbook/assets/r-in-container.gif)
 
@@ -67,100 +65,100 @@ mean(1:10)
 q()
 ```
 
-#### 0b.2\) load data, install packages, etc
+### 0b.2) load data, install & library packages
 
-1. Prepare output directory
+#### Prepare output directory
 
-   ```r
-   dir.create('output')
-   ```
+```r
+dir.create('output')
+```
 
-2. Load the data
+#### Load the data
 
-   ```r
-   # Read the input files
-   # “header=T” means that the data has a title, and sep="\t" is used as the separator
-   data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
-   # The function c(,,) means create the vector type data 
-   df <- data[, c("mpg", "cyl", "wt")]
+```r
+# Read the input files
+# “header=T” means that the data has a title, and sep="\t" is used as the separator
+data <-read.table("input/box_plots_mtcars.txt",header=T,sep="\t")
+# The function c(,,) means create the vector type data 
+df <- data[, c("mpg", "cyl", "wt")]
 
-   df2 <-read.table("input/histogram_plots.txt",header=T,sep="\t")
+df2 <-read.table("input/histogram_plots.txt",header=T,sep="\t")
 
-   df3 <- read.table("input/volcano_plots.txt", header=T)
+df3 <- read.table("input/volcano_plots.txt", header=T)
 
-   df4 <- read.table("input/manhattan_plots_gwasResults.txt",header=T,sep="\t")
+df4 <- read.table("input/manhattan_plots_gwasResults.txt",header=T,sep="\t")
 
-   df5 <-read.table("input/heatmaps.txt",header=T,sep="\t")
+df5 <-read.table("input/heatmaps.txt",header=T,sep="\t")
 
-   # Covert data into matrix format
-   # nrow(df5) and ncol(df5) return the number of rows and columns of matrix df5 respectively.
-   dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
+# Covert data into matrix format
+# nrow(df5) and ncol(df5) return the number of rows and columns of matrix df5 respectively.
+dm <- data.matrix(df5[1:nrow(df5),2:ncol(df5)])
 
-   # Get the row names
-   row.names(dm) <- df5[,1]
+# Get the row names
+row.names(dm) <- df5[,1]
 
-   df6 <- read.table("input/ballon_plots_GO.txt", header=T, sep="\t")
+df6 <- read.table("input/ballon_plots_GO.txt", header=T, sep="\t")
 
-   df7 <- read.table("input/box_plots_David_GO.txt",header=T,sep="\t")
-   df7 <- df7[1:10,]
-   ```
+df7 <- read.table("input/box_plots_David_GO.txt",header=T,sep="\t")
+df7 <- df7[1:10,]
+```
 
-3. Install R packages
+#### Install R packages
 
-   Docker 中已经装好所需要的 R 包，如果你是在自己电脑上运行，则需要安装 ggplot2, qqman, gplots, pheatmap, scales, reshape2, RColorBrewer 和 plotrix（使用 `install.packages()`, 如 `install.packages('ggplot2')`）。
+Docker 中已经装好所需要的 R 包，如果你是在自己电脑上运行，则需要安装 ggplot2, qqman, gplots, pheatmap, scales, reshape2, RColorBrewer 和 plotrix（使用 `install.packages()`, 如 `install.packages('ggplot2')`）。
 
-4. library R packages
+#### library R packages
 
-   ```r
-   library(ggplot2)
-   library(qqman)
-   library(gplots)
-   library(pheatmap)
-   library(scales)
-   library(reshape2)
-   library(RColorBrewer)
-   library(plyr)
-   library(plotrix)
-   ```
+```r
+library(ggplot2)
+library(qqman)
+library(gplots)
+library(pheatmap)
+library(scales)
+library(reshape2)
+library(RColorBrewer)
+library(plyr)
+library(plotrix)
+```
 
-#### 0b.3\) Save the plot and view it
+### 0b.3) Save & view the plot
 
 If you want to save the plot, please use either `pdf()` + `dev.off()` or `ggsave()`.  
-The second one is specific for the **ggplot2** package \(i.e., if the code for plot starts with `ggplot`, then you can use the second one\).
+The second one is specific for the **ggplot2** package (i.e., if the code for plot starts with `ggplot`, then you can use the second one).
 
 Let's see an example:
 
-1. `pdf()` + `dev.off()`
+#### `pdf()` + `dev.off()`
 
-   ```r
-   # Begin to plot
-   # Output as pdf
-   pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
-   # Mapping the X and Y 
-   # Components are constructed by using "+"
-   ggplot(df, aes(x=cyl, y=mpg))+ 
-   # draw the boxplot and fill it with gray
-     geom_boxplot(fill="gray")+
-   # Use the labs function to set the title and modify x and y
-     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-   # Set the theme style
-     theme_classic()
+```r
+# Begin to plot
+# Output as pdf
+pdf("output/1.1.Basic_boxplot.pdf", height = 3, width = 3)
+# Mapping the X and Y 
+# Components are constructed by using "+"
+ggplot(df, aes(x=cyl, y=mpg))+ 
+# draw the boxplot and fill it with gray
+  geom_boxplot(fill="gray")+
+# Use the labs function to set the title and modify x and y
+  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+# Set the theme style
+  theme_classic()
 
-   # Save the plot
-   dev.off()
-   ```
+# Save the plot
+dev.off()
+```
 
-2. `ggsave()`
+#### `ggsave()`
 
-   ```r
-   # Begin to plot
-   p <- ggplot(df, aes(x=cyl, y=mpg)) + 
-     geom_boxplot(fill="gray")+
-     labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
-     theme_classic()
-   # Sava as pdf
-   ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3,    width = 3)
-   ```
+```r
+# Begin to plot
+p <- ggplot(df, aes(x=cyl, y=mpg)) + 
+  geom_boxplot(fill="gray")+
+  labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
+  theme_classic()
+# Sava as pdf
+ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3,    width = 3)
+```
 
 If you want to view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine.
 
@@ -172,7 +170,7 @@ cp output/1.1.Basic_boxplot.pdf /home/test/share/
 
 Here we only show one plot, in real use, you should replace the code for plot and change output file name to do more plots.
 
-#### 0b.4\) 以上 3 步的动画
+### 0b.4) 以上 3 步的动画
 
 为了更清楚地展示方案二，我们制作了一个完整的动画：
 
