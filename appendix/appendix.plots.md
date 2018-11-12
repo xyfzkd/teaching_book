@@ -155,7 +155,7 @@ p <- ggplot(df, aes(x=cyl, y=mpg)) +
   labs(title="Plot of mpg per cyl",x="Cyl", y = "Mpg")+
   theme_classic()
 # Sava as pdf
-ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3,    width = 3)
+ggsave("output/1.1.Basic_boxplot.pdf", plot=p, height = 3, width = 3)
 ```
 
 If you want to view the produced file, you need to copy the file to `/home/test/share`, then open the `bioinfo_tsinghua_share` folder on the Desktop of host machine.
@@ -218,7 +218,7 @@ For the following sections, you can find all code in `/home/test/plot/Rscripts/`
      theme_bw()
    ```
 
-   ![](../.gitbook/assets/1.2.customized_boxplot.png)
+![](../.gitbook/assets/1.2.customized_boxplot.png)
 
 3. Box plot for GO results
 
@@ -264,7 +264,7 @@ For the following sections, you can find all code in `/home/test/plot/Rscripts/`
            axis.text.x = element_text(size = 12,face="bold"))
    ```
 
-   ![](../.gitbook/assets/1.3.customized_boxplot2.png)
+![](../.gitbook/assets/1.3.customized_boxplot2.png)
 
    ```r
    ggplot(df7) + geom_bar(stat="identity", width=0.6, aes(Term,Fold.Enrichment, fill=-1*log10(PValue)),colour="#1d2a33") + 
