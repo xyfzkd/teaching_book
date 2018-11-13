@@ -10,8 +10,7 @@
 * RNA-seq analysis pipeline at GitHub: [https://github.com/mgonzalezporta/TeachingMaterial](https://github.com/mgonzalezporta/TeachingMaterial)
 * lncRNA analysis pipeline: [http://webhome.weizmann.ac.il/home/igoru/PLAR/](http://webhome.weizmann.ac.il/home/igoru/PLAR/)
 * \(Deprecated\) RNA-seq analysis pipeline @ Lu Lab: [RNAfinder](http://bioinformatics.life.tsinghua.edu.cn/new_home/lulab-software/rnafinder.html)
-  * [Bioinformatics Manual](http://www.ncrnalab.org/wiki/index.php/Bioinformatics_Manual) @ Lu Lab
-  * [Bioinformatics Tool/Module List](http://www.ncrnalab.org/wiki/index.php/Research_@_Lu_Lab#in-house_Tools) @ Lu Lab
+
 
 ## 休息一会
 
